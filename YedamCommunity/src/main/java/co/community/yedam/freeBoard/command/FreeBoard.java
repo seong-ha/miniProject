@@ -9,7 +9,7 @@ public class FreeBoard implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return "main/freeBoard";
+		return "main/freeBoard/freeBoard";
 	}
 
 }

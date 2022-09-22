@@ -9,7 +9,7 @@ public class Community implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return "main/community";
+		return "main/community/community";
 	}
 
 }
