@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.Main;
 import co.community.yedam.common.Command;
+import co.community.yedam.community.command.Community;
+import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.member.command.MemberLoginForm;
 
 
@@ -29,6 +31,8 @@ public class FrontController extends HttpServlet {
     public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
+		map.put("/community.do", new Community());
+		map.put("/freeBoard.do", new FreeBoard());
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
