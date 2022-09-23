@@ -4,13 +4,19 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 	<definition name="mainTiles" template="/WEB-INF/views/layouts/mainLayout.jsp">
-		<put-attribute name="title" value="Yedam Community(메인)"/>
+		<put-attribute name="title" value=""/>
 		<put-attribute name="header" value="/WEB-INF/views/layouts/mainHeader.jsp"/>
 		<put-attribute name="body" value=""/>
 		<put-attribute name="footer" value="/WEB-INF/views/layouts/mainFooter.jsp"/>
 	</definition>
 	
 	<definition name="WILDCARD:main/*/*" extends="mainTiles">
+		<put-attribute name="title" value="Yedam Community(메인)"/>
+		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"/>
+	</definition>
+	
+	<definition name="WILDCARD:projectStudy/*/*" extends="mainTiles">
+		<put-attribute name="title" value="Project and Study"/>
 		<put-attribute name="body" value="/WEB-INF/views/{1}/{2}.jsp"/>
 	</definition>
 </tiles-definitions>

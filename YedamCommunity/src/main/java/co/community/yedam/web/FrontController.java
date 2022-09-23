@@ -23,6 +23,7 @@ import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
+import co.community.yedam.projectStudy.command.ProjectStudy;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -38,6 +39,9 @@ public class FrontController extends HttpServlet {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/memberJoinForm.do", new MemberJoinForm());
+		map.put("/community.do", new Community());
+		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
