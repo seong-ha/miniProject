@@ -7,10 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div style="border: 1px solid green; background-color: green;">
-		<h1>여기는 body!</h1>
-		<h2>시작 페이지!</h2>
-		sdakg;ej;agjeglawejj
-	</div>
+
 </body>
 </html>
