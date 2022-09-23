@@ -15,7 +15,8 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
-import co.community.yedam.freeBoard.command.FreeBoardSelectlist;
+import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLoginForm;
 
@@ -35,7 +36,8 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoinForm.do", new MemberJoinForm());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
-		map.put("/freeBoardSelectlist.do", new FreeBoardSelectlist());
+		map.put("/freeBoardSelect.do", new FreeBoardSelect());
+		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
