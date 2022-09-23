@@ -10,7 +10,7 @@
 </head>
 <div class="login-box">
   <h2>Login</h2>
-  <form>
+  <form id="frm" action="memberLogin.do" method="post">
     <div class="user-box">
       <input type="text" name="memberId" id="memberId" required="required">
       <label>Username</label>
@@ -19,11 +19,12 @@
       <input type="password" name="memberPw" id="memberPw" required="required">
       <label>Password</label>
     </div>
-    <a href="#">
+    <a>
       <span></span>
       <span></span>
       <span></span>
       <span></span>
+      <input type="submit" value="로그인">
       로그인
     </a>
     <a href="memberJoinForm.do">
@@ -42,4 +43,6 @@
     </a>
   </form>
 </div>
+
+
 </html>
