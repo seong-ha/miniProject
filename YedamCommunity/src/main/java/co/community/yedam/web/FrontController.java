@@ -16,6 +16,7 @@ import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.member.command.MemberLoginForm;
+import co.community.yedam.notice.board.NoticeBoard;
 
 
 @WebServlet("*.do")
@@ -33,6 +34,7 @@ public class FrontController extends HttpServlet {
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/noticeboard.do", new NoticeBoard());
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
