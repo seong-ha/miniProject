@@ -26,11 +26,11 @@
 		</div>
 		<div class="input-group mb-3">
 			<input type="file" class="form-control" id="inputGroupFile02">
-			<label class="input-group-text" for="inputGroupFile02">Upload</label>
+			<label class="input-group-text" for="inputGroupFile02">업로드</label>
 		</div>
-		<br>
+		<br>&nbsp;&nbsp;
 		<button class="btn btn-primary me-md-2" type="button"
-			onclick="location.href='freeBoardInsertPage.do'">등록</button>
+			onclick="location.href='freeBoardInsert.do'">등록</button>
 		&nbsp;&nbsp;
 		<button class="btn btn-primary" type="button"
 			onclick="freeBoardInsertPage.do'">취소</button>

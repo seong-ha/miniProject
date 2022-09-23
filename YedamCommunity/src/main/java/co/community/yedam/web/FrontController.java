@@ -15,6 +15,7 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
+import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
 import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
