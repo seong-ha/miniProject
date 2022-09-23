@@ -23,6 +23,13 @@ import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
+import co.community.yedam.notice.board.command.NoticeBoardDelete;
+import co.community.yedam.notice.board.command.NoticeBoardEdit;
+import co.community.yedam.notice.board.command.NoticeBoardEditForm;
+import co.community.yedam.notice.board.command.NoticeBoardInsert;
+import co.community.yedam.notice.board.command.NoticeBoardSelect;
+import co.community.yedam.notice.board.command.NoticeBoardSelectList;
+import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 
 @WebServlet("*.do")
@@ -47,9 +54,20 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+	}
+
+
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
     }
+
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
