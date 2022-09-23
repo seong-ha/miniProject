@@ -21,6 +21,6 @@
 	</environments>
 	<mappers>
 		<mapper resource="co/community/yedam/member/service/MemberMapper.xml" />
-		
+		<mapper resource="co/community/yedam/freeBoard/service/FreeBoardMapper.xml" />
 	</mappers>
 </configuration>
