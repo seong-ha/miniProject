@@ -8,5 +8,4 @@ public interface FreeBoardService {
 	int freeBoardInsert(FreeBoardVO vo);
 	int freeBoardDelete(FreeBoardVO vo);
 	int freeBoardUpdate(FreeBoardVO vo);
-	//
 }
