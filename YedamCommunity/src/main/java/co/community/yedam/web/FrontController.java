@@ -16,43 +16,56 @@ import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.member.command.MemberLoginForm;
-import co.community.yedam.notice.board.NoticeBoard;
-
+import co.community.yedam.notice.board.command.NoticeBoardDelete;
+import co.community.yedam.notice.board.command.NoticeBoardEdit;
+import co.community.yedam.notice.board.command.NoticeBoardEditForm;
+import co.community.yedam.notice.board.command.NoticeBoardInsert;
+import co.community.yedam.notice.board.command.NoticeBoardSelect;
+import co.community.yedam.notice.board.command.NoticeBoardSelectList;
+import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// 실제 요청페이지와, 그에 대해 할당할 커멘드를 담아두는 저장소
 	private HashMap<String, Command> map = new HashMap<String, Command>();
-	
-    public FrontController() {
-        super();
-    }
 
-    public void init(ServletConfig config) throws ServletException {
+	public FrontController() {
+		super();
+	}
+
+	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
-		map.put("/noticeboard.do", new NoticeBoard());
-    }
+		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	}
+
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		
+
 		// 실제 요펑 페이지 분석
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
-		
+
 		// 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
-		
+
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)
 		if (!viewPage.endsWith(".do")) {
-			
-			if (viewPage.startsWith("ajax:")) { // ajax를 사용할때 
+
+			if (viewPage.startsWith("ajax:")) { // ajax를 사용할때
 				response.setContentType("text/html; charset=UTF-8");
 				response.getWriter().append(viewPage.substring(5));
 				return;
@@ -61,9 +74,9 @@ public class FrontController extends HttpServlet {
 				if (viewPage.startsWith("noTiles:")) {
 					viewPage = "/WEB-INF/views/" + viewPage.substring(8) + ".jsp";
 				} else { // tiles 적용 되도록할 때
-					viewPage = viewPage + ".tiles";  // tiles layout 사용
+					viewPage = viewPage + ".tiles"; // tiles layout 사용
 				}
-				
+
 				// RequestDipatcher의 forward로 쏴줘야 앞단에 뿌려줄 수 있다.
 				RequestDispatcher dispatcher = request.getRequestDispatcher(viewPage);
 				dispatcher.forward(request, response);
@@ -72,6 +85,5 @@ public class FrontController extends HttpServlet {
 			response.sendRedirect(viewPage); // *.do return -> 다시 Controller로 요청 들어감.(뺑뺑이)
 		}
 	}
-
 
 }

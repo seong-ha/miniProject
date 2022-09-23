@@ -1,16 +1,15 @@
-package co.community.yedam.notice.board;
+package co.community.yedam.notice.board.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.common.Command;
 
-public class NoticeBoard implements Command {
+public class NoticeBoardWriteForm implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		return null;
+		return "notice/noticeWriteForm";
 	}
 
 }
