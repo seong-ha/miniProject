@@ -15,6 +15,13 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
+import co.community.yedam.freeBoard.command.FreeBoardInsert;
+import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberJoin;
+import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardSelect;
+import co.community.yedam.member.command.MemberJoinForm;
+import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.notice.board.command.NoticeBoardDelete;
 import co.community.yedam.notice.board.command.NoticeBoardEdit;
@@ -23,6 +30,7 @@ import co.community.yedam.notice.board.command.NoticeBoardInsert;
 import co.community.yedam.notice.board.command.NoticeBoardSelect;
 import co.community.yedam.notice.board.command.NoticeBoardSelectList;
 import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
+import co.community.yedam.projectStudy.command.ProjectStudy;
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -37,6 +45,13 @@ public class FrontController extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
+		map.put("/memberJoinForm.do", new MemberJoinForm());
+		map.put("/community.do", new Community());
+		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/projectStudy.do", new ProjectStudy());
+		map.put("/memberLogin.do", new MemberLogin());
+		map.put("/memberJoin.do", new MemberJoin());
+		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
 		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
@@ -46,8 +61,13 @@ public class FrontController extends HttpServlet {
 		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
 		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
-
 	}
+
+
+		map.put("/freeBoardSelect.do", new FreeBoardSelect());
+		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
+    }
+
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
