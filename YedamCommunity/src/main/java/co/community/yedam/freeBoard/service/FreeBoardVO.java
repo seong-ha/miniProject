@@ -6,14 +6,14 @@ import lombok.Data;
 
 @Data
 public class FreeBoardVO {
-	private String freeBoardId;
+	private int freeBoardId;
 	private String freeBoardTitle;
 	private String freeBoardSubject;
 	private Date freeBoardDate;
 	private String freeBoardAttech;
 	private String freeBoardAttechDir;
 	private String freeBoardHit;
-	private Date freeBoardLike;
+	private int freeBoardLike;
 	private int memberId; // 외래키
 
 	/*
