@@ -26,12 +26,19 @@
       <span></span>
       로그인
     </a>
-    <a href="Join.jsp">
+    <a href="memberJoinForm.do">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       회원가입
+    </a>
+    <a href="main.do">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      홈
     </a>
   </form>
 </div>
