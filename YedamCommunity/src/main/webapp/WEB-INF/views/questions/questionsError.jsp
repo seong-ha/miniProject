@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<div align="center">
+	<!-- 팝업 -->
+	<div><h1>${message }</h1></div>
+</div>
 </body>
 </html>

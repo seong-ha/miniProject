@@ -1,5 +1,6 @@
 package co.community.yedam.web;
 
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -17,6 +18,14 @@ import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLoginForm;
+import co.community.yedam.questions.command.QuestionsDelte;
+import co.community.yedam.questions.command.QuestionsEditForm;
+import co.community.yedam.questions.command.QuestionsInsert;
+import co.community.yedam.questions.command.QuestionsSearch;
+import co.community.yedam.questions.command.QuestionsSelect;
+import co.community.yedam.questions.command.QuestionsSelectList;
+import co.community.yedam.questions.command.QuestionsWriteForm;
+
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -34,6 +43,13 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoinForm.do", new MemberJoinForm());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/questionsWriteForm.do", new QuestionsWriteForm());
+		map.put("/questionsSelectList.do", new QuestionsSelectList());
+		map.put("/questionsSelect.do", new QuestionsSelect());
+		map.put("/questionsEditForm.do", new QuestionsEditForm());
+		map.put("/questionsInsert.do", new QuestionsInsert());
+		map.put("/questionsDelte.do", new QuestionsDelte());
+		map.put("/questionsSearch.do", new QuestionsSearch());
     }
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
