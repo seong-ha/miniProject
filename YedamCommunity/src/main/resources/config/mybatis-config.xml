@@ -22,5 +22,6 @@
 	<mappers>
 		<mapper resource="co/community/yedam/member/service/MemberMapper.xml" />
 		<mapper resource="co/community/yedam/questions/service/questionsMapper.xml" />
+		<mapper resource="co/community/yedam/freeBoard/service/FreeBoardMapper.xml" />
 	</mappers>
 </configuration>

@@ -16,8 +16,15 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
+import co.community.yedam.freeBoard.command.FreeBoardInsert;
+import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberJoin;
+import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.MemberJoinForm;
+import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
+
 import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
@@ -25,6 +32,16 @@ import co.community.yedam.questions.command.QuestionsSearch;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
+
+
+import co.community.yedam.notice.board.command.NoticeBoardDelete;
+import co.community.yedam.notice.board.command.NoticeBoardEdit;
+import co.community.yedam.notice.board.command.NoticeBoardEditForm;
+import co.community.yedam.notice.board.command.NoticeBoardInsert;
+import co.community.yedam.notice.board.command.NoticeBoardSelect;
+import co.community.yedam.notice.board.command.NoticeBoardSelectList;
+import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
+import co.community.yedam.projectStudy.command.ProjectStudy;
 
 
 @WebServlet("*.do")
@@ -50,7 +67,26 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsInsert.do", new QuestionsInsert());
 		map.put("/questionsDelte.do", new QuestionsDelte());
 		map.put("/questionsSearch.do", new QuestionsSearch());
+		map.put("/projectStudy.do", new ProjectStudy());
+		map.put("/memberLogin.do", new MemberLogin());
+		map.put("/memberJoin.do", new MemberJoin());
+		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
+		map.put("/community.do", new Community());
+		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+	}
+
+
+		map.put("/freeBoardSelect.do", new FreeBoardSelect());
+		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
     }
+
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
