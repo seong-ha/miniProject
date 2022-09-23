@@ -38,7 +38,7 @@
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html"><span>YEDAM
+							<a class="navbar-brand" href="main.do"><span>YEDAM
 							</span>Community <small>IT직업전문학교</small></a>
 						</div>
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
