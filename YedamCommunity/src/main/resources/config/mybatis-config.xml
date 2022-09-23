@@ -20,6 +20,6 @@
 		</environment>
 	</environments>
 	<mappers>
-		<package name="co/community/yedam/mapper" />
+		<mapper resource="co/community/yedam/freeBoard/service/FreeBoardMapper.xml" />
 	</mappers>
 </configuration>

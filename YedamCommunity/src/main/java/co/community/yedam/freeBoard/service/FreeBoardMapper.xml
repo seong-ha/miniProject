@@ -4,15 +4,13 @@
 
 	<select id="freeBoardSelectlist" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
+		ORDER BY FREE_BOARD_ID DESC
 	</select>
 	
 	<!-- 동적 sql예시. id만 들어오면 찾아주고, 둘 다 들어오면 로그인 처리해주는 거 -->
 	<select id="freeBoardSelect" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
-		WHERE SAMPLE_ID = #{sampleId}
-		<if test="samplePassword != null">
-			AND SAMPLE_PW = #{samplePw}
-		</if>
+		WHERE FREE_BOARD_ID = #{freeBoardId}
 	</select>
 	
 	<insert id="freeBoardInsert" parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">

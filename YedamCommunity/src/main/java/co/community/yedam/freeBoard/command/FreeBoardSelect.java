@@ -5,11 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.common.Command;
 
-public class FreeBoardSelectlist implements Command {
+public class FreeBoardSelect implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return null;
+		// 자유게시판 목록 상세 조회하기.
+		
+		return "main/freeBoard/freeBoardSelect";
 	}
 
 }
