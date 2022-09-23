@@ -15,7 +15,10 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
+import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.member.command.MemberJoinForm;
+import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 
 @WebServlet("*.do")
@@ -32,6 +35,9 @@ public class FrontController extends HttpServlet {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/memberJoinForm.do", new MemberJoinForm());
+		map.put("/memberLogin.do", new MemberLogin());
+		map.put("/memberJoin.do", new MemberJoin());
+		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
     }
