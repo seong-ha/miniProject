@@ -78,7 +78,6 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
-		map.put("/freeBoard.do", new FreeBoard());
 		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
 		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
 		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
@@ -88,6 +87,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
