@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,8 +45,15 @@
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
 							<form id="frm" action="memberLoginForm.do" method="post">
 								<div class="btn-group" role="group" aria-label="Basic example">
-									<button type="submit" class="btn btn-primary">로그인</button>
-									<button type="button" class="btn btn-primary">회원가입</button>
+									<c:choose>
+										<c:when test="${empty id }">
+											<button type="button" class="btn btn-primary" href="memberLoginForm.do">로그인 & 회원가입</button>
+										</c:when>
+										<c:otherwise>
+											<button type="button" class="btn btn-primary" href="main.do">로그아웃</button>
+											<button type="button" class="btn btn-primary" href="main.do">마이페이지</button>
+										</c:otherwise>
+									</c:choose>
 								</div>
 							</form>
 						</div>
@@ -91,6 +99,13 @@
 							class="nav-link">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link">프로젝트&스터디</a></li>
+						<li class="nav-item"><a href="about.html" class="nav-link">공지사항</a></li>
+						<li class="nav-item"><a href="community.do" class="nav-link">커뮤니티</a></li>
+						<li class="nav-item"><a href="top-seller.html"
+							class="nav-link">정보</a></li>
+						<li class="nav-item"><a href="book.html" class="nav-link">스터디</a></li>
+						<li class="nav-item"><a href="questionsSelectList.do" class="nav-link">문의사항</a></li>
+						<li class="nav-item"><a href="projectStudy.do" class="nav-link">프로젝트&스터디</a></li>
 						<li class="nav-item"><a href="author.html" class="nav-link">문의사항</a></li>
 					</ul>
 				</div>

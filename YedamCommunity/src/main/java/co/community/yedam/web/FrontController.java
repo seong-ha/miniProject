@@ -1,5 +1,6 @@
 package co.community.yedam.web;
 
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -29,7 +30,25 @@ import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
 import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
+
+import co.community.yedam.questions.command.QuestionsDelte;
+import co.community.yedam.questions.command.QuestionsEditForm;
+import co.community.yedam.questions.command.QuestionsInsert;
+import co.community.yedam.questions.command.QuestionsSearch;
+import co.community.yedam.questions.command.QuestionsSelect;
+import co.community.yedam.questions.command.QuestionsSelectList;
+import co.community.yedam.questions.command.QuestionsWriteForm;
+
+
+import co.community.yedam.notice.board.command.NoticeBoardDelete;
+import co.community.yedam.notice.board.command.NoticeBoardEdit;
+import co.community.yedam.notice.board.command.NoticeBoardEditForm;
+import co.community.yedam.notice.board.command.NoticeBoardInsert;
+import co.community.yedam.notice.board.command.NoticeBoardSelect;
+import co.community.yedam.notice.board.command.NoticeBoardSelectList;
+import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
+
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -47,6 +66,13 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoinForm.do", new MemberJoinForm());
 		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/questionsWriteForm.do", new QuestionsWriteForm());
+		map.put("/questionsSelectList.do", new QuestionsSelectList());
+		map.put("/questionsSelect.do", new QuestionsSelect());
+		map.put("/questionsEditForm.do", new QuestionsEditForm());
+		map.put("/questionsInsert.do", new QuestionsInsert());
+		map.put("/questionsDelte.do", new QuestionsDelte());
+		map.put("/questionsSearch.do", new QuestionsSearch());
 		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
