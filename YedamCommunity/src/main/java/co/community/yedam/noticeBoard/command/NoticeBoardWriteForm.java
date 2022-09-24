@@ -1,4 +1,4 @@
-package co.community.yedam.notice.board.command;
+package co.community.yedam.noticeBoard.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,7 +9,7 @@ public class NoticeBoardWriteForm implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return "notice/noticeWriteForm";
+		return "main/notice/noticeBoardWriteForm";
 	}
 
 }
