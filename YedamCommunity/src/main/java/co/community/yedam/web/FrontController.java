@@ -15,21 +15,20 @@ import co.community.yedam.Main;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
-import co.community.yedam.freeBoard.command.FreeBoardInsert;
-import co.community.yedam.member.command.AjaxMemberIdCheck;
-import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
+import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
-import co.community.yedam.notice.board.command.NoticeBoardDelete;
-import co.community.yedam.notice.board.command.NoticeBoardEdit;
-import co.community.yedam.notice.board.command.NoticeBoardEditForm;
-import co.community.yedam.notice.board.command.NoticeBoardInsert;
-import co.community.yedam.notice.board.command.NoticeBoardSelect;
-import co.community.yedam.notice.board.command.NoticeBoardSelectList;
-import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
+import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
+import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
+import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
+import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
+import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
+import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
+import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 
 @WebServlet("*.do")
@@ -61,13 +60,9 @@ public class FrontController extends HttpServlet {
 		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
 		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
-	}
-
-
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
-    }
-
+	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {

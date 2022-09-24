@@ -1,4 +1,4 @@
-package co.community.yedam.noticeBoard.Service;
+package co.community.yedam.noticeBoard.service;
 
 import java.util.List;
 
@@ -10,40 +10,31 @@ public class NoticeBoardServiceImpl implements NoticeBoardService {
 
 	private SqlSession sqlSession = DataSource.getSession().openSession(true);
 	private NoticeBoardMapper map = sqlSession.getMapper(NoticeBoardMapper.class);
-
+	
 	@Override
-	public List<NoticeBoardVO> NoticeBoardSelectList() {
-		// TODO Auto-generated method stub
-		return map.NoticeBoardSelectList();
+	public List<NoticeBoardVO> noticeBoardSelectList() {
+		return map.noticeBoardSelectList();
 	}
-
 	@Override
-	public NoticeBoardVO NoticeBoardSelect(NoticeBoardVO vo) {
-		// TODO Auto-generated method stub
-		return map.NoticeBoardSelect(vo);
+	public NoticeBoardVO noticeBoardSelect(NoticeBoardVO vo) {
+		return map.noticeBoardSelect(vo);
 	}
-
 	@Override
 	public int noticeBoardInsert(NoticeBoardVO vo) {
-		// TODO Auto-generated method stub
 		return map.noticeBoardInsert(vo);
 	}
-
 	@Override
 	public int noticeBoardUpdate(NoticeBoardVO vo) {
-		// TODO Auto-generated method stub
 		return map.noticeBoardUpdate(vo);
 	}
-
 	@Override
 	public int noticeBoardDelete(NoticeBoardVO vo) {
-		// TODO Auto-generated method stub
 		return map.noticeBoardDelete(vo);
 	}
-
 	@Override
 	public boolean isMemberId(String id) {
-		// TODO Auto-generated method stub
 		return map.isMemberId(id);
 	}
+	
+
 }

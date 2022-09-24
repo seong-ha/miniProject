@@ -1,12 +1,12 @@
-package co.community.yedam.noticeBoard.Service;
+package co.community.yedam.noticeBoard.service;
 
-import java.util.Date;
+import java.sql.Date;
 
 import lombok.Data;
 
 @Data
 public class NoticeBoardVO {
-	private int noticeBoardId;
+	private int noticeboardId;
 	private String noticeboardTitle;
 	private String noticeboardSubject;
 	private Date noticeboardDate;

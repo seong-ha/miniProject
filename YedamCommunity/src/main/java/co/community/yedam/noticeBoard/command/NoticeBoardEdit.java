@@ -1,4 +1,4 @@
-package co.community.yedam.notice.board.command;
+package co.community.yedam.noticeBoard.command;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +11,9 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import co.community.yedam.common.Command;
-import co.community.yedam.noticeBoard.Service.NoticeBoardService;
-import co.community.yedam.noticeBoard.Service.NoticeBoardServiceImpl;
-import co.community.yedam.noticeBoard.Service.NoticeBoardVO;
+import co.community.yedam.noticeBoard.service.NoticeBoardService;
+import co.community.yedam.noticeBoard.service.NoticeBoardServiceImpl;
+import co.community.yedam.noticeBoard.service.NoticeBoardVO;
 
 public class NoticeBoardEdit implements Command {
 	private String saveFolder = "C:\\fileUploadTest"; // 실제 파일을 저장할 공간
@@ -23,7 +23,7 @@ public class NoticeBoardEdit implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// 게시글 수정
-		String viewPage = "notice/noticeError";
+		String viewPage = "noticeBoard/noticeError";
 		NoticeBoardService dao = new NoticeBoardServiceImpl();
 		NoticeBoardVO vo = new NoticeBoardVO();
 
@@ -33,11 +33,11 @@ public class NoticeBoardEdit implements Command {
 			String fileName = multi.getFilesystemName("file");
 			String OriginalFileName = multi.getOriginalFileName(fileName);
 
-			vo.setNoticeBoardId(Integer.valueOf(multi.getParameter("noticeId")));
-			vo.setMemberID(Integer.valueOf(multi.getParameter("noticeWriter")));
-			vo.setNoticeboardDate(Date.valueOf(multi.getParameter("noticeDate")));
-			vo.setNoticeboardTitle(multi.getParameter("noticeTitle"));
-			vo.setNoticeboardSubject(multi.getParameter("noticeSubject"));
+			vo.setNoticeboardId(Integer.valueOf(multi.getParameter("noticeBoardId")));
+			vo.setMemberID(Integer.valueOf(multi.getParameter("noticeBoardWriter")));
+			vo.setNoticeboardDate(Date.valueOf(multi.getParameter("noticeBoardDate")));
+			vo.setNoticeboardTitle(multi.getParameter("noticeBoardTitle"));
+			vo.setNoticeboardSubject(multi.getParameter("noticeBoardSubject"));
 
 			vo.setNoticeboardAttech(OriginalFileName);
 			vo.setNoticeboardAttechDir(saveFolder + File.separator + fileName);
@@ -48,7 +48,7 @@ public class NoticeBoardEdit implements Command {
 			e.printStackTrace();
 		}
 
-		System.out.println("id: " + vo.getNoticeBoardId());
+		System.out.println("id: " + vo.getNoticeboardId());
 		System.out.println("writer: " + vo.getMemberID());
 		System.out.println("date: " + vo.getNoticeboardDate());
 		System.out.println("title: " + vo.getNoticeboardTitle());
@@ -59,9 +59,9 @@ public class NoticeBoardEdit implements Command {
 		int result = dao.noticeBoardUpdate(vo);
 
 		if (result != 0) {
-			NoticeBoardVO resultVO = dao.NoticeBoardSelect(vo);
+			NoticeBoardVO resultVO = dao.noticeBoardSelect(vo);
 			request.setAttribute("vo", resultVO);
-			viewPage = "notice/noticeSelect"; // 수정 완료시 목록으로 돌아감
+			viewPage = "noticeBoard/noticeBoardSelect"; // 수정 완료시 목록으로 돌아감
 		} else {
 			request.setAttribute("message", "게시글 수정에 실패했습니다.");
 		}
