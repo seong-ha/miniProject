@@ -1,4 +1,4 @@
-package co.community.yedam.notice.board.command;
+package co.community.yedam.noticeBoard.command;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,9 +11,9 @@ import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import co.community.yedam.common.Command;
-import co.community.yedam.noticeBoard.Service.NoticeBoardService;
-import co.community.yedam.noticeBoard.Service.NoticeBoardServiceImpl;
-import co.community.yedam.noticeBoard.Service.NoticeBoardVO;
+import co.community.yedam.noticeBoard.service.NoticeBoardService;
+import co.community.yedam.noticeBoard.service.NoticeBoardServiceImpl;
+import co.community.yedam.noticeBoard.service.NoticeBoardVO;
 
 public class NoticeBoardInsert implements Command {
 	private String saveFolder = "C:\\fileUploadTest"; // 실제 파일을 저장할 공간
@@ -25,7 +25,7 @@ public class NoticeBoardInsert implements Command {
 		// 게시글 등록
 		NoticeBoardService dao = new NoticeBoardServiceImpl();
 		NoticeBoardVO vo = new NoticeBoardVO();
-		String viewPage = "notice/noticeError";
+		String viewPage = "notice/noticeBoardError";
 		String filename = "";
 		String originalFileName = "";
 		try {
@@ -34,10 +34,10 @@ public class NoticeBoardInsert implements Command {
 					new DefaultFileRenamePolicy());
 			filename = multi.getFilesystemName("ufile");// 파일저장
 			originalFileName = multi.getOriginalFileName("ufile");// 실제 파일명
-			vo.setMemberID(Integer.valueOf("noticeWriter"));
-			vo.setNoticeboardDate(Date.valueOf(multi.getParameter("noticeDate")));
-			vo.setNoticeboardTitle(multi.getParameter("noticeTitle"));
-			vo.setNoticeboardSubject(multi.getParameter("noticeSubject"));
+			vo.setMemberID(Integer.valueOf("noticeBoardWriter"));
+			vo.setNoticeboardDate(Date.valueOf(multi.getParameter("noticeBoardDate")));
+			vo.setNoticeboardTitle(multi.getParameter("noticeBoardTitle"));
+			vo.setNoticeboardSubject(multi.getParameter("noticeBoardSubject"));
 			vo.setNoticeboardAttech(originalFileName);
 			vo.setNoticeboardAttechDir(saveFolder + File.separator + filename);
 		} catch (IOException e) {
@@ -46,7 +46,7 @@ public class NoticeBoardInsert implements Command {
 		}
 		int n = dao.noticeBoardInsert(vo);
 		if (n != 0) {
-			viewPage = "noticeSelectList.do";
+			viewPage = "noticeBoardSelectList.do";
 		} else {
 			request.setAttribute("message", "게시물 등록실패");
 		}
