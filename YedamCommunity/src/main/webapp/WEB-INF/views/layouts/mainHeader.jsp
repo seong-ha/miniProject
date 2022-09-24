@@ -99,14 +99,7 @@
 							class="nav-link">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link">프로젝트&스터디</a></li>
-						<li class="nav-item"><a href="about.html" class="nav-link">공지사항</a></li>
-						<li class="nav-item"><a href="community.do" class="nav-link">커뮤니티</a></li>
-						<li class="nav-item"><a href="top-seller.html"
-							class="nav-link">정보</a></li>
-						<li class="nav-item"><a href="book.html" class="nav-link">스터디</a></li>
 						<li class="nav-item"><a href="questionsSelectList.do" class="nav-link">문의사항</a></li>
-						<li class="nav-item"><a href="projectStudy.do" class="nav-link">프로젝트&스터디</a></li>
-						<li class="nav-item"><a href="author.html" class="nav-link">문의사항</a></li>
 					</ul>
 				</div>
 			</div>
