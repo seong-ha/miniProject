@@ -6,13 +6,25 @@
 <head>
 <meta charset="UTF-8">
 <title>자유게시판</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+	crossorigin="anonymous">
 </head>
 <body>
-	<hr><br>
+	<hr>
+	<br>
 	<div align="center">
 		<div>
 			<h1>자유게시판</h1>
 		</div>
+		<div align="right">
+			<input type="text" value="검색어를 입력하세요.">&nbsp;&nbsp;
+			<button type="button" class="btn btn-dark">검색</button>
+			&nbsp;&nbsp;
+		</div>
+		<br>
 		<div>
 			<table class="table">
 				<thead class="table-dark">
@@ -28,11 +40,14 @@
 				</thead>
 				<tbody>
 					<c:forEach items="${freeBoards }" var="m">
-						<tr onMouseover="this.style.backgroundColor='yellow';"
-							onMouseout="this.style.backgroundColor='white';" onclick="#">
+						<tr onMouseover="this.style.backgroundColor='gray';"
+							onMouseout="this.style.backgroundColor='white';"
+							onclick="selectFreeBoard(${m.freeBoardId})">
 							<td>${m.freeBoardId }</td>
-							<td>${m.freeBoardTitle }</td>
-							<td>${m.freeBoardSubject }</td>
+							<td><span class="d-inline-block text-truncate"
+								style="max-width: 150px;"> ${m.freeBoardTitle }</span></td>
+							<td><span class="d-inline-block text-truncate"
+								style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
 							<td>${m.memberId }</td>
 							<td>${m.freeBoardDate }</td>
 							<td>${m.freeBoardHit }</td>
@@ -44,11 +59,32 @@
 		</div>
 		<br>
 		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-			<button class="btn btn-primary me-md-2" type="button" onclick="location.href='freeBoardInsertPage.do'">글쓰기</button>
+			<button class="btn btn-primary me-md-2" type="button"
+				onclick="location.href='freeBoardInsertPage.do'">글쓰기</button>
 			<!-- <button class="btn btn-primary" type="button">돌아가기</button> -->
 		</div>
 		<br>
-		<p>1 2 3 4 5</p>
+		<div id="paging">
+			<c:url var="action" value="" />
+			<p>1 2 3 4 5</p>
+		</div>
+		<div>
+			<form id="fbf" name="fbf" method="post">
+				<input type="hidden" id="freeBoardId" name="freeBoardId">
+			</form>
+		</div>
 	</div>
+	<script type="text/javascript">
+	function selectFreeBoard(id) {
+		document.getElementById("freeBoardId").value = id;
+		fbf.action = "freeBoardSelect.do";
+		fbf.submit();
+	}
+	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous">
+	</script>
 </body>
 </html>

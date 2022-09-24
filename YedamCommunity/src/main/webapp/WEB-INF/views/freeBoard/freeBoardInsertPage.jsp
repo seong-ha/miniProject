@@ -33,7 +33,7 @@
 			onclick="location.href='freeBoardInsert.do'">등록</button>
 		&nbsp;&nbsp;
 		<button class="btn btn-primary" type="button"
-			onclick="freeBoardInsertPage.do'">취소</button>
+			onclick="location.href='freeBoard.do'">취소</button>
 		<br> <br> <br>
 	</div>
 </body>
