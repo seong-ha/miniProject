@@ -25,14 +25,8 @@ import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
-import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
-import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
-import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
-import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
-import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
-
+import co.community.yedam.noticeBoard.command.NoticeBoard;
+import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
@@ -40,10 +34,6 @@ import co.community.yedam.questions.command.QuestionsSearch;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
-
-
-
-import co.community.yedam.projectStudy.command.ProjectStudy;
 
 
 @WebServlet("*.do")
@@ -74,13 +64,13 @@ public class FrontController extends HttpServlet {
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
-		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
-		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
-		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+		map.put("/noticeBoard.do", new NoticeBoard());
+//		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+//		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+//		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+//		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+//		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+//		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
 		map.put("/memberLogout.do", new MemberLogout());
