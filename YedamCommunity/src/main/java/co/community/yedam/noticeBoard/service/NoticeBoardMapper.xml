@@ -2,70 +2,37 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper
 	namespace="co.community.yedam.noticeBoard.service.NoticeBoardMapper">
-
-
-	<select id="noticeBoardSelectList"
-		resultType="co.community.yedam.noticeBoard.service.NoticeBoardVO">
-		SELECT * FROM NOTICEBOARD ORDER BY NOTICEBOARD_ID DESC
-
+	
+	<select id="noticeBoardSelectList" resultType="co.community.yedam.noticeBoard.service.NoticeBoardVO">
+		SELECT * FROM NOTICE_BOARD
 	</select>
-
-	<select id="noticeBoardSelect"
-		resultType="co.community.yedam.noticeBoard.service.NoticeBoardVO">
-		SELECT * FROM NOTICE_BOARD WHERE NOTICE_BOARD_ID =
-		#{noticeBoardId}
+	
+	<select id="noticeBoardSelect">
+		SELECT * FROM NOTICE_BOARD
+		WHERE NOTICE_BOARD_ID = #{vo.noticeBoardId}
 	</select>
-
+	
 	<insert id="noticeBoardInsert">
-		<selectKey keyProperty="noticeBoardId" resultType="int"
-			order="BEFORE">
-			SELECT CASE WHEN MAX(NOTICE_ID) IS NULL THEN 1
-			ELSE
-			MAX(NOTICEBOARD_ID)+1 END AS
-			ID
-			FROM NOTIC_EBOARD
-
-
-
-		</selectKey>
-		INSERT INTO NOTICEBOARD
-		VALUES(#{noticeBoardId},#{noticeBoardWriter},#{noticeBoardTitle},#{noticeBoardSubject},#{noticeBoardDate},#{noticeBoardAttech},#{noticeBoardAttechDir},#{noticeBoardHit})
+		INSERT INTO NOTICE_BOARD
+		VALUES (#{noticeBoardId},#{noticeBoardTitle},#{noticeBoardSubject},
+				#{noticeBoardDate},#{noticeBoardAttech},#{noticeBoardAttechDir},
+				#{noticeBoardHit},#{memberId})
+		
 	</insert>
-
+	
 	<update id="noticeBoardUpdate">
-		UPDATE NOTICEBoard
-		<set>
-			<if test="noticeBoardWriter != null">NOTICEBoard_WRITER=#{noticeBoardWriter},</if>
-			<if test="noticeBoardTitle != null">NOTICEBoard_TITLE=#{noticeBoardTitle},</if>
-			<if test="noticeBoardSubject!= null">NOTICEBoard_SUBJECT=#{noticeBoardSubject},</if>
-			<if test="noticeBoardDate!= null">NOTICEBoard_DATE=#{noticeBoardDate},</if>
-			<if test="noticeBoardAttech!= null">NOTICEBoard_ATTECH=#{noticeBoardAttech},</if>
-			<if test="noticeBoardAttechDir!= null">NOTICEBoard_ATTECH_DIR=#{noticeBoardAttechDir}</if>
-		</set>
-		WHERE NOTICEBOARD_ID =#{noticeBoardId}
+		UPDATE NOTICE_BOARD
+		SET NOTICE_BOARD_TITLE = #{noticeBoardTitle}
+		WHERE NOTICE_BOARD_ID = #{noticeBoardId}
 	</update>
-
+	
 	<delete id="noticeBoardDelete">
-		DELETE FROM NOTICEBOARD WHERE NOTICEBOARD_ID
-		=#{NOTICEBOARDID}
+		DELETE NOTICE_BOARD
+		WHERE NOTICE_BOARD_ID = #{noticeBoardId}
 	</delete>
-
-	<update id="noticeBoardUpdate" parameterType="int">
-		UPDATE
-		NOTICEBOARD
-		SET
-		NOTICE_HIT = NOTICEBoard_HIT + 1 WHERE NOTICEBoard_ID
-		=#{id}
-	</update>
-
-
-	<select id="noticeBoardSelect"
-		resultType="co.community.yedam.noticeBoard.service.NoticeBoardVO">
-		select * from noticeBoard
-		where NOTICE_BOARD_ID=#{noticeBoardID}
+	
+	<select id="isMemberId">
+		SELECT * FROM NOTICE_BOARD
+		WHERE MEMBER_ID = #{memberId}
 	</select>
-
-
-
-
 </mapper>
