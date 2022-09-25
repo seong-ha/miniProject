@@ -47,11 +47,12 @@
 								<div class="btn-group" role="group" aria-label="Basic example">
 									<c:choose>
 										<c:when test="${empty id }">
-											<button type="button" class="btn btn-primary" href="memberLoginForm.do">로그인 & 회원가입</button>
+											<button type="submit" class="btn btn-primary" >로그인 & 회원가입
 										</c:when>
 										<c:otherwise>
-											<button type="button" class="btn btn-primary" href="main.do">로그아웃</button>
-											<button type="button" class="btn btn-primary" href="main.do">마이페이지</button>
+				
+											<button type="button" class="btn btn-primary" onclick="location.href='memberLogout.do'">로그아웃</button>
+											<button type="button" class="btn btn-primary" onclick="location.href='memberMyHome.do'">마이페이지</button>
 										</c:otherwise>
 									</c:choose>
 								</div>
