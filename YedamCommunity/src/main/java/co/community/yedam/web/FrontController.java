@@ -18,7 +18,7 @@ import co.community.yedam.community.command.Community;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
-import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
 import co.community.yedam.member.command.MemberJoin;
@@ -74,7 +74,7 @@ public class FrontController extends HttpServlet {
 //		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
 //		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
-		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
+		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
