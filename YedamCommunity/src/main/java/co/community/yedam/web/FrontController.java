@@ -23,6 +23,8 @@ import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
+import co.community.yedam.member.command.MemberLogout;
+import co.community.yedam.member.command.MemberMyHome;
 import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
 import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
 import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
@@ -40,13 +42,7 @@ import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
 
 
-import co.community.yedam.notice.board.command.NoticeBoardDelete;
-import co.community.yedam.notice.board.command.NoticeBoardEdit;
-import co.community.yedam.notice.board.command.NoticeBoardEditForm;
-import co.community.yedam.notice.board.command.NoticeBoardInsert;
-import co.community.yedam.notice.board.command.NoticeBoardSelect;
-import co.community.yedam.notice.board.command.NoticeBoardSelectList;
-import co.community.yedam.notice.board.command.NoticeBoardWriteForm;
+
 import co.community.yedam.projectStudy.command.ProjectStudy;
 
 
@@ -87,7 +83,8 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
-		
+		map.put("/memberLogout.do", new MemberLogout());
+		map.put("/memberMyHome.do", new MemberMyHome());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
