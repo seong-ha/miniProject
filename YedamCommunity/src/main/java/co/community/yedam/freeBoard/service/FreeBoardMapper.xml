@@ -2,12 +2,11 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="co.community.yedam.freeBoard.service.FreeBoardMapper">
 
-	<select id="freeBoardSelectlist" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
+	<select id="freeBoardSelectList" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
 		ORDER BY FREE_BOARD_ID DESC
 	</select>
 	
-	<!-- 동적 sql예시. id만 들어오면 찾아주고, 둘 다 들어오면 로그인 처리해주는 거 -->
 	<select id="freeBoardSelect" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
 		WHERE FREE_BOARD_ID = #{freeBoardId}

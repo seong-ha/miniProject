@@ -20,6 +20,8 @@ public class FreeBoardInsert implements Command {
 		FreeBoardService dao = new FreeBoardServiceImpl();
 		FreeBoardVO vo = new FreeBoardVO();
 		int n = 0;
+		
+		// 파일 처리.
 		String fileName = "";
 		String originalFileName = "";
 
@@ -31,17 +33,16 @@ public class FreeBoardInsert implements Command {
 		vo.setFreeBoardAttechDir(request.getParameter("freeBoardAttechDir"));
 		vo.setFreeBoardHit(request.getParameter("freeBoardHit"));
 		vo.setFreeBoardLike(Integer.valueOf(request.getParameter("freeBoardLike")));
-		vo.setMemberId(Integer.valueOf(request.getParameter("memberId")));
+		vo.setMemberId(request.getParameter("memberId"));
 
 		n = dao.freeBoardInsert(vo);
 
-		String viewPage = null;
+		String viewPage = "main/freeBoard/freeBoardError";
 
 		if (n != 0) {
 			viewPage = "freeBoardSelectList.do";
 		} else {
 			request.setAttribute("message", "게시글 등록에 실패하였습니다.");
-			viewPage = "main/freeBoard/freeBoardMessage";
 		}
 
 		return viewPage;

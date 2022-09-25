@@ -4,9 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.common.Command;
-import co.community.yedam.freeBoard.service.FreeBoardService;
-import co.community.yedam.freeBoard.service.FreeBoardServiceImpl;
-import co.community.yedam.freeBoard.service.FreeBoardVO;
 
 public class FreeBoardInsertPage implements Command {
 
