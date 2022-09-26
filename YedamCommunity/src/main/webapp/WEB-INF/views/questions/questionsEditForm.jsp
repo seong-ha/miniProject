@@ -20,21 +20,21 @@
                <td width = "100" align="center">${vo.memberId }</td>
                <th width = "100">작성일자</th>
                <td width = "100" align="center">
-               		<input type="date" id="noticeDate" name="noticeDate" value="${vo.noticeDate }">
+               		<input type="date" id="questionsDate" name="questionsDate" value="${vo.questionsDate }">
                </td>
                      
             </tr>
             <tr>
                <th>제목</th>
                <td colspan ="5">
-               		<input type="text" id="noticeTitle" name="noticeTitle" value="${vo.noticeTitle }"> <!-- 디폴트 값: value -->
+               		<input type="text" id="questionsTitle" name="questionsTitle" value="${vo.questionsTitle }"> <!-- 디폴트 값: value -->
                </td>
             </tr>
             <tr>
                <th>내용</th>
                <td colspan ="5">
-               <textarea rows="10" cols="80" id="noticeSubject" name="noticeSubject">
-              		${vo.noticeSubject }
+               <textarea rows="10" cols="80" id="questionsContent" name="questionsContent">
+              		${vo.questionsContent }
                </textarea>
                </td>
             </tr>
@@ -46,8 +46,8 @@
       		<input type="submit" value="수정"> &nbsp;&nbsp;&nbsp;
       		<input type="button" onclick="location.href='questionsSelectList.do'" value="목록">
       </div>
-      </form>
+      
   </div>
-  </div>
+ 
 </body>
 </html>

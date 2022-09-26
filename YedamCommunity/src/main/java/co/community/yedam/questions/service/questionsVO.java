@@ -2,7 +2,8 @@ package co.community.yedam.questions.service;
 
 
 
-import java.util.Date;
+import java.sql.Date;
+
 
 import lombok.Getter;
 import lombok.Setter;
@@ -14,6 +15,7 @@ public class questionsVO {
 	private String questionsTitle;
 	private String questionsContent;
 	private Date questionsDate;
-	private String memberId;
+	private String memberId; //외래키
+	
 	
 }
