@@ -19,6 +19,8 @@ import co.community.yedam.community.command.Community;
 import co.community.yedam.foodInfo.command.InfoFood;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
+import co.community.yedam.freeBoard.command.FreeBoardEdit;
+import co.community.yedam.freeBoard.command.FreeBoardEditForm;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
@@ -31,14 +33,6 @@ import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
 import co.community.yedam.member.command.MemberUpdate;
-import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
-import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
-import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
-import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
-import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
-import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
 import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
@@ -100,6 +94,8 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new InfoFood());
 		map.put("/infoCafe.do", new InfoCafe());
+		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
+		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
