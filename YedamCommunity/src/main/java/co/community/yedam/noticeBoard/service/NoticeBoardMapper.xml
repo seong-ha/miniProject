@@ -12,18 +12,31 @@
 		WHERE NOTICE_BOARD_ID = #{vo.noticeBoardId}
 	</select>
 	
-	<insert id="noticeBoardInsert">
-		INSERT INTO NOTICE_BOARD
-		VALUES (#{noticeBoardId},#{noticeBoardTitle},#{noticeBoardSubject},
-				#{noticeBoardDate},#{noticeBoardAttech},#{noticeBoardAttechDir},
-				#{noticeBoardHit},#{memberId})
-		
-	</insert>
 	
+	<insert id="noticeBoardInsert">
+		<selectKey keyProperty="noticeBoardId" resultType="int"
+			order="BEFORE">
+			SELECT CASE WHEN MAX(NOTICE_BOARD_ID) IS NULL THEN 1
+			ELSE
+			MAX(NOTICE_BOARD_ID)+1 END AS
+			ID
+			FROM NOTICE_BOARD
+		</selectKey>
+		INSERT INTO NOTICE_BOARD(NOTICE_BOARD_ID,NOTICE_BOARD_TITLE,NOTICE_BOARD_SUBJECT,NOTICE_BOARD_DATE,MEMBER_ID)
+		VALUES(#{noticeBoardId},#{noticeBoardTitle},#{noticeBoardSubject},
+		#{noticeBoardDate},#{memberId})
+	</insert>
+
 	<update id="noticeBoardUpdate">
-		UPDATE NOTICE_BOARD
-		SET NOTICE_BOARD_TITLE = #{noticeBoardTitle}
-		WHERE NOTICE_BOARD_ID = #{noticeBoardId}
+		UPDATE NOTICE_Board
+		<set>
+			<if test="noticeBoardTitle != null">NOTICE_Board_TITLE=#{noticeBoardTitle},</if>
+			<if test="noticeBoardSubject!= null">NOTICE_Board_SUBJECT=#{noticeBoardSubject},</if>
+			<if test="noticeBoardDate!= null">NOTICE_Board_DATE=#{noticeBoardDate},</if>
+			<if test="noticeBoardAttech!= null">NOTICE_Board_ATTECH=#{noticeBoardAttech},</if>
+			<if test="noticeBoardAttechDir!= null">NOTICE_Board_ATTECH_DIR=#{noticeBoardAttechDir}</if>
+		</set>
+		WHERE NOTICE_BOARD_ID =#{noticeBoardId}
 	</update>
 	
 	<delete id="noticeBoardDelete">

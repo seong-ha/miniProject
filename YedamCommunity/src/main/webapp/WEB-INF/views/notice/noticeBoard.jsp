@@ -57,7 +57,7 @@ td {
 			<form id="frm" action="noticeSelect.do" method="post">
 				<input type="hidden" id="id" name="id">
 				<c:if test="${not empty id}">
-					<button type="button" onclick="location.href='noticeWriteForm.do'">글쓰기</button>
+					<button type="button" onclick="location.href='noticeBoardWriteForm.do'">글쓰기</button>
 				</c:if>
 			</form>
 		</div>

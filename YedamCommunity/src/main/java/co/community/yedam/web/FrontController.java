@@ -1,7 +1,6 @@
 package co.community.yedam.web;
 
 
-
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -41,6 +40,12 @@ import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
 import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
+import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
+import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
+import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
+import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
+import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
+import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsEditForm;
@@ -49,7 +54,6 @@ import co.community.yedam.questions.command.QuestionsSearchForm;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
-
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -80,12 +84,12 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/noticeBoard.do", new NoticeBoard());
-//		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
-//		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-//		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-//		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-//		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-//		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
@@ -96,10 +100,6 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new InfoFood());
 		map.put("/infoCafe.do", new InfoCafe());
-		
-		
-		
-		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -111,7 +111,7 @@ public class FrontController extends HttpServlet {
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
 
-		// 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
+    // 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
 
