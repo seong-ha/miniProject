@@ -372,9 +372,10 @@
 	</section>
 	<script type="text/javascript">
 	
-	fetch('projectStudyCardAll.do')
-    .then(response => response.text())
-	.then(data => responseResult(data));  // 이 곳에 Call Back함수를 작성하면 됨.
+		// 프로젝트&스터디 페이지 onload시 전체분류 카드 출력
+		fetch('projectStudyCardAll.do')
+	    .then(cards => response.text())
+		.then(data => responseResult(data));  // 이 곳에 Call Back함수를 작성하면 됨.
 	
 		function categorySelect(event) {
 			console.log(event.target.checked);

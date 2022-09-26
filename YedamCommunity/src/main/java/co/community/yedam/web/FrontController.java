@@ -27,6 +27,7 @@ import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
+import co.community.yedam.projectStudy.command.ProjectStudyCardAll;
 import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
@@ -75,6 +76,7 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
+		map.put("/projectStudyCardAll.do", new ProjectStudyCardAll());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
