@@ -63,10 +63,13 @@
 			</table>
 		</div>
 		<br>
-		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-			<button class="btn btn-primary me-md-2" type="button"
-				onclick="location.href='freeBoardInsertPage.do'">글쓰기</button>
-			<!-- <button class="btn btn-primary" type="button">돌아가기</button> -->
+				<div>
+			<form id="frm" action="freeBoardSelect.do" method="post">
+				<input type="hidden" id="id" name="id">
+				<c:if test="${not empty id}">
+					<button type="button" onclick="location.href='freeBoardInsertForm.do'">글쓰기</button>
+				</c:if>
+			</form>
 		</div>
 		<br>
 		<div id="paging">
