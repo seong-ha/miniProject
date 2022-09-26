@@ -10,7 +10,7 @@
 <body>
 	<div align="center">
 	<h2><a href="freeBoard.do">자유게시판</a></h2>
-	<h2><a href="#">질문게시판</a></h2>
+	<h2><a href="questionsSelectList.do">질문게시판</a></h2>
 	</div>
 </body>
 </html>
