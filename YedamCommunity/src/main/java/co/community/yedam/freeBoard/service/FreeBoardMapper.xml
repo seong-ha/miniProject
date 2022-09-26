@@ -25,7 +25,7 @@
 			FROM FREE_BOARD
 		</selectKey>
 		INSERT INTO FREE_BOARD
-		VALUES(#{freeBoardId},#{freeBoardTitle},#{freeBoardSubject},#{freeBoardDate},#{freeBoardAttech},#{freeBoardAttechDir},#{freeBoardHit},#{freeBoardLike},#{memberId })
+		VALUES(#{freeBoardId},#{freeBoardTitle},#{freeBoardSubject},SYSDATE,#{freeBoardAttech},#{freeBoardAttechDir},#{freeBoardHit},#{freeBoardLike},#{memberId })
 	</insert>
 
 	<update id="freeBoardUpdate"
