@@ -24,9 +24,17 @@ public class MemberLogin implements Command {
 		
 		if(vo != null) {
 			//세션처리하고, 세션객체에 아이디,권한,이름 담는 것
-			session.setAttribute("id", vo.getMemberId()); 
-			session.setAttribute("author", vo.getMemberAuthor());
-			session.setAttribute("name", vo.getMemberName());
+			session.setAttribute("memberId", vo.getMemberId()); 
+			session.setAttribute("memberAuthor", vo.getMemberAuthor());
+			session.setAttribute("memberName", vo.getMemberName());
+			session.setAttribute("memberPw", vo.getMemberPw());
+			session.setAttribute("memberBirth", vo.getMemberBirth());
+			session.setAttribute("memberEmail", vo.getMemberEmail());
+			session.setAttribute("memberAddress", vo.getMemberAddress());
+			session.setAttribute("memberTel", vo.getMemberTel());
+			session.setAttribute("memberCreateDate", vo.getMemberCreateDate());
+			session.setAttribute("memberPoint", vo.getMemberPoint());
+			session.setAttribute("memberGender", vo.getMemberGender());
 			request.setAttribute("message", vo.getMemberName() + "님 환영합니다.");
 		}else {
 			//실패메세지 전달
