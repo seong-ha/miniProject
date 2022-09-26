@@ -39,29 +39,37 @@
 					</tr>
 				</thead>
 				<tbody>
-					<c:forEach items="${freeBoards }" var="m">
-						<tr onMouseover="this.style.backgroundColor='gray';"
-							onMouseout="this.style.backgroundColor='white';"
-							onclick="selectFreeBoard(${m.freeBoardId})">
-							<td>${m.freeBoardId }</td>
-							<td><span class="d-inline-block text-truncate"
-								style="max-width: 150px;"> ${m.freeBoardTitle }</span></td>
-							<td><span class="d-inline-block text-truncate"
-								style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
-							<td>${m.memberId }</td>
-							<td>${m.freeBoardDate }</td>
-							<td>${m.freeBoardHit }</td>
-							<td>${m.freeBoardLike }</td>
-						</tr>
-					</c:forEach>
+					<c:if test="${empty freeBoards }">
+						<td colspan="6">게시글이 존재하지 않습니다.</td>
+					</c:if>
+					<c:if test="${not empty freeBoards }">
+						<c:forEach items="${freeBoards }" var="m">
+							<tr onMouseover="this.style.backgroundColor='gray';"
+								onMouseout="this.style.backgroundColor='white';"
+								onclick="selectFreeBoard(${m.freeBoardId})">
+								<td>${m.freeBoardId }</td>
+								<td><span class="d-inline-block text-truncate"
+									style="max-width: 150px;"> ${m.freeBoardTitle }</span></td>
+								<td><span class="d-inline-block text-truncate"
+									style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
+								<td>${m.memberId }</td>
+								<td>${m.freeBoardDate }</td>
+								<td>${m.freeBoardHit }</td>
+								<td>${m.freeBoardLike }</td>
+							</tr>
+						</c:forEach>
+					</c:if>
 				</tbody>
 			</table>
 		</div>
 		<br>
-		<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-			<button class="btn btn-primary me-md-2" type="button"
-				onclick="location.href='freeBoardInsertPage.do'">글쓰기</button>
-			<!-- <button class="btn btn-primary" type="button">돌아가기</button> -->
+				<div>
+			<form id="frm" action="freeBoardSelect.do" method="post">
+				<input type="hidden" id="id" name="id">
+				<c:if test="${not empty id}">
+					<button type="button" onclick="location.href='freeBoardInsertForm.do'">글쓰기</button>
+				</c:if>
+			</form>
 		</div>
 		<br>
 		<div id="paging">

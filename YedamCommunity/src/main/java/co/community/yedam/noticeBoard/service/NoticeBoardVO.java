@@ -2,16 +2,18 @@ package co.community.yedam.noticeBoard.service;
 
 import java.sql.Date;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class NoticeBoardVO {
-	private int noticeboardId;
-	private String noticeboardTitle;
-	private String noticeboardSubject;
-	private Date noticeboardDate;
-	private String noticeboardAttech;
-	private String noticeboardAttechDir;
-	private int noticeboardHit;
-	private int memberID;
+	private int noticeBoardId;
+	private String noticeBoardTitle;
+	private String noticeBoardSubject;
+	private Date noticeBoardDate;
+	private String noticeBoardAttech;
+	private String noticeBoardAttechDir;
+	private int noticeBoardHit;
+	private String memberId;
 }

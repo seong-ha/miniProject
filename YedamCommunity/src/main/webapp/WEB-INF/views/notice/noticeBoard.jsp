@@ -39,13 +39,13 @@ td {
 						<c:forEach items="${list}" var="notice">
 							<tr onMouseover="this.style.backgroundColor='yellow';"
 								onMouseout="this.style.backgroundColor='white';"
-								onclick="selectNotice('${notice.noticeId}')">
-								<td>${notice.noticeId}</td>
-								<td>${notice.noticeTitle}</td>
-								<td>${notice.noticeWriter}</td>
-								<td>${notice.noticeDate}</td>
-								<td>${notice.noticeAttech}</td>
-								<td>${notice.noticeHit}</td>
+								onclick="selectNotice('${notice.noticeBoardId}')">
+								<td>${notice.noticeBoardId}</td>
+								<td>${notice.noticeBoardTitle}</td>
+								<td>${notice.memberId}</td>
+								<td>${notice.noticeBoardDate}</td>
+								<td>${notice.noticeBoardAttech}</td>
+								<td>${notice.noticeBoardHit}</td>
 							</tr>
 						</c:forEach>
 					</c:if>

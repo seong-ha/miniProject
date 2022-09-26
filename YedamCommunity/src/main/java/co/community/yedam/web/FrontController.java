@@ -1,6 +1,7 @@
 package co.community.yedam.web;
 
 
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -13,10 +14,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.Main;
+import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
+import co.community.yedam.foodInfo.command.InfoFood;
 import co.community.yedam.freeBoard.command.FreeBoard;
-import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardDelete;
+import co.community.yedam.freeBoard.command.FreeBoardInsert;
+import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
 import co.community.yedam.member.command.MemberDelete;
@@ -34,18 +39,16 @@ import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
 import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
-
 import co.community.yedam.questions.command.QuestionsDelte;
+import co.community.yedam.noticeBoard.command.NoticeBoard;
+import co.community.yedam.projectStudy.command.ProjectStudy;
+import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
-import co.community.yedam.questions.command.QuestionsSearch;
+import co.community.yedam.questions.command.QuestionsSearchForm;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
-
-
-
-import co.community.yedam.projectStudy.command.ProjectStudy;
 
 
 @WebServlet("*.do")
@@ -69,26 +72,34 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-		map.put("/questionsDelte.do", new QuestionsDelte());
-		map.put("/questionsSearch.do", new QuestionsSearch());
+		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
+		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
 		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
-		map.put("/noticeBoardSelectList.do", new NoticeBoardSelectList());
-		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
-		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+		map.put("/noticeBoard.do", new NoticeBoard());
+//		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+//		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+//		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+//		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+//		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+//		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
-		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
+		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberDelete.do", new MemberDelete());
+		map.put("/freeBoardInsert.do", new FreeBoardInsert());
+		map.put("/freeBoardDelete.do", new FreeBoardDelete());
+		map.put("/infoFood.do", new InfoFood());
+		map.put("/infoCafe.do", new InfoCafe());
+		
+		
+		
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,7 +54,7 @@
          if(str == 'E'){
             frm.action = "questionsEditForm.do"  //수정
          }else{
-            frm.action = "questionsDelte.do"  //삭제
+            frm.action = "questionsDelete.do"  //삭제
          }
          
          frm.submit();
