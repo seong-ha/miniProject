@@ -40,7 +40,7 @@ public class MemberLogin implements Command {
 			//실패메세지 전달
 			request.setAttribute("message", "아이디 또는 패스워드가 틀렸습니다.");
 		}
-		return "main/member/memberMessage";
+		return "main/main/main";
 	}
 
 

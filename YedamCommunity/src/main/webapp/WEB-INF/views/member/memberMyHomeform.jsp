@@ -6,13 +6,17 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <link href="css/memberMyHome.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 	<table>
 		<div>
+			
+			
 			<form id="mtd" method="post">
 				<thead>
 					<tr>
+						
 						<th colspan="5">${member.memberName}님의마이페이지</th>
 
 					</tr>
@@ -22,6 +26,7 @@
 						<td>ID</td>
 						<td colspan="4"><input type="text" id="memberId"
 							name="memberId" value="${member.memberId}" readonly="readonly" /></td>
+						
 
 					</tr>
 					<tr>
@@ -84,13 +89,14 @@
 							<button type="button" onclick="actionForm('memberPwUpdate')">회원
 								비밀번호 변경</button> &nbsp;&nbsp;&nbsp;&nbsp;
 							<button type="button" onclick="actionForm('memberDelete')">회원탈퇴</button>
-
-						</td>
+							</td>
 					</tr>
 				</tbody>
 			</form>
 		</div>
 	</table>
+	
+ 
 
 	<script type="text/javascript">
 		function actionForm(str) {
@@ -101,12 +107,12 @@
 			case 'memberDelete':
 				mtd.action = 'memberDelete.do';
 				break;
-			default:
-				mtd.action = 'memberPwUpdate,do';
+			
 			}
 
 			mtd.submit();
 		}
+		
 	</script>
 </body>
 </html>
