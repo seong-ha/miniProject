@@ -44,7 +44,7 @@
 			</div>
 			<br>
 			<div>
-				<c:if test="${freeBoard.memberId eq id}">
+				<c:if test="${freeBoard.memberId eq memberId}">
 					<button type="button" onclick="subCall('E')">수정</button>
 					&nbsp;&nbsp;
 					<button type="button" onclick="subCall('D')">삭제</button>

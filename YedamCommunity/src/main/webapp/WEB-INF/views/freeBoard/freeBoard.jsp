@@ -49,7 +49,7 @@
 								onclick="selectFreeBoard(${m.freeBoardId})">
 								<td>${m.freeBoardId }</td>
 								<td><span class="d-inline-block text-truncate"
-									style="max-width: 150px;"> ${m.freeBoardTitle }</span></td>
+									style="max-width: 200px;"> ${m.freeBoardTitle }</span></td>
 								<td><span class="d-inline-block text-truncate"
 									style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
 								<td>${m.memberId }</td>
