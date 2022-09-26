@@ -19,21 +19,18 @@
 			<table border="1">
 				<tr>
 					<th width="100">작성자</th>
-					<td>
-						<!-- 로그인한 사용자 이름을 value에 박아서 required 필요 없음. --> <input
-						type="text" id="memberId" name="memberId" value="${id}"
-						readonly="readonly">
-					</td>
+					<td><input type="text" id="memberId" name="memberId"
+						value="${memberId}" readonly="readonly"></td>
 				</tr>
 				<tr>
 					<th>제목</th>
-					<td colspan="3"><input type="text" size="87" id="freeBoardTitle"
-						name="freeBoardTitle" required="required"></td>
+					<td colspan="3"><input type="text" size="87"
+						id="freeBoardTitle" name="freeBoardTitle" required="required"></td>
 				</tr>
 				<tr>
 					<th>내용</th>
 					<td colspan="3"><textArea rows="10" cols="88"
-							id="noticeSufreeBoardSubjectbject" name="freeBoardSubject"></textArea></td>
+							id="freeBoardSubject" name="freeBoardSubject"></textArea></td>
 				</tr>
 				<tr>
 					<th>첨부파일</th>
@@ -46,11 +43,9 @@
 			<div>
 				<input type="submit" value="등록">&nbsp;&nbsp;&nbsp; <input
 					type="reset" value="초기화">&nbsp;&nbsp;&nbsp; <input
-					type="button" value="목록"
-					onclick="location.href='freeBoard.do'">&nbsp;&nbsp;&nbsp;
+					type="button" value="목록" onclick="location.href='freeBoard.do'">&nbsp;&nbsp;&nbsp;
 			</div>
-			<br>
-			<br>
+			<br> <br>
 		</form>
 	</div>
 </body>

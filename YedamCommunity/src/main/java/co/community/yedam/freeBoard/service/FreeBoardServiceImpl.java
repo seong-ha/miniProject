@@ -36,4 +36,9 @@ public class FreeBoardServiceImpl implements FreeBoardService {
 		return map.freeBoardUpdate(vo);
 	}
 
+	@Override
+	public int freeBoardHitUpdate(FreeBoardVO vo) {
+		return map.freeBoardHitUpdate(vo);
+	}
+
 }
