@@ -1,6 +1,7 @@
 package co.community.yedam.web;
 
 
+
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -13,8 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.Main;
+import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
+import co.community.yedam.foodInfo.command.InfoFood;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
@@ -29,10 +32,10 @@ import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
-import co.community.yedam.questions.command.QuestionsDelte;
+import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
-import co.community.yedam.questions.command.QuestionsSearch;
+import co.community.yedam.questions.command.QuestionsSearchForm;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
@@ -59,8 +62,8 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-		map.put("/questionsDelte.do", new QuestionsDelte());
-		map.put("/questionsSearch.do", new QuestionsSearch());
+		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
+		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
 		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
@@ -79,6 +82,12 @@ public class FrontController extends HttpServlet {
 		map.put("/memberMyHome.do", new MemberMyHome());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
+		map.put("/infoFood.do", new InfoFood());
+		map.put("/infoCafe.do", new InfoCafe());
+		
+		
+		
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

@@ -1,7 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
 <html>
@@ -25,6 +25,15 @@
 								class="fa fa-chevron-right"></i></a></span> <span>문의사항 <i
 							class="fa fa-chevron-right"></i></span>
 					</p>
+					<br>
+					<br>
+						<br>
+							<br>
+								<br>
+									<br>
+										<br>
+											<br>
+												<br>
 					<h1 class="mb-0 bread">Q&A</h1>
 				</div>
 			</div>
@@ -38,87 +47,123 @@
 
 
 	<!-- <div align="center"><h1>Q&A</h1></div> -->
-	<div align="center">
+	
+		<br> <br>
 
-		<br> <br> <br>
-		<table>
-			<thead>
-				<tr align="center">
-					<th width="70">NO</th>
-					<th width="250">제목</th>
-					<th width="150">작성자</th>
-					<th width="150">작성일자</th>
+		<div align="center">
+			<table>
+				<thead>
+					<tr align="center">
+						<th width="70">NO</th>
+						<th width="250">제목</th>
+						<th width="150">작성자</th>
+						<th width="150">작성일자</th>
 
-				</tr>
-			</thead>
-
-
-			<tbody>
-				<c:if test="${empty list }">
-					<tr>
-						<td colspan="4">게시글이 존재하지 않습니다.</td>
 					</tr>
-				</c:if>
-				<c:if test="${not empty list }">
-					<c:forEach items="${list }" var="n">
-						<tr onMouseover="this.style.backgroundColor='grey'"
-							onMouseout="this.style.backgroundColor='white'"
-							onclick="selectQuestions('${n.questionsId}')">
-							<td align="center">${n.questionsNum }</td>
-							<td align="center">${n.questionsTitle }</td>
-							<td align="center">${n.questionsContent }</td>
-							<td align="center">${n.questionsWriter }</td>
-							<td align="center">${n.questionsDate }</td>
+				</thead>
 
+
+				<tbody>
+					<c:if test="${empty list }">
+						<tr>
+							<td colspan="4">게시글이 존재하지 않습니다.</td>
 						</tr>
-					</c:forEach>
-				</c:if>
-			</tbody>
+					</c:if>
+					<c:if test="${not empty list }">
+						<c:forEach items="${list }" var="n">
+							<tr onMouseover="this.style.backgroundColor='grey', this.style.color='white'"
+								onMouseout="this.style.backgroundColor='white',this.style.color='black'"
+								onclick="selectQuestions('${n.questionsId}')">
+								<td align="center">${n.questionsId }</td>
+								<td align="center">${n.questionsTitle }</td>
+								<td align="center">${n.memberId }</td>
+								<td align="center">${n.questionsDate }</td>
+								
+								<td><script>
+									document
+											.write(timestamp('${n.questionsDate}'));
+								</script></td>
 
-		</table>
+							</tr>
+						</c:forEach>
+					</c:if>
+				</tbody>
 
-	</div>
-	<br>
-	<div align="center">
+			</table>
+		</div>
+		
+		
+		
+<br><br><br>
+		<div align="center">
+			<form id="searchfrm" method="post">
+				<select id="key" name="key">
+					<option value="0">전체</option>
+					<option value="1">제목</option>
+					<option value="2">작성자</option>
+					<option value="3">내용</option>
+				</select> 
+				<input type="text" id="val" name="val">&nbsp;&nbsp;
+				<input type="button" onclick="searchCall()" value="검색">
+			</form>
+			
+			
+			<br>
+			<c:if test="${not empty id }">
+				<!-- 접근제어 -->
+				<button type="button"
+					onclick="location.href='questionsWriteForm.do'">글쓰기</button>
+			</c:if>
+		</div>
+		
+	
 		<form id="frm" method="post" action="questionsSelect.do">
 			<input type="hidden" id="id" name="id">
-			
-			<div class="container">
-				<div class="row">
-					<form method="post" name="search" action="searchQuestions.do">
-						<table class="pull-right">
-							<tr>
-								<td>
-								<form name="searchList" method="post" acthion="questionsSearchList.do">
-								<select class="form-control" name="keyField">
-										<option value="0">선택</option>
-										<option value="questionsTitle">제목</option>
-										<option value="memberId">작성자</option>
-								</select></td>
-								<td><input type="text" class="form-control"
-									placeholder="검색어 입력" name="keyWord" maxlength="100"></td>
-								<td><button type="submit" class="btn btn-success">검색</button>
-							</form></td></tr>
-
-						</table>
-					</form>
-				<c:if test="${not empty id }">
-					<!-- 접근제어 -->
-					<button type="button"
-						onclick="location.href='questionsWriteForm.do'">글쓰기</button>
-				</c:if>
+			<!--<c:if test="${not empty id }">
+			   접근제어
+				<button type="button"
+					onclick="location.href='questionsWriteForm.do'">글쓰기</button>
+			</c:if>-->
+		</form>
 	
-				
-				</div>
-			</div>
-		
-	</div>
+	
+
+	
 	<br>
 	<br>
 	<script type="text/javascript">
-		function selectQuestions(id) {
+	
+		function questionsSelect(id) {
 			document.getElementById("id").value = id;
 			frm.submit();
+		}
+		
+		function searchCall(){
+			let key = document.getElementById("key").value;
+			let val = document.getElementById("val").value;
+			let payload = 'key='+key+'&val='+val;
+			fetch("AjaxNoticeSearch.do?"+payload)
+				.then(response => response.json())
+				.then(json => htmlViews(json)); //화면에 출력
+		}
+		
+		function htmlViews(datas) {  //json을 html로 변환해서 화면에 뿌림
+			document.querySelector('tbody').remove();  //<tbody> 삭제
+			const container = document.createElement('tbody'); //<tbod>태그 생성
+			container.innerHTML = datas.map(data => createHTMLString(data)).join("");  //Html 변환
+			document.querySelector('table').appendChild(container);  //화면에 추가
+		}
+		
+		function createHTMLString(data){  //html 변환 코드 css, event Listner를 활용하면 깔끔하게 정리됨
+			//if(data.noticeAttech == null) data.noticeAttech = ""; //json 객체에서 null값을 ""로대체
+			let str = "<tr onclick=";
+				str += "questionsSelect('"+ data.questionsId +"')" +">";
+				str += "<td>" + data.questionsId + "</td>";
+				str += "<td>" + data.questionsTitle + "</td>";
+				str += "<td>" + data.memberId + "</td>";
+				str += "<td>" + data.questionsDate + "</td>";
+				
+			return str;
 		}
 	</script>
 
