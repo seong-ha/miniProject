@@ -2,9 +2,11 @@ package co.community.yedam.freeBoard.service;
 
 import java.sql.Date;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class FreeBoardVO {
 	private int freeBoardId;
 	private String freeBoardTitle;
@@ -12,9 +14,9 @@ public class FreeBoardVO {
 	private Date freeBoardDate;
 	private String freeBoardAttech;
 	private String freeBoardAttechDir;
-	private String freeBoardHit;
+	private int freeBoardHit;
 	private int freeBoardLike;
-	private int memberId; // 외래키
+	private String memberId; // 외래키
 
 	/*
 	 * ↓ <Date 타입 import 선택 시> 시분초포함 상세한 날짜정보 -> import java.util.Date 대충 날짜정보 ->

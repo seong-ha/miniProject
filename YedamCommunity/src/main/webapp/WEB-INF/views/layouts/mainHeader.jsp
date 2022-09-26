@@ -39,14 +39,14 @@
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="index.html"><span>YEDAM
+							<a class="navbar-brand" href="main.do"><span>YEDAM
 							</span>Community <small>IT직업전문학교</small></a>
 						</div>
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
 							<form id="frm" action="memberLoginForm.do" method="post">
 								<div class="btn-group" role="group" aria-label="Basic example">
 									<c:choose>
-										<c:when test="${empty id }">
+										<c:when test="${empty memberId }">
 											<button type="submit" class="btn btn-primary" >로그인 & 회원가입
 										</c:when>
 										<c:otherwise>
@@ -92,11 +92,11 @@
 				</button>
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav m-auto">
-						<li class="nav-item active"><a href="index.html"
+						<li class="nav-item active"><a href="main.do"
 							class="nav-link">홈</a></li>
 						<li class="nav-item"><a href="noticeBoard.do" class="nav-link">공지사항</a></li>
 						<li class="nav-item"><a href="community.do" class="nav-link">커뮤니티</a></li>
-						<li class="nav-item"><a href="top-seller.html"
+						<li class="nav-item"><a href="infoFood.do"
 							class="nav-link">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link">프로젝트&스터디</a></li>

@@ -17,10 +17,12 @@ public class QuestionsSelect implements Command {
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		vo.setQuestionsId(Integer.valueOf(request.getParameter("id")));
+		vo = dao.questionsSelect(vo);
+		
 		if(vo != null) {
 			request.setAttribute("vo", vo);
 		}
-		return "questions/questionsSelect";
+		return "main/questions/questionsSelect";
 	}
 
 }

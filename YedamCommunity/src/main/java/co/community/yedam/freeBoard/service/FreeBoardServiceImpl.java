@@ -12,8 +12,8 @@ public class FreeBoardServiceImpl implements FreeBoardService {
 	private FreeBoardMapper map = sqlSession.getMapper(FreeBoardMapper.class);
 
 	@Override
-	public List<FreeBoardVO> freeBoardSelectlist() {
-		return map.freeBoardSelectlist();
+	public List<FreeBoardVO> freeBoardSelectList() {
+		return map.freeBoardSelectList();
 	}
 
 	@Override
@@ -34,6 +34,11 @@ public class FreeBoardServiceImpl implements FreeBoardService {
 	@Override
 	public int freeBoardUpdate(FreeBoardVO vo) {
 		return map.freeBoardUpdate(vo);
+	}
+
+	@Override
+	public int freeBoardHitUpdate(FreeBoardVO vo) {
+		return map.freeBoardHitUpdate(vo);
 	}
 
 }

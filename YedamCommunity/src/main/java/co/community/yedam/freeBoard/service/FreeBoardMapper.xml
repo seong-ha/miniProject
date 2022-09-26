@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="co.community.yedam.freeBoard.service.FreeBoardMapper">
+<mapper
+	namespace="co.community.yedam.freeBoard.service.FreeBoardMapper">
 
-	<select id="freeBoardSelectlist" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
+	<select id="freeBoardSelectList"
+		resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
 		ORDER BY FREE_BOARD_ID DESC
 	</select>
-	
-	<!-- 동적 sql예시. id만 들어오면 찾아주고, 둘 다 들어오면 로그인 처리해주는 거 -->
-	<select id="freeBoardSelect" resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
+
+	<select id="freeBoardSelect"
+		resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
-		WHERE FREE_BOARD_ID = #{freeBoardId}
+		WHERE FREE_BOARD_ID =
+		#{freeBoardId}
 	</select>
-	
-	<insert id="freeBoardInsert" parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
+
+	<insert id="freeBoardInsert"
+		parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
+		<selectKey keyProperty="freeBoardId" resultType="int"
+			order="BEFORE">
+			SELECT CASE WHEN MAX(FREE_BOARD_ID) IS NULL THEN 1 ELSE
+			MAX(FREE_BOARD_ID) + 1 END AS ID
+			FROM FREE_BOARD
+		</selectKey>
 		INSERT INTO FREE_BOARD
-		VALUES (#{freeBoardId}, #{freeBoardTitle}, #{freeBoardSubject}, #{freeBoardSubject}, #{freeBoardDate}, 
-		#{freeBoardAttech}, #{freeBoardAttechDir}, #{freeBoardHit}, #{freeBoardLike}, #{memberId})
+		VALUES(#{freeBoardId},#{freeBoardTitle},#{freeBoardSubject},#{freeBoardDate},#{freeBoardAttech},#{freeBoardAttechDir},#{freeBoardHit},#{freeBoardLike},#{memberId })
 	</insert>
-	
-	<update id="freeBoardUpdate" parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
-		UPDATE FREE_BOARD
-		SET FREE_BOARD_TITLE = #{freeBoardTitle}, 
-			FREE_BOARD_SUBJECT = #{freeBoardSubject}
+
+	<update id="freeBoardUpdate"
+		parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
+	UPDATE FREE_BOARD
+	<set>
+			<if test="freeBoardTitle != null"> FREE_BOARD_TITLE = #{freeBoardTitle},</if>
+			<if test="freeBoardSubject != null"> FREE_BOARD_SUBJECT = #{freeBoardSubject},</if>
+			<if test="freeBoardAttech != null"> FREE_BOARD_ATTECH = #{freeBoardAttech},</if>
+			<if test="freeBoardAttechDir != null"> FREE_BOARD_ATTECH_DIR = #{freeBoardAttechDir}</if>
+		</set>
 		WHERE FREE_BOARD_ID = #{freeBoardId}
+
 	</update>
-	
-	<delete id="freeBoardDelete" parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
-		DELETE FROM FREE_BOARD
-		WHERE FREE_BOARD_ID = #{freeBoardId}
+
+	<delete id="freeBoardDelete"
+		parameterType="co.community.yedam.freeBoard.service.FreeBoardVO">
+		DELETE FROM FREE_BOARD WHERE FREE_BOARD_ID = #{freeBoardId}
 	</delete>
+	
+	<update id="freeBoardHitUpdate" parameterType="int">
+		UPDATE FREE_BOARD SET FREE_BOARD_HIT = NOTICE_HIT + 1 WHERE FREE_BOARD_ID = #{id}
+	</update>
 
 </mapper>
