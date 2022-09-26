@@ -45,7 +45,7 @@
 	<select id="projectStudyFilteredList" resultType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		SELECT * FROM PROJECT_STUDY
 		<where>
-			<if test="projectStudyDistinctType != null">
+			<if test="projectStudyType != null">
 				PROJECT_STUDY_TYPE = #{projectStudyType}
 			</if>
 			<if test="projectStudyLanguage != null">
