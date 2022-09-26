@@ -39,20 +39,30 @@
 				<div class="col-md-8 order-md-last">
 					<div class="row">
 						<div class="col-md-6 text-center">
-							<a class="navbar-brand" href="main.do"><span>YEDAM
-							</span>Community <small>IT직업전문학교</small></a>
+							<a class="navbar-brand" href="main.do"><span>YEDAM </span>Community
+								<small>IT직업전문학교</small></a>
 						</div>
 						<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
 							<form id="frm" action="memberLoginForm.do" method="post">
 								<div class="btn-group" role="group" aria-label="Basic example">
 									<c:choose>
 										<c:when test="${empty memberId }">
-											<button type="submit" class="btn btn-primary" >로그인 & 회원가입
+											<button type="submit" class="btn btn-primary">로그인 &
+												회원가입
 										</c:when>
 										<c:otherwise>
-				
-											<button type="button" class="btn btn-primary" onclick="location.href='memberLogout.do'">로그아웃</button>
-											<button type="button" class="btn btn-primary" onclick="location.href='memberMyHome.do'">마이페이지</button>
+
+											<button type="button" class="btn btn-primary"
+												onclick="location.href='memberLogout.do'">로그아웃</button>
+											<c:if test="${memberAuthor eq 'USER' }">
+												<button type="button" class="btn btn-primary"
+												onclick="location.href='memberMyHome.do'">마이페이지</button>
+											</c:if>
+											<c:if test="${memberAuthor eq 'ADMIN' }">
+												<button type="button" class="btn btn-primary"
+												onclick="location.href='memberSelectList.do'">회원정보조회</button>
+											</c:if>
+						
 										</c:otherwise>
 									</c:choose>
 								</div>
@@ -94,13 +104,14 @@
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item active"><a href="main.do"
 							class="nav-link">홈</a></li>
-						<li class="nav-item"><a href="noticeBoard.do" class="nav-link">공지사항</a></li>
+						<li class="nav-item"><a href="noticeBoard.do"
+							class="nav-link">공지사항</a></li>
 						<li class="nav-item"><a href="community.do" class="nav-link">커뮤니티</a></li>
-						<li class="nav-item"><a href="infoFood.do"
-							class="nav-link">정보</a></li>
+						<li class="nav-item"><a href="infoFood.do" class="nav-link">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link">프로젝트&스터디</a></li>
-						<li class="nav-item"><a href="questionsSelectList.do" class="nav-link">문의사항</a></li>
+						<li class="nav-item"><a href="questionsSelectList.do"
+							class="nav-link">문의사항</a></li>
 					</ul>
 				</div>
 			</div>

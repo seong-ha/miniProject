@@ -31,15 +31,9 @@ import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
+import co.community.yedam.member.command.MemberSelect;
+import co.community.yedam.member.command.MemberSelectList;
 import co.community.yedam.member.command.MemberUpdate;
-import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
-import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
-import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
-import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
-import co.community.yedam.noticeBoard.command.NoticeBoardSelectList;
-import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
-import co.community.yedam.questions.command.QuestionsDelte;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
@@ -96,8 +90,8 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new InfoFood());
 		map.put("/infoCafe.do", new InfoCafe());
-		
-		
+		map.put("/memberSelectList.do", new MemberSelectList());
+		map.put("/memberSelect.do", new MemberSelect());
 		
 		
 	}

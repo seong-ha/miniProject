@@ -9,40 +9,30 @@
 
 </head>
 <div class="login-box">
-  <h2>Login</h2>
-  <form id="frm" action="memberLogin.do" method="post">
-    <div class="user-box">
-      <input type="text" name="memberId" id="memberId" required="required">
-      <label>Username</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="memberPw" id="memberPw" required="required">
-      <label>Password</label>
-    </div>
-    <a>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <input type="submit" value="로그인">
-      로그인
-    </a>
-    <a href="memberJoinForm.do">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      회원가입
-    </a>
-    <a href="main.do">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      홈
-    </a>
-  </form>
+	<h2>Login</h2>
+	<form id="frm" action="memberLogin.do" method="post">
+		<div class="user-box">
+			<input type="text" name="memberId" id="memberId" required="required">
+			<label>Username</label>
+		</div>
+		<div class="user-box">
+			<input type="password" name="memberPw" id="memberPw"
+				required="required"> <label>Password</label>
+		</div>
+		<a> <span></span> <span></span> <span></span> <span></span> 
+		<input type="submit" value="로그인" onclick="loginAlter()" > 로그인
+		</a> <a href="memberJoinForm.do"> <span></span> <span></span> <span></span>
+			<span></span> 회원가입
+		</a> <a href="main.do"> <span></span> <span></span> <span></span> <span></span>
+			홈
+		</a>
+	</form>
 </div>
 
+<script type="text/javascript">
+	function loginAlter() {
+		alert('로그인이 완료되었습니다!')
+	}
+</script>
 
 </html>
