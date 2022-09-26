@@ -46,7 +46,7 @@
 							<form id="frm" action="memberLoginForm.do" method="post">
 								<div class="btn-group" role="group" aria-label="Basic example">
 									<c:choose>
-										<c:when test="${empty id }">
+										<c:when test="${empty memberId }">
 											<button type="submit" class="btn btn-primary" >로그인 & 회원가입
 										</c:when>
 										<c:otherwise>
