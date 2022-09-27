@@ -15,7 +15,7 @@
 					<table border="1">
 						<tr>
 							<th>작성자</th>
-							<td>${vo.noticeBoardWriter}</td>
+							<td>${vo.memberId}</td>
 							<th>작성일자</th>
 							<td><input type="date" id="noticeBoardDate"
 								name="noticeBoardDate" value="${vo.noticeBoardDate}"
@@ -44,10 +44,10 @@
 				</div>
 				<br>
 				<div>
-					<input type="hidden" id="noticeId" name="noticeId"
+					<input type="hidden" id="noticeBoardId" name="noticeBoardId"
 						value="${vo.noticeBoardId}"> <input type="submit"
 						value="수정">&nbsp;&nbsp; <input type="button"
-						onclick="location.href='noticeBoardSelect.do'" value="목록">
+						onclick="location.href='noticeBoard.do'" value="목록">
 				</div>
 			</form>
 		</div>

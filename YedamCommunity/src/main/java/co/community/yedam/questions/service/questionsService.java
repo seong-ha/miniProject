@@ -2,6 +2,8 @@ package co.community.yedam.questions.service;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 
 public interface questionsService {
 	
@@ -12,6 +14,8 @@ public interface questionsService {
 	int questionsInsert(questionsVO vo);
 	int questionsUpdate(questionsVO vo);
 	int questionsDelete(questionsVO vo);
-	List<questionsVO> questionsSearchList();
+	
+	
+	List<questionsVO> questionsSearchList(@Param("key") String key, @Param("val") String val);  //게시글 검색
 	
 }

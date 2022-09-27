@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>공지사항</title>
 <style type="text/css">
 td {
 	text-align: center;
@@ -39,7 +39,7 @@ td {
 						<c:forEach items="${list}" var="notice">
 							<tr onMouseover="this.style.backgroundColor='yellow';"
 								onMouseout="this.style.backgroundColor='white';"
-								onclick="selectNotice('${notice.noticeBoardId}')">
+								onclick="noticeBoard('${notice.noticeBoardId}')">
 								<td>${notice.noticeBoardId}</td>
 								<td>${notice.noticeBoardTitle}</td>
 								<td>${notice.memberId}</td>
@@ -54,18 +54,18 @@ td {
 		</div>
 		<br>
 		<div>
-			<form id="frm" action="noticeSelect.do" method="post">
+			<form id="NoticeBoardfrm" action="noticeBoardSelect.do" method="post">
 				<input type="hidden" id="id" name="id">
-				<c:if test="${not empty id}">
-					<button type="button" onclick="location.href='noticeWriteForm.do'">글쓰기</button>
+				<c:if test="${memberAuthor eq 'ADMIN' }">
+					<button type="button" onclick="location.href='noticeBoardWriteForm.do'">글쓰기</button>
 				</c:if>
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
-		function selectNotice(id) {
+		function noticeBoard(id) {
 			document.getElementById("id").value = id
-			frm.submit();
+			NoticeBoardfrm.submit();
 		}
 	</script>
 </body>

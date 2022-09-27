@@ -17,21 +17,22 @@
 	<br>
 	
 	<div>
-		<form id="frm" action="questionsInsert.do" method="post" enctype="multipart/form-data"> <!-- 이진 바이너리도 있다는 걸 알려줌 -->
+		<form id="frm" action="questionsInsert.do" method="post" > <!-- 이진 바이너리도 있다는 걸 알려줌 -->
 			<div align="center">
 				<table border="1">
 					<tr>
 						<th width="150">작성자</th>
 						<td width="200">
-							<input type="text" id="memberId" name="memberId" value="${memberId }" readonly="readonly">
+							<input type="text" id="memberId" name="memberId" value="${id }" readonly="readonly">
 						</td>
-					</tr>
-	
+					
+				
 					<tr>
 						<th width="150">제목</th>
 						<td colspan="3">
 							<input type="text" id="questionsTitle" name="questionsTitle" required="required">
 						</td>
+						
 					</tr>
 					<tr>
 						<th>내용</th>
@@ -48,7 +49,7 @@
 			<div align="center">
 				<input type="submit" value="등록">&nbsp;&nbsp;&nbsp;
 				<input type="reset" value="취소" onclick="location.href='questionsSelectList.do'">&nbsp;&nbsp;&nbsp;
-				<input type="button" value="목록" onclick="location.href='questionsSelectList.do'">
+				
 			</div>
 			
 		

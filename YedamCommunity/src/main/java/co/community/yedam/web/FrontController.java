@@ -1,6 +1,5 @@
 package co.community.yedam.web;
 
-
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -12,20 +11,35 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import co.community.yedam.Main;
+import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
+import co.community.yedam.foodInfo.command.FoodInfoInsert;
+import co.community.yedam.foodInfo.command.FoodInfoSelectList;
+import co.community.yedam.foodInfo.command.FoodInfoWriteForm;
+import co.community.yedam.foodInfo.command.foodInfo;
+import co.community.yedam.foodInfo.command.foodInfoSelect;
 import co.community.yedam.freeBoard.command.FreeBoard;
-import co.community.yedam.freeBoard.command.FreeBoardInsertPage;
+import co.community.yedam.freeBoard.command.FreeBoardDelete;
+import co.community.yedam.freeBoard.command.FreeBoardEdit;
+import co.community.yedam.freeBoard.command.FreeBoardEditForm;
+import co.community.yedam.freeBoard.command.FreeBoardInsert;
+import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
+import co.community.yedam.freeBoard.command.FreeBoardSearchForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
+import co.community.yedam.freeBoard.command.FreeBoardUpdateLike;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberDelete;
 import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
+import co.community.yedam.member.command.MemberSelect;
+import co.community.yedam.member.command.MemberSelectList;
+import co.community.yedam.member.command.MemberUpdate;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.projectStudy.command.ProjectCard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
@@ -33,14 +47,20 @@ import co.community.yedam.projectStudy.command.ProjectStudyCard;
 import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
 import co.community.yedam.projectStudy.command.StudyCard;
 import co.community.yedam.projectStudy.service.ProjectStudyVO;
-import co.community.yedam.questions.command.QuestionsDelte;
+import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
+import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
+import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
+import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
+import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
+import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
+import co.community.yedam.questions.command.AjaxQuestionsSearch;
+import co.community.yedam.questions.command.QuestionsDelete;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
-import co.community.yedam.questions.command.QuestionsSearch;
+import co.community.yedam.questions.command.QuestionsSearchForm;
 import co.community.yedam.questions.command.QuestionsSelect;
 import co.community.yedam.questions.command.QuestionsSelectList;
 import co.community.yedam.questions.command.QuestionsWriteForm;
-
 
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
@@ -66,26 +86,43 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsDelte.do", new QuestionsDelte());
 		map.put("/questionsSearch.do", new QuestionsSearch());
 		map.put("/projectStudy.do", new ProjectStudy()); // 프로젝트스터디 메인페이지
+		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
+		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/noticeBoard.do", new NoticeBoard());
-//		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
-//		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-//		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-//		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-//		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-//		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
-		map.put("/freeBoardInsertPage.do", new FreeBoardInsertPage());
+		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
 		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
 		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
 		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
 		map.put("/projectStudyWriteFrom.do", new ProjectStudyWriteFrom()); // 프로젝트스터디 새글쓰기 form으로
-		
+		map.put("/memberUpdate.do", new MemberUpdate());
+		map.put("/memberDelete.do", new MemberDelete());
+		map.put("/freeBoardInsert.do", new FreeBoardInsert());
+		map.put("/freeBoardDelete.do", new FreeBoardDelete());
+		map.put("/infoFood.do", new foodInfo());
+		map.put("/infoCafe.do", new InfoCafe());
+		map.put("/foodInfoWriteForm.do", new FoodInfoWriteForm());
+		map.put("/foodInfoSelectList.do", new FoodInfoSelectList());
+		map.put("/foodInfoInsert.do", new FoodInfoInsert());
+		map.put("/foodInfoSelect.do", new foodInfoSelect());
+		map.put("/memberSelectList.do", new MemberSelectList());
+		map.put("/memberSelect.do", new MemberSelect());
+		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
+		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
+		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm()); // 자유게시판 검색 기능.
+		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -96,11 +133,11 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
-
+System.out.println(page);
 		// 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
+    // 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
-
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)
 		if (!viewPage.endsWith(".do")) {
 

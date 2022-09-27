@@ -17,7 +17,7 @@ public class FreeBoard implements Command {
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		FreeBoardService dao = new FreeBoardServiceImpl();
 		List<FreeBoardVO> list = new ArrayList<FreeBoardVO>();
-		list = dao.freeBoardSelectlist();
+		list = dao.freeBoardSelectList();
 		request.setAttribute("freeBoards", list);
 		
 		return "main/freeBoard/freeBoard";

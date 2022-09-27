@@ -8,7 +8,7 @@ import co.community.yedam.common.DataSource;
 
 public class questionsServiceImpl implements questionsService {
 	private SqlSession sqlSession = DataSource.getSession().openSession(true);
-	   questionsMapper map = sqlSession.getMapper(questionsMapper.class);
+	private questionsMapper map = sqlSession.getMapper(questionsMapper.class);
 
 	@Override
 	public List<questionsVO> questionsSelectList() {
@@ -16,11 +16,6 @@ public class questionsServiceImpl implements questionsService {
 		return map.questionsSelectList();
 	}
 	
-	@Override
-	public List<questionsVO> questionsSearchList() {
-		// 
-		return map.questionsSearchList();
-	}
 
 	@Override
 	public questionsVO questionsSelect(questionsVO vo) {
@@ -44,6 +39,11 @@ public class questionsServiceImpl implements questionsService {
 	public int questionsDelete(questionsVO vo) {
 		// TODO Auto-generated method stub
 		return map.questionsDelete(vo);
+	}
+	
+	@Override
+	public List<questionsVO> questionsSearchList(String key, String val) {
+		return map.questionsSearchList(key, val);
 	}
 
 }

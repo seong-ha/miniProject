@@ -1,9 +1,6 @@
 package co.community.yedam.questions.command;
 
 
-
-import java.sql.Date;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,15 +14,32 @@ public class QuestionsInsert implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		
-		String viewPage = "questions/questionsError";
+		String viewPage = "main/questions/questionsError";
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		
-		vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId")));
+		
+//		System.out.println("안녕");
+//		System.out.println(Integer.parseInt("questionsId"));
+		
+//		if("questionsId" == null || "questionsId".trim().equals("")) {
+//			 questionsId=0;
+//		}
+		
+		// vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId"));
 		vo.setQuestionsTitle(request.getParameter("questionsTitle"));
 		vo.setQuestionsContent(request.getParameter("questionsContent"));
-		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
+		//vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
 		vo.setMemberId(request.getParameter("memberId"));
+		
+		
+//		System.out.println("title="+vo.getQuestionsTitle());
+//		System.out.println("content="+vo.getQuestionsContent());
+//		System.out.println("date="+vo.getQuestionsDate());
+//		System.out.println("memberid="+vo.getMemberId());
+		
+		
+		
 		
 		int n = dao.questionsInsert(vo);
 		if(n != 0) {
@@ -37,3 +51,4 @@ public class QuestionsInsert implements Command {
 	}
 
 }
+
