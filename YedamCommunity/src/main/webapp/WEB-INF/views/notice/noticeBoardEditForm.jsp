@@ -15,7 +15,7 @@
 					<table border="1">
 						<tr>
 							<th>작성자</th>
-							<td>${vo.noticeBoardWriter}</td>
+							<td>${vo.memberId}</td>
 							<th>작성일자</th>
 							<td><input type="date" id="noticeBoardDate"
 								name="noticeBoardDate" value="${vo.noticeBoardDate}"
