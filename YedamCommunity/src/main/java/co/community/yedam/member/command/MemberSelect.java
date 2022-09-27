@@ -16,9 +16,9 @@ public class MemberSelect implements Command {
 		MemberService dao = new MemberServiceImpl();
 		MemberVO vo = new MemberVO();
 		// session에 값이 담겨 있기 때문에 session 자체를 불러와서 vo 객체에 담아주는 것
-		HttpSession ss = request.getSession();
-		vo.setMemberId(ss.getAttribute("memberId").toString()); // 폼에서 넘어온 아이디를 담고
-//		vo.setMemberId(request.getParameter("memberId")); // 폼에서 넘어온 아이디를 담고
+//		HttpSession ss = request.getSession();
+//		vo.setMemberId(ss.getAttribute("memberId").toString()); // 폼에서 넘어온 아이디를 담고
+		vo.setMemberId(request.getParameter("memberId")); // 폼에서 넘어온 아이디를 담고
 		vo = dao.memberSelect(vo); // 검색결과 얻기
 //		System.out.println(vo);
 		request.setAttribute("member", vo); //페이지에 전달하기 위해
