@@ -45,8 +45,8 @@ public class ProjectStudyCard implements Command {
 		 * obj.addProperty("projectStudyType", vo.getProjectStudyType());
 		 * obj.addProperty("projectStudyonoffline", vo.getProjectStudyonoffline());
 		 * obj.addProperty("projectStudyPersonNum", vo.getProjectStudyPersonNum());
-		 * obj.addProperty("projectStudyStart", vo.getProjectStudyStart().toString());
-		 * obj.addProperty("projectStudyTel", vo.getProjectStudyTel());
+		 * obj.addProperty("projectStudyStart", vo.getProjectStudyStartDate().toString());
+		 * obj.addProperty("projectStudyTel", vo.getProjectStudyContact());
 		 * obj.addProperty("projectStudyPeriod", vo.getProjectStudyPeriod());
 		 * obj.addProperty("projectStudyLanguage", vo.getProjectStudyLanguage());
 		 * obj.addProperty("projectStudyHit", vo.getProjectStudyHit());
