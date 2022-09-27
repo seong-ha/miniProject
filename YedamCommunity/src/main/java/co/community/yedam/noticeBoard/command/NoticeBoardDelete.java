@@ -22,11 +22,11 @@ public class NoticeBoardDelete implements Command {
 		int no = dao.noticeBoardDelete(vo);
 		if (no != 0) {
 			request.setAttribute("vo", vo);
-			viewPage = "noticeBoardSelet.do";
+			viewPage = "noticeBoard.do";
 		} else {
 			request.setAttribute("message", "게시글 삭제를 실패하였습니다");
 		}
-		return null;
+		return viewPage;
 	}
 
 }

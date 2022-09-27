@@ -219,9 +219,9 @@
 			<div class="row justify-content-center mb-5 pb-2 d-flex">
 				<div class="col-md-6 align-items-stStudy.jpgretch d-flex">
 					<div class="img img-video d-flex align-items-center"
-						style="background-image: url(css1/images/about-2.jpg);">
+						style="background-image: url(css1/images/GG3.jpg);">
 						<div class="video justify-content-center">
-							<a href="https://vimeo.com/45830194"
+							<a href="https://www.youtube.com/watch?v=bw4uC-P84CQ"
 								class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 								<span class="ion-ios-play"></span>
 							</a>
@@ -619,8 +619,7 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
-									<p>전 세계에서 압도적 1위를 차지하는 검색 엔진이며, 2018년부로 20주년을 맞는 다국적 기업이자
-										역사상 가장 큰 인터넷 기업 중 하나로[4] 마이크로소프트, 아마존닷컴, Apple과 함께 MAGA의 일원이다.</p>
+									<p>“재능을 찾기보다는 무엇에 열정이 있는지 찾는 게 중요하다. 내 마음이 무엇을 원하는지, 그 열정을 찾아야 한다."</p>
 									<p class="name">Sundar Pichai</p>
 									<span class="position">Google</span>
 								</div>

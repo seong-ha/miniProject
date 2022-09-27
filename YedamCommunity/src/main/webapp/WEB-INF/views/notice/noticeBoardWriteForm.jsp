@@ -35,11 +35,7 @@
 						<td colspan="3"><textArea rows="10" cols="88"
 								id="noticeBoardSubject" name="noticeBoardSubject"></textArea></td>
 					</tr>
-					<tr>
-						<th>Ã·ºÎÆÄÀÏ</th>
-						<td colspan="3"><input type="file" id="ufile" name="ufile">
-						</td>
-					</tr>
+					
 				</table>
 			</div>
 			<br>

@@ -40,4 +40,10 @@ public class NoticeBoardServiceImpl implements NoticeBoardService {
 		return map.isMemberId(id);
 	}
 
+	@Override
+	public int noticeBoardHitUpdate(int id) {
+		// TODO Auto-generated method stub
+		return map.noticeBoardHitUpdate(id);
+	}
+
 }

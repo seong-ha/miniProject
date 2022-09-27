@@ -14,4 +14,6 @@ public interface NoticeBoardService {
 	int noticeBoardDelete(NoticeBoardVO vo); // 데이터 삭제
 
 	boolean isMemberId(String id);
+
+	int noticeBoardHitUpdate(int id);
 }
