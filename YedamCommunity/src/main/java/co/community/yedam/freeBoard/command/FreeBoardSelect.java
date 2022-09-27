@@ -19,6 +19,12 @@ public class FreeBoardSelect implements Command {
 		vo = dao.freeBoardSelect(vo);
 		request.setAttribute("freeBoard", vo);
 		
+		FreeBoardVO resultVO = dao.freeBoardSelect(vo);
+		if (resultVO != null) {
+			dao.freeBoardHitUpdate((resultVO.getFreeBoardId()));
+			request.setAttribute("vo", resultVO);
+		}
+		
 		return "main/freeBoard/freeBoardSelect";
 	}
 
