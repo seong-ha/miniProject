@@ -2,6 +2,7 @@ package co.community.yedam.web;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -40,13 +41,18 @@ import co.community.yedam.member.command.MemberSelect;
 import co.community.yedam.member.command.MemberSelectList;
 import co.community.yedam.member.command.MemberUpdate;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
+import co.community.yedam.projectStudy.command.ProjectCard;
+import co.community.yedam.projectStudy.command.ProjectStudy;
+import co.community.yedam.projectStudy.command.ProjectStudyCard;
+import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
+import co.community.yedam.projectStudy.command.StudyCard;
+import co.community.yedam.projectStudy.service.ProjectStudyVO;
 import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
 import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
 import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
 import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
 import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
-import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsDelete;
 import co.community.yedam.questions.command.QuestionsEditForm;
@@ -61,7 +67,7 @@ public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// 실제 요청페이지와, 그에 대해 할당할 커멘드를 담아두는 저장소
 	private HashMap<String, Command> map = new HashMap<String, Command>();
-
+	public static List<ProjectStudyVO> list = null;
 	public FrontController() {
 		super();
 	}
@@ -77,10 +83,11 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-		map.put("/questionsDelete.do", new QuestionsDelete());
+		map.put("/questionsDelte.do", new QuestionsDelte());
+		map.put("/questionsSearch.do", new QuestionsSearch());
+		map.put("/projectStudy.do", new ProjectStudy()); // 프로젝트스터디 메인페이지
 		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
 		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
-		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
@@ -96,6 +103,10 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
+		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
+		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
+		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
+		map.put("/projectStudyWriteFrom.do", new ProjectStudyWriteFrom()); // 프로젝트스터디 새글쓰기 form으로
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberDelete.do", new MemberDelete());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
