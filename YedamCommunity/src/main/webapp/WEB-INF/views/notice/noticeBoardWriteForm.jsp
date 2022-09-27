@@ -18,7 +18,7 @@
 						<th width="100">작성자</th>
 						<td>
 							<!-- 로그인한 사용자 이름을 value에 박아서 required 필요 없음. --> <input
-							type="text" id="memberId" name="memberId" value="${id}"
+							type="text" id="memberId" name="memberId" value="${memberId}"
 							readonly="readonly">
 						</td>
 						<th width="150">작성일자</th>
@@ -47,7 +47,7 @@
 				<input type="submit" value="등록">&nbsp;&nbsp;&nbsp; <input
 					type="reset" value="취소">&nbsp;&nbsp;&nbsp; <input
 					type="button" value="목록"
-					onclick="location.href='noticeBoardInsert.do'">&nbsp;&nbsp;&nbsp;
+					onclick="location.href='noticeBoard.do'">&nbsp;&nbsp;&nbsp;
 			</div>
 		</form>
 	</div>
