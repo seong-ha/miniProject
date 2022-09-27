@@ -61,11 +61,14 @@
 		</div>
 		<br>
 		<div>
-
 			<form
 				class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-				<div class="dataTable-search">
-					<input class="dataTable-input" placeholder="Search..." type="text">
+				<div class="input-group">
+					<input class="form-control" type="text" placeholder="Search for..."
+						aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+					<button class="btn btn-black" id="btnNavbarSearch" type="button">
+						<i class="fas fa-search"></i>
+					</button>
 				</div>
 			</form>
 			&nbsp;&nbsp;
@@ -83,14 +86,17 @@
 			<br>
 		</div>
 
-		<br>
 		<div>
 
 			<div>
-				<ul id="pagingul">
-					<li><a href="freeBoard.do">1</a>&nbsp;<a href="freeBoard.do">2</a>&nbsp;<a
-						href="freeBoard.do">3</a>&nbsp;<a href="freeBoard.do">4</a>&nbsp;<a
-						href="freeBoard.do">5</a></li>
+				<ul>
+					<li>
+						<a href="freeBoard.do">1</a>&nbsp;
+						<a href="freeBoard.do">2</a>&nbsp;
+						<a href="freeBoard.do">3</a>&nbsp;
+						<a href="freeBoard.do">4</a>&nbsp;
+						<a href="freeBoard.do">5</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -116,10 +122,10 @@
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		crossorigin="anonymous"></script>
-	<script src="css/scripts.js"></script>
+	<script src="js/scripts.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
 		crossorigin="anonymous"></script>
-	<script src="css/datatables-simple-demo.js"></script>
+	<script src="js/datatables-simple-demo.js"></script>
 
 </body>
 </html>

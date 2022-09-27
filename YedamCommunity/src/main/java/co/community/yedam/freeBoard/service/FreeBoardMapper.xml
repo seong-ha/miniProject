@@ -53,14 +53,20 @@
 		SET FREE_BOARD_HIT = FREE_BOARD_HIT + 1 WHERE FREE_BOARD_ID = #{id}
 	</update>
 
+	<update id="freeBoardLikeUpdate" parameterType="int">
+		UPDATE FREE_BOARD
+		SET FREE_BOARD_Like = FREE_BOARD_Like + 1 WHERE FREE_BOARD_ID = #{id}
+	</update>
+
 	<select id="freeBoardCount" resultType="int">
 		SELECT COUNT(*) FROM
 		FREE_BOARD
 	</select>
-	
-		<select id="freeBoardSearchList" resultType="co.community.yedam.questions.service.questionsVO">
+
+	<select id="freeBoardSearchList"
+		resultType="co.community.yedam.questions.service.questionsVO">
 		SELECT * FROM FREE_BOARD
-		WHERE 
+		WHERE
 		<if test="key == 0">1 = 1</if>
 		<if test="key == 1"> FREE_BOARD_TITLE LIKE '%'|| #{val} ||'%'</if>
 		<if test="key == 2"> FREE_BOARD_MEMBER_ID LIKE '%'|| #{val} ||'%'</if>
