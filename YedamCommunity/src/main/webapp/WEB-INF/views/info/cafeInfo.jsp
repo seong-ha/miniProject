@@ -27,6 +27,7 @@
 	<!-- main contents : 카드 형식-->
 	<h2>오늘은 어디서 공부하지?</h2>
 	<br>
+	<br>
 	<div class="container">
 		<div class="main-content">
 			<article class="component">

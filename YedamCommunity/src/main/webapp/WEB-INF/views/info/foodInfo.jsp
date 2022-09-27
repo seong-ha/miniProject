@@ -23,21 +23,41 @@
 		</nav>
 	</header>
 	<br>
+	<br>
 	<!-- main contents : 카드 형식-->
 	<h2>오늘은 뭐 먹지?</h2>
 	<br>
+	<br>
+	<div align="right">
+				<!-- 접근제어 -->
+			<!--<c:if test="${vo.memberAuthor eq 'ADMIN'}">-->
+				<button type="button"
+					onclick="location.href='foodInfoWriteForm.do'">글쓰기</button>
+			<!--</c:if>-->
+	</div>
+	<br>
+	
+	<c:if test="${not empty list }">
+		<c:forEach items="${list }" var="n">
 	<div class="container">
 		<div class="main-content">
 			<article class="component">
 				<img src="" alt="">
 				<div class="description">
-					<h3>스시센</h3>
-					<p>#점심특선 #가성비 #일식</p>
+					<h3>${n.infoName}</h3>
+					<p>${n.infoTag }</p>
 					<p class="here">세부내용</p>
-					<a href="food1.do" class="button">더보기</a>
+					<a href="foodInfoSelect.do" class="button">더보기</a>
 				</div>
 			</article>
-			<article class="component">
+			
+			</div>
+			</div>
+			</c:forEach>
+			</c:if>
+			
+			
+			<!--  <article class="component">
 				<img src="" alt="">
 				<div class="description">
 					<h3>신라식당</h3>
@@ -110,13 +130,16 @@
 				</div>
 			</article>
 
-
-				
 		</div>
+		
 		<br>
 		<br>
+		
+		<br>
+		<br>
+		
 
-	</div>
+	</div>-->
 
 
 </body>
