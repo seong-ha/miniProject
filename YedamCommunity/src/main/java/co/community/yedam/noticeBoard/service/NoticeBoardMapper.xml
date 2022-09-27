@@ -7,9 +7,9 @@
 		SELECT * FROM NOTICE_BOARD
 	</select>
 	
-	<select id="noticeBoardSelect">
+	<select id="noticeBoardSelect" resultType="co.community.yedam.noticeBoard.service.NoticeBoardVO">
 		SELECT * FROM NOTICE_BOARD
-		WHERE NOTICE_BOARD_ID = #{vo.noticeBoardId}
+		WHERE NOTICE_BOARD_ID = #{noticeBoardId}
 	</select>
 	
 	
