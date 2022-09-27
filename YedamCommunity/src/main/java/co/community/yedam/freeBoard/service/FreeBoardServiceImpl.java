@@ -51,4 +51,9 @@ public class FreeBoardServiceImpl implements FreeBoardService {
 		return map.freeBoardSearchList(key, val);
 	}
 
+	@Override
+	public int freeBoardLikeUpdate(int id) {
+		return map.freeBoardLikeUpdate(id);
+	}
+
 }

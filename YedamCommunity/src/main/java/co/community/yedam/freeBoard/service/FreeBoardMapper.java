@@ -12,6 +12,7 @@ public interface FreeBoardMapper {
 	int freeBoardUpdate(FreeBoardVO vo);
 	int freeBoardHitUpdate(int id);
 	int freeBoardCount();
+	int freeBoardLikeUpdate(int id);
 	
 	List<FreeBoardVO> freeBoardSearchList(@Param("key") String key, @Param("val") String val);  //게시글 검색
 }

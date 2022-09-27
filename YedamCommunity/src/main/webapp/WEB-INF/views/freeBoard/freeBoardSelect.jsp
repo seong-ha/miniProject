@@ -44,13 +44,17 @@
 			</div>
 			<br>
 			<div>
+				<img alt="" src="images/추천.png" width="4%" height="4%" onclick="updateLike()">
+			</div>
+			<br><br>
+			<div>
 				<c:if test="${freeBoard.memberId eq memberId}">
-					<button type="button" onclick="subCall('E')">수정</button>
+					<button type="button" onclick="subCall('E')" class="btn btn-dark">수정</button>
 					&nbsp;&nbsp;
-					<button type="button" onclick="subCall('D')">삭제</button>
+					<button type="button" onclick="subCall('D')" class="btn btn-dark">삭제</button>
 				</c:if>
 				&nbsp;&nbsp;
-				<button type="button" onclick="location.href='freeBoard.do'">목록</button>
+				<button type="button" onclick="location.href='freeBoard.do'" class="btn btn-dark">목록</button>
 			</div>
 			<br>
 			<div>
@@ -70,6 +74,12 @@
 			}
 			fbs.submit();
 		}
+		
+		function updateLike() {
+			fbs.action = "freeBoardUpdateLike.do"; // 좋아요 증가.
+			fbs.submit();
+		}
+		
 	</script>
 </body>
 </html>
