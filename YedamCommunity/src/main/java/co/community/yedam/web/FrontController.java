@@ -10,7 +10,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 import co.community.yedam.Main;
 import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
@@ -22,17 +21,29 @@ import co.community.yedam.foodInfo.command.foodInfo;
 import co.community.yedam.foodInfo.command.foodInfoSelect;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
+import co.community.yedam.freeBoard.command.FreeBoardEdit;
+import co.community.yedam.freeBoard.command.FreeBoardEditForm;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
+import co.community.yedam.member.command.MemberDelete;
 import co.community.yedam.member.command.MemberJoin;
 import co.community.yedam.member.command.MemberJoinForm;
 import co.community.yedam.member.command.MemberLogin;
 import co.community.yedam.member.command.MemberLoginForm;
 import co.community.yedam.member.command.MemberLogout;
 import co.community.yedam.member.command.MemberMyHome;
+import co.community.yedam.member.command.MemberSelect;
+import co.community.yedam.member.command.MemberSelectList;
+import co.community.yedam.member.command.MemberUpdate;
 import co.community.yedam.noticeBoard.command.NoticeBoard;
+import co.community.yedam.noticeBoard.command.NoticeBoardDelete;
+import co.community.yedam.noticeBoard.command.NoticeBoardEdit;
+import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
+import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
+import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
+import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsDelete;
@@ -73,16 +84,18 @@ public class FrontController extends HttpServlet {
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
 		map.put("/community.do", new Community());
 		map.put("/noticeBoard.do", new NoticeBoard());
-//		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
-//		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-//		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-//		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-//		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-//		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
+		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
+		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
+		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
+		map.put("/memberUpdate.do", new MemberUpdate());
+		map.put("/memberDelete.do", new MemberDelete());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new foodInfo());
@@ -91,11 +104,10 @@ public class FrontController extends HttpServlet {
 		map.put("/foodInfoSelectList.do", new FoodInfoSelectList());
 		map.put("/foodInfoInsert.do", new FoodInfoInsert());
 		map.put("/foodInfoSelect.do", new foodInfoSelect());
-
-		
-		
-		
-		
+		map.put("/memberSelectList.do", new MemberSelectList());
+		map.put("/memberSelect.do", new MemberSelect());
+		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
+		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -108,6 +120,7 @@ public class FrontController extends HttpServlet {
 		String page = uri.substring(contextPath.length());
 System.out.println(page);
 		// 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
+    // 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)

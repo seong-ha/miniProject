@@ -44,10 +44,10 @@
 				</div>
 				<br>
 				<div>
-					<input type="hidden" id="noticeId" name="noticeId"
+					<input type="hidden" id="noticeBoardId" name="noticeBoardId"
 						value="${vo.noticeBoardId}"> <input type="submit"
 						value="수정">&nbsp;&nbsp; <input type="button"
-						onclick="location.href='noticeBoardSelect.do'" value="목록">
+						onclick="location.href='noticeBoard.do'" value="목록">
 				</div>
 			</form>
 		</div>

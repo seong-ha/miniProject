@@ -19,11 +19,6 @@
 		<div>
 			<h1>자유게시판</h1>
 		</div>
-		<div align="right">
-			<input type="text" value="검색어를 입력하세요.">&nbsp;&nbsp;
-			<button type="button" class="btn btn-dark">검색</button>
-			&nbsp;&nbsp;
-		</div>
 		<br>
 		<div>
 			<table class="table">
@@ -49,7 +44,7 @@
 								onclick="selectFreeBoard(${m.freeBoardId})">
 								<td>${m.freeBoardId }</td>
 								<td><span class="d-inline-block text-truncate"
-									style="max-width: 150px;"> ${m.freeBoardTitle }</span></td>
+									style="max-width: 200px;"> ${m.freeBoardTitle }</span></td>
 								<td><span class="d-inline-block text-truncate"
 									style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
 								<td>${m.memberId }</td>
@@ -63,13 +58,26 @@
 			</table>
 		</div>
 		<br>
-				<div>
+		<div>
 			<form id="frm" action="freeBoardSelect.do" method="post">
 				<input type="hidden" id="id" name="id">
-				<c:if test="${not empty id}">
-					<button type="button" onclick="location.href='freeBoardInsertForm.do'">글쓰기</button>
+				<c:if test="${not empty memberId}">
+					<button type="button"
+						onclick="location.href='freeBoardInsertForm.do'">글쓰기</button>
 				</c:if>
 			</form>
+		</div>
+		<div>
+			<form id="searchfrm" method="post">
+				<select id="key" name="key">
+					<option value="0">전체</option>
+					<option value="1">제목</option>
+					<option value="2">작성자</option>
+					<option value="3">내용</option>
+				</select> <input type="text" value="검색어를 입력하세요.">&nbsp;&nbsp;
+				<button type="button" class="btn btn-dark">검색</button>
+			</form>
+			&nbsp;&nbsp;
 		</div>
 		<br>
 		<div id="paging">

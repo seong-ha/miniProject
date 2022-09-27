@@ -2,9 +2,11 @@ package co.community.yedam.freeBoard.service;
 
 import java.sql.Date;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class FreeBoardVO {
 	private int freeBoardId;
 	private String freeBoardTitle;
@@ -12,7 +14,7 @@ public class FreeBoardVO {
 	private Date freeBoardDate;
 	private String freeBoardAttech;
 	private String freeBoardAttechDir;
-	private String freeBoardHit;
+	private int freeBoardHit;
 	private int freeBoardLike;
 	private String memberId; // 외래키
 

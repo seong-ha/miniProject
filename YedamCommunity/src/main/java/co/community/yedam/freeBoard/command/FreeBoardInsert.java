@@ -33,12 +33,11 @@ public class FreeBoardInsert implements Command {
 			String fileName = multi.getFilesystemName("ufile"); // 물리적 위치에 파일저장.  여기의 file이라는 것은 noticeWriteForm.jsp 의 id,name값.
 			String originalFileName = multi.getOriginalFileName("ufile"); // 실제파일명
 			
-			vo.setMemberId(multi.getParameter("memberId"));
 			vo.setFreeBoardTitle(multi.getParameter("freeBoardTitle"));
 			vo.setFreeBoardSubject(multi.getParameter("freeBoardSubject"));
-			
 			vo.setFreeBoardAttech(originalFileName);
 			vo.setFreeBoardAttechDir(saveFolder + File.separator + fileName);
+			vo.setMemberId(multi.getParameter("memberId"));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -46,9 +45,7 @@ public class FreeBoardInsert implements Command {
 			e.printStackTrace();
 		}
 
-
 		int n = dao.freeBoardInsert(vo);
-
 
 		if (n != 0) {
 			viewPage = "freeBoard.do";

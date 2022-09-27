@@ -15,13 +15,14 @@ public class FreeBoardDelete implements Command {
 		// 자유게시판 글 삭제.
 		FreeBoardService dao = new FreeBoardServiceImpl();
 		FreeBoardVO vo = new FreeBoardVO();
-		vo.setFreeBoardId(Integer.valueOf(request.getParameter("id")));
-		
+		vo.setFreeBoardId(Integer.valueOf(request.getParameter("deleteFreeBoardId")));
+		System.out.println(vo.getFreeBoardId()); 
 		int n = dao.freeBoardDelete(vo);
 		
 		String viewPage = "main/freeboard/freeBoardError";
 		
 		if(n != 0) {
+			request.setAttribute("vo", vo);
 			return "freeBoard.do";
 		} else {
 			request.setAttribute("message", "게시글 작성에 실패했습니다.");

@@ -24,7 +24,6 @@ public class MemberJoin implements Command {
 				vo.setMemberAddress(request.getParameter("memberAddress"));
 				vo.setMemberEmail(request.getParameter("memberEmail"));
 				
-				vo.setMemberAuthor(request.getParameter("memberAuthor"));
 				int n = dao.memberInsert(vo);
 				String viewPage = null;
 				if(n != 0) {
