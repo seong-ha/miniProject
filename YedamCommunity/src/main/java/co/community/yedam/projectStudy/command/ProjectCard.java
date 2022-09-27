@@ -18,10 +18,25 @@ public class ProjectCard implements Command {
 		ProjectStudyService dao = new ProjectStudyServiceImpl();
 		ProjectStudyVO projectStudyVO = new ProjectStudyVO();
 		projectStudyVO.setProjectStudyType("프로젝트");
-		
 		List<ProjectStudyVO> list = dao.projectStudyFilteredList(projectStudyVO);
+
+		// 언어가 여러개면 ,를 기준으로 나누고 trim 후 언어들 앞에 # 붙이기
+		for (ProjectStudyVO vo : list) {
+			if (vo.getProjectStudyLanguage().indexOf(",") != -1) {
+				String[] strArr = vo.getProjectStudyLanguage().split(",");
+
+				for (int i = 0; i < strArr.length; i++) {
+					strArr[i] = strArr[i].trim();
+				}
+
+				String result = String.join(" #", strArr);
+				vo.setProjectStudyLanguage(result);
+			}
+
+		}
+
 		request.setAttribute("list", list);
-		
+
 		return "main/projectStudy/projectCard"; // 프로젝트 필터링 checked jsp로
 	}
 

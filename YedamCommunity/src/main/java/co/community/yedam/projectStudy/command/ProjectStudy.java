@@ -1,6 +1,5 @@
 package co.community.yedam.projectStudy.command;
 
-import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -15,31 +14,28 @@ public class ProjectStudy implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("커멘드로 왔어?");
+		//프로젝트스터디 전체 모집건 필터링해서 가져오기
 		ProjectStudyService dao = new ProjectStudyServiceImpl();
 		List<ProjectStudyVO> list = dao.projectStudySelectList();
-		
+
+		// 언어가 여러개면 ,를 기준으로 나누고 trim 후 언어들 앞에 # 붙이기
 		for (ProjectStudyVO vo : list) {
-			// 언어가 여러개면 언어 사이에 # 붙이기
 			if (vo.getProjectStudyLanguage().indexOf(",") != -1) {
 				String[] strArr = vo.getProjectStudyLanguage().split(",");
-				System.out.println("strArr =>  " + Arrays.toString(strArr));
-				
+
 				for (int i = 0; i < strArr.length; i++) {
 					strArr[i] = strArr[i].trim();
-					System.out.println("str.trim() =>  " + "\"" + strArr[i] + "\"");
 				}
-				
+
 				String result = String.join(" #", strArr);
-				System.out.println(result);
 				vo.setProjectStudyLanguage(result);
 			}
-			
+
 		}
-		
+
 		request.setAttribute("list", list);
-		
-		return "projectStudy/projectStudy/projectStudy";
+
+		return "projectStudy/projectStudy/projectStudy";  // 프로젝트 스터디
 	}
 
 }

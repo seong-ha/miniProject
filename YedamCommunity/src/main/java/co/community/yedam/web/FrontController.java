@@ -30,6 +30,7 @@ import co.community.yedam.noticeBoard.command.NoticeBoard;
 import co.community.yedam.projectStudy.command.ProjectCard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.projectStudy.command.ProjectStudyCard;
+import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
 import co.community.yedam.projectStudy.command.StudyCard;
 import co.community.yedam.projectStudy.service.ProjectStudyVO;
 import co.community.yedam.questions.command.QuestionsDelte;
@@ -83,6 +84,8 @@ public class FrontController extends HttpServlet {
 		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
 		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
 		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
+		map.put("/projectStudyWriteFrom.do", new ProjectStudyWriteFrom()); // 프로젝트스터디 새글쓰기 form으로
+		
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
