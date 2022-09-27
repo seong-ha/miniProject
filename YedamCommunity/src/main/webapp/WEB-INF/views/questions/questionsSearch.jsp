@@ -30,7 +30,7 @@
 		</div>
 	</div>
 	<script>
-		function questionsSelect(mem){
+		function questionsSelect(id){
 			location.href = '${contextPath}/notice/detail?nno=' + nno;
 		}
 	

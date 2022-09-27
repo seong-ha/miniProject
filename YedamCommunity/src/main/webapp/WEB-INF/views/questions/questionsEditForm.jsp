@@ -10,16 +10,16 @@
    <div align="center">
       
       <div>
-         <h1>게시글 상세보기</h1>
+         <h1>게시글 수정하기</h1>
       </div>
       
       <div>
          <table border = "1">
             <tr>
                <th width = "100">작성자</th>
-               <td width = "100" align="center">${vo.memberId }</td>
+               <td width = "100">${vo.memberId }</td>
                <th width = "100">작성일자</th>
-               <td width = "100" align="center">
+               <td width ="100">
                		<input type="date" id="questionsDate" name="questionsDate" value="${vo.questionsDate }">
                </td>
                      
@@ -34,7 +34,7 @@
                <th>내용</th>
                <td colspan ="5">
                <textarea rows="10" cols="80" id="questionsContent" name="questionsContent">
-              		${vo.questionsContent }
+              	${vo.questionsContent }
                </textarea>
                </td>
             </tr>

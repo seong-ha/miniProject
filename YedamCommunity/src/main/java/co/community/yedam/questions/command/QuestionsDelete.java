@@ -15,19 +15,20 @@ public class QuestionsDelete implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// 게시글 삭제
-		String viewPage="questions/questionsError";
+		String viewPage="main/questions/questionsError";
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		vo.setQuestionsId(Integer.valueOf(request.getParameter("id")));
-		
+		System.out.println(vo.getQuestionsId());
 		int n = dao.questionsDelete(vo);
+		System.out.println(n);
 		if(n != 0) {
 			request.setAttribute("vo", vo);
-			viewPage="noticeSelectList.do";
+			viewPage="questionsSelectList.do";
 		}else {
 			request.setAttribute("message", "게시글 삭제가 실패하였습니다.!");
 		}
-		return null;
+		return viewPage;
 	}
 
 }

@@ -14,7 +14,7 @@ public class QuestionsInsert implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		
-		String viewPage = "questions/questionsError";
+		String viewPage = "main/questions/questionsError";
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		

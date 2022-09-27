@@ -73,7 +73,7 @@
 						<c:forEach items="${list }" var="n">
 							<tr onMouseover="this.style.backgroundColor='grey', this.style.color='white'"
 								onMouseout="this.style.backgroundColor='white',this.style.color='black'"
-								onclick="selectQuestions('${n.questionsId}')">
+								onclick="questionsSelect('${n.questionsId}')">
 								<td align="center">${n.questionsId }</td>
 								<td align="center">${n.questionsTitle }</td>
 								<td align="center">${n.memberId }</td>
@@ -117,13 +117,9 @@
 		</div>
 		
 	
-		<form id="frm" method="post" action="questionsSelect.do">
-			<input type="hidden" id="id" name="id">
-			<!--<c:if test="${not empty id }">
-			   접근제어
-				<button type="button"
-					onclick="location.href='questionsWriteForm.do'">글쓰기</button>
-			</c:if>-->
+		<form id="fbf" name="fbf" method="post">
+			<input type="hidden" id="questionsId" name="questionsId">
+			
 		</form>
 	
 	
@@ -131,11 +127,14 @@
 	
 	<br>
 	<br>
+	
 	<script type="text/javascript">
 	
 		function questionsSelect(id) {
-			document.getElementById("id").value = id;
-			frm.submit();
+			document.getElementById("questionsId").value = id;
+			console.log(id);
+			fbf.action="questionsSelect.do";
+			fbf.submit();
 		}
 		
 		function searchCall(){
