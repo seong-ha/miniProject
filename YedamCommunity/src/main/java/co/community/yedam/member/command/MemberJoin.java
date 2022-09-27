@@ -27,11 +27,11 @@ public class MemberJoin implements Command {
 				int n = dao.memberInsert(vo);
 				String viewPage = null;
 				if(n != 0) {
-					request.setAttribute("message", "★ 회원가입이 완료 되었습니다 ★");
-					viewPage = "main/main/main";
+					request.setAttribute("message", "★ 회원가입이 완료 되었습니다 로그인 해 주세요!!★");
+					viewPage = "main/member/memberMessage";
 				} else {
 					request.setAttribute("message", "★ 회원가입이 실패했습니다 ★");
-					viewPage = "main/main/main";;
+					viewPage = "main/member/memberMessage";;
 				}
 				
 				return viewPage;
