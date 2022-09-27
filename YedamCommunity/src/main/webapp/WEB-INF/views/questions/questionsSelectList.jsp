@@ -141,7 +141,7 @@
 			let key = document.getElementById("key").value;
 			let val = document.getElementById("val").value;
 			let payload = 'key='+key+'&val='+val;
-			fetch("AjaxNoticeSearch.do?"+payload)
+			fetch("AjaxfreeBoardSearch.do?"+payload)
 				.then(response => response.json())
 				.then(json => htmlViews(json)); //화면에 출력
 		}
@@ -154,7 +154,6 @@
 		}
 		
 		function createHTMLString(data){  //html 변환 코드 css, event Listner를 활용하면 깔끔하게 정리됨
-			//if(data.noticeAttech == null) data.noticeAttech = ""; //json 객체에서 null값을 ""로대체
 			let str = "<tr onclick=";
 				str += "questionsSelect('"+ data.questionsId +"')" +">";
 				str += "<td>" + data.questionsId + "</td>";

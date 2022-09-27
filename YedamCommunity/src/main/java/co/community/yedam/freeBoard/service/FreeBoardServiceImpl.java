@@ -37,8 +37,18 @@ public class FreeBoardServiceImpl implements FreeBoardService {
 	}
 
 	@Override
-	public int freeBoardHitUpdate(FreeBoardVO vo) {
-		return map.freeBoardHitUpdate(vo);
+	public int freeBoardHitUpdate(int id) {
+		return map.freeBoardHitUpdate(id);
+	}
+
+	@Override
+	public int freeBoardCount() {
+		return map.freeBoardCount();
+	}
+
+	@Override
+	public List<FreeBoardVO> freeBoardSearchList(String key, String val) {
+		return map.freeBoardSearchList(key, val);
 	}
 
 }
