@@ -93,7 +93,7 @@ public class FrontController extends HttpServlet {
 		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
 		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
 		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
 		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
@@ -136,6 +136,7 @@ System.out.println(page);
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)
+		System.out.println(viewPage);
 		if (!viewPage.endsWith(".do")) {
 
 			if (viewPage.startsWith("ajax:")) { // ajax를 사용할때

@@ -17,7 +17,11 @@ public class NoticeBoardSelect implements Command {
 
 		vo.setNoticeBoardId(Integer.valueOf(request.getParameter("id")));
 		vo = dao.noticeBoardSelect(vo);
+		request.setAttribute("noticeBoard", vo);
+
+		NoticeBoardVO resultVO = dao.noticeBoardSelect(vo);
 		if (vo != null) {
+			dao.noticeBoardHitUpdate(resultVO.getNoticeBoardId());
 			request.setAttribute("vo", vo);
 		}
 		return "main/notice/noticeBoardSelect";

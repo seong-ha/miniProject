@@ -15,17 +15,28 @@ td {
 <body>
 	<div align="center">
 		<div>
-			<h1>게시글 목록</h1>
+			<h1>공지사항 목록</h1>
+		</div>
+		<div>
+			<form id="searchfrm" method="post">
+				<select id="key" name="key">
+					<option value="0">전체</option>
+					<option value="1">제목</option>
+					<option value="2">작성자</option>
+					<option value="3">내용</option>
+				</select> <input type="text" value="검색어를 입력하세요.">&nbsp;&nbsp;
+				<button type="button" class="btn btn-dark">검색</button>
+			</form>
+			&nbsp;&nbsp;
 		</div>
 		<div>
 			<table>
 				<thead>
 					<tr>
 						<th width="70">글번호</th>
-						<th width="250">제목</th>
-						<th width="150">작성자</th>
-						<th width="150">작성일자</th>
-						<th width="150">첨부파일</th>
+						<th width="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제목</th>
+						<th width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</th>
+						<th width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성일자</th>
 						<th width="70">조회수</th>
 					</tr>
 				<thead>
@@ -44,7 +55,6 @@ td {
 								<td>${notice.noticeBoardTitle}</td>
 								<td>${notice.memberId}</td>
 								<td>${notice.noticeBoardDate}</td>
-								<td>${notice.noticeBoardAttech}</td>
 								<td>${notice.noticeBoardHit}</td>
 							</tr>
 						</c:forEach>
@@ -57,8 +67,20 @@ td {
 			<form id="NoticeBoardfrm" action="noticeBoardSelect.do" method="post">
 				<input type="hidden" id="id" name="id">
 				<c:if test="${memberAuthor eq 'ADMIN' }">
-					<button type="button" onclick="location.href='noticeBoardWriteForm.do'">글쓰기</button>
+					<button type="button"
+						onclick="location.href='noticeBoardWriteForm.do'">글쓰기</button>
 				</c:if>
+			</form>
+		</div>
+
+		<br>
+		<div id="paging">
+			<c:url var="action" value="" />
+			<p>1 2 3 4 5</p>
+		</div>
+		<div>
+			<form id="NoticeBoardfrm" name="NoticeBoardfrm" method="post">
+				<input type="hidden" id="noticeBoardId" name="noticeBoardId">
 			</form>
 		</div>
 	</div>
