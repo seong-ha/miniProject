@@ -12,7 +12,7 @@
 <style>
 		
 	.category{
-		margin-left: 26%;
+		margin-left: 24%;
 		margin-top: 40px;
 	}
 	
@@ -29,7 +29,9 @@
 	}
 
 	.wrapper {
-		margin: 5vh;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 80px;
 		clear: both;
 	}
 
@@ -125,6 +127,14 @@
 </style>
 </head>
 <body>
+
+	<div style="float:right; margin-top: 30px; margin-right:22%;">
+		<button type="button" class="btn btn-outline-warning btn-rounded"
+			data-mdb-ripple-color="dark" onclick="location.href='projectStudyWriteFrom.do'">
+			<h2 style="margin:0">새 글 쓰기</h2>
+		</button>
+	</div>
+
 	<!-- start 모집분류 라디오 버튼 -->
 	<section class="category">
 			<div class="form-check form-switch">
@@ -215,8 +225,6 @@
 			</div>
 		</div>
 	</section>
-	<script type="text/javascript">
-		
-	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>
 </html>
