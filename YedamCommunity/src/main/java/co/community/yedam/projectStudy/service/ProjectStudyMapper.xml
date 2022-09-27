@@ -15,7 +15,7 @@
 	<insert id="projectStudyInsert" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		INSERT INTO PROJECT_STUDY
 		VALUES (#{projectStudyId}, #{memberId}, #{projectStudyType}, #{projectStudyonoffline},
-			#{projectStudyPersonNum}, #{projectStudyStart}, #{projectStudyTel}, #{projectStudyPeriod},
+			#{projectStudyPersonNum}, #{projectStudyStartDate}, #{projectStudyContact}, #{projectStudyPeriod},
 			#{projectStudyLanguage}, #{projectStudyHit}, #{projectStudyTitle}, #{projectStudySubject})
 	</insert>
 	
@@ -25,8 +25,8 @@
 			<if test="projectStudyType != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyType},</if>
 			<if test="projectStudyonoffline != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyonoffline},</if>
 			<if test="projectStudyPersonNum != null"> PROJECT_STUDY_PERSON_NUM = #{projectStudyPersonNum},</if>
-			<if test="projectStudyStart != null"> PROJECT_STUDY_START = #{projectStudyStart},</if>
-			<if test="projectStudyTel != null"> PROJECT_STUDY_TEL = #{projectStudyTel},</if>
+			<if test="projectStudyStartDate != null"> PROJECT_STUDY_START_DATE = #{projectStudyStartDate},</if>
+			<if test="projectStudyContact != null"> PROJECT_STUDY_CONTACT = #{projectStudyContact},</if>
 			<if test="projectStudyPeriod != null"> PROJECT_STUDY_PERIOD = #{projectStudyPeriod},</if>
 			<if test="projectStudyLanguage != null"> PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage},</if>
 			<if test="projectStudyHit != null"> PROJECT_STUDY_HIT = #{projectStudyHit},</if>

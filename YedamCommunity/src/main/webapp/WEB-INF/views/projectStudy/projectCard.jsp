@@ -192,7 +192,7 @@
 											</a>
 										</h3>
 										<h6 class="card-meta mb-1" style="color:greenyellow">#${card.projectStudyLanguage}</h6>
-										<h6><i class="far fa-clock"></i> 시작예정일 | ${card.projectStudyStart}</h6>
+										<h6><i class="far fa-clock"></i> 시작예정일 | ${card.projectStudyStartDate}</h6>
 									</div>
 									<div class="card-footer">
 										<div class="media">
