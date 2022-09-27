@@ -154,7 +154,7 @@
 							class="nav-link" style="font-size:x-large">홈</a></li>
 						<li class="nav-item"><a href="noticeBoard.do"
 							class="nav-link" style="font-size:x-large">공지사항</a></li>
-						<li class="nav-item"><a href="community.do" class="nav-link" style="font-size:x-large">커뮤니티</a></li>
+						<li class="nav-item"><a href="freeBoard.do" class="nav-link" style="font-size:x-large">자유게시판</a></li>
 						<li class="nav-item"><a href="infoFood.do" class="nav-link" style="font-size:x-large">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link" style="font-size:x-large">프로젝트&스터디</a></li>
