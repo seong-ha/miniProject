@@ -91,11 +91,13 @@
 			<div>
 				<ul>
 					<li>
+						<a href="freeBoard.do">◀</a>&nbsp;
 						<a href="freeBoard.do">1</a>&nbsp;
 						<a href="freeBoard.do">2</a>&nbsp;
 						<a href="freeBoard.do">3</a>&nbsp;
 						<a href="freeBoard.do">4</a>&nbsp;
-						<a href="freeBoard.do">5</a>
+						<a href="freeBoard.do">5</a>&nbsp;
+						<a href="freeBoard.do">▶</a>
 					</li>
 				</ul>
 			</div>
