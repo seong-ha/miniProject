@@ -53,7 +53,7 @@
 }
 
 .member tr th {
-	background-color: #FD5F00;
+	background-color: black;
 	color: #fff;
 }
 
@@ -69,6 +69,9 @@
 	color: crimson;
 	font-weight: 500;
 }
+td {
+	color: black;
+}
 </style>
 
 
@@ -78,6 +81,7 @@
 	<form id="mtd" method="post">
 		<div class="tableBack">
 			<div class="container" align="center">
+			<br>
 				<table class="member">
 					<thead class="table-dark">
 						<tr>

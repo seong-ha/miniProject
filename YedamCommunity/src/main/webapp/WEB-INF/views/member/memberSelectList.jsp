@@ -12,100 +12,60 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="css9/main.css" />
+<noscript>
+	<link rel="stylesheet" href="css9/noscript.css" />
+</noscript>
 <style>
-	
-	.tableBack {
-		background-image: url("css1/images/tableBack.jpg");
-	
-	}
-	.table-dark {
-		text-align: center;
-	}
-	
-		.member {
-	width: 900px;
-	background-color: #fff;
-	border-collapse: collapse;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-	border-radius: 5px;
-	overflow: hidden;
+.tableBack {
+	background-image: url("css1/images/tableBack.jpg");
 }
 
-.member caption {
-	font-size: 20px;
-	margin-bottom: 30px;
-}
-
-.member tr {
-	border-bottom: 1px solid #eee;
-}
-
-.member tr:last-child {
-	border: none;
-}
-
-.member tr:nth-child(odd) {
-	background-color: #ddd;
-}
-
-.member th, .member td {
-	padding: 12px;
+.table-dark {
 	text-align: center;
 }
-
-.member tr th {
-	background-color: #FD5F00;
-	color: #fff;
+.alt>thead>tr>th {
+	background-color: black;
+	font-weight: bold;
+	font-size: 16px;
 }
-
-.member tr th:first-child {
-	border-radius: 5px 0 0 0;
 }
-
-.member tr th:last-child {
-	border-radius: 0 5px 0 0;
-}
-
-.member tr td:last-child {
-	color: crimson;
-	font-weight: 500;
-}
-
 </style>
 </head>
 <body>
 	<div align="center" class="tableBack">
 		<div>
-			<hr><br>
-			<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1>
-			<br>
-		</div>
-		<div>
 			<div class="container">
-				<table class="member">
-					<thead>
-						<tr>
-							<th>아이디</th>
-							<th>이름</th>
-							<th>전화번호</th>
-							<th>이메일</th>
-							<th>주소</th>
-							<th>생년월일</th>
-							
-						</tr>
-					</thead>
-					<c:forEach items="${members}" var="member">
-						<tr onclick="selectMember('${member.memberId}')">
-							<td width="80px">${member.memberId}</td>
-							<td>${member.memberName}</td>
-							<td width="150px">${member.memberTel}</td>
-							<td>${member.memberEmail}</td>
-							<td width="250px">${member.memberAddress }</td>
-							<td>${member.memberBirth }</td>
-							
-						</tr>
-					</c:forEach>
-				</table>
+			<br><br>
+				<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1><br>
+				<div class="table-wrapper">
+					<table class="alt">
+						<thead>
+							<tr>
+								<th>아이디</th>
+								<th>이름</th>
+								<th>전화번호</th>
+								<th>이메일</th>
+								<th>주소</th>
+								<th>생년월일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${members}" var="member">
+								<tr onclick="selectMember('${member.memberId}')"
+									onMouseover="this.style.backgroundColor='#E2E2E2';"
+									onMouseout="this.style.backgroundColor='white';">
+									<td width="80px">${member.memberId}</td>
+									<td>${member.memberName}</td>
+									<td width="150px">${member.memberTel}</td>
+									<td>${member.memberEmail}</td>
+									<td width="250px">${member.memberAddress }</td>
+									<td>${member.memberBirth }</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 		<br>
@@ -114,16 +74,13 @@
 			<form id="msl" method="post">
 				<input type="hidden" id="memberId" name="memberId">
 			</form>
-		</div><br><br>
-					<div>
-				<ul>
-					<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
-						<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
-						<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
-						<a href="freeBoard.do">▶</a></li>
-				</ul>
-			</div>
-	</div><br>
+		</div>
+
+		<div>
+			<small>◀ 1 2 3 4 5 ▶</small>
+		</div>
+	</div>
+	<br>
 	<script type="text/javascript">
 		function selectMember(id) {
 			document.getElementById('memberId').value = id

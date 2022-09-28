@@ -376,7 +376,7 @@ html, body {
 					</div>
 					<div align="left">
 						<textarea placeholder="내용을 입력하세요."></textarea>
-						<input type="submit" class="btn btn-dark">
+						<input type="submit" class="btn btn-outline-dark">
 					</div>
 				</form>	
 			</section>
@@ -397,22 +397,22 @@ html, body {
 					<tbody>
 						<tr>
 							<td>전성하</td>
-							<td>좋은 글이네요,,,,, 담아갑니다,,,</td>
+							<td>좋은 글이네요.... 담아갑니다...</td>
 							<td>09-28</td>
 						</tr>
 						<tr>
 							<td>김두영</td>
-							<td>아아ㅏㅏ아아ㅏㅏㅏㅏ아아ㅏ아아ㅏ아ㅏ아아아아아</td>
+							<td>우짤래미저짤래미~</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
 							<td>김민지</td>
-							<td>♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬</td>
+							<td>좋은 하루되세요~~ *^^*</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
 							<td>황용주</td>
-							<td>凸凸凸凸凸凸凸凸凸凸凸</td>
+							<td>뭐야 이거?</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
