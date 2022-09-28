@@ -124,7 +124,7 @@
 							<a href="#"
 								class="d-flex align-items-center justify-content-center"><span
 								class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> <a
-								href="#"
+								href="https://yedam.step.or.kr/main.do"
 								class="d-flex align-items-center justify-content-center"><span
 								class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> <a
 								href="#"
