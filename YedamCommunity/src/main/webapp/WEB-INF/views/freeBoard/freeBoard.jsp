@@ -251,16 +251,22 @@ section.notice {
 						</c:if>
 						<c:if test="${not empty freeBoards }">
 							<c:forEach items="${freeBoards }" var="m">
-								<tr onclick="selectFreeBoard(${m.freeBoardId})">
+								<tr onclick="selectFreeBoard(${m.freeBoardId})"
+									onMouseover="this.style.backgroundColor='#E2E2E2';"
+									onMouseout="this.style.backgroundColor='white';">
 									<td>${m.freeBoardId }</td>
-									<th><span class="d-inline-block text-truncate"
-										style="max-width: 200px;"> ${m.freeBoardTitle }</span></th>
+									
+									<th><div align="center"><span class="d-inline-block text-truncate"
+										style="max-width: 200px;"> ${m.freeBoardTitle }</span></div></th>
+										
 									<td>${m.freeBoardDate }</td>
 								</tr>
 							</c:forEach>
 						</c:if>
 					</tbody>
-				</table><br><br>
+				</table>
+				<br>
+				<br>
 				<div align="center">
 					<form id="frm" action="freeBoardSelect.do" method="post">
 						<input type="hidden" id="id" name="id">
@@ -270,7 +276,10 @@ section.notice {
 								class="btn btn-outline-dark">글쓰기</button>
 						</c:if>
 					</form>
-					<br>
+					<br><br>
+					<div>
+						<small>◀  1  2  3  4  5  ▶</small>
+					</div>
 				</div>
 			</div>
 			<div>

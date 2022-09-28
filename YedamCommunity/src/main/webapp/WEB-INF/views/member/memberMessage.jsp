@@ -8,6 +8,10 @@
 
 </head>
 <body>
-	<div><h1>${message }</h1></div>
+	<div align="center">
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1>${message }</h1>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
 </body>
 </html>
