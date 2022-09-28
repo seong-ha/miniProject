@@ -17,8 +17,8 @@ public class QuestionsSelect implements Command {
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId")));
-		System.out.println(request.getParameter("questionsId"));
-		System.out.println("void"+vo.getQuestionsId());
+//		System.out.println(request.getParameter("questionsId"));
+//		System.out.println("void"+vo.getQuestionsId());
 		vo = dao.questionsSelect(vo);
 		
 		if(vo != null) {

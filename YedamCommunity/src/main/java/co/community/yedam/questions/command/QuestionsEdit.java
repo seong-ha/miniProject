@@ -1,6 +1,6 @@
 package co.community.yedam.questions.command;
 
-
+import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -10,26 +10,42 @@ import co.community.yedam.questions.service.questionsService;
 import co.community.yedam.questions.service.questionsServiceImpl;
 import co.community.yedam.questions.service.questionsVO;
 
-public class QuestionsDelete implements Command {
+public class QuestionsEdit implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 게시글 삭제
+		// TODO Auto-generated method stub
+		
+		
 		String viewPage="main/questions/questionsError";
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
 		
+		
 		vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId")));
-		System.out.println(vo.getQuestionsId());
-		int n = dao.questionsDelete(vo);
-		System.out.println(n);
+		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
+		vo.setQuestionsTitle(request.getParameter("questionsTitle"));
+		vo.setQuestionsContent(request.getParameter("questionsContent"));
+		System.out.println("vo: "+vo);
+
+		System.out.println("title:"+request.getParameter("questionsTitle"));
+		
+		
+		
+		int n =dao.questionsUpdate(vo);
+		
+		
+
 		if(n != 0) {
-			request.setAttribute("vo", vo);
+			request.setAttribute("id", vo.getQuestionsId());
 			viewPage="questionsSelectList.do";
 		}else {
-			request.setAttribute("message", "게시글 삭제가 실패하였습니다.!");
+			request.setAttribute("message", "게시글 수정 실패하였습니다.!");
 		}
+		
 		return viewPage;
+	
+		
 	}
 
 }

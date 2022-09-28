@@ -23,7 +23,11 @@
 					<tr>
 						<th width="150">작성자</th>
 						<td width="200">
-							<input type="text" id="memberId" name="memberId" value="${id }" readonly="readonly">
+							<input type="text" id="memberId" name="memberId" value="${memberId }" readonly="readonly">
+						</td>
+						<th width="150">작성일자</th>
+						<td width="200">
+							<input type="date" id="questionsDate" name="questionsDate"  required="required">
 						</td>
 					
 				
@@ -56,6 +60,10 @@
 		</form>
 	</div>
 	</div>
+	<script>
+		document.getElementById('questionsDate').valueAsDate = new Date();
+		
+	</script>
 	<br>
 	<br>
 	<br>

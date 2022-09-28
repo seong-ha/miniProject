@@ -4,6 +4,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Insert title here</title>
 <link
 	href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap"
@@ -126,6 +128,14 @@
 	<section class="ftco-section ftco-no-pt ftc-no-pb">
 		<div class="container">
 			<div class="row d-flex">
+				<div
+					class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
+					<div class="img"
+						style="background-image: url(css1/images/about.jpg);"></div>
+				</div>
+				<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
+
+					<div class="row mt-5">
 				<!-- <div
 					class="col-md-5 order-md-last wrap-about wrap-about d-flex align-items-stretch">
 					<div class="img"
@@ -242,6 +252,42 @@
 						in which roasted parts of sentences fly into your mouth.</p>
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section ftco-counter img" id="section-counter"
+		style="background-image: url(css1/images/bg_3.jpg);"
+		data-stellar-background-ratio="0.5">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-2 d-flex">
+				<div class="col-md-6 align-items-stretch d-flex">
+					<div class="img img-video d-flex align-items-center"
+						style="background-image: url(css1/images/about-2.jpg);">
+						<div class="video justify-content-center">
+							<a href="https://vimeo.com/45830194"
+								class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<span class="ion-ios-play"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div
+					class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+					<h2 class="mb-4">Fox University</h2>
+					<p>Separated they live in. A small river named Duden flows by
+						their place and supplies it with the necessary regelialia. It is a
+						paradisematic country. A small river named Duden flows by their
+						place and supplies it with the necessary regelialia. It is a
+						paradisematic country, in which roasted parts of sentences fly
+						into your mouth.</p>
+					<p>A small river named Duden flows by their place and supplies
+						it with the necessary regelialia. It is a paradisematic country,
+						in which roasted parts of sentences fly into your mouth.</p>
+				</div>
+			</div>
+			<div class="row d-md-flex align-items-center justify-content-center">
+				<div class="col-lg-12">
+					<div class="row d-md-flex align-items-center">
 			<div class="row d-md-flex align-items-center justify-content-center">
 				<div class="col-lg-12">
 					<div class="row d-md-flex align-items-center">
@@ -264,6 +310,8 @@
 									<span class="flaticon-doctor"></span>
 								</div>
 								<div class="text">
+									<strong class="number" data-number="75678">0</strong> <span>총
+										방문자</span>
 									<strong class="number" data-number="3061">0</strong> <span><h4>일
 											방문자</h4></span>
 								</div>
@@ -276,6 +324,136 @@
 									<span class="flaticon-doctor"></span>
 								</div>
 								<div class="text">
+									<strong class="number" data-number="3061">0</strong> <span>일
+										방문자</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon">
+									<span class="flaticon-doctor"></span>
+								</div>
+								<div class="text">
+									<strong class="number" data-number="30">0</strong> <span>동시
+										접속자 수</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+							<div class="block-18">
+								<div class="icon">
+									<span class="flaticon-doctor"></span>
+								</div>
+								<div class="text">
+									<strong class="number" data-number="1032">0</strong> <span>수료생
+										수</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="ftco-section">
+		<div class="container-fluid px-4">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4">
+						<span>채용</span> 공고
+					</h2>
+					<p>당신의 꿈을 펼쳐나갈 회사에 지원하세요.</p>
+				</div>
+			
+			<div class="row">
+				<div class="col-md-3 course ftco-animate">
+					`<div class="img"
+						style="background-image: url(images/company1.png);"></div>
+						<div class="text pt-4">
+						<p class="meta d-flex">
+							<span><i class="icon-user mr-2"></i>모집중</span> <span><i
+								class="icon-table mr-2"></i>D-3</span> <span><i
+								class="icon-calendar mr-2"></i>#대구</span>
+						</p>
+						
+						<h3>
+							<a href="#">스텝페이<br>	
+							[BackEnd]
+							</a>
+						</h3>
+						<p>#Springboot #Gradle #간편결제</p>
+						<p>
+							<a href="https://www.wanted.co.kr/wd/130848" class="btn btn-primary" >지원하기</a>
+						</p>
+					
+				</div>
+				</div>
+				<div class="col-md-3 course ftco-animate">
+				<div class="img"
+						style="background-image: url(images/company2.jpg);"></div>
+
+					<div class="text pt-4">
+						<p class="meta d-flex">
+							<span><i class="icon-user mr-2"></i>모집중</span> <span><i
+								class="icon-table mr-2"></i>D-20</span> <span><i
+								class="icon-calendar mr-2"></i>#서울</span>
+						</p>
+						<h3>
+							<a href="#">마켓디자이너스<br>
+							[웹 백엔드 개발자(5년이상)]
+							</a>
+						</h3>
+						<p>#AI튜터 #프로덕트개발 #AWS</p>
+						<p>
+							<a href="https://www.wanted.co.kr/wd/70638" class="btn btn-primary" align="center">지원하기</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 course ftco-animate">
+				<div class="img"
+						style="background-image: url(images/company3.jpg);"></div>
+
+					<div class="text pt-4">
+						<p class="meta d-flex">
+							<span><i class="icon-user mr-2"></i>모집중</span> <span><i
+								class="icon-table mr-2"></i>D-10</span> <span><i
+								class="icon-calendar mr-2"></i>#서울 마포구</span>
+						</p>
+						<h3>
+							<a href="#">엔버랩스<br>
+							[FrontEnd React 개발자]</a>
+						</h3>
+						<p>#프론트엔드 #JavaScript #ReactJs</p>
+						
+						<p>
+							<a href="https://www.wanted.co.kr/wd/108043" class="btn btn-primary" align="center">지원하기</a>
+						</p>
+					</div>
+				</div>
+				
+				<div class="col-md-3 course ftco-animate">
+				
+				<div class="img"
+						style="background-image: url(images/company4.jpg);"></div>
+					
+					<div class="text pt-4">
+						<p class="meta d-flex">
+							<span><i class="icon-user mr-2"></i>모집완료</span> <span><i
+								class="icon-calendar mr-2"></i>#서울 강남구</span>
+						</p>
+						<h3>
+							<a href="#">스펙터<br>
+							[모바일 로봇 자율주행 SW개발자]</a>
+						</h3>
+						<p>#인공지능(AI) #사물인터넷(IoT) </p>
+						<p>
+							<a href="https://www.wanted.co.kr/wd/82197" class="btn btn-primary" align="center">지원하기</a>
+						</p>
 									<strong class="number" data-number="30">0</strong> <span><h4>동시
 											접속자 수</h4> </span>
 								</div>
@@ -294,6 +472,21 @@
 							</div>
 						</div>
 					</div>
+					
+				</div>
+				</ul>
+			</div>
+			</div>
+	</section>
+
+	<section class="ftco-section bg-light">
+		<div class="container-fluid px-4">
+			<div class="row justify-content-center mb-5 pb-2">
+				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4">1조회원</h2>
+					<p>Separated they live in. A small river named Duden flows by
+						their place and supplies it with the necessary regelialia. It is a
+						paradisematic country</p>
 				</div>
 			</div>
 		</div>
@@ -586,6 +779,10 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
+					<h2 class="mb-4">Student Says About Us</h2>
+					<p>Separated they live in. A small river named Duden flows by
+						their place and supplies it with the necessary regelialia. It is a
+						paradisematic country</p>
 					<h2 class="mb-4">Cultivator Says About Us</h2>
 					<p>IT 교육분야에서부터 혁신을 주도하여 새로운 IT 인재들의 잠재적인 역량을 극대화 할 수 있는 토양을 만들고
 						싶습니다. 특히 기술의 발전과 세계의 흐름에 민감한 IT 교육의 특성상 끊임없는 연구와 변화를 통해 일류 기업으로
@@ -598,6 +795,8 @@
 						<div class="item">
 							<div class="testimony-wrap d-flex">
 								<div class="user-img mr-4"
+									style="background-image: url(css1/images/teacher-1.jpg)">
+								</div>
 									style="background-image: url(css1/images/APPLE.jpg)"></div>
 								<div class="text ml-2">
 									<span
@@ -619,6 +818,10 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>Far far away, behind the word mountains, far from the
+										countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="name">Racky Henderson</p>
+									<span class="position">Father</span>
 									<p>“재능을 찾기보다는 무엇에 열정이 있는지 찾는 게 중요하다. 내 마음이 무엇을 원하는지, 그 열정을 찾아야 한다."</p>
 									<p class="name">Sundar Pichai</p>
 									<span class="position">Google</span>
@@ -628,6 +831,7 @@
 						<div class="item">
 							<div class="testimony-wrap d-flex">
 								<div class="user-img mr-4"
+									style="background-image: url(css1/images/teacher-2.jpg)">
 									style="background-image: url(css1/images/MICROSOFT.jpg)">
 								</div>
 								<div class="text ml-2">
@@ -635,6 +839,10 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>Far far away, behind the word mountains, far from the
+										countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="name">Henry Dee</p>
+									<span class="position">Mother</span>
 									<p>CEO로서 우선 희망부터 심어야 했다. CEO가 된 첫날은 변화가 시작되는 첫날이다.</p>
 									<p class="name">Satya Nadella</p>
 									<span class="position">MicroSoft</span>
@@ -660,12 +868,53 @@
 						<div class="item">
 							<div class="testimony-wrap d-flex">
 								<div class="user-img mr-4"
+									style="background-image: url(css1/images/teacher-3.jpg)">
+								</div>
+								<div class="text ml-2">
+									<span
+										class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the
+										countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="name">Mark Huff</p>
+									<span class="position">Mother</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4"
+									style="background-image: url(css1/images/teacher-4.jpg)">
+								</div>
+								<div class="text ml-2">
+									<span
+										class="quote d-flex align-items-center justify-content-center">
+										<i class="icon-quote-left"></i>
+									</span>
+									<p>Far far away, behind the word mountains, far from the
+										countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="name">Rodel Golez</p>
+									<span class="position">Mother</span>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="testimony-wrap d-flex">
+								<div class="user-img mr-4"
+									style="background-image: url(css1/images/teacher-1.jpg)">
+								</div>
+
 									style="background-image: url(css1/images/SAMSUNG.jpg)"></div>
 								<div class="text ml-2">
 									<span
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>Far far away, behind the word mountains, far from the
+										countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p class="name">Ken Bosh</p>
+									<span class="position">Mother</span>
 									<p>전세계 40개국에 서비스를 제공하는 IT Solution Provider로 성장하였습니다.</p>
 									<p class="name">Hwang Seong-woo</p>
 									<span class="position">SamSung</span>
