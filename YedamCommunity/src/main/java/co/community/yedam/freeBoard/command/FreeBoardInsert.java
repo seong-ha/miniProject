@@ -33,8 +33,8 @@ public class FreeBoardInsert implements Command {
 			String fileName = multi.getFilesystemName("ufile"); // 물리적 위치에 파일저장.  여기의 file이라는 것은 noticeWriteForm.jsp 의 id,name값.
 			String originalFileName = multi.getOriginalFileName("ufile"); // 실제파일명
 			
-			vo.setFreeBoardTitle(multi.getParameter("freeBoardTitle"));
-			vo.setFreeBoardSubject(multi.getParameter("freeBoardSubject"));
+			vo.setFreeBoardTitle(multi.getParameter("board_subject"));
+			vo.setFreeBoardSubject(multi.getParameter("board_content"));
 			vo.setFreeBoardAttech(originalFileName);
 			vo.setFreeBoardAttechDir(saveFolder + File.separator + fileName);
 			vo.setMemberId(multi.getParameter("memberId"));
