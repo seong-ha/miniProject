@@ -12,12 +12,24 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+<style>
+	
+	.tableBack {
+		background-image: url("css1/images/tableBack.jpg");
+	
+	}
+	.table-dark {
+		text-align: center;
+	}
+	
+
+</style>
 </head>
 <body>
-	<div align="center">
+	<div align="center" class="tableBack">
 		<div>
 			<br>
-			<h1>멤버 전체 목록</h1>
+			<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1>
 			<br>
 		</div>
 		<div>
@@ -31,9 +43,7 @@
 							<th>이메일</th>
 							<th>주소</th>
 							<th>생년월일</th>
-							<th>가입날짜</th>
-							<th>권한</th>
-							<th width="90px">포인트</th>
+							
 						</tr>
 					</thead>
 					<c:forEach items="${members}" var="member">
@@ -44,11 +54,9 @@
 							<td>${member.memberName}</td>
 							<td width="150px">${member.memberTel}</td>
 							<td>${member.memberEmail}</td>
-							<td width="180px">${member.memberAddress }</td>
+							<td width="250px">${member.memberAddress }</td>
 							<td>${member.memberBirth }</td>
-							<td>${member.memberCreateDate }</td>
-							<td>${member.memberAuthor }</td>
-							<td>${member.memberPoint }</td>
+							
 						</tr>
 					</c:forEach>
 				</table>

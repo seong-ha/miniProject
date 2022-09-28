@@ -13,11 +13,19 @@
 	crossorigin="anonymous">
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
 	crossorigin="anonymous"></script>
+	
+<style>
+	.tableBack {
+		background-image: url("css1/images/tableBack.jpg");
+	
+	}
+	
+</style>	
+	
 </head>
 <body>
 	<hr>
-	<br>
-	<div align="center">
+	<div align="center" class="tableBack">
 		<div>
 			<h1>자유게시판</h1>
 		</div>
