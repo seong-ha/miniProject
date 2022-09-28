@@ -127,15 +127,12 @@
 </style>
 </head>
 <body>
-	<c:if test="${not empty projectStudyInsertMessage}">
-		<div class="alert alert-primary" role="alert">${projectStudyInsertMessage}</div>
-	</c:if>
 	
 	<!-- 로그인 상태에서만 글쓰기 버튼 보임 -->
 	<c:if test="${not empty memberId}">
 		<div style="float:right; margin-top: 30px; margin-right:22%;">
 			<button type="button" class="btn btn-outline-warning btn-rounded"
-				data-mdb-ripple-color="dark" onclick="location.href='projectStudyWriteFrom.do'">
+				data-mdb-ripple-color="dark" onclick="location.href='projectStudyInsertForm.do'">
 				<h2 style="margin:0">새 글 쓰기</h2>
 			</button>
 		</div>

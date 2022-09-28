@@ -37,7 +37,7 @@ public class ProjectCard implements Command {
 
 		request.setAttribute("list", list);
 
-		return "main/projectStudy/projectCard"; // 프로젝트 필터링 checked jsp로
+		return "projectStudy/projectStudy/projectCard"; // 프로젝트 필터링 checked jsp로
 	}
 
 }

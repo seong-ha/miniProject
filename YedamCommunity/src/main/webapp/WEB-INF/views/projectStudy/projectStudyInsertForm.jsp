@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,8 +27,13 @@ select option[value=""][disabled] {
 </head>
 <body>
 
+<!-- 모집글 등록 실패 시. 돌아왔을때 실패메세지 alert -->
+	<c:if test="${not empty projectStudyInsertMessage}">
+		<div class="alert alert-primary" role="alert">${projectStudyInsertMessage}</div>
+	</c:if>
+
 	<div id="allContainer">
-		<form id="projectStudyWriteForm" action="projectStudyInsert.do">
+		<form id="projectStudyInsertForm" action="projectStudyInsert.do">
 		
 			<!-- start 프로젝트/스터디 기본 정보 -->
 			<div align="center" style="margin: 50px auto 30px auto;">
@@ -140,7 +146,7 @@ select option[value=""][disabled] {
 					</div>
 					<div class="ui segment">
 						<select class="form-select form-select-lg" id="contactWay"
-							onchange="contactWayPlaceholder()" required>
+							onchange="contactWayPlaceholder()">
 							<option value="" disabled selected>연락 방법</option>
 							<option>카카오톡 오픈채팅</option>
 							<option>이메일</option>

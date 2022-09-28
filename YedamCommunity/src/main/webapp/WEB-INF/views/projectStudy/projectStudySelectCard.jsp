@@ -37,26 +37,25 @@
 
 </head>
 <body>
-<%-- 	projectStudyId: ${card.projectStudyId}<br>
-	memberId: ${card.memberId}<br>
-	projectStudyType: ${card.projectStudyType}<br>
-	projectStudyonoffline: ${card.projectStudyonoffline}<br>
-	projectStudyPersonNum: ${card.projectStudyPersonNum}<br>
-	projectStudyStartDate: ${card.projectStudyStartDate}<br>
-	projectStudyContact: ${card.projectStudyContact}<br>
-	projectStudyPeriod: ${card.projectStudyPeriod}<br>
-	projectStudyLanguage: ${card.projectStudyLanguage}<br>
-	projectStudyHit: ${card.projectStudyHit}<br>
-	projectStudyTitle: ${card.projectStudyTitle}<br>
-	projectStudySubject: ${card.projectStudySubject}
-	<br><br><br><br> --%>
+	<br><br>
 	
-	<br><br>	
+<!-- 모집글 수정 실패 시. 돌아왔을때 실패메세지 alert -->
+	<c:if test="${not empty projectStudyUpdateMessage}">
+		<div class="alert alert-primary" role="alert">${projectStudyUpdateMessage}</div>
+	</c:if>
+	
+<!-- 모집글 삭제 실패 시. 돌아왔을때 실패메세지 alert -->
+	<c:if test="${not empty projectStudyDeleteMessage}">
+		<div class="alert alert-primary" role="alert">${projectStudyDeleteMessage}</div>
+	</c:if>
+	
+		
 	<div id="allContainer">
 		
 		<!-- start 프로젝트/스터디 기본 정보 -->
 		<div style="margin: 50px 20% 30px 20%;">
-			<h1 class="display-3">
+			<h1 class="display-3" style="overflow: hidden; text-overflow: ellipsis; word-wrap : break-word;
+			white-space : normal; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;">
 				${card.projectStudyTitle}
 			</h1>
 			<br>
@@ -146,18 +145,31 @@
 					${card.projectStudySubject}
 				</div>
 				<div align="right">
-					<form id="projectStudyWriteForm" action="projectStudyInsert.do">
-						<input type="hidden" id="" name="">
-						<input type="hidden" id="" name="">
-						<input type="hidden" id="" name="">
+					<!--   수정 -> 수정 폼으로 값 들고 넘길 form태그 -->
+					<form id="projectStudyToEditForm" action="projectStudyUpdateForm.do">
+						<input type="hidden" id="projectStudyId" name="projectStudyId" value="${card.projectStudyId}">
+						<input type="hidden" id="projectStudyType" name="projectStudyType" value="${card.projectStudyType}">
+						<input type="hidden" id="projectStudyonoffline" name="projectStudyonoffline" value="${card.projectStudyonoffline}">
+						<input type="hidden" id="projectStudyPersonNum" name="projectStudyPersonNum" value="${card.projectStudyPersonNum}">
+						<input type="hidden" id="projectStudyStartDate" name="projectStudyStartDate" value="${card.projectStudyStartDate}">
+						<input type="hidden" id="projectStudyContact" name="projectStudyContact" value="${card.projectStudyContact}">
+						<input type="hidden" id="projectStudyPeriod" name="projectStudyPeriod" value="${card.projectStudyPeriod}">
+						<input type="hidden" id="projectStudyLanguage" name="projectStudyLanguage" value="${card.projectStudyLanguage}">
+						<input type="hidden" id="projectStudyTitle" name="projectStudyTitle" value="${card.projectStudyTitle}">
+						<input type="hidden" id="projectStudySubject" name="projectStudySubject" value="${card.projectStudySubject}">
 						<h5>
 							<input type="button" value="목록" onclick="location.href='projectStudyCard.do'">&nbsp;&nbsp;
 							<c:if test="${memberId eq card.memberId}">
-								<input type="button" value="수정" onclick="location.href='projectStudyUpdateCard.do'">&nbsp;&nbsp;
-								<input type="button" value="삭제" onclick="location.href='projectStudyDeleteCard.do'">&nbsp;&nbsp;
-								<input type="submit" value="글 등록"></input>
+								<input type="button" value="수정" onclick="editAndDelete('edit')">&nbsp;&nbsp;
+								<input type="button" value="삭제" onclick="editAndDelete('delete')">&nbsp;&nbsp;
 							</c:if>
 						</h5>
+					</form>
+				</div>
+				<div>
+					<!-- 삭제할 때 넘기는 form태그 -->
+					<form id="projectStudyToDelete" action="projectStudyDelete.do">
+						<input type="hidden" id="projectStudyId" name="projectStudyId" value="${card.projectStudyId}">
 					</form>
 				</div>
 			</div>
@@ -179,22 +191,15 @@
 
 	<script type="text/javascript">
 	
-		// 연락 방법 select태그 값에 따라 아래 input태그 placeholder 안내 문구 바꾸기
-		function contactWayPlaceholder(event) {
-			let contactWay = document.getElementById('contactWay').value;
-			let projectStudyContact = document
-					.getElementById('projectStudyContact');
+		// 수정,삭제 버튼 클릭 시 값들고 서버로 전송 
+		function editAndDelete(type) {
 
-			switch (contactWay) {
-			case '카카오톡 오픈채팅':
-				projectStudyContact.setAttribute('placeholder', '오픈 카톡방 링크');
-				break;
-			case '이메일':
-				projectStudyContact.setAttribute('placeholder', '이메일 주소');
-				break;
-			case '구글 폼':
-				projectStudyContact.setAttribute('placeholder', '구글 폼 주소');
-				break;
+			switch (type) {
+				case 'edit':
+					projectStudyToEditForm.submit();
+					break;
+				case 'delete':
+					projectStudyToDelete.submit();
 			}
 		}
 		

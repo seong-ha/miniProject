@@ -28,7 +28,7 @@
 	<update id="projectStudyUpdate" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		UPDATE PROJECT_STUDY
 		<set>
-			<if test="projectStudyType != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyType},</if>
+			<if test="projectStudyType != null"> PROJECT_STUDY_TYPE = #{projectStudyType},</if>
 			<if test="projectStudyonoffline != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyonoffline},</if>
 			<if test="projectStudyPersonNum != null"> PROJECT_STUDY_PERSON_NUM = #{projectStudyPersonNum},</if>
 			<if test="projectStudyStartDate != null"> PROJECT_STUDY_START_DATE = #{projectStudyStartDate},</if>
@@ -39,7 +39,7 @@
 			<if test="projectStudyTitle != null"> PROJECT_STUDY_TITLE = #{projectStudyTitle},</if>
 			<if test="projectStudySubject != null"> PROJECT_STUDY_SUBJECT = #{projectStudySubject}</if>
 		</set>
-		WHERE PROJECTSTUDY_ID = #{projectStudyId}
+		WHERE PROJECT_STUDY_ID = #{projectStudyId}
 	</update>
 	
 	<delete id="projectStudyDelete" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">

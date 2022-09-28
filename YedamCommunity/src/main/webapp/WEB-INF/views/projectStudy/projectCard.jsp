@@ -135,7 +135,7 @@
 	<c:if test="${not empty memberId}">
 		<div style="float:right; margin-top: 30px; margin-right:22%;">
 			<button type="button" class="btn btn-outline-warning btn-rounded"
-				data-mdb-ripple-color="dark" onclick="location.href='projectStudyWriteFrom.do'">
+				data-mdb-ripple-color="dark" onclick="location.href='projectStudyInsertForm.do'">
 				<h2 style="margin:0">새 글 쓰기</h2>
 			</button>
 		</div>

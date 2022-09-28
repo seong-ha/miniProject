@@ -13,7 +13,6 @@ public class ProjectStudySelect implements Command {
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// 프로젝트스터디 모집글 상세글 가져오기.
-		System.out.println("select로 왔어");
 		ProjectStudyService dao = new ProjectStudyServiceImpl();
 		ProjectStudyVO projectStudyVO = new ProjectStudyVO();
 		projectStudyVO.setProjectStudyId(Integer.valueOf(request.getParameter("projectStudyId")));
@@ -24,7 +23,7 @@ public class ProjectStudySelect implements Command {
 			request.setAttribute("card", vo);
 		}
 		
-		return "main/projectStudy/projectStudySelectCard";
+		return "projectStudy/projectStudy/projectStudySelectCard";
 	}
 
 }
