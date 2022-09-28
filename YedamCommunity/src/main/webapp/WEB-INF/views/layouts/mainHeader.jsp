@@ -31,7 +31,56 @@
 
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/style.css">
+<!-- <link href="css1/css/memberLogin2.css" rel="stylesheet" type="text/css"> -->
+<!-- 버튼 때문에 위에 스타일 적용해 놓음 다른 css와 얽힐까바 -->
+<style type="text/css">
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 140px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+</style>
 </head>
+
 <body>
 	<div>
 		<div class="container-fluid px-md-5  pt-4 pt-md-5">
@@ -47,19 +96,18 @@
 								<div class="btn-group" role="group" aria-label="Basic example">
 									<c:choose>
 										<c:when test="${empty memberId }">
-											<button type="submit" class="btn btn-primary">로그인 &
-												회원가입
+											<button type="submit" class="btn-hover color-2">로그인&회원가입</button>
 										</c:when>
 										<c:otherwise>
-
-											<button type="button" class="btn btn-primary"
+											<h5>${memberName }님 환영합니다</h5> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<button type="button" class="btn-hover color-2"
 												onclick="location.href='memberLogout.do'">로그아웃</button>
 											<c:if test="${memberAuthor eq 'USER' }">
-												<button type="button" class="btn btn-primary"
+												<button type="button" class="btn-hover color-2"
 												onclick="location.href='memberMyHome.do'">마이페이지</button>
 											</c:if>
 											<c:if test="${memberAuthor eq 'ADMIN' }">
-												<button type="button" class="btn btn-primary"
+												<button type="button" class="btn-hover color-2"
 												onclick="location.href='memberSelectList.do'">회원정보조회</button>
 											</c:if>
 						
@@ -76,7 +124,7 @@
 							<a href="#"
 								class="d-flex align-items-center justify-content-center"><span
 								class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a> <a
-								href="#"
+								href="https://yedam.step.or.kr/main.do"
 								class="d-flex align-items-center justify-content-center"><span
 								class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a> <a
 								href="#"
@@ -103,15 +151,15 @@
 				<div class="collapse navbar-collapse" id="ftco-nav">
 					<ul class="navbar-nav m-auto">
 						<li class="nav-item active"><a href="main.do"
-							class="nav-link">홈</a></li>
+							class="nav-link" style="font-size:x-large">홈</a></li>
 						<li class="nav-item"><a href="noticeBoard.do"
-							class="nav-link">공지사항</a></li>
-						<li class="nav-item"><a href="community.do" class="nav-link">커뮤니티</a></li>
-						<li class="nav-item"><a href="infoFood.do" class="nav-link">정보</a></li>
+							class="nav-link" style="font-size:x-large">공지사항</a></li>
+						<li class="nav-item"><a href="freeBoard.do" class="nav-link" style="font-size:x-large">자유게시판</a></li>
+						<li class="nav-item"><a href="infoFood.do" class="nav-link" style="font-size:x-large">정보</a></li>
 						<li class="nav-item"><a href="projectStudy.do"
-							class="nav-link">프로젝트&스터디</a></li>
+							class="nav-link" style="font-size:x-large">프로젝트&스터디</a></li>
 						<li class="nav-item"><a href="questionsSelectList.do"
-							class="nav-link">문의사항</a></li>
+							class="nav-link" style="font-size:x-large">문의사항</a></li>
 					</ul>
 				</div>
 			</div>

@@ -23,7 +23,7 @@ public class MemberDelete implements Command {
 		HttpSession hs = request.getSession();
 		hs.invalidate();
 		
-		return "main/main/main";
+		return "main/member/memberMessage";
 	}
 
 }

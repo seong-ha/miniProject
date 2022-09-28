@@ -9,8 +9,7 @@
 </head>
 <body>
 <body>
-   <div id="con">
-    <div id="login">
+   
     <div id="login_form"><!--로그인 폼-->
     <form  id="frm" action="memberJoin.do" onsubmit="return formCheck()" method="post">
         <h3 class="login" style="letter-spacing:-1px;">회 원 가 입</h3>
@@ -22,7 +21,7 @@
         <hr>
 		
         <!-- <span>ID</span> -->
-        <p style="text-align: left; font-size:12px; color: #fff">userid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <p style="text-align: left; font-size:12px; color: #fff">userID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -65,7 +64,7 @@
 		 <label>
                 <!-- <span>PW</span> -->
             <p style="text-align: left; font-size:12px; color: #fff">
-                <input type='radio' id="memberGender" name='memberGender' value='여성' />여성
+                <input type='radio' id="memberGender" name='memberGender' value='여성' checked/>여성
   <input type='radio' id="memberGender" name='memberGender' value='남성' />남성</p>
         </label> <!--성별-->  
 		
@@ -101,8 +100,8 @@
 
     <hr>
     <p class="find">
-        <span><a href="memberLoginForm.do" >로그인 페이지로 이동</a></span>
-        <span><a href="main.do" >홈 페이지로 이동</a></span>
+        <span><a href="memberLoginForm.do" style="font-size:15px">로그인 페이지로 이동</a></span>
+        <span><a href="main.do" style="font-size:15px">홈 페이지로 이동</a></span>
     </p>
     </div>
     <div>

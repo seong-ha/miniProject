@@ -14,19 +14,24 @@
 	
 	<insert id="projectStudyInsert" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		INSERT INTO PROJECT_STUDY
-		VALUES (#{projectStudyId}, #{memberId}, #{projectStudyDistinctType}, #{projectStudyonoffline},
-			#{projectStudyNum}, #{projectStudyStart}, #{projectStudyTel}, #{projectStudyPeriod}, #{projectStudyLanguage})
+		VALUES (#{projectStudyId}, #{memberId}, #{projectStudyType}, #{projectStudyonoffline},
+			#{projectStudyPersonNum}, #{projectStudyStart}, #{projectStudyTel}, #{projectStudyPeriod},
+			#{projectStudyLanguage}, #{projectStudyHit}, #{projectStudyTitle}, #{projectStudySubject})
 	</insert>
 	
 	<update id="projectStudyUpdate" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		UPDATE PROJECT_STUDY
 		<set>
+			<if test="projectStudyType != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyType},</if>
 			<if test="projectStudyonoffline != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyonoffline},</if>
-			<if test="projectStudyNum != null"> PROJECT_STUDY_PERSON_NUM = #{projectStudyNum},</if>
-			<if test="projectStudyStart != null"> PROJECT_STUDY_START = #{projectStudyStart}</if>
-			<if test="projectStudyTel != null"> PROJECT_STUDY_TEL = #{projectStudyTel}</if>
-			<if test="projectStudyPeriod != null"> PROJECT_STUDY_PERIOD = #{projectStudyPeriod}</if>
-			<if test="projectStudyLanguage != null"> PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage}</if>
+			<if test="projectStudyPersonNum != null"> PROJECT_STUDY_PERSON_NUM = #{projectStudyPersonNum},</if>
+			<if test="projectStudyStart != null"> PROJECT_STUDY_START = #{projectStudyStart},</if>
+			<if test="projectStudyTel != null"> PROJECT_STUDY_TEL = #{projectStudyTel},</if>
+			<if test="projectStudyPeriod != null"> PROJECT_STUDY_PERIOD = #{projectStudyPeriod},</if>
+			<if test="projectStudyLanguage != null"> PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage},</if>
+			<if test="projectStudyHit != null"> PROJECT_STUDY_HIT = #{projectStudyHit},</if>
+			<if test="projectStudyTitle != null"> PROJECT_STUDY_TITLE = #{projectStudyTitle},</if>
+			<if test="projectStudySubject != null"> PROJECT_STUDY_SUBJECT = #{projectStudySubject}</if>
 		</set>
 		WHERE PROJECTSTUDY_ID = #{projectStudyId}
 	</update>
@@ -40,8 +45,8 @@
 	<select id="projectStudyFilteredList" resultType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		SELECT * FROM PROJECT_STUDY
 		<where>
-			<if test="projectStudyDistinctType != null">
-				PROJECT_STUDY_DISTINCT_TYPE = #{projectStudyDistinctType}
+			<if test="projectStudyType != null">
+				PROJECT_STUDY_TYPE = #{projectStudyType}
 			</if>
 			<if test="projectStudyLanguage != null">
 				AND PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage}

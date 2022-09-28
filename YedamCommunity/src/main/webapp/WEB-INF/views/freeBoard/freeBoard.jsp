@@ -11,16 +11,26 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+<script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+	crossorigin="anonymous"></script>
+	
+<style>
+	.tableBack {
+		background-image: url("css1/images/tableBack.jpg");
+	
+	}
+	
+</style>	
+	
 </head>
 <body>
 	<hr>
-	<br>
-	<div align="center">
+	<div align="center" class="tableBack">
 		<div>
 			<h1>자유게시판</h1>
 		</div>
 		<br>
-		<div>
+		<div class="container">
 			<table class="table">
 				<thead class="table-dark">
 					<tr>
@@ -59,30 +69,46 @@
 		</div>
 		<br>
 		<div>
-			<form id="frm" action="freeBoardSelect.do" method="post">
-				<input type="hidden" id="id" name="id">
-				<c:if test="${not empty memberId}">
-					<button type="button"
-						onclick="location.href='freeBoardInsertForm.do'">글쓰기</button>
-				</c:if>
-			</form>
-		</div>
-		<div>
-			<form id="searchfrm" method="post">
-				<select id="key" name="key">
-					<option value="0">전체</option>
-					<option value="1">제목</option>
-					<option value="2">작성자</option>
-					<option value="3">내용</option>
-				</select> <input type="text" value="검색어를 입력하세요.">&nbsp;&nbsp;
-				<button type="button" class="btn btn-dark">검색</button>
+			<form
+				class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+				<div class="input-group">
+					<input class="form-control" type="text" placeholder="Search for..."
+						aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+					<button class="btn btn-black" id="btnNavbarSearch" type="button">
+						<i class="fas fa-search"></i>
+					</button>
+				</div>
 			</form>
 			&nbsp;&nbsp;
 		</div>
 		<br>
-		<div id="paging">
-			<c:url var="action" value="" />
-			<p>1 2 3 4 5</p>
+		<div align="center">
+			<form id="frm" action="freeBoardSelect.do" method="post">
+				<input type="hidden" id="id" name="id">
+				<c:if test="${not empty memberId}">
+					<button type="button"
+						onclick="location.href='freeBoardInsertForm.do'"
+						class="btn btn-dark">글쓰기</button>
+				</c:if>
+			</form>
+			<br>
+		</div>
+
+		<div>
+
+			<div>
+				<ul>
+					<li>
+						<a href="freeBoard.do">◀</a>&nbsp;
+						<a href="freeBoard.do">1</a>&nbsp;
+						<a href="freeBoard.do">2</a>&nbsp;
+						<a href="freeBoard.do">3</a>&nbsp;
+						<a href="freeBoard.do">4</a>&nbsp;
+						<a href="freeBoard.do">5</a>&nbsp;
+						<a href="freeBoard.do">▶</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div>
 			<form id="fbf" name="fbf" method="post">
@@ -101,6 +127,15 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous">
+	
 	</script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest"
+		crossorigin="anonymous"></script>
+	<script src="js/datatables-simple-demo.js"></script>
+
 </body>
 </html>

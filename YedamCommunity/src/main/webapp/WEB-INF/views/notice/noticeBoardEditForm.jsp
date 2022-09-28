@@ -9,13 +9,12 @@
 <body>
 	<div align="center">
 		<div>
-			<form id="frm" action="noticeBoardEdit.do" method="post"
-				enctype="multipart/form-data">
+			<form id="frm" action="noticeBoardEdit.do" method="post">
 				<div>
 					<table border="1">
 						<tr>
 							<th>작성자</th>
-							<td>${vo.noticeBoardWriter}</td>
+							<td>${vo.memberId}</td>
 							<th>작성일자</th>
 							<td><input type="date" id="noticeBoardDate"
 								name="noticeBoardDate" value="${vo.noticeBoardDate}"
@@ -35,11 +34,7 @@
 									id="noticeBoardSubject" name="noticeBoardSubject">${vo.noticeBoardSubject}</textArea>
 							</td>
 						</tr>
-						<tr>
-							<th>첨부파일</th>
-							<td colspan="5"><input type="file" id="file" name="file"
-								onchange="${vo.noticeBoardAttech}"></td>
-						</tr>
+
 					</table>
 				</div>
 				<br>

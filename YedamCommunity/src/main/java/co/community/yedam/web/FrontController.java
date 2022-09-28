@@ -2,6 +2,7 @@ package co.community.yedam.web;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
@@ -21,6 +22,9 @@ import co.community.yedam.foodInfo.command.Store3;
 import co.community.yedam.foodInfo.command.Store4;
 import co.community.yedam.foodInfo.command.Store5;
 import co.community.yedam.foodInfo.command.Store6;
+import co.community.yedam.foodInfo.command.FoodInfoInsert;
+import co.community.yedam.foodInfo.command.FoodInfoSelectList;
+import co.community.yedam.foodInfo.command.FoodInfoWriteForm;
 import co.community.yedam.foodInfo.command.foodInfo;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
@@ -29,6 +33,7 @@ import co.community.yedam.freeBoard.command.FreeBoardEditForm;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
+import co.community.yedam.freeBoard.command.FreeBoardUpdateLike;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
 import co.community.yedam.member.command.MemberDelete;
 import co.community.yedam.member.command.MemberJoin;
@@ -47,7 +52,12 @@ import co.community.yedam.noticeBoard.command.NoticeBoardEditForm;
 import co.community.yedam.noticeBoard.command.NoticeBoardInsert;
 import co.community.yedam.noticeBoard.command.NoticeBoardSelect;
 import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
+import co.community.yedam.projectStudy.command.ProjectCard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
+import co.community.yedam.projectStudy.command.ProjectStudyCard;
+import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
+import co.community.yedam.projectStudy.command.StudyCard;
+import co.community.yedam.projectStudy.service.ProjectStudyVO;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsDelete;
 import co.community.yedam.questions.command.QuestionsEdit;
@@ -63,7 +73,7 @@ public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// 실제 요청페이지와, 그에 대해 할당할 커멘드를 담아두는 저장소
 	private HashMap<String, Command> map = new HashMap<String, Command>();
-
+	public static List<ProjectStudyVO> list = null;
 	public FrontController() {
 		super();
 	}
@@ -72,7 +82,6 @@ public class FrontController extends HttpServlet {
 		map.put("/main.do", new Main());
 		map.put("/memberLoginForm.do", new MemberLoginForm());
 		map.put("/memberJoinForm.do", new MemberJoinForm());
-		map.put("/community.do", new Community());
 		map.put("/freeBoard.do", new FreeBoard());
 		map.put("/questionsWriteForm.do", new QuestionsWriteForm());
 		map.put("/questionsSelectList.do", new QuestionsSelectList());
@@ -80,25 +89,27 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
 		map.put("/questionsEdit.do", new QuestionsEdit());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-		map.put("/questionsDelete.do", new QuestionsDelete());
+		map.put("/projectStudy.do", new ProjectStudy()); // 프로젝트스터디 메인페이지
 		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
 		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
-		map.put("/projectStudy.do", new ProjectStudy());
 		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoin.do", new MemberJoin());
 		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
-		map.put("/community.do", new Community());
 		map.put("/noticeBoard.do", new NoticeBoard());
 		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
 		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
 		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-		map.put("/noticevEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
 		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
 		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
 		map.put("/freeBoardSelect.do", new FreeBoardSelect());
 		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
 		map.put("/memberLogout.do", new MemberLogout());
 		map.put("/memberMyHome.do", new MemberMyHome());
+		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
+		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
+		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
+		map.put("/projectStudyWriteFrom.do", new ProjectStudyWriteFrom()); // 프로젝트스터디 새글쓰기 form으로
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberDelete.do", new MemberDelete());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
@@ -115,6 +126,7 @@ public class FrontController extends HttpServlet {
 		map.put("/store4.do", new Store4());
 		map.put("/store5.do", new Store5());
 		map.put("/store6.do", new Store6());
+		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -131,6 +143,7 @@ System.out.println(page);
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)
+		System.out.println(viewPage);
 		if (!viewPage.endsWith(".do")) {
 
 			if (viewPage.startsWith("ajax:")) { // ajax를 사용할때
