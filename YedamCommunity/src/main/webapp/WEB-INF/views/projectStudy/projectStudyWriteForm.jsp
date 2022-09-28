@@ -17,10 +17,6 @@
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
 
- <!-- Toast UI Editor -->
-<link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
-<script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
-
 <style type="text/css">
 select option[value=""][disabled] {
 	display: none;
@@ -31,7 +27,7 @@ select option[value=""][disabled] {
 <body>
 
 	<div id="allContainer">
-		<form action="projectStudyInsert.do">
+		<form id="projectStudyWriteForm" action="projectStudyInsert.do">
 		
 			<!-- start 프로젝트/스터디 기본 정보 -->
 			<div align="center" style="margin: 50px auto 30px auto;">
@@ -47,7 +43,7 @@ select option[value=""][disabled] {
 			<div class="ui two column stackable grid container">
 				<div class="column">
 					<div>
-						<h4>프로젝트 구분</h4>
+						<h4>모집 구분</h4>
 					</div>
 					<div class="ui segment">
 						<select class="form-select form-select-lg" id="projectStudyType" name="projectStudyType" required>
@@ -112,7 +108,7 @@ select option[value=""][disabled] {
 						<h4>기술 스택 및 개발 언어</h4>
 					</div>
 					<div class="ui segment">
-						<select class="form-select form-select-lg" id="projectStudylanguage" name="projectStudylanguage" required>
+						<select class="form-select form-select-lg" id="projectStudyLanguage" name="projectStudyLanguage" required>
 							<option value="" disabled selected>기술 스택/개발 언어</option>
 							<option>Java</option>
 							<option>Java, Spring</option>
@@ -183,14 +179,14 @@ select option[value=""][disabled] {
 				<div class="column">
 					<div class="ui top attached block header"><h4>내용</h4></div>
 					<div class="ui bottom attached segment">
-						<!-- Toast UI Editor -->
-						<div id="editor" name="projectStudyTitle" placeholder="프로젝트/스터디에 대해 소개해주세요!"></div>
+						<textarea class="form-control" id="projectStudySubject" name="projectStudySubject" rows="8" placeholder="프로젝트/스터디에 대해 소개해주세요!"></textarea>
 					</div>
 				</div>
-				<div class="column">
-					<input type="hidden">
-					<input type="button" value="취소" onclick="location.href='projectStudy.do'">
-					<input type="submit" value="글 등록">
+				<div class="column" align="right">
+					<h5>
+						<input type="button" value="취소" onclick="location.href='projectStudyCard.do'">&nbsp;&nbsp;
+						<input type="submit" value="글 등록"></input>
+					</h5>
 				</div>
 			</div>
 		</form>
@@ -230,18 +226,6 @@ select option[value=""][disabled] {
 			}
 		}
 		
-		/* Toast Editor */
-		const Editor = toastui.Editor;
- 
-		const editor = new Editor({
-			  el: document.querySelector('#editor'),
-			  height: '600px',
-			  initialEditType: 'markdown',
-			  previewStyle: 'vertical',
-			  autofocus: false
-		});
-		
-		console.log(document.getElementById('editor').value);
 	</script>
 </body>
 </html>

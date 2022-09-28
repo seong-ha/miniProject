@@ -50,6 +50,8 @@ import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectCard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.projectStudy.command.ProjectStudyCard;
+import co.community.yedam.projectStudy.command.ProjectStudyInsert;
+import co.community.yedam.projectStudy.command.ProjectStudySelect;
 import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
 import co.community.yedam.projectStudy.command.StudyCard;
 import co.community.yedam.projectStudy.service.ProjectStudyVO;
@@ -120,6 +122,8 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
 		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm()); // 자유게시판 검색 기능.
 		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
+		map.put("/projectStudyInsert.do", new ProjectStudyInsert()); // 프로젝트스터디 글쓰기 form의 데이터 들고와서 insert
+		map.put("/projectStudySelect.do", new ProjectStudySelect()); // 프로젝트스터디 모집글 상세보기.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

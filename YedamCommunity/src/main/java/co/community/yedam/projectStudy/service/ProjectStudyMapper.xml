@@ -3,7 +3,7 @@
 <mapper namespace="co.community.yedam.projectStudy.service.ProjectStudyMapper">
 
 	<select id="projectStudySelectList" resultType="co.community.yedam.projectStudy.service.ProjectStudyVO">
-		SELECT * FROM PROJECT_STUDY
+		SELECT * FROM PROJECT_STUDY ORDER BY PROJECT_STUDY_ID DESC
 	</select>
 	
 	<!-- 동적 sql예시. id만 들어오면 찾아주고, 둘 다 들어오면 로그인 처리해주는 거 -->
@@ -13,6 +13,12 @@
 	</select>
 	
 	<insert id="projectStudyInsert" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
+		<selectKey keyProperty="projectStudyId" resultType="int" order="BEFORE">
+			SELECT CASE WHEN MAX(PROJECT_STUDY_ID) IS NULL THEN 1 ELSE
+			MAX(PROJECT_STUDY_ID) + 1 END AS ID
+			FROM PROJECT_STUDY
+		</selectKey>
+		
 		INSERT INTO PROJECT_STUDY
 		VALUES (#{projectStudyId}, #{memberId}, #{projectStudyType}, #{projectStudyonoffline},
 			#{projectStudyPersonNum}, #{projectStudyStartDate}, #{projectStudyContact}, #{projectStudyPeriod},
@@ -52,6 +58,12 @@
 				AND PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage}
 			</if>
 		</where>
+		
+		ORDER BY PROJECT_STUDY_ID DESC
 	</select>
+	
+	<update id="projectStudyHitUpdate" parameterType="int">
+		UPDATE PROJECT_STUDY SET PROJECT_STUDY_HIT = PROJECT_STUDY_HIT + 1 WHERE PROJECT_STUDY_ID = #{id}
+	</update>
 	
 </mapper>
