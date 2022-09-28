@@ -10,15 +10,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import co.community.yedam.Main;
 import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
 import co.community.yedam.community.command.Community;
-import co.community.yedam.foodInfo.command.FoodInfoInsert;
-import co.community.yedam.foodInfo.command.FoodInfoSelectList;
-import co.community.yedam.foodInfo.command.FoodInfoWriteForm;
+import co.community.yedam.foodInfo.command.Store1;
+import co.community.yedam.foodInfo.command.Store2;
+import co.community.yedam.foodInfo.command.Store3;
+import co.community.yedam.foodInfo.command.Store4;
+import co.community.yedam.foodInfo.command.Store5;
+import co.community.yedam.foodInfo.command.Store6;
 import co.community.yedam.foodInfo.command.foodInfo;
-import co.community.yedam.foodInfo.command.foodInfoSelect;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
 import co.community.yedam.freeBoard.command.FreeBoardEdit;
@@ -47,6 +50,7 @@ import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
 import co.community.yedam.questions.command.QuestionsDelete;
+import co.community.yedam.questions.command.QuestionsEdit;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
 import co.community.yedam.questions.command.QuestionsSearchForm;
@@ -74,6 +78,7 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsSelectList.do", new QuestionsSelectList());
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
+		map.put("/questionsEdit.do", new QuestionsEdit());
 		map.put("/questionsInsert.do", new QuestionsInsert());
 		map.put("/questionsDelete.do", new QuestionsDelete());
 		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
@@ -100,14 +105,16 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new foodInfo());
 		map.put("/infoCafe.do", new InfoCafe());
-		map.put("/foodInfoWriteForm.do", new FoodInfoWriteForm());
-		map.put("/foodInfoSelectList.do", new FoodInfoSelectList());
-		map.put("/foodInfoInsert.do", new FoodInfoInsert());
-		map.put("/foodInfoSelect.do", new foodInfoSelect());
 		map.put("/memberSelectList.do", new MemberSelectList());
 		map.put("/memberSelect.do", new MemberSelect());
 		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
 		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
+		map.put("/store1.do", new Store1());
+		map.put("/store2.do", new Store2());
+		map.put("/store3.do", new Store3());
+		map.put("/store4.do", new Store4());
+		map.put("/store5.do", new Store5());
+		map.put("/store6.do", new Store6());
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

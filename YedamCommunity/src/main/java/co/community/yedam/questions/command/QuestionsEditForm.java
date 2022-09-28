@@ -15,26 +15,11 @@ public class QuestionsEditForm implements Command {
 		// 수정폼 호출
 		questionsService dao = new questionsServiceImpl();
 		questionsVO vo = new questionsVO();
-		vo.setQuestionsId(Integer.valueOf(request.getParameter("id")));
-		vo.setQuestionsTitle(request.getParameter("questionsTitle"));
-		vo.setQuestionsContent(request.getParameter("questionsContent"));
-		System.out.println(request.getParameter("id"));
-		System.out.println(request.getParameter("questionsTitle"));
-		System.out.println(request.getParameter("questionsContent"));
+		vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId")));
+		vo=dao.questionsSelect(vo);
+		request.setAttribute("vo", vo);
 
-		int n =dao.questionsUpdate(vo);
-		System.out.println(vo);
-		System.out.println(n);
-		String viewPage="main/questions/questionsError";
+		return "main/questions/questionsEditForm";
 
-		if(n != 0) {
-			request.setAttribute("vo", vo);
-			viewPage="questionsEditForm.do";
-		}else {
-			request.setAttribute("message", "게시글 수정 실패하였습니다.!");
-		}
-		
-		return viewPage;
-	}
-
+}
 }

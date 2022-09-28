@@ -1,5 +1,6 @@
 package co.community.yedam.questions.command;
 
+import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,8 +30,9 @@ public class QuestionsInsert implements Command {
 		// vo.setQuestionsId(Integer.valueOf(request.getParameter("questionsId"));
 		vo.setQuestionsTitle(request.getParameter("questionsTitle"));
 		vo.setQuestionsContent(request.getParameter("questionsContent"));
-		//vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
+//		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
 		vo.setMemberId(request.getParameter("memberId"));
+		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
 		
 		
 //		System.out.println("title="+vo.getQuestionsTitle());

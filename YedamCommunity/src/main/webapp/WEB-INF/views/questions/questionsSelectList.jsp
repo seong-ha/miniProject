@@ -8,6 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <title>문의게시판 목록</title>
+<script src="js/util.js"></script>
 </head>
 <body>
 
@@ -79,10 +80,10 @@
 								<td align="center">${n.memberId }</td>
 								<td align="center">${n.questionsDate }</td>
 								
-								<td><script>
+								<!-- <td><script>
 									document
 											.write(timestamp('${n.questionsDate}'));
-								</script></td>
+								</script></td> -->
 
 							</tr>
 						</c:forEach>
@@ -109,7 +110,7 @@
 			
 			
 			<br>
-			<c:if test="${not empty id }">
+			<c:if test="${not empty memberId }">
 				<!-- 접근제어 -->
 				<button type="button"
 					onclick="location.href='questionsWriteForm.do'">글쓰기</button>
@@ -117,7 +118,7 @@
 		</div>
 		
 	
-		<form id="fbf" name="fbf" method="post">
+		<form id="qsl" name="qsl" method="post" action="questionsSelect.do">
 			<input type="hidden" id="questionsId" name="questionsId">
 			
 		</form>
@@ -132,16 +133,15 @@
 	
 		function questionsSelect(id) {
 			document.getElementById("questionsId").value = id;
-			console.log(id);
-			fbf.action="questionsSelect.do";
-			fbf.submit();
+			qsl.action="questionsSelect.do";
+			qsl.submit();
 		}
 		
 		function searchCall(){
 			let key = document.getElementById("key").value;
 			let val = document.getElementById("val").value;
 			let payload = 'key='+key+'&val='+val;
-			fetch("AjaxNoticeSearch.do?"+payload)
+			fetch("AjaxQuestionsSearch.do?"+payload)
 				.then(response => response.json())
 				.then(json => htmlViews(json)); //화면에 출력
 		}
@@ -160,7 +160,7 @@
 				str += "<td>" + data.questionsId + "</td>";
 				str += "<td>" + data.questionsTitle + "</td>";
 				str += "<td>" + data.memberId + "</td>";
-				str += "<td>" + data.questionsDate + "</td>";
+				str += "<td>" + data.questionsDate + "</td></tr>";
 				
 			return str;
 		}

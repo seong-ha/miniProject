@@ -28,18 +28,22 @@
 			MAX(QUESTIONS_ID) + 1 END AS ID
 			FROM QUESTIONS
 		</selectKey>
-		INSERT INTO QUESTIONS 
-		VALUES (#{questionsId},#{questionsTitle},#{questionsContent},#{questionsDate},#{memberId})
+		INSERT INTO QUESTIONS (QUESTIONS_ID,QUESTIONS_TITLE,QUESTIONS_CONTENT,QUESTIONS_DATE,MEMBER_ID)
+		VALUES (#{questionsId},#{questionsTitle},#{questionsContent},SYSDATE,#{memberId})
 		
 	</insert>
 
 	<update id="questionsUpdate" parameterType="co.community.yedam.questions.service.questionsVO">
+		UPDATE QUESTIONS
+		
 		<set>
-		<if test="questionsTitle != null">questions_title =#{questionsTitle},</if>
-		<if test="questionsContent != null">questions_content = #{questionsContent}</if>
+		<if test="questionsTitle != null">questions_title = #{questionsTitle},</if>
+		<if test="questionsContent != null">questions_content = #{questionsContent},</if>
+		<if test="questionsDate != null">questions_date = #{questionsDate}</if>
 		</set>
 		WHERE QUESTIONS_ID = #{questionsId}
 	</update>
+	
 
 	<delete id="questionsDelete">
 		DELETE FROM QUESTIONS
@@ -56,6 +60,8 @@
 		<if test="key == 3"> questions_content LIKE '%'|| #{val} ||'%'</if>
 		ORDER BY questions_ID DESC
 	</select>
+	
+	
 
 
 
