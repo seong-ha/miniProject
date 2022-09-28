@@ -28,59 +28,47 @@
 
 
 <!-- css2 -->
-<link
-	href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-	rel="stylesheet">
-<link href="css2/css/bootstrap.min.css" rel="stylesheet">
-<link href="css2/css/fontawesome-all.min.css" rel="stylesheet">
-<link href="css2/css/swiper.css" rel="stylesheet">
-<link href="css2/css/styles.css" rel="stylesheet">
+<link rel="icon" href="css2/img/favicon/favicon-32x32.png" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="css2/img/favicon/favicon-144x144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="css2/img/favicon/favicon-72x72.png">
+	<link rel="apple-touch-icon-precomposed" href="css2/img/favicon/favicon-54x54.png">
 <!-- css3 -->
-<link rel="stylesheet" href="css3/css/bootstrap.min.css">
-<link rel="stylesheet" href="css3/css/jquery-ui.css">
-<link rel="stylesheet" href="css3/css/owl.carousel.min.css">
-<link rel="stylesheet" href="css3/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="css3/css/owl.theme.default.min.css">
+ <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css3/css/jquery.fancybox.min.css">
 
-<link rel="stylesheet" href="css3/css/bootstrap-datepicker.css">
-
-<link rel="stylesheet" href="css3/fonts/flaticon/font/flaticon.css">
-<link rel="stylesheet" href="css3/fonts/icomoon/style.css">
-
-<link rel="stylesheet" href="css3/css/aos.css">
-
-<link rel="stylesheet" href="css3/css/style.css">
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css3/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css3/css/style.css" type="text/css">
 
 
 <!-- css4 -->
-<link href="img/favicon.ico" rel="icon">
+ <!-- Favicons -->
+  <link href="css4/img/favicon.png" rel="icon">
+  <link href="css4/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-<!-- Google Web Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
-	rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-<!-- Icon Font Stylesheet -->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-	rel="stylesheet">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-	rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="css4/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Libraries Stylesheet -->
-<link href="lib/animate/animate.min.css" rel="stylesheet">
-<link href="lib/owlcarousel/assets/owl.carousel.min.css"
-	rel="stylesheet">
-<!-- Customized Bootstrap Stylesheet -->
-<link href="css4/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="css4/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css4/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="css4/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="css4/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css4/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-<!-- Template Stylesheet -->
-<link href="css4/css/style.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css4/css/style.css" rel="stylesheet">
+
 
 <!-- css5 -->
 <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -250,27 +238,14 @@
 			</div>
 		</div>
 	</section>
-	<section class="page-section bg-primary" id="about">
-		<div class="container px-4 px-lg-5">
-			<div class="row gx-4 gx-lg-5 justify-content-center">
-				<div class="col-lg-8 text-center">
-					<h2 class="text-white mt-0">We've got what you need!</h2>
-					<hr class="divider divider-light" />
-					<p class="text-white-75 mb-4">Start Bootstrap has everything
-						you need to get your new website up and running in no time! Choose
-						one of our open source, free to download, and easy to use themes!
-						No strings attached!</p>
-					<a class="btn btn-light btn-xl" href="#services">Get Started!</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Portfolio-->
+
+	
+	
 	<div id="portfolio">
 		<div class="container-fluid p-0">
 			<div class="row g-0">
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg"
+					<a class="portfolio-box" href="css5/img/portfolio/fullsize/1.jpg"
 						title="Project Name"> <img class="img-fluid"
 						src="css5/img/portfolio/thumbnails/1.jpg" alt="..." />
 						<div class="portfolio-box-caption">
@@ -280,7 +255,7 @@
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg"
+					<a class="portfolio-box" href="css5/img/portfolio/fullsize/2.jpg"
 						title="Project Name"> <img class="img-fluid"
 						src="css5/img/portfolio/thumbnails/2.jpg" alt="..." />
 						<div class="portfolio-box-caption">
@@ -338,223 +313,394 @@
 
 
 	<!-- css3 -->
-	<section class="site-section" id="portfolio-section">
+	
 
+	
+  <!--==========================
+     css4
+    ============================-->
+    <section id="skills">
+      <div class="container">
 
+        <header class="section-header">
+          <h3>Our Skills</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+        </header>
+
+        <div class="skills-content">
+
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">HTML <i class="val">100%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">CSS <i class="val">90%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+            </div>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!--==========================
+      Facts Section
+    ============================-->
+    <section id="facts"  class="wow fadeIn">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Facts</h3>
+          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+        </header>
+
+        <div class="row counters">
+
+  				<div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">274</span>
+            <p>Clients</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">421</span>
+            <p>Projects</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">1,364</span>
+            <p>Hours Of Support</p>
+  				</div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-toggle="counter-up">18</span>
+            <p>Hard Workers</p>
+  				</div>
+
+  			</div>
+
+        <div class="facts-img">
+          <img src="css4/img/facts-img.png" alt="" class="img-fluid">
+        </div>
+
+      </div>
+    </section><!-- #facts -->
+
+    <!--==========================
+      Portfolio Section
+    ============================-->
+    <section id="portfolio"  class="section-bg" >
+      <div class="container">
+
+        <header class="section-header">
+          <h3 class="section-title">Our Portfolio</h3>
+        </header>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/app1.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">App 1</a></h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/web3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 3</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/app2.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">App 2</a></h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/card2.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 2</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/web2.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 2</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/app3.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">App 3</a></h4>
+                <p>App</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/card1.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 1</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/card3.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Card 3</a></h4>
+                <p>Card</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="css4/img/portfolio/web1.jpg" class="img-fluid" alt="">
+                <a href="css4/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="css4/img/portfolio/web1.jpg" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Web 1</a></h4>
+                <p>Web</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #portfolio -->
+
+	<!-- css2 -->
+	<!-- Team start -->
+	<section id="team" class="team">
 		<div class="container">
-
-			<div class="row mb-3">
-				<div class="col-12 text-center" data-aos="fade">
-					<h2 class="section-title mb-3">Portfolio</h2>
+			<div class="row">
+				<div class="col-md-12 heading">
+					<span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
+					<h2 class="title">Meet with our Team <span class="title-desc">A Quality Experience Team with 4 years experience</span></h2>
 				</div>
-			</div>
+			</div><!-- Title row end -->
 
-			<div class="row justify-content-center mb-5" data-aos="fade-up">
-				<div id="filters" class="filters text-center button-group col-md-7">
-					<button class="btn btn-primary active" data-filter="*">All</button>
-					<button class="btn btn-primary" data-filter=".web">Web</button>
-					<button class="btn btn-primary" data-filter=".design">Design</button>
-					<button class="btn btn-primary" data-filter=".brand">Brand</button>
-				</div>
-			</div>
-
-			<div id="posts" class="row no-gutter">
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css2/images/project-1.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-1.jpg">
-					</a>
-				</div>
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="images/img_2.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-2.jpg">
-					</a>
-				</div>
-
-				<div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="images/img_3.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-3.jpg">
-					</a>
-				</div>
-
-				<div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-
-					<a href="images/img_4.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-4.jpg">
-					</a>
-
-				</div>
-
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="images/img_5.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-5.jpg">
-					</a>
-				</div>
-
-				<div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="images/img_6.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-6.jpg">
-					</a>
-				</div>
-
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_7.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-7.jpg">
-					</a>
-				</div>
-
-				<div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_8.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-8.jpg">
-					</a>
-				</div>
-
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_9.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css2/images/project-9.jpg">
-					</a>
-				</div>
-
-				<div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_10.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css3/images/img_10.jpg">
-					</a>
-				</div>
-
-				<div class="item brand col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_11.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css3/images/img_11.jpg">
-					</a>
-				</div>
-
-				<div class="item design col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_12.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css3/images/img_12.jpg">
-					</a>
-				</div>
-
-				<div class="item web col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
-					<a href="css3/images/img_13.jpg" class="item-wrap fancybox"
-						data-fancybox="gallery2"> <span class="icon-search2"></span> <img
-						class="img-fluid" src="css3/images/img_13.jpg">
-					</a>
-				</div>
-
-			</div>
-		</div>
-
-	</section>
-	<div id="ftco-loader" class="show fullscreen">
-		<svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none"
-				stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none"
-				stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg>
-	</div>
-
-
-	<!-- css4 -->
-	<!-- Team Start -->
-	<div class="container-xxl py-5">
-		<div class="container">
-			<div class="text-center mx-auto mb-5 wow fadeInUp"
-				data-wow-delay="0.1s" style="max-width: 500px;">
-				<div
-					class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Team
-					Members</div>
-				<h1 class="display-6 mb-5">Let's Meet With Our Ordinary
-					Soldiers</h1>
-			</div>
-			<div class="row g-4">
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-					<div class="team-item position-relative rounded overflow-hidden">
-						<div class="overflow-hidden">
-							<img class="img-fluid" src="css4/img/team-1.jpg" alt="">
+			<div class="row text-center">
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInLeft">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team1.jpg" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
 						</div>
-						<div class="team-text bg-light text-center p-4">
-							<h5>Full Name</h5>
-							<p class="text-primary">Designation</p>
-							<div class="team-social text-center">
-								<a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a> <a class="btn btn-square"
-									href=""><i class="fab fa-twitter"></i></a> <a
-									class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+						<div class="team-content">
+							<h3>Vosgi Varduhi</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>	
+				</div><!--/ Team 1 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInLeft">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team2.jpg" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>Robert Aleska</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-					<div class="team-item position-relative rounded overflow-hidden">
-						<div class="overflow-hidden">
-							<img class="img-fluid" src="css4/img/team-2.jpg" alt="">
+				</div><!--/ Team 2 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team3.jpg" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
 						</div>
-						<div class="team-text bg-light text-center p-4">
-							<h5>Full Name</h5>
-							<p class="text-primary">Designation</p>
-							<div class="team-social text-center">
-								<a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a> <a class="btn btn-square"
-									href=""><i class="fab fa-twitter"></i></a> <a
-									class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+						<div class="team-content">
+							<h3>Taline Voski</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-					<div class="team-item position-relative rounded overflow-hidden">
-						<div class="overflow-hidden">
-							<img class="img-fluid" src="css4/img/team-3.jpg" alt="">
+				</div><!--/ Team 3 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team4.jpg" alt="">
+							<span class="img-top"></span>
+							<span class="img-bottom"></span>
 						</div>
-						<div class="team-text bg-light text-center p-4">
-							<h5>Full Name</h5>
-							<p class="text-primary">Designation</p>
-							<div class="team-social text-center">
-								<a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a> <a class="btn btn-square"
-									href=""><i class="fab fa-twitter"></i></a> <a
-									class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
+						<div class="team-content">
+							<h3>Alban Spencer</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
+								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
+								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
+								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-					<div class="team-item position-relative rounded overflow-hidden">
-						<div class="overflow-hidden">
-							<img class="img-fluid" src="css4/img/team-4.jpg" alt="">
-						</div>
-						<div class="team-text bg-light text-center p-4">
-							<h5>Full Name</h5>
-							<p class="text-primary">Designation</p>
-							<div class="team-social text-center">
-								<a class="btn btn-square" href=""><i
-									class="fab fa-facebook-f"></i></a> <a class="btn btn-square"
-									href=""><i class="fab fa-twitter"></i></a> <a
-									class="btn btn-square" href=""><i class="fab fa-instagram"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Team End -->
-
-
-
-
-
-
+				</div><!--/ Team 4 end -->
+			</div><!--/ Content row end -->
+		</div><!--/ Container end -->
+    </section><!--/ Team end -->
+	
+	<!-- css3 -->
+	<!-- Contact Section Begin -->
+    <section class="contact-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2>Location</h2>
+                        <p>Get directions to our event center</p>
+                    </div>
+                    <div class="cs-text">
+                        <div class="ct-address">
+                            <span>Address:</span>
+                            <p>01 Pascale Springs Apt. 339, NY City <br />United State</p>
+                        </div>
+                        <ul>
+                            <li>
+                                <span>Phone:</span>
+                                (+12)-345-67-8910
+                            </li>
+                            <li>
+                                <span>Email:</span>
+                                info.colorlib@gmail.com
+                            </li>
+                        </ul>
+                        <div class="ct-links">
+                            <span>Website:</span>
+                            <p>https://conference.colorlib.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="cs-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1808595875964!2d128.58873723158544!3d35.86908446377675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e3c264a0f67b%3A0x6f6af951f8677f92!2z7JiI64u07KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1664354791415!5m2!1sko!2skr"
+                            height="400" style="border:0;" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
 
 
 
@@ -576,31 +722,46 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="css1/js/google-map.js"></script>
 	<script src="css1/js/main.js"></script>
-
-
+	
+	<!-- css2 -->
+	<!-- initialize jQuery Library -->
+	<script type="text/javascript" src="css2/js/jquery.js"></script>
+	<!-- Bootstrap jQuery -->
+	<script type="text/javascript" src="css2/js/bootstrap.min.js"></script>
+	<!-- Style Switcher -->
+	<script type="text/javascript" src="css2/js/style-switcher.js"></script>
+	<!-- Owl Carousel -->
+	<script type="text/javascript" src="css2/js/owl.carousel.js"></script>
+	<!-- PrettyPhoto -->
+	<script type="text/javascript" src="css2/js/jquery.prettyPhoto.js"></script>
+	<!-- Bxslider -->
+	<script type="text/javascript" src="css2/js/jquery.flexslider.js"></script>
+	<!-- CD Hero slider -->
+	<script type="text/javascript" src="css2/js/cd-hero.js"></script>
+	<!-- Isotope -->
+	<script type="text/javascript" src="css2/js/isotope.js"></script>
+	<script type="text/javascript" src="css2/js/ini.isotope.js"></script>
+	<!-- Wow Animation -->
+	<script type="text/javascript" src="css2/js/wow.min.js"></script>
+	<!-- SmoothScroll -->
+	<script type="text/javascript" src="css2/js/smoothscroll.js"></script>
+	<!-- Eeasing -->
+	<script type="text/javascript" src="css2/js/jquery.easing.1.3.js"></script>
+	<!-- Counter -->
+	<script type="text/javascript" src="css2/js/jquery.counterup.min.js"></script>
+	<!-- Waypoints -->
+	<script type="text/javascript" src="css2/js/waypoints.min.js"></script>
+	<!-- Template custom -->
+	<script type="text/javascript" src="css2/js/custom.js"></script>
+	
 	<!-- css3 -->
-	<script src="css3/js/jquery-3.3.1.min.js"></script>
-	<script src="css3/js/jquery-ui.js"></script>
-	<script src="css3/js/popper.min.js"></script>
-	<script src="css3/js/bootstrap.min.js"></script>
-	<script src="css3/js/owl.carousel.min.js"></script>
-	<script src="css3/js/jquery.countdown.min.js"></script>
-	<script src="css3/js/jquery.easing.1.3.js"></script>
-	<script src="css3/js/aos.js"></script>
-	<script src="css3/js/jquery.fancybox.min.js"></script>
-	<script src="css3/js/jquery.sticky.js"></script>
-	<script src="css3/js/isotope.pkgd.min.js"></script>
-	<script src="css3/js/main.js"></script>
-	<!-- css4 -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="css4/lib/wow/wow.min.js"></script>
-	<script src="css4/lib/easing/easing.min.js"></script>
-	<script src="css4/lib/waypoints/waypoints.min.js"></script>
-	<script src="css4/lib/owlcarousel/owl.carousel.min.js"></script>
-	<script src="css4/lib/parallax/parallax.min.js"></script>
-	<script src="css4/js/main.js"></script>
+	 <script src="css3/js/jquery-3.3.1.min.js"></script>
+    <script src="css3/js/bootstrap.min.js"></script>
+    <script src="css3/js/jquery.magnific-popup.min.js"></script>
+    <script src="css3/js/jquery.countdown.min.js"></script>
+    <script src="css3/js/jquery.slicknav.js"></script>
+    <script src="css3/js/owl.carousel.min.js"></script>
+    <script src="css3/js/main.js"></script>
 
 	<!-- css5 -->
 	<script
@@ -616,5 +777,24 @@
 	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
+	<!-- css4 -->
+	<script src="css4/lib/jquery/jquery.min.js"></script>
+  <script src="css4/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="css4/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="css4/lib/easing/easing.min.js"></script>
+  <script src="css4/lib/superfish/hoverIntent.js"></script>
+  <script src="css4/lib/superfish/superfish.min.js"></script>
+  <script src="css4/lib/wow/wow.min.js"></script>
+  <script src="css4/lib/waypoints/waypoints.min.js"></script>
+  <script src="css4/lib/counterup/counterup.min.js"></script>
+  <script src="css4/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="css4/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="css4/lib/lightbox/js/lightbox.min.js"></script>
+  <script src="css4/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="css4/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="css4/js/main.js"></script>
 </body>
 </html>
