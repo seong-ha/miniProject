@@ -60,9 +60,9 @@
 				</div>
 				<br>
 				<div align="center">
-					<input type="submit" value="등록">&nbsp;&nbsp;&nbsp; <input
-						type="reset" value="초기화">&nbsp;&nbsp;&nbsp; <input
-						type="button" value="목록" onclick="location.href='freeBoard.do'">&nbsp;&nbsp;&nbsp;
+					<input type="submit" value="등록" class="btn btn-outline-dark">&nbsp;&nbsp;&nbsp; <input
+						type="reset" value="초기화" class="btn btn-outline-dark">&nbsp;&nbsp;&nbsp; <input
+						type="button" value="목록" onclick="location.href='freeBoard.do'" class="btn btn-outline-dark">&nbsp;&nbsp;&nbsp;
 				</div>
 			</form>
 		</div>

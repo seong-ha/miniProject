@@ -10,7 +10,7 @@
 <body>
 	<div align="center">
 
-<br>
+		<br>
 
 		<div>
 			<h1>문의 상세보기</h1>
@@ -28,7 +28,7 @@
 					<td width="100">${vo.memberId }</td>
 					<th width="100">작성일자</th>
 					<td width="100">${vo.questionsDate }</td>
-					
+
 
 				</tr>
 
@@ -46,11 +46,9 @@
 
 
 	<div align="center">
-
 		<button type="button" onclick="subCall('E')">수정</button>
 		&nbsp;&nbsp;
 		<button type="button" onclick="subCall('D')">삭제</button>
-
 		&nbsp;&nbsp;
 		<button type="button" onclick="location.href='questionsSelectList.do'">목록</button>
 	</div>
@@ -60,7 +58,8 @@
 
 	<div>
 		<form id="fbs" method="post">
-			<input type="hidden" id="questionsId" name="questionsId" value="${vo.questionsId}">
+			<input type="hidden" id="questionsId" name="questionsId"
+				value="${vo.questionsId}">
 		</form>
 	</div>
 

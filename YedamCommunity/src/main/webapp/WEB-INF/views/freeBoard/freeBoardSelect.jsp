@@ -314,7 +314,7 @@ html, body {
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
 				<div class="writer-icon"></div>
-				<span>작성자</span>
+				<span>${freeBoard.memberId }</span>
 			</div>
 			<table class="cell" border="1">
 				<colgroup>
@@ -352,13 +352,13 @@ html, body {
 		<br>
 		<div>
 			<c:if test="${freeBoard.memberId eq memberId}">
-				<button type="button" onclick="subCall('E')" class="btn btn-dark">수정</button>
+				<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 					&nbsp;&nbsp;
-					<button type="button" onclick="subCall('D')" class="btn btn-dark">삭제</button>
+					<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 			</c:if>
 			&nbsp;&nbsp;
 			<button type="button" onclick="location.href='freeBoard.do'"
-				class="btn btn-dark">목록</button>
+				class="btn btn-outline-dark">목록</button>
 		</div>
 		<br>
 		<div>
@@ -434,7 +434,7 @@ html, body {
 				fbs.action = "freeBoardDelete.do"; // 삭제
 			} else if (str == 'L') {
 				fbs.action = "freeBoardUpdateLike.do"; // 좋아요 증가.
-				alert('${message}');
+				alert("좋아요!");
 			}
 			fbs.submit();
 		}

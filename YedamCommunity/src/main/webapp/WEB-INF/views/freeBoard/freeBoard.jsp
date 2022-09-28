@@ -13,34 +13,32 @@
 	crossorigin="anonymous">
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
 	crossorigin="anonymous"></script>
-	
+
 <style>
-	.tableBack {
-		background-image: url("css1/images/tableBack.jpg");
-	
-	}
-	
-</style>	
-	
+.tableBack {
+	background-image: url("css1/images/tableBack.jpg");
+}
+
+}
+</style>
+
 </head>
 <body>
 	<hr>
 	<div align="center" class="tableBack">
 		<div>
-			<h1>자유게시판</h1>
+			<h1>
+				<small>자유게시판</small>
+			</h1>
 		</div>
 		<br>
 		<div class="container">
-			<table class="table">
-				<thead class="table-dark">
+			<table class="member">
+				<thead>
 					<tr>
 						<th>글번호</th>
 						<th>제목</th>
 						<th>내용</th>
-						<th>작성자ID</th>
-						<th>작성일</th>
-						<th>조회수</th>
-						<th>추천수</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -49,9 +47,7 @@
 					</c:if>
 					<c:if test="${not empty freeBoards }">
 						<c:forEach items="${freeBoards }" var="m">
-							<tr onMouseover="this.style.backgroundColor='gray';"
-								onMouseout="this.style.backgroundColor='white';"
-								onclick="selectFreeBoard(${m.freeBoardId})">
+							<tr onclick="selectFreeBoard(${m.freeBoardId})">
 								<td>${m.freeBoardId }</td>
 								<td><span class="d-inline-block text-truncate"
 									style="max-width: 200px;"> ${m.freeBoardTitle }</span></td>
@@ -88,7 +84,7 @@
 				<c:if test="${not empty memberId}">
 					<button type="button"
 						onclick="location.href='freeBoardInsertForm.do'"
-						class="btn btn-dark">글쓰기</button>
+						class="btn btn-outline-dark">글쓰기</button>
 				</c:if>
 			</form>
 			<br>
@@ -98,15 +94,10 @@
 
 			<div>
 				<ul>
-					<li>
-						<a href="freeBoard.do">◀</a>&nbsp;
-						<a href="freeBoard.do">1</a>&nbsp;
-						<a href="freeBoard.do">2</a>&nbsp;
-						<a href="freeBoard.do">3</a>&nbsp;
-						<a href="freeBoard.do">4</a>&nbsp;
-						<a href="freeBoard.do">5</a>&nbsp;
-						<a href="freeBoard.do">▶</a>
-					</li>
+					<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
+						<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
+						<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
+						<a href="freeBoard.do">▶</a></li>
 				</ul>
 			</div>
 		</div>

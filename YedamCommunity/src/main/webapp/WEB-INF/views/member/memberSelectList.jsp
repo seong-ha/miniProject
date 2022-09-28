@@ -22,20 +22,68 @@
 		text-align: center;
 	}
 	
+		.member {
+	width: 900px;
+	background-color: #fff;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.member caption {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.member tr {
+	border-bottom: 1px solid #eee;
+}
+
+.member tr:last-child {
+	border: none;
+}
+
+.member tr:nth-child(odd) {
+	background-color: #ddd;
+}
+
+.member th, .member td {
+	padding: 12px;
+	text-align: center;
+}
+
+.member tr th {
+	background-color: #FD5F00;
+	color: #fff;
+}
+
+.member tr th:first-child {
+	border-radius: 5px 0 0 0;
+}
+
+.member tr th:last-child {
+	border-radius: 0 5px 0 0;
+}
+
+.member tr td:last-child {
+	color: crimson;
+	font-weight: 500;
+}
 
 </style>
 </head>
 <body>
 	<div align="center" class="tableBack">
 		<div>
-			<br>
+			<hr><br>
 			<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1>
 			<br>
 		</div>
 		<div>
 			<div class="container">
-				<table class="table">
-					<thead class="table-dark">
+				<table class="member">
+					<thead>
 						<tr>
 							<th>아이디</th>
 							<th>이름</th>
@@ -47,9 +95,7 @@
 						</tr>
 					</thead>
 					<c:forEach items="${members}" var="member">
-						<tr onclick="selectMember('${member.memberId}')"
-							onMouseover="this.style.backgroundColor='gray';"
-							onMouseout="this.style.backgroundColor='white';">
+						<tr onclick="selectMember('${member.memberId}')">
 							<td width="80px">${member.memberId}</td>
 							<td>${member.memberName}</td>
 							<td width="150px">${member.memberTel}</td>
@@ -68,8 +114,16 @@
 			<form id="msl" method="post">
 				<input type="hidden" id="memberId" name="memberId">
 			</form>
-		</div>
-	</div>
+		</div><br><br>
+					<div>
+				<ul>
+					<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
+						<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
+						<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
+						<a href="freeBoard.do">▶</a></li>
+				</ul>
+			</div>
+	</div><br>
 	<script type="text/javascript">
 		function selectMember(id) {
 			document.getElementById('memberId').value = id
