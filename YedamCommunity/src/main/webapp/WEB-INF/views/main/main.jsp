@@ -79,7 +79,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">공지사항</h3>
-							<p>1조 화이팅</p>
+							<p>각종 커뮤니티 정보를 확인 할 수 있습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">커뮤니티</h3>
-							<p>이현성 ㅗ</p>
+							<p>자유롭게 글쓰시고 정보를 공유할수있는 공간입니다.</p>
 						</div>
 					</div>
 				</div>
@@ -103,8 +103,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">정보</h3>
-							<p>Even the all-powerful Pointing has no control about the
-								blind texts it is an almost unorthographic.</p>
+							<p>스터디카페 도서 맛집을 볼 수 있습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -116,8 +115,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">프로젝트 &amp; 스터디</h3>
-							<p>Even the all-powerful Pointing has no control about the
-								blind texts it is an almost unorthographic.</p>
+							<p>스터디모집과 프로젝트모집을 공고를 볼수있습니다.</p>
 						</div>
 					</div>
 				</div>
@@ -223,7 +221,7 @@
 
 
 	<section class="ftco-section ftco-counter img" id="section-counter"
-		style="background-image: url(css1/images/Study1.jpg);"
+		style="background-image: url(css1/images/DD.jpg);"
 		data-stellar-background-ratio="0.5">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-2 d-flex">
@@ -240,17 +238,53 @@
 				</div>
 				<div
 					class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-					<h2 class="mb-4">Fox University</h2>
-					<p>Separated they live in. A small river named Duden flows by
-						their place and supplies it with the necessary regelialia. It is a
-						paradisematic country. A small river named Duden flows by their
-						place and supplies it with the necessary regelialia. It is a
-						paradisematic country, in which roasted parts of sentences fly
-						into your mouth.</p>
-					<p>A small river named Duden flows by their place and supplies
-						it with the necessary regelialia. It is a paradisematic country,
-						in which roasted parts of sentences fly into your mouth.</p>
+					<h2 class="mb-4">YEDAM COMMUNITY</h2>
+					<p>1.코로나로 힘겨운 요즘인데 평온한 하루 보내시길 바랍니다.</p>
+					<p>2.여러 소식들로 뒤숭숭한 요즘인데요, 부디 지치지 않고 잘 이겨내셨으면 합니다.</p>
+					<p>3.코로나 때문에 불안한 나날들이 몇 달째인데, 편안한 마음으로 일상을 보내실 수 있길 바랍니다.</p>
+					<p>4.코로나가 또다시 기승을 부리는 요즘이네요. 건강, 체력 모두 조심 또 조심하세요!</p>
+					<p>5. 마스크로 답답하지만,마음만은 상쾌한 한 주 보내시길 바랍니다.</p>
+					<p>6.코로나가 지나고 곧 많은 분들과 함께 볼 수 있는 날이 오면 좋겠습니다.</p>
+					<p>7.이 계절에서 저 계절로 아프지 않고 건너가실 수 있길 바랍니다.</p>
+
 				</div>
+				<div class="row d-md-flex align-items-center justify-content-center">
+					<div class="col-lg-12">
+						<div class="row d-md-flex align-items-center">
+							<div
+								class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+								<div class="block-18">
+									<div class="icon">
+										<span class="flaticon-doctor"></span>
+									</div>
+									<div class="text">
+										<strong class="number" data-number="75678">0</strong> <span><h4>총
+												방문자</h4></span>
+									</div>
+								</div>
+							</div>
+							<div
+								class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+								<div class="block-18">
+									<div class="icon">
+										<span class="flaticon-doctor"></span>
+									</div>
+									<div class="text">
+										<strong class="number" data-number="3061">0</strong> <span><h4>일
+												방문자</h4></span>
+									</div>
+								</div>
+							</div>
+							<div
+								class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+								<div class="block-18">
+									<div class="icon">
+										<span class="flaticon-doctor"></span>
+									</div>
+									<div class="text">
+										<strong class="number" data-number="30">0</strong> <span><h4>동시
+												접속자 수</h4> </span>
+									</div>
 			</div>
 		</div>
 	</section>
@@ -458,16 +492,16 @@
 											접속자 수</h4> </span>
 								</div>
 							</div>
-						</div>
-						<div
-							class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-							<div class="block-18">
-								<div class="icon">
-									<span class="flaticon-doctor"></span>
-								</div>
-								<div class="text">
-									<strong class="number" data-number="1032">0</strong> <span><h4>수료생
-											수</h4></span>
+							<div
+								class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+								<div class="block-18">
+									<div class="icon">
+										<span class="flaticon-doctor"></span>
+									</div>
+									<div class="text">
+										<strong class="number" data-number="1032">0</strong> <span><h4>수료생
+												수</h4></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -489,7 +523,6 @@
 						paradisematic country</p>
 				</div>
 			</div>
-		</div>
 	</section>
 
 
@@ -498,7 +531,7 @@
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
 					<h2 class="mb-4">
-						<span>Our</span> Courses
+						<span>뭐하지</span> Courses
 					</h2>
 					<p>Separated they live in. A small river named Duden flows by
 						their place and supplies it with the necessary regelialia. It is a
@@ -594,7 +627,7 @@
 		<div class="container-fluid px-4">
 			<div class="row justify-content-center mb-5 pb-2">
 				<div class="col-md-8 text-center heading-section ftco-animate">
-					<h2 class="mb-4">1조회원</h2>
+					<h2 class="mb-4">우수 수료생</h2>
 					<p>Separated they live in. A small river named Duden flows by
 						their place and supplies it with the necessary regelialia. It is a
 						paradisematic country</p>
@@ -613,16 +646,7 @@
 							<div class="faded">
 								<p>I am an ambitious workaholic, but apart from that, pretty
 									simple person.</p>
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-instagram"></span></a></li>
-								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -639,16 +663,7 @@
 							<div class="faded">
 								<p>I am an ambitious workaholic, but apart from that, pretty
 									simple person.</p>
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-instagram"></span></a></li>
-								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -665,16 +680,7 @@
 							<div class="faded">
 								<p>I am an ambitious workaholic, but apart from that, pretty
 									simple person.</p>
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-instagram"></span></a></li>
-								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -691,16 +697,7 @@
 							<div class="faded">
 								<p>I am an ambitious workaholic, but apart from that, pretty
 									simple person.</p>
-								<ul class="ftco-social text-center">
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-twitter"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-facebook"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-google-plus"></span></a></li>
-									<li class="ftco-animate"><a href="#"><span
-											class="icon-instagram"></span></a></li>
-								</ul>
+
 							</div>
 						</div>
 					</div>
@@ -720,7 +717,7 @@
 					<div class="py-md-5">
 						<div
 							class="heading-section heading-section-white ftco-animate mb-5">
-							<h2 class="mb-4">Request A Quote</h2>
+							<h2 class="mb-4">뭐하지</h2>
 							<p>Far far away, behind the word mountains, far from the
 								countries Vokalia and Consonantia, there live the blind texts.</p>
 						</div>
@@ -818,6 +815,8 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>“재능을 찾기보다는 무엇에 열정이 있는지 찾는 게 중요하다. 내 마음이 무엇을 원하는지, 그 열정을
+										찾아야 한다."</p>
 									<p>Far far away, behind the word mountains, far from the
 										countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="name">Racky Henderson</p>
@@ -839,6 +838,7 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>"절대 어제를 후회하지마라. 인생은 오늘의 나 안에 있고 내일은 스스로 만드는 것이다"</p>
 									<p>Far far away, behind the word mountains, far from the
 										countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="name">Henry Dee</p>
@@ -858,8 +858,7 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
-									<p>IT 전문 기업으로 분할되어 출범한 법인으로, 네이버, 라인, 스노우 등 네이버 계열사들을 대상으로
-										IT 인프라 전반을 지원하고 있습니다</p>
+									<p>"좋은 성과를 얻으려면 한 걸음 한 걸음이 힘차고 충실하지 않으면 안 된다"</p>
 									<p class="name">Choi Soo-yeon</p>
 									<span class="position">Naver</span>
 								</div>
@@ -911,6 +910,7 @@
 										class="quote d-flex align-items-center justify-content-center">
 										<i class="icon-quote-left"></i>
 									</span>
+									<p>"우리는 우리가 늘 생각하는 것이 된다. 그것이 가장 묘한 비밀이다."</p>
 									<p>Far far away, behind the word mountains, far from the
 										countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="name">Ken Bosh</p>
@@ -931,9 +931,9 @@
 		<div class="container-wrap">
 			<div class="row no-gutters">
 				<div class="col-md-3 ftco-animate">
-					<a href="css1/images/image_1.jpg"
+					<a href="css1/images/Yedam1.jpg"
 						class="gallery image-popup img d-flex align-items-center"
-						style="background-image: url(css1/images/course-1.jpg);">
+						style="background-image: url(css1/images/Yedam1.jpg);">
 						<div
 							class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
@@ -941,9 +941,9 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="css1/images/image_2.jpg"
+					<a href="css1/images/Yedam2.jpg"
 						class="gallery image-popup img d-flex align-items-center"
-						style="background-image: url(css1/images/image_2.jpg);">
+						style="background-image: url(css1/images/Yedam2.jpg);">
 						<div
 							class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
@@ -951,9 +951,9 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="css1/images/image_3.jpg"
+					<a href="css1/images/Yedam3.jpg"
 						class="gallery image-popup img d-flex align-items-center"
-						style="background-image: url(css1/images/image_3.jpg);">
+						style="background-image: url(css1/images/Yedam3.jpg);">
 						<div
 							class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
@@ -961,9 +961,9 @@
 					</a>
 				</div>
 				<div class="col-md-3 ftco-animate">
-					<a href="css1/images/image_4.jpg"
+					<a href="css1/images/Yedam4.jpg"
 						class="gallery image-popup img d-flex align-items-center"
-						style="background-image: url(css1/images/image_4.jpg);">
+						style="background-image: url(css1/images/Yedam4.jpg);">
 						<div
 							class="icon mb-4 d-flex align-items-center justify-content-center">
 							<span class="icon-instagram"></span>
