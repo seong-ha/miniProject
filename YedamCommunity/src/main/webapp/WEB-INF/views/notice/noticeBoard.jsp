@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -70,6 +70,7 @@ td {
 					<button type="button"
 						onclick="location.href='noticeBoardWriteForm.do'">±Û¾²±â</button>
 				</c:if>
+				<input type="hidden" id="noticeBoardId" name="noticeBoardId">
 			</form>
 		</div>
 
@@ -78,11 +79,10 @@ td {
 			<c:url var="action" value="" />
 			<p>1 2 3 4 5</p>
 		</div>
-		<div>
-			<form id="NoticeBoardfrm" name="NoticeBoardfrm" method="post">
-				<input type="hidden" id="noticeBoardId" name="noticeBoardId">
+	<!-- 	<div>
+			<form id="NoticeBoardSfrm" name="NoticeBoardSfrm" method="post">
 			</form>
-		</div>
+		</div> -->
 	</div>
 	<script type="text/javascript">
 		function noticeBoard(id) {
