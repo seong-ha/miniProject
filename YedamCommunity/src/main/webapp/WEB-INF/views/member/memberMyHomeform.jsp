@@ -12,18 +12,31 @@
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
 	
+<style>
+	.tableBack {
+		background-image: url("css1/images/tableBack.jpg");
+		background-position: right bottom;
+	}
+	.table-dark {
+		text-align: center;
+	}
+	
+</style>	
+
 </head>
+
 <body>
 	
+
 	
 	<form id="mtd" method="post">
-		<div>
+		<div class="tableBack">
 			<div class="container" align="center">
 				<table class="table">
 
 					<thead class="table-dark">
 						<tr>
-							<th colspan="5">${member.memberName}님의마이페이지</th>
+							<th colspan="5" style="font-size: 20px"> ${member.memberName}님의 MyPage </th>
 						</tr>
 					</thead>
 					<tbody>

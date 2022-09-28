@@ -5,12 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.common.Command;
 
-public class FoodInfoWriteForm implements Command {
+public class Store4 implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
 		// TODO Auto-generated method stub
-		return "main/info/infoWriteForm";
+		return "main/store/store4";
 	}
 
 }

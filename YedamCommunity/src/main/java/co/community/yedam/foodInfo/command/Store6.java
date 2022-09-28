@@ -1,16 +1,16 @@
-package co.community.yedam.freeBoard.command;
+package co.community.yedam.foodInfo.command;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import co.community.yedam.common.Command;
 
-public class FreeBoardSearchForm implements Command {
+public class Store6 implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 자유게시판 검색 결과 출력.
-		return "main/freeBoard/freeBoardSearchForm";
+		// TODO Auto-generated method stub
+		return "main/store/store6";
 	}
 
 }

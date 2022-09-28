@@ -36,7 +36,7 @@ public class FreeBoardEdit implements Command {
 			
 			vo.setFreeBoardId(Integer.valueOf(multi.getParameter("freeBoardId")));
 			vo.setFreeBoardTitle(multi.getParameter("freeBoardTitle"));
-			vo.setFreeBoardSubject(multi.getParameter("freeBoardSubject"));
+			vo.setFreeBoardSubject(multi.getParameter("board_content"));
 			vo.setFreeBoardAttech(originalFileName);
 			vo.setFreeBoardAttechDir(saveFolder + File.separator + fileName);
 			vo.setFreeBoardHit(Integer.valueOf(multi.getParameter("freeBoardHit")));
@@ -61,7 +61,7 @@ public class FreeBoardEdit implements Command {
 
 		if (result != 0) {
 			FreeBoardVO resultVO = dao.freeBoardSelect(vo);
-			request.setAttribute("vo", resultVO);
+			request.setAttribute("freeBoard", resultVO);
 			viewPage = "main/freeBoard/freeBoardSelect"; // 수정 완료시 목록으로 돌아감
 		} else {
 			request.setAttribute("message", "게시글 수정에 실패했습니다.");

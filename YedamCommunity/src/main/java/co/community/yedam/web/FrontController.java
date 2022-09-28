@@ -15,18 +15,23 @@ import javax.servlet.http.HttpServletResponse;
 import co.community.yedam.Main;
 import co.community.yedam.cafeInfo.command.InfoCafe;
 import co.community.yedam.common.Command;
+import co.community.yedam.community.command.Community;
+import co.community.yedam.foodInfo.command.Store1;
+import co.community.yedam.foodInfo.command.Store2;
+import co.community.yedam.foodInfo.command.Store3;
+import co.community.yedam.foodInfo.command.Store4;
+import co.community.yedam.foodInfo.command.Store5;
+import co.community.yedam.foodInfo.command.Store6;
 import co.community.yedam.foodInfo.command.FoodInfoInsert;
 import co.community.yedam.foodInfo.command.FoodInfoSelectList;
 import co.community.yedam.foodInfo.command.FoodInfoWriteForm;
 import co.community.yedam.foodInfo.command.foodInfo;
-import co.community.yedam.foodInfo.command.foodInfoSelect;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
 import co.community.yedam.freeBoard.command.FreeBoardEdit;
 import co.community.yedam.freeBoard.command.FreeBoardEditForm;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
-import co.community.yedam.freeBoard.command.FreeBoardSearchForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.freeBoard.command.FreeBoardUpdateLike;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
@@ -54,6 +59,8 @@ import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
 import co.community.yedam.projectStudy.command.StudyCard;
 import co.community.yedam.projectStudy.service.ProjectStudyVO;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
+import co.community.yedam.questions.command.QuestionsDelete;
+import co.community.yedam.questions.command.QuestionsEdit;
 import co.community.yedam.questions.command.QuestionsEditForm;
 import co.community.yedam.questions.command.QuestionsInsert;
 import co.community.yedam.questions.command.QuestionsSearchForm;
@@ -80,9 +87,8 @@ public class FrontController extends HttpServlet {
 		map.put("/questionsSelectList.do", new QuestionsSelectList());
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
+		map.put("/questionsEdit.do", new QuestionsEdit());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-//		map.put("/questionsDelte.do", new QuestionsDelte());
-//		map.put("/questionsSearch.do", new QuestionsSearch());
 		map.put("/projectStudy.do", new ProjectStudy()); // 프로젝트스터디 메인페이지
 		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
 		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
@@ -110,15 +116,16 @@ public class FrontController extends HttpServlet {
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
 		map.put("/infoFood.do", new foodInfo());
 		map.put("/infoCafe.do", new InfoCafe());
-		map.put("/foodInfoWriteForm.do", new FoodInfoWriteForm());
-		map.put("/foodInfoSelectList.do", new FoodInfoSelectList());
-		map.put("/foodInfoInsert.do", new FoodInfoInsert());
-		map.put("/foodInfoSelect.do", new foodInfoSelect());
 		map.put("/memberSelectList.do", new MemberSelectList());
 		map.put("/memberSelect.do", new MemberSelect());
 		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
 		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
-		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm()); // 자유게시판 검색 기능.
+		map.put("/store1.do", new Store1());
+		map.put("/store2.do", new Store2());
+		map.put("/store3.do", new Store3());
+		map.put("/store4.do", new Store4());
+		map.put("/store5.do", new Store5());
+		map.put("/store6.do", new Store6());
 		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
 	}
 

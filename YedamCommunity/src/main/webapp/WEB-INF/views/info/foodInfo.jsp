@@ -28,118 +28,106 @@
 	<h2>오늘은 뭐 먹지?</h2>
 	<br>
 	<br>
-	<div align="right">
-				<!-- 접근제어 -->
-			<!--<c:if test="${vo.memberAuthor eq 'ADMIN'}">-->
-				<button type="button"
-					onclick="location.href='foodInfoWriteForm.do'">글쓰기</button>
-			<!--</c:if>-->
-	</div>
+
 	<br>
-	
-	<c:if test="${not empty list }">
+
+	<!--<c:if test="${not empty list }">
 		<c:forEach items="${list }" var="n">
-	<div class="container">
+			<tr onclick="selectNotice('${n.noticeId }')">
+				<article class="component">
+					<img src="" alt="">
+					<div class="description">
+						<h3>만복식당</h3>
+						<p>#매일다른메뉴 #한식</p>
+						<p class="here">세부내용</p>
+						<a return="main/store/store2">더보기</a>
+					</div>
+				</article>
+				<td>${n.noticeId }</td>
+				<td>${n.noticeTitle }</td>
+				<td>${n.noticeWriter }</td>
+				<td><script>
+					document.write(timestamp('${n.noticeDate}'));
+				</script></td>
+				<td>${n.noticeAttech }</td>
+				<td>${n.noticeHit }</td>
+			</tr>
+		</c:forEach>
+	</c:if>-->
+
+	 <div class="container">
 		<div class="main-content">
-			<article class="component">
-				<img src="" alt="">
-				<div class="description">
-					<h3>${n.infoName}</h3>
-					<p>${n.infoTag }</p>
-					<p class="here">세부내용</p>
-					<a href="foodInfoSelect.do" class="button">더보기</a>
-				</div>
-			</article>
-			
-			</div>
-			</div>
-			</c:forEach>
-			</c:if>
-			
-			
-			<!--  <article class="component">
-				<img src="" alt="">
+			  <article class="component">
+				<img src="images/store1.jpg" alt="이미지1">
 				<div class="description">
 					<h3>신라식당</h3>
 					<p>#낙지볶음 #웨이팅 #한식</p>
 					<p class="here">세부내용</p>
-					<a href="food2.do" class="button">더보기</a>
+					<a href="store1.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
-				<img src="" alt="">
+				<img src="images/store2.jpg" alt="이미지2">
 				<div class="description">
-					<h3>만복식당</h3>
+					<h3>만복국수</h3>
 					<p>#매일다른메뉴 #한식</p>
 					<p class="here">세부내용</p>
-					<a href="food3.do" class="button">더보기</a>
+					 <a href="store2.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
-				<img src="" alt="">
+				<img src="images/store3.jpg" alt="이미지3">
 				<div class="description">
 					<h3>제주곤이칼국수</h3>
 					<p>#고기국수 #제주 #한식</p>
 					<p class="here">세부내용</p>
-					<a href="food4.do" class="button">더보기</a>
+					<a href="store3.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
-				<img src="" alt="">
+				<img src="images/store4.jpg" alt="이미지4">
 				<div class="description">
 					<h3>개미집 동성로점</h3>
 					<p>#매콤한 #낙곱새</p>
 					<p class="here">세부내용</p>
-					<a href="food5.do" class="button">더보기</a>
+					<a href="store4.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
-				<img src="" alt="">
+				<img src="images/store5.jpg" alt="이미지5">
 				<div class="description">
 					<h3>포꼬</h3>
 					<p>#베트남 #반쎄오존맛</p>
 					<p class="here">세부내용</p>
-					<a href="food6.do" class="button">더보기</a>
+					<a href="store5.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
-				<img src="" alt="">
+				<img src="images/store6.jpg" alt="이미지6">
 				<div class="description">
 					<h3>마차이짬뽕</h3>
 					<p>#짬뽕 #도라방스</p>
 					<p class="here">세부내용</p>
-					<a href="food7.do" class="button">더보기</a>
+					<a href="store6.do" class="button">더보기</a>
 				</div>
 			</article>
-			<article class="component">
-				<img src="" alt="">
-				<div class="description">
-					<h3>가게 이름</h3>
-					<p>내용 입력</p>
-					<p class="here">세부내용</p>
-					<a href="#" class="button">더보기</a>
-				</div>
-			</article>
-			<article class="component">
-				<img src="" alt="">
-				<div class="description">
-					<h3>가게 이름</h3>
-					<p>내용 입력</p>
-					<p class="here">세부내용</p>
-					<a href="#" class="button">더보기</a>
-				</div>
-			</article>
+			
 
-		</div>
-		
-		<br>
-		<br>
-		
-		<br>
-		<br>
-		
 
-	</div>-->
+	</div>
+	<br>
+	<br>
+
+	<br>
+	<br>
+
+	</div>
+
+
+
+	<br>
+	<br>
+	<br>
 
 
 </body>

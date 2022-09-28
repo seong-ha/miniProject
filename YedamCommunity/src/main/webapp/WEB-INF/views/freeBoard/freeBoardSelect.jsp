@@ -324,23 +324,18 @@ html, body {
 					<tr class="article-title">
 						<th>[${freeBoard.freeBoardId }] 제목</th>
 						<td colspan="3">${freeBoard.freeBoardTitle }</td>
+												<th>작성일</th>
+						<td>${freeBoard.freeBoardDate }</td>
 					</tr>
 					<tr class="article-info">
-						<th>작성일</th>
-						<td>${freeBoard.freeBoardDate }</td>
 						<th>조회수</th>
 						<td>${freeBoard.freeBoardHit }</td>
+						<th>좋아요</th>
+						<td>${freeBoard.freeBoardLike }</td>
 					</tr>
 					<tr class="article-body">
 						<th>내용</th>
 						<td colspan="4">${freeBoard.freeBoardSubject }</td>
-					</tr>
-					<tr>
-						<th>좋아요</th>
-						<td>${freeBoard.freeBoardLike }</td>
-						<th>첨부파일</th>
-						<td>${freeBoard.freeBoardAttech }</td>
-
 					</tr>
 				</tbody>
 			</table>
@@ -401,29 +396,29 @@ html, body {
 					</thead>
 					<tbody>
 						<tr>
-							<td>작성자</td>
-							<td>댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용</td>
-							<td>작성일</td>
+							<td>전성하</td>
+							<td>좋은 글이네요,,,,, 담아갑니다,,,</td>
+							<td>09-28</td>
 						</tr>
 						<tr>
-							<td>작성자</td>
-							<td>댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용</td>
-							<td>작성일</td>
+							<td>김두영</td>
+							<td>아아ㅏㅏ아아ㅏㅏㅏㅏ아아ㅏ아아ㅏ아ㅏ아아아아아</td>
+							<td>09-27</td>
 						</tr>
 						<tr>
-							<td>작성자</td>
-							<td>댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용</td>
-							<td>작성일</td>
+							<td>김민지</td>
+							<td>♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬</td>
+							<td>09-27</td>
 						</tr>
 						<tr>
-							<td>작성자</td>
-							<td>댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용</td>
-							<td>작성일</td>
+							<td>황용주</td>
+							<td>凸凸凸凸凸凸凸凸凸凸凸</td>
+							<td>09-27</td>
 						</tr>
 						<tr>
-							<td>작성자</td>
-							<td>댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용댓글내용</td>
-							<td>작성일</td>
+							<td>이현성</td>
+							<td>안녕하세요~</td>
+							<td>09-26</td>
 						</tr>
 					</tbody>
 				</table>

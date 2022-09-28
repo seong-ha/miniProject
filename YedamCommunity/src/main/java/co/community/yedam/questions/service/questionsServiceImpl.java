@@ -1,4 +1,5 @@
-package co.community.yedam.questions.service;
+
+ package co.community.yedam.questions.service;
 
 import java.util.List;
 
@@ -33,6 +34,7 @@ public class questionsServiceImpl implements questionsService {
 	public int questionsUpdate(questionsVO vo) {
 		// TODO Auto-generated method stub
 		return map.questionsUpdate(vo);
+	
 	}
 
 	@Override
@@ -41,9 +43,20 @@ public class questionsServiceImpl implements questionsService {
 		return map.questionsDelete(vo);
 	}
 	
+
+	
+	
 	@Override
 	public List<questionsVO> questionsSearchList(String key, String val) {
 		return map.questionsSearchList(key, val);
 	}
 
 }
+
+
+
+
+
+
+
+ 
