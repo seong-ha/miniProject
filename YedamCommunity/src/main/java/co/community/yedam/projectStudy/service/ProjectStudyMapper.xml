@@ -3,7 +3,7 @@
 <mapper namespace="co.community.yedam.projectStudy.service.ProjectStudyMapper">
 
 	<select id="projectStudySelectList" resultType="co.community.yedam.projectStudy.service.ProjectStudyVO">
-		SELECT * FROM PROJECT_STUDY
+		SELECT * FROM PROJECT_STUDY ORDER BY PROJECT_STUDY_ID DESC
 	</select>
 	
 	<!-- 동적 sql예시. id만 들어오면 찾아주고, 둘 다 들어오면 로그인 처리해주는 거 -->
@@ -13,27 +13,33 @@
 	</select>
 	
 	<insert id="projectStudyInsert" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
+		<selectKey keyProperty="projectStudyId" resultType="int" order="BEFORE">
+			SELECT CASE WHEN MAX(PROJECT_STUDY_ID) IS NULL THEN 1 ELSE
+			MAX(PROJECT_STUDY_ID) + 1 END AS ID
+			FROM PROJECT_STUDY
+		</selectKey>
+		
 		INSERT INTO PROJECT_STUDY
 		VALUES (#{projectStudyId}, #{memberId}, #{projectStudyType}, #{projectStudyonoffline},
-			#{projectStudyPersonNum}, #{projectStudyStart}, #{projectStudyTel}, #{projectStudyPeriod},
+			#{projectStudyPersonNum}, #{projectStudyStartDate}, #{projectStudyContact}, #{projectStudyPeriod},
 			#{projectStudyLanguage}, #{projectStudyHit}, #{projectStudyTitle}, #{projectStudySubject})
 	</insert>
 	
 	<update id="projectStudyUpdate" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
 		UPDATE PROJECT_STUDY
 		<set>
-			<if test="projectStudyType != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyType},</if>
+			<if test="projectStudyType != null"> PROJECT_STUDY_TYPE = #{projectStudyType},</if>
 			<if test="projectStudyonoffline != null"> PROJECT_STUDY_ONOFFLINE = #{projectStudyonoffline},</if>
 			<if test="projectStudyPersonNum != null"> PROJECT_STUDY_PERSON_NUM = #{projectStudyPersonNum},</if>
-			<if test="projectStudyStart != null"> PROJECT_STUDY_START = #{projectStudyStart},</if>
-			<if test="projectStudyTel != null"> PROJECT_STUDY_TEL = #{projectStudyTel},</if>
+			<if test="projectStudyStartDate != null"> PROJECT_STUDY_START_DATE = #{projectStudyStartDate},</if>
+			<if test="projectStudyContact != null"> PROJECT_STUDY_CONTACT = #{projectStudyContact},</if>
 			<if test="projectStudyPeriod != null"> PROJECT_STUDY_PERIOD = #{projectStudyPeriod},</if>
 			<if test="projectStudyLanguage != null"> PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage},</if>
 			<if test="projectStudyHit != null"> PROJECT_STUDY_HIT = #{projectStudyHit},</if>
 			<if test="projectStudyTitle != null"> PROJECT_STUDY_TITLE = #{projectStudyTitle},</if>
 			<if test="projectStudySubject != null"> PROJECT_STUDY_SUBJECT = #{projectStudySubject}</if>
 		</set>
-		WHERE PROJECTSTUDY_ID = #{projectStudyId}
+		WHERE PROJECT_STUDY_ID = #{projectStudyId}
 	</update>
 	
 	<delete id="projectStudyDelete" parameterType="co.community.yedam.projectStudy.service.ProjectStudyVO">
@@ -52,6 +58,12 @@
 				AND PROJECT_STUDY_LANGUAGE = #{projectStudyLanguage}
 			</if>
 		</where>
+		
+		ORDER BY PROJECT_STUDY_ID DESC
 	</select>
+	
+	<update id="projectStudyHitUpdate" parameterType="int">
+		UPDATE PROJECT_STUDY SET PROJECT_STUDY_HIT = PROJECT_STUDY_HIT + 1 WHERE PROJECT_STUDY_ID = #{id}
+	</update>
 	
 </mapper>

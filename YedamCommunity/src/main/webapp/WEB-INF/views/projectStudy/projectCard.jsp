@@ -127,13 +127,19 @@
 </style>
 </head>
 <body>
-
-	<div style="float:right; margin-top: 30px; margin-right:22%;">
-		<button type="button" class="btn btn-outline-warning btn-rounded"
-			data-mdb-ripple-color="dark" onclick="location.href='projectStudyWriteFrom.do'">
-			<h2 style="margin:0">새 글 쓰기</h2>
-		</button>
-	</div>
+	<c:if test="${not empty projectStudyInsertMessage}">
+		<div class="alert alert-primary" role="alert">${projectStudyInsertMessage}</div>
+	</c:if>
+	
+	<!-- 로그인 상태에서만 글쓰기 버튼 보임 -->
+	<c:if test="${not empty memberId}">
+		<div style="float:right; margin-top: 30px; margin-right:22%;">
+			<button type="button" class="btn btn-outline-warning btn-rounded"
+				data-mdb-ripple-color="dark" onclick="location.href='projectStudyInsertForm.do'">
+				<h2 style="margin:0">새 글 쓰기</h2>
+			</button>
+		</div>
+	</c:if>
 
 	<!-- start 모집분류 라디오 버튼 -->
 	<section class="category">
@@ -181,9 +187,9 @@
 								style="background-image:url('https://source.unsplash.com/600x900/?programming');">
 								<img class="card-img d-none" src="https://source.unsplash.com/600x900/?programming"
 									alt="Goverment Lorem Ipsum Sit Amet Consectetur dipisi?">
-								<div class="card-img-overlay d-flex flex-column">
+								<div class="card-img-overlay d-flex flex-column" onclick="selectedCard('${card.projectStudyId}')">
 									<div class="card-body">
-										<h6 class="card-meta mb-2">#${card.projectStudyType } #${card.projectStudyonoffline} #${card.projectStudyPersonNum}명</h6>
+										<h6 class="card-meta mb-2">#${card.projectStudyType } #${card.projectStudyonoffline} #${card.projectStudyPersonNum}</h6>
 										<h3 class="card-title mt-0 ">
 											<a class="text-white" herf="#"
 											style="overflow: hidden; text-overflow: ellipsis; word-wrap : break-word;
@@ -192,7 +198,7 @@
 											</a>
 										</h3>
 										<h6 class="card-meta mb-1" style="color:greenyellow">#${card.projectStudyLanguage}</h6>
-										<h6><i class="far fa-clock"></i> 시작예정일 | ${card.projectStudyStart}</h6>
+										<h6><i class="far fa-clock"></i> 시작예정일 | ${card.projectStudyStartDate}</h6>
 									</div>
 									<div class="card-footer">
 										<div class="media">
@@ -210,7 +216,7 @@
 													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
 														<path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
 													</svg>
-													<large>20</large>
+													<large>0</large>
 												</div>
 											</div>
 										</div>
@@ -221,10 +227,23 @@
 					</c:forEach>
 				</c:if>
 				<!-- end 모집글이 존재 시 카드 만들기 -->
-				
+			<div>
+				<form id="selectedCardToServer" action="projectStudySelect.do">
+					<input type="hidden" id="projectStudyId" name="projectStudyId">
+				</form>
+			</div>
 			</div>
 		</div>
 	</section>
+
+	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	
+	<script type="text/javascript">
+		function selectedCard(selectedCardId) {
+			document.getElementById('projectStudyId').value = selectedCardId;
+			selectedCardToServer.submit();
+		}
+	</script>
 </body>
 </html>

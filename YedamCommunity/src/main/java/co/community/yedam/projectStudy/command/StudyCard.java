@@ -37,7 +37,7 @@ public class StudyCard implements Command {
 
 		request.setAttribute("list", list);
 
-		return "main/projectStudy/studyCard"; // 스터디 필터링 checked jsp로
+		return "projectStudy/projectStudy/studyCard"; // 스터디 필터링 checked jsp로
 	}
 
 }
