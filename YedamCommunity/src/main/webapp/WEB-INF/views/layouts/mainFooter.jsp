@@ -33,10 +33,9 @@
 					<div class="col-sm-12 col-md">
 						<div class="ftco-footer-widget mb-4">
 							<h2 class="ftco-heading-2 logo">
-								<a href="#">회사소개</a>
+								<a href="main.do" style="color: #FD5F00">Yedam Community</a>
 							</h2>
-							<p>Far far away, behind the word mountains, far from the
-								countries.</p>
+							
 							<ul class="ftco-footer-social list-unstyled mt-2">
 								<li class="ftco-animate"><a href="#"><span
 										class="fa fa-twitter"></span></a></li>
@@ -49,57 +48,48 @@
 					</div>
 					<div class="col-sm-12 col-md">
 						<div class="ftco-footer-widget mb-4 ml-md-4">
-							<h2 class="ftco-heading-2">공지사항</h2>
+							<h2 class="ftco-heading-2" style="color: #FD5F00">언어 지원</h2>
 							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Affiliate
-										Program</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Business
-										Services</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Education
-										Services</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Gift
-										Cards</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>KOREAN</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>English</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Chinese</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>France</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-12 col-md">
 						<div class="ftco-footer-widget mb-4 ml-md-4">
-							<h2 class="ftco-heading-2">연락처</h2>
+							<h2 class="ftco-heading-2" style="color: #FD5F00">개발 프로그램</h2>
 							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Join
-										us</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Privacy
-										&amp; Policy</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term
-										&amp; Conditions</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>JAVA</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>JavaScript</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>HTML</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>CSS</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-12 col-md">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2">광고문의</h2>
+							<h2 class="ftco-heading-2" style="color: #FD5F00">광고문의</h2>
 							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About
-										Us</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>전성하와 아이들</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>한건당</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>만원에</a></li>
+								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>모십니다</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-12 col-md">
 						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2">서비스 이용</h2>
+							<h2 class="ftco-heading-2" style="color: #FD5F00">서비스 이용</h2>
 							<div class="block-23 mb-3">
 								<ul>
 									<li><span class="icon fa fa-map marker"></span><span
-										class="text">203 Fake St. Mountain View, San Francisco,
-											California, USA</span></li>
+										class="text">대구광역시 중구 남일동 중앙대로 403</span></li>
 									<li><a href="#"><span class="icon fa fa-phone"></span><span
-											class="text">+2 392 3929 210</span></a></li>
+											class="text">+82 010 2352 9011</span></a></li>
 									<li><a href="#"><span
-											class="icon fa fa-paper-plane pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
+											class="icon fa fa-paper-plane pr-4"></span><span class="text">dydwn3107@gmail.com</span></a></li>
 								</ul>
 							</div>
 						</div>
@@ -119,7 +109,7 @@
 								</script>
 								All rights reserved | This template is made with <i
 									class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-									href="https://colorlib.com" target="_blank">Colorlib.com</a>
+									href="main.do" target="_blank" style="color: #FD5F00">YedamCommunity.com</a>
 								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							</p>
 						</div>
