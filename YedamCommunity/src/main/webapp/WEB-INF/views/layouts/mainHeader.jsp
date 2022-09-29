@@ -155,7 +155,13 @@
 						<li class="nav-item"><a href="noticeBoard.do"
 							class="nav-link" style="font-size:x-large">공지사항</a></li>
 						<li class="nav-item"><a href="freeBoard.do" class="nav-link" style="font-size:x-large">자유게시판</a></li>
-						<li class="nav-item"><a href="infoFood.do" class="nav-link" style="font-size:x-large">정보</a></li>
+						<li class="nav-item dropdown">
+							<a href="infoFood.do" class="nav-link dropdown-toggle " id="dropdownMenu" data-toggle="dropdown" aria-expanded="false" style="font-size:x-large">정보</a>
+							 <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+							     <a class="dropdown-item" href="infoFood.do">맛집 리스트</a>
+							     <a class="dropdown-item" href="infoCafe.do">스터디카페 리스트</a>
+							 </div>
+						</li>
 						<li class="nav-item"><a href="projectStudy.do"
 							class="nav-link" style="font-size:x-large">프로젝트&스터디</a></li>
 						<li class="nav-item"><a href="questionsSelectList.do"
