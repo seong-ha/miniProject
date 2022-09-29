@@ -198,10 +198,12 @@ section.notice {
 </head>
 <body>
 	<div align="center">
+		<br>
+		<br>
 		<section class="noticeBoard">
 			<div class="page-title">
 				<div class="container">
-					<h3>공지사항</h3>
+					<h1>공지사항</h1>
 				</div>
 			</div>
 
@@ -223,13 +225,13 @@ section.notice {
 			<!-- board list area -->
 			<div id="noticeBoard-list">
 				<div class="container">
-					<table>
+					<table class="noticeBoard-table">
 						<thead>
 							<tr>
 								<th width="70">글번호</th>
-								<th width="250">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;제목</th>
-								<th width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성자</th>
-								<th width="150">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작성일자</th>
+								<th width="250">제목</th>
+								<th width="150">작성자</th>
+								<th width="150">작성일자</th>
 								<th width="70">조회수</th>
 							</tr>
 						<thead>
@@ -264,21 +266,15 @@ section.notice {
 				<input type="hidden" id="id" name="id">
 				<c:if test="${memberAuthor eq 'ADMIN' }">
 					<button type="button"
-						onclick="location.href='noticeBoardWriteForm.do'">글쓰기</button>
+						onclick="location.href='noticeBoardWriteForm.do'" class="btn btn-dark">글쓰기</button>
 				</c:if>
 				<input type="hidden" id="noticeBoardId" name="noticeBoardId">
 			</form>
 		</div>
-
-		<br>
+		<br><br><br>
 		<div>
-			<ul>
-				<li><a href="noticeBoard.do">◀</a>&nbsp; <a
-					href="noticeBoard.do">1</a>&nbsp; <a href="noticeBoard.do">2</a>&nbsp;
-					<a href="noticeBoard.do">3</a>&nbsp; <a href="noticeBoard.do">4</a>&nbsp;
-					<a href="noticeBoard.do">5</a>&nbsp; <a href="noticeBoard.do">▶</a></li>
-			</ul>
-		</div>
+			<small><a href="freeBoard.do">◀ 1 2 3 4 5 ▶</a></small>
+		</div><br><br>
 	</div>
 	<script type="text/javascript">
 		function noticeBoard(id) {

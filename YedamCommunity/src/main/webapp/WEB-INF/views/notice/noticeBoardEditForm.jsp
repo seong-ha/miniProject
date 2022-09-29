@@ -69,11 +69,11 @@
 				<div>
 					<input type="hidden" id="noticeBoardId" name="noticeBoardId"
 						value="${vo.noticeBoardId}"> <input type="submit"
-						value="수정">&nbsp;&nbsp; <input type="button"
-						onclick="location.href='noticeBoard.do'" value="목록">
+						value="수정" class="btn btn-outline-dark">&nbsp;&nbsp; <input type="button"
+						onclick="location.href='noticeBoard.do'" value="목록" class="btn btn-outline-dark">
 				</div>
 			</form>
-		</div>
+		</div><br><br>
 	</div>
 
 </body>

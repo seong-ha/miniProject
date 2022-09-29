@@ -64,13 +64,12 @@
 	</select>
 
 	<select id="freeBoardSearchList"
-		resultType="co.community.yedam.questions.service.questionsVO">
+		resultType="co.community.yedam.freeBoard.service.FreeBoardVO">
 		SELECT * FROM FREE_BOARD
 		WHERE
 		<if test="key == 0">1 = 1</if>
 		<if test="key == 1"> FREE_BOARD_TITLE LIKE '%'|| #{val} ||'%'</if>
-		<if test="key == 2"> FREE_BOARD_MEMBER_ID LIKE '%'|| #{val} ||'%'</if>
-		<if test="key == 3"> FREE_BOARD_SUBJECT LIKE '%'|| #{val} ||'%'</if>
+		<if test="key == 2"> MEMBER_ID LIKE '%'|| #{val} ||'%'</if>
 		ORDER BY FREE_BOARD_ID DESC
 	</select>
 
