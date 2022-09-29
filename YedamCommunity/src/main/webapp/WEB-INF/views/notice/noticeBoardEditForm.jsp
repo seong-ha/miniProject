@@ -4,7 +4,36 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>공지사항</title>
+<%-- summernote 라이브러리 추가 --%>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+	rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script
+	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<link
+	href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css"
+	rel="stylesheet">
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+<script>
+	
+<%-- form의 textarea에 summernote 적용 --%>
+	$(document).ready(
+			function() {
+				$('#summernote').summernote(
+						{
+							height : 400,
+							fontNames : [ '맑은고딕', 'Arial', 'Arial Black',
+									'Comic Sans MS', 'Courier New', ],
+							fontNamesIgnoreCheck : [ '맑은고딕' ],
+							focus : true
+						});
+			});
+</script>
 </head>
 <body>
 	<div align="center">
@@ -30,8 +59,7 @@
 						</tr>
 						<tr>
 							<th>내용</th>
-							<td colspan="5"><textArea rows="10" cols="88"
-									id="noticeBoardSubject" name="noticeBoardSubject">${vo.noticeBoardSubject}</textArea>
+							<td colspan="5"><textarea id="summernote" name="editordata"></textarea>
 							</td>
 						</tr>
 
@@ -47,5 +75,6 @@
 			</form>
 		</div>
 	</div>
+
 </body>
 </html>

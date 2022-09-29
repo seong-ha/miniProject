@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-
 .like-content span {
 	color: #9d9da4;
 	font-family: monospace;
@@ -52,13 +51,27 @@ keyframes likeAnimation { 0% {
 }
 
 100
+
+
 %
 {
 transform
+
+
 :
-scale(
+
+
+scale
+(
+
+
 1
-);
+
+
+)
+;
+
+
 }
 }
 html {
@@ -324,7 +337,7 @@ html, body {
 					<tr class="article-title">
 						<th>[${freeBoard.freeBoardId }] 제목</th>
 						<td colspan="3">${freeBoard.freeBoardTitle }</td>
-												<th>작성일</th>
+						<th>작성일</th>
 						<td>${freeBoard.freeBoardDate }</td>
 					</tr>
 					<tr class="article-info">
@@ -348,8 +361,7 @@ html, body {
 			</button>
 
 		</div>
-		<br>
-		<br>
+		<br> <br>
 		<div>
 			<c:if test="${freeBoard.memberId eq memberId}">
 				<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
@@ -378,7 +390,7 @@ html, body {
 						<textarea placeholder="내용을 입력하세요."></textarea>
 						<input type="submit" class="btn btn-outline-dark">
 					</div>
-				</form>	
+				</form>
 			</section>
 
 			<h1 class="">댓글 목록</h1>
@@ -424,7 +436,10 @@ html, body {
 				</table>
 			</section>
 		</div>
-		<br><br><br><br>
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 	<script type="text/javascript">
 		function subCall(str) {
