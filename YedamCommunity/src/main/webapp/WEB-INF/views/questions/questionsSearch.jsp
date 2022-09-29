@@ -18,10 +18,11 @@
 				</div>
 				<div class="questions_list">
 					<c:forEach var="list" items="${ list }">
-						<ul class="notice_ul" onclick="questionsSelect(${list.memberId});">
+						<ul class="notice_ul" onclick="questionsSelect(${list.questionsId});">
 							<li class="no">${ list.questionsId }</li>
 							<li class="title">${ list.questionsTitle }</li>
-							<li class="date">${ list.questionsDate }</li>
+							<li class="title">${ list.memberId }</li>
+							<li> class="date">${ list.questionsDate }</li>
 						</ul>
 					</c:forEach>
 				</div>

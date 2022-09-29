@@ -1,68 +1,91 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
- 
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>FreeBoard Insert Form</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<%-- summernote 라이브러리 추가 --%>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+	rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script
+	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<link
+	href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css"
+	rel="stylesheet">
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+<script>
+	
+<%-- form의 textarea에 summernote 적용 --%>
+	$(document).ready(
+			function() {
+				$('#questionsContent').summernote(
+						{
+							height : 700,
+							fontNames : [ '맑은고딕', 'Arial', 'Arial Black',
+									'Comic Sans MS', 'Courier New', ],
+							fontNamesIgnoreCheck : [ '맑은고딕' ],
+							focus : true
+						});
+			});
+</script>
 </head>
+
+
+		
+<br>
 <body>
-<div align="center">
+	<hr>
 	<br>
+	<div align="center">
+		<h1>문의게시판 작성</h1>
+	</div>
 	<br>
-	
-	<div align="center"><h1>온라인 문의</h1></div>
-	<br>
-	
 	<div>
-		<form id="frm" action="questionsInsert.do" method="post" > <!-- 이진 바이너리도 있다는 걸 알려줌 -->
-			<div align="center">
-				<table border="1">
-					<tr>
-						<th width="150">작성자</th>
-						<td width="200">
-							<input type="text" id="memberId" name="memberId" value="${memberId }" readonly="readonly">
-						</td>
-						<th width="150">작성일자</th>
-						<td width="200">
-							<input type="date" id="questionsDate" name="questionsDate"  required="required">
-						</td>
-					
-				
-					<tr>
-						<th width="150">제목</th>
-						<td colspan="3">
-							<input type="text" id="questionsTitle" name="questionsTitle" required="required">
-						</td>
-						
-					</tr>
-					<tr>
-						<th>내용</th>
-						<td colspan="3">
-							<textarea rows="10" cols="80" id="questionsContent" name="questionsContent"></textarea>
-						</td>
-					</tr>
-					
-		
-				</table>
-			
-			</div><br>
-			
-			<div align="center">
-				<input type="submit" value="등록">&nbsp;&nbsp;&nbsp;
-				<input type="reset" value="취소" onclick="location.href='questionsSelectList.do'">&nbsp;&nbsp;&nbsp;
-				
-			</div>
-			
-		
-		</form>
+		<div class="w3-margin-top w3-main"
+			style="margin-left: 340px; margin-right: 40px; width: 60%;">
+			<form id="questionsInsertForm" action="questionsInsert.do" method="post">
+				<div class="w3-margin-bottom w3-border">
+					<input type="text" name="questionsTitle"
+						class="w3-input w3-border w3-white" autofocus
+						placeholder="제목을 입력하세요" id="questionsTitle" required="required">
+					<input type="hidden" name="memberId" id="memberId"
+						value="${memberId }">
+				</div>
+				<div>
+					<textarea name="questionsContent" id="questionsContent"></textarea>
+				</div>
+				<br>
+				<div align="center">
+					<input type="submit" value="등록">&nbsp;&nbsp;&nbsp; <input
+						type="reset" value="초기화">&nbsp;&nbsp;&nbsp; <input
+						type="button" value="목록"
+						onclick="location.href='questionsSelectList.do'">&nbsp;&nbsp;&nbsp;
+				</div>
+			</form>
+		</div>
+		<br> <br> <br>
+	
+	
+	<form id="fbf" method="post">
+				<input type="hidden" id="questionsDate" name="questionsDate"
+					value="${vo.questionsDate}">
+	</form>
 	</div>
-	</div>
+
+
+
+
+
 	<script>
 		document.getElementById('questionsDate').valueAsDate = new Date();
-		
 	</script>
 	<br>
 	<br>

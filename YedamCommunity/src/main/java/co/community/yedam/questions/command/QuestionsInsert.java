@@ -32,13 +32,15 @@ public class QuestionsInsert implements Command {
 		vo.setQuestionsContent(request.getParameter("questionsContent"));
 //		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
 		vo.setMemberId(request.getParameter("memberId"));
-		vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
+		//vo.setQuestionsDate(Date.valueOf(request.getParameter("questionsDate")));
 		
 		
 //		System.out.println("title="+vo.getQuestionsTitle());
 //		System.out.println("content="+vo.getQuestionsContent());
 //		System.out.println("date="+vo.getQuestionsDate());
 //		System.out.println("memberid="+vo.getMemberId());
+		//board_subject
+		//board_content
 		
 		
 		

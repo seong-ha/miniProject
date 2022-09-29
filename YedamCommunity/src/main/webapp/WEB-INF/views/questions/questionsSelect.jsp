@@ -6,16 +6,41 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
-	<div align="center">
+<style>
+.animate-like {
+	animation-name: likeAnimation;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 0.65s;
+}
 
+
+@
+keyframes likeAnimation { 0% {
+	transform: scale(30);
+}
 		<br>
 
-		<div>
-			<h1>문의 상세보기</h1>
-		</div>
+100
+%
+{
+transform
+:
+scale(
+1
+);
+}
+}
+html {
+	font-family: "Noto Sans KR", sans-serif;
+}
 
+/* 노말라이즈 */
+body, ul, li, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 		<div>
 			<table border="1">
 
@@ -30,21 +55,331 @@
 					<td width="100">${vo.questionsDate }</td>
 
 
-				</tr>
+a:link {
+	color: lightblue;
+}
 
-				<tr>
-					<th>내용</th>
-					<td colspan="5"><textarea rows="10" cols="80"
-							readonly="readonly">${vo.questionsContent }</textarea></td>
-				</tr>
+/* 라이브러리 */
+.con {
+	margin: 0 auto;
+}
 
+.img-box>img {
+	width: 100%;
+	display: block;
+}
+
+.row::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.cell {
+	float: left;
+	box-sizing: border-box;
+}
+
+.cell-right {
+	float: right;
+	box-sizing: border-box;
+}
+
+.margin-0-auto {
+	margin: 0 auto;
+}
+
+.block {
+	display: block;
+}
+
+.inline-block {
+	display: inline-block;
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.line-height-0-ch-only {
+	line-height: 0;
+}
+
+.line-height-0-ch-only>* {
+	line-height: normal;
+}
+
+.relative {
+	position: relative;
+}
+
+.absolute-left {
+	position: absolute;
+	left: 0;
+}
+
+.absolute-right {
+	position: absolute;
+	right: 0;
+}
+
+.absolute-middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/* 커스텀 */
+/* 반응형 레이아웃 */
+.con {
+	max-width: 950px;
+}
+
+.con-min-width {
+	min-width: 320px;
+}
+
+.top-menu a {
+	text-decoration: none;
+	color: gray;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.table-common>table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table-common .btn-box {
+	text-align: center;
+}
+
+.table-common>table th, .table-common>table td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.article-list table {
+	border: none;
+	border-top: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+}
+
+.article-list>table th, .article-list>table td {
+	border: none;
+}
+
+.article-list>table td {
+	border-bottom: 1px solid lightgray;
+}
+
+.article-list>table thead {
+	border-bottom: 2px solid lightgray;
+	background-color: #F5F5F5;
+}
+
+.article-detail {
+	border: 2px solid lightgray;
+}
+
+.article-detail>table {
+	border: none;
+	width: calc(100% - 100px);
+}
+
+.article-detail>table th, .article-detail>table td {
+	border: none;
+}
+
+.article-detail>table tr:not(:last-child) {
+	border-bottom: 1px solid lightgray;
+}
+
+.article-detail>table tr:not(.article-body), .article-detail>table tr:not(.article-body)>td
+	{
+	height: 20px;
+	font-size: 0.8rem;
+}
+
+.article-detail>table tr.article-title>td {
+	height: 40px;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.article-detail>table td:last-child {
+	padding-right: 100px;
+}
+
+.article-detail>.article-writer {
+	width: 100px;
+	height: 102px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+
+.article-detail>.article-writer .writer-icon {
+	margin: 0 auto;
+	background-color: white;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.reply {
+	margin-top: 20px;
+	border: 2px solid lightgray;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.reply-form {
+	padding: 10px;
+}
+
+.reply-form>form input[type="text"] {
+	width: 200px;
+}
+
+.reply-form>form textarea {
+	width: calc(100% - 100px);
+	min-height: 40px;
+}
+
+.reply-form>form input[type="submit"] {
+	width: 80px;
+	height: 40px;
+	transform: translatey(-40%);
+}
+
+.reply-form>form>div:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.reply-list>table {
+	border: none;
+}
+
+.reply-list>table th {
+	display: none;
+}
+
+.reply-list>table td {
+	border: none;
+}
+
+.reply-list>table tr:nth-child(2n+1) {
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+.reply-list>table td:first-child {
+	font-weight: bold;
+}
+
+.reply-list>table td:first-child::after {
+	content: " : ";
+	font-weight: bold;
+}
+</style>
+
+
+</head>
+<body>
+	<div align="center">
+		<hr>
+		<br>
+		<h1 class="con">문의게시판</h1>
+		<br>
+		<section class="article-detail table-common con row">
+			<div class="article-writer cell">
+				<div class="writer-icon"></div>
+				<span>작성자</span>
+			</div>
+			<table class="cell" border="1">
+				<colgroup>
+					<col width="100px">
+				</colgroup>
+				<tbody>
+					<tr class="article-title">
+						<th>[${vo.questionsId }] 제목</th>
+						<td colspan="3">${vo.questionsTitle }</td>
+												<th>작성일</th>
+						<td>${vo.questionsDate}</td>
+					</tr>
+					
+					<tr class="article-body">
+						<th>내용</th>
+						<td colspan="4">${vo.questionsContent }</td>
+					</tr>
+				</tbody>
 			</table>
+		</section>
+		<br>
+		
+		<br>
+		<br>
+		<div>
+			<c:if test="${vo.memberId eq memberId}">
+				<button type="button" onclick="subCall('E')" class="btn btn-dark">수정</button>
+					&nbsp;&nbsp;
+					<button type="button" onclick="subCall('D')" class="btn btn-dark">삭제</button>
+			</c:if>
+			&nbsp;&nbsp;
+			<button type="button" onclick="location.href='questionsSelectList.do'"
+				class="btn btn-dark">목록</button>
 		</div>
-	</div>
-	<br>
+		<br>
+		<div>
+			<form id="fbs" method="post">
+				<input type="hidden" id="questionsId" name="questionsId"
+					value="${vo.questionsId}">
+			</form>
+		</div>
+		<div class="con reply">
+			<h1 class="">댓글 입력</h1>
+			<section class="reply-form">
+				<form action="return false;">
+					<div align="left">
+						<input type="text" placeholder="제목을 입력하세요.">
+					</div>
+					<div align="left">
+						<textarea placeholder="내용을 입력하세요."></textarea>
+						<input type="submit" class="btn btn-dark">
+					</div>
+				</form>	
+			</section>
 
-
-
+			<h1 class="">댓글 목록</h1>
+			<section class="reply-list table-common">
+				<table border="1">
+					<colgroup>
+						<col width="100px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>작성자</th>
+							<th>댓글내용</th>
+							<th>작성일</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>관리자</td>
+							<td>문의사항 확인하였습니다. 빠른 시일 내에 문제를 해결하겠습니다.</td>
+							<td>09-30<td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</section>
+		</div>
+		<br><br><br><br>
 	<div align="center">
 		<button type="button" onclick="subCall('E')">수정</button>
 		&nbsp;&nbsp;
@@ -74,11 +409,7 @@
 			fbs.submit();
 		}
 
-		//<script type="text/javascript">
-		// function questionsUpdate(id) {
-		//  document.getElementById("questionsId").value = id;
-		//fbf.action="questionsEditForm.do";
-		//fbf.submit();
+	
 	</script>
 </body>
 </html>
