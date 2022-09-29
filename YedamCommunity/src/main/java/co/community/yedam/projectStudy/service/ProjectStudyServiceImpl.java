@@ -40,4 +40,9 @@ public class ProjectStudyServiceImpl implements ProjectStudyService {
 		return map.projectStudyFilteredList(vo);
 	}
 
+	@Override
+	public void projectStudyHitUpdate(int id) {
+		map.projectStudyHitUpdate(id);
+	}
+
 }

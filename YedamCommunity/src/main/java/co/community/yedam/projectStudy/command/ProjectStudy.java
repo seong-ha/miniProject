@@ -30,7 +30,7 @@ public class ProjectStudy implements Command {
 				String result = String.join(" #", strArr);
 				vo.setProjectStudyLanguage(result);
 			}
-
+			
 		}
 
 		request.setAttribute("list", list);

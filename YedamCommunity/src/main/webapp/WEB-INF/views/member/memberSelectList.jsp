@@ -12,54 +12,60 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="css9/main.css" />
+<noscript>
+	<link rel="stylesheet" href="css9/noscript.css" />
+</noscript>
 <style>
-	
-	.tableBack {
-		background-image: url("css1/images/tableBack.jpg");
-	
-	}
-	.table-dark {
-		text-align: center;
-	}
-	
+.tableBack {
+	background-image: url("css1/images/tableBack.jpg");
+}
 
+.table-dark {
+	text-align: center;
+}
+.alt>thead>tr>th {
+	background-color: black;
+	font-weight: bold;
+	font-size: 16px;
+}
+}
 </style>
 </head>
 <body>
 	<div align="center" class="tableBack">
 		<div>
-			<br>
-			<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1>
-			<br>
-		</div>
-		<div>
 			<div class="container">
-				<table class="table">
-					<thead class="table-dark">
-						<tr>
-							<th>아이디</th>
-							<th>이름</th>
-							<th>전화번호</th>
-							<th>이메일</th>
-							<th>주소</th>
-							<th>생년월일</th>
-							
-						</tr>
-					</thead>
-					<c:forEach items="${members}" var="member">
-						<tr onclick="selectMember('${member.memberId}')"
-							onMouseover="this.style.backgroundColor='gray';"
-							onMouseout="this.style.backgroundColor='white';">
-							<td width="80px">${member.memberId}</td>
-							<td>${member.memberName}</td>
-							<td width="150px">${member.memberTel}</td>
-							<td>${member.memberEmail}</td>
-							<td width="250px">${member.memberAddress }</td>
-							<td>${member.memberBirth }</td>
-							
-						</tr>
-					</c:forEach>
-				</table>
+			<br><br>
+				<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1><br>
+				<div class="table-wrapper">
+					<table class="alt">
+						<thead>
+							<tr>
+								<th>아이디</th>
+								<th>이름</th>
+								<th>전화번호</th>
+								<th>이메일</th>
+								<th>주소</th>
+								<th>생년월일</th>
+							</tr>
+						</thead>
+						<tbody>
+							<c:forEach items="${members}" var="member">
+								<tr onclick="selectMember('${member.memberId}')"
+									onMouseover="this.style.backgroundColor='#E2E2E2';"
+									onMouseout="this.style.backgroundColor='white';">
+									<td width="80px">${member.memberId}</td>
+									<td>${member.memberName}</td>
+									<td width="150px">${member.memberTel}</td>
+									<td>${member.memberEmail}</td>
+									<td width="250px">${member.memberAddress }</td>
+									<td>${member.memberBirth }</td>
+								</tr>
+							</c:forEach>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
 		<br>
@@ -69,7 +75,12 @@
 				<input type="hidden" id="memberId" name="memberId">
 			</form>
 		</div>
+
+		<div>
+			<small>◀ 1 2 3 4 5 ▶</small>
+		</div>
 	</div>
+	<br>
 	<script type="text/javascript">
 		function selectMember(id) {
 			document.getElementById('memberId').value = id

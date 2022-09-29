@@ -61,8 +61,8 @@
 					<input type="hidden" name="memberId" id="memberId" value="${vo.memberId }">
 					<input type="hidden" name="freeBoardHit" id="freeBoardHit" value="${vo.freeBoardHit }">
 					<input type="hidden" name="freeBoardLike" id="freeBoardLike" value="${vo.freeBoardLike }">
-					<input type="submit" value="완료"> &nbsp;&nbsp;
-					<input type="button" onclick="location.href='freeBoard.do'"	value="목록">
+					<input type="submit" value="완료" class="btn btn-outline-dark"> &nbsp;&nbsp;
+					<input type="button" onclick="location.href='freeBoard.do'"	value="목록" class="btn btn-outline-dark">
 				</div>
 				<br>
 			</form>

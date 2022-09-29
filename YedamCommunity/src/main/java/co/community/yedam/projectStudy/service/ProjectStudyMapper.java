@@ -10,4 +10,5 @@ public interface ProjectStudyMapper {
 	int projectStudyDelete(ProjectStudyVO vo); // 모집 삭제
 	
 	List<ProjectStudyVO> projectStudyFilteredList(ProjectStudyVO vo); // 모집구분별, 언어별 필터링된 목록들 가져오기
+	void projectStudyHitUpdate(int id); // 조회수 up
 }

@@ -51,7 +51,12 @@ import co.community.yedam.noticeBoard.command.NoticeBoardWriteForm;
 import co.community.yedam.projectStudy.command.ProjectCard;
 import co.community.yedam.projectStudy.command.ProjectStudy;
 import co.community.yedam.projectStudy.command.ProjectStudyCard;
-import co.community.yedam.projectStudy.command.ProjectStudyWriteFrom;
+import co.community.yedam.projectStudy.command.ProjectStudyDelete;
+import co.community.yedam.projectStudy.command.ProjectStudyInsert;
+import co.community.yedam.projectStudy.command.ProjectStudyInsertForm;
+import co.community.yedam.projectStudy.command.ProjectStudySelect;
+import co.community.yedam.projectStudy.command.ProjectStudyUpdate;
+import co.community.yedam.projectStudy.command.ProjectStudyUpdateForm;
 import co.community.yedam.projectStudy.command.StudyCard;
 import co.community.yedam.projectStudy.service.ProjectStudyVO;
 import co.community.yedam.questions.command.AjaxQuestionsSearch;
@@ -104,7 +109,7 @@ public class FrontController extends HttpServlet {
 		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
 		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
 		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
-		map.put("/projectStudyWriteFrom.do", new ProjectStudyWriteFrom()); // 프로젝트스터디 새글쓰기 form으로
+		map.put("/projectStudyInsertForm.do", new ProjectStudyInsertForm()); // 프로젝트스터디 새글쓰기 폼으로
 		map.put("/memberUpdate.do", new MemberUpdate());
 		map.put("/memberDelete.do", new MemberDelete());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
@@ -122,6 +127,11 @@ public class FrontController extends HttpServlet {
 		map.put("/store5.do", new Store5());
 		map.put("/store6.do", new Store6());
 		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
+		map.put("/projectStudyInsert.do", new ProjectStudyInsert()); // 프로젝트스터디 글쓰기 form의 데이터 들고와서 insert
+		map.put("/projectStudySelect.do", new ProjectStudySelect()); // 프로젝트스터디 모집글 상세보기.
+		map.put("/projectStudyUpdateForm.do", new ProjectStudyUpdateForm()); // 프로젝트스터디 모집글 수정폼으로.
+		map.put("/projectStudyUpdate.do", new ProjectStudyUpdate()); // 프로젝트스터디 모집글 수정.
+		map.put("/projectStudyDelete.do", new ProjectStudyDelete()); // 프로젝트스터디 모집글 삭제.
 	}
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)

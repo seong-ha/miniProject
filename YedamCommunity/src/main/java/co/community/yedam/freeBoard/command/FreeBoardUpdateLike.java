@@ -31,7 +31,7 @@ public class FreeBoardUpdateLike implements Command {
 			request.setAttribute("vo", resultVO);
 		}
 		
-		return "ajax:main/freeBoard/freeBoardSelect";
+		return "main/freeBoard/freeBoardSelect";
 
 	}
 

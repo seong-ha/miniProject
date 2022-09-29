@@ -8,9 +8,9 @@
 </head>
 <body>
 	<div align="center">
-		<div>
-			<h1>${message}</h1>
-		</div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<h1>${message }</h1>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br>
 	</div>
 </body>
 </html>
