@@ -29,6 +29,10 @@ public class QuestionsEdit implements Command {
 		System.out.println("vo: "+vo);
 
 		System.out.println("title:"+request.getParameter("questionsTitle"));
+		System.out.println(request.getParameter("questionsId"));
+		System.out.println(request.getParameter("questionsContent"));
+		System.out.println(request.getParameter("questionsDate"));
+
 		
 		
 		
