@@ -169,7 +169,7 @@ html, body {
 	<div align="center">
 		<hr>
 		<br>
-		<h1 class="con">자유게시판 상세</h1>
+		<h1 class="con">공지사항 상세</h1>
 		<br>
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
@@ -202,13 +202,13 @@ html, body {
 
 	<div align="center">
 		<c:if test="${memberAuthor == 'ADMIN'}">
-			<button type="button" onclick="subCall('E')">수정</button>
+			<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 			&nbsp;&nbsp;
-			<button type="button" onclick="subCall('D')">삭제</button>
+			<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 			&nbsp;&nbsp;
 			</c:if>
-		<button type="button" onclick="location.href='noticeBoard.do'">목록</button>
-	</div>
+		<button type="button" onclick="location.href='noticeBoard.do'" class="btn btn-outline-dark">목록</button>
+	</div><br><br>
 	<div>
 		<form id="noticeBoardfrm" action="" method="post">
 			<input type="hidden" id="id" name="id" value="${vo.noticeBoardId}">

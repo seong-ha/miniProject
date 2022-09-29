@@ -207,6 +207,9 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+.optionBox {
+	margin-left: 275px;
+}
 </style>
 
 </head>
@@ -214,7 +217,6 @@ section.notice {
 	<section class="notice">
 		<div class="page-title" align="center">
 			<div class="container">
-			<img alt="" src="images/frog.png" width="8%" height="8%">
 				<h1>자유게시판</h1>
 			</div>
 		</div>
@@ -222,12 +224,16 @@ section.notice {
 		<div id="board-search">
 			<div class="container">
 				<div class="search-window">
-					<form action="">
+					<form id="searchfrm" method="post" action="ajaxFreeBoardSearch.do">
+					<select class="optionBox" id="key" name="key">
+								<option value="0">전체</option>
+								<option value="1">제목</option>
+								<option value="2">작성자</option>
+							</select>
 						<div class="search-wrap">
 							<label for="search" class="blind">자유게시판 내용 검색</label> <input
-								id="search" type="search" name="" placeholder="검색어를 입력해주세요."
-								value="">
-							<button type="submit" class="btn btn-dark">검색</button>
+								id="val" type="text" name="val" placeholder="검색어를 입력해주세요."
+								value="검색"><button onclick="searchCall()" type="submit" class="btn btn-dark">검색</button>
 						</div>
 					</form>
 				</div>
@@ -240,9 +246,11 @@ section.notice {
 				<table class="board-table">
 					<thead>
 						<tr>
-							<th scope="col" class="th-num">번호</th>
-							<th scope="col" class="th-title">제목</th>
-							<th scope="col" class="th-date">등록일</th>
+							<th width="70">글번호</th>
+							<th width="250">제목</th>
+							<th width="150">작성자</th>
+							<th width="150">작성일자</th>
+							<th width="70">조회수</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -255,13 +263,13 @@ section.notice {
 									onMouseover="this.style.backgroundColor='#E2E2E2';"
 									onMouseout="this.style.backgroundColor='white';">
 									<td>${m.freeBoardId }</td>
-
 									<th><div align="center">
 											<span class="d-inline-block text-truncate"
 												style="max-width: 200px;"> ${m.freeBoardTitle }</span>
 										</div></th>
-
+									<td>${m.memberId }</td>
 									<td>${m.freeBoardDate }</td>
+									<td>${m.freeBoardHit }</td>
 								</tr>
 							</c:forEach>
 						</c:if>
@@ -278,7 +286,6 @@ section.notice {
 						</c:if>
 					</form>
 					<br>
-					<br>
 					<div>
 						<small><a href="freeBoard.do">◀ 1 2 3 4 5 ▶</a></small>
 					</div>
@@ -292,143 +299,44 @@ section.notice {
 		</div>
 
 	</section>
-	<!-- 
-	<hr>
-	<div align="center" class="tableBack">
-		<div>
-			<h1>
-				<small>자유게시판</small>
-			</h1>
-		</div>
-		<br>
-		<div class="container">
-			<table class="member">
-				<thead>
-					<tr>
-						<th>글번호</th>
-						<th>제목</th>
-						<th>내용</th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:if test="${empty freeBoards }">
-						<td colspan="6">게시글이 존재하지 않습니다.</td>
-					</c:if>
-					<c:if test="${not empty freeBoards }">
-						<c:forEach items="${freeBoards }" var="m">
-							<tr onclick="selectFreeBoard(${m.freeBoardId})">
-								<td>${m.freeBoardId }</td>
-								<td><span class="d-inline-block text-truncate"
-									style="max-width: 200px;"> ${m.freeBoardTitle }</span></td>
-								<td><span class="d-inline-block text-truncate"
-									style="max-width: 350px;"> ${m.freeBoardSubject }</span></td>
-								<td>${m.memberId }</td>
-								<td>${m.freeBoardDate }</td>
-								<td>${m.freeBoardHit }</td>
-								<td>${m.freeBoardLike }</td>
-							</tr>
-						</c:forEach>
-					</c:if>
-				</tbody>
-			</table>
-			<br>
-			<div>
-				<form
-					class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-					<div class="input-group">
-						<input class="form-control" type="text"
-							placeholder="Search for..." aria-label="Search for..."
-							aria-describedby="btnNavbarSearch" />
-						<button class="btn btn-black" id="btnNavbarSearch" type="button">
-							<i class="fas fa-search"></i>
-						</button>
-					</div>
-				</form>
-				&nbsp;&nbsp;
-			</div>
-			<br>
-			<div align="center">
-				<form id="frm" action="freeBoardSelect.do" method="post">
-					<input type="hidden" id="id" name="id">
-					<c:if test="${not empty memberId}">
-						<button type="button"
-							onclick="location.href='freeBoardInsertForm.do'"
-							class="btn btn-outline-dark">글쓰기</button>
-					</c:if>
-				</form>
-				<br>
-			</div>
 
-			<div>
-
-				<div>
-					<ul>
-						<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
-							<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
-							<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
-							<a href="freeBoard.do">▶</a></li>
-					</ul>
-				</div>
-			</div>
-			<div>
-				<form id="fbf" name="fbf" method="post">
-					<input type="hidden" id="freeBoardId" name="freeBoardId">
-				</form>
-			</div>
-		</div>
-		<br>
-		<div>
-			<form
-				class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-				<div class="input-group">
-					<input class="form-control" type="text" placeholder="Search for..."
-						aria-label="Search for..." aria-describedby="btnNavbarSearch" />
-					<button class="btn btn-black" id="btnNavbarSearch" type="button">
-						<i class="fas fa-search"></i>
-					</button>
-				</div>
-			</form>
-			&nbsp;&nbsp;
-		</div>
-		<br>
-		<div align="center">
-			<form id="frm" action="freeBoardSelect.do" method="post">
-				<input type="hidden" id="id" name="id">
-				<c:if test="${not empty memberId}">
-					<button type="button"
-						onclick="location.href='freeBoardInsertForm.do'"
-						class="btn btn-outline-dark">글쓰기</button>
-				</c:if>
-			</form>
-			<br>
-		</div>
-
-		<div>
-
-			<div>
-				<ul>
-					<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
-						<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
-						<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
-						<a href="freeBoard.do">▶</a></li>
-				</ul>
-			</div>
-		</div>
-		<div>
-			<form id="fbf" name="fbf" method="post">
-				<input type="hidden" id="freeBoardId" name="freeBoardId">
-			</form>
-		</div>
-	</div>
-		 -->
 	<script type="text/javascript">
-	function selectFreeBoard(id) {
+	function freeBoardSelect(id) {
 		document.getElementById("freeBoardId").value = id;
-		fbf.action = "freeBoardSelect.do";
+		console.log(id);
+		fbf.action="freeBoard.do";
 		fbf.submit();
 	}
+	function searchCall(){
+		let key = document.getElementById("key").value;
+		let val = document.getElementById("val").value;
+		let payload = 'key='+key+'&val='+val;
+		fetch("ajaxFreeBoardSearch.do?"+payload)
+			.then(response => response.json())
+			.then(json => htmlViews(json)); //화면에 출력
+	}
+	
+	function htmlViews(datas) {  //json을 html로 변환해서 화면에 뿌림
+		document.querySelector('tbody').remove();  //<tbody> 삭제
+		const container = document.createElement('tbody'); //<tbod>태그 생성
+		container.innerHTML = datas.map(data => createHTMLString(data)).join("");  //Html 변환
+		document.querySelector('table').appendChild(container);  //화면에 추가
+	}
+	
+	function createHTMLString(data){  //html 변환 코드 css, event Listner를 활용하면 깔끔하게 정리됨
+		//if(data.noticeAttech == null) data.noticeAttech = ""; //json 객체에서 null값을 ""로대체
+		let str = "<tr onclick=";
+			str += "freeBoardSelect('"+ data.freeBoardId +"')" +">";
+			str += "<td>" + data.freeBoardId + "</td>";
+			str += "<td>" + data.freeBoardTitle + "</td>";
+			str += "<td>" + data.memberId + "</td>";
+			str += "<td>" + data.freeBoardDate + "</td></tr>";
+			str += "<td>" + data.freeBoardHit + "</td></tr>";
+			
+		return str;
+	}
+</script>
 
-	</script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

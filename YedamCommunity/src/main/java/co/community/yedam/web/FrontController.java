@@ -22,12 +22,14 @@ import co.community.yedam.foodInfo.command.Store4;
 import co.community.yedam.foodInfo.command.Store5;
 import co.community.yedam.foodInfo.command.Store6;
 import co.community.yedam.foodInfo.command.foodInfo;
+import co.community.yedam.freeBoard.command.AjaxFreeBoardSearch;
 import co.community.yedam.freeBoard.command.FreeBoard;
 import co.community.yedam.freeBoard.command.FreeBoardDelete;
 import co.community.yedam.freeBoard.command.FreeBoardEdit;
 import co.community.yedam.freeBoard.command.FreeBoardEditForm;
 import co.community.yedam.freeBoard.command.FreeBoardInsert;
 import co.community.yedam.freeBoard.command.FreeBoardInsertForm;
+import co.community.yedam.freeBoard.command.FreeBoardSearchForm;
 import co.community.yedam.freeBoard.command.FreeBoardSelect;
 import co.community.yedam.freeBoard.command.FreeBoardUpdateLike;
 import co.community.yedam.member.command.AjaxMemberIdCheck;
@@ -132,8 +134,9 @@ public class FrontController extends HttpServlet {
 		map.put("/projectStudyUpdateForm.do", new ProjectStudyUpdateForm()); // 프로젝트스터디 모집글 수정폼으로.
 		map.put("/projectStudyUpdate.do", new ProjectStudyUpdate()); // 프로젝트스터디 모집글 수정.
 		map.put("/projectStudyDelete.do", new ProjectStudyDelete()); // 프로젝트스터디 모집글 삭제.
+		map.put("/ajaxFreeBoardSearch.do", new AjaxFreeBoardSearch());
+		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm());
 	}
-
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
