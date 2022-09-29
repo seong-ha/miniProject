@@ -18,23 +18,26 @@
   box-sizing: border-box;
 }
 
+header {
+	display: block;
+	background-color: #73685d;
+	height: 80px;
+    text-align: center;
+}
+
 .navMenu {
-  position: absolute;
-  top: 40%;
+  position: relative;
   left: 50%;
+  padding-top: 100px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: #73685d;
-  border-radius: 20px;
-  padding: 20px;
 }
 
 .navMenu a {
   color: #ff7f50;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Single Day', cursive;
   text-transform: uppercase;
   display: inline-block;
   width: 230px;
@@ -56,23 +59,23 @@
   background: yellow;
   border-radius: 50%;
   opacity: 0;
-  -webkit-transform: translateX(30px);
-  transform: translateX(30px);
+  -webkit-transform: translateX(400px);
+  transform: translateX(400px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(70px);
-  transform: translateX(70px);
+  -webkit-transform: translateX(510px);
+  transform: translateX(510px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(340px);
-  transform: translateX(340px);
+  -webkit-transform: translateX(740px);
+  transform: translateX(740px);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 1;
@@ -89,13 +92,12 @@
    		  <div class="dot"></div>
    		</nav>
 	</header>
-	<br><br><br><br><br><br>
+	<br><br><br>
 	
 	<!-- main contents : 카드 형식-->
 	<h2>오늘은 뭐 먹지?</h2>
 	<br>
 	<br>
-
 	<br>
 
 	<!--<c:if test="${not empty list }">

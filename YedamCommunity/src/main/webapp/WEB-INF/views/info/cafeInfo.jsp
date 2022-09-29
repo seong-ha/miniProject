@@ -18,23 +18,26 @@
   box-sizing: border-box;
 }
 
+header {
+	display: block;
+	background-color: #73685d;
+	height: 80px;
+    text-align: center;
+}
+
 .navMenu {
-  position: absolute;
-  top: 40%;
+  position: relative;
   left: 50%;
+  padding-top: 100px;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: #73685d;
-  border-radius: 20px;
-  padding: 20px;
 }
 
 .navMenu a {
   color: #ff7f50;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Single Day', cursive;
   text-transform: uppercase;
   display: inline-block;
   width: 230px;
@@ -91,12 +94,14 @@
    		  <div class="dot"></div>
    		</nav>
 	</header>
-	<br><br><br><br><br><br>
+	<br><br><br>
 	
 	<!-- main contents : 카드 형식-->
 	<h2>오늘은 어디서 공부하지?</h2>
 	<br>
 	<br>
+	<br>
+	
 	<div class="container">
 		<div class="main-content">
 			<article class="component">
