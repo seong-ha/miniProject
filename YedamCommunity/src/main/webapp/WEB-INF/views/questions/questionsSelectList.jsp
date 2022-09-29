@@ -219,8 +219,7 @@ section.notice {
 									</select> <input type="text" id="val" name="val" placeholder="검색어를 입력해주세요.">&nbsp;&nbsp; <input
 										type="button" onclick="searchCall()" value="검색">
 								</form>
-								
-							</div>
+						</div>
 				</div>
 			</div>
 		</div>
