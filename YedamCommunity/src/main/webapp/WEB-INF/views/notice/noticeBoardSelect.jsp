@@ -6,51 +6,213 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-th {
-	width: 100;
+
+<style>
+.con {
+	max-width: 950px;
+}
+
+.con-min-width {
+	min-width: 320px;
+}
+
+.top-menu a {
+	text-decoration: none;
+	color: gray;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+html, body {
+	overflow-x: hidden;
+}
+
+.table-common>table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.table-common .btn-box {
+	text-align: center;
+}
+
+.table-common>table th, .table-common>table td {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+.article-list table {
+	border: none;
+	border-top: 2px solid lightgray;
+	border-bottom: 2px solid lightgray;
+}
+
+.article-list>table th, .article-list>table td {
+	border: none;
+}
+
+.article-list>table td {
+	border-bottom: 1px solid lightgray;
+}
+
+.article-list>table thead {
+	border-bottom: 2px solid lightgray;
+	background-color: #F5F5F5;
+}
+
+.article-detail {
+	border: 2px solid lightgray;
+}
+
+.article-detail>table {
+	border: none;
+	width: calc(100% - 100px);
+}
+
+.article-detail>table th, .article-detail>table td {
+	border: none;
+}
+
+.article-detail>table tr:not(:last-child) {
+	border-bottom: 1px solid lightgray;
+}
+
+.article-detail>table tr:not(.article-body), .article-detail>table tr:not(.article-body)>td
+	{
+	height: 20px;
+	font-size: 0.8rem;
+}
+
+.article-detail>table tr.article-title>td {
+	height: 40px;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+.article-detail>table td:last-child {
+	padding-right: 100px;
+}
+
+.article-detail>.article-writer {
+	width: 100px;
+	height: 102px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+	text-align: center;
+}
+
+.article-detail>.article-writer .writer-icon {
+	margin: 0 auto;
+	background-color: white;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.reply {
+	margin-top: 20px;
+	border: 2px solid lightgray;
+	padding: 15px;
+	box-sizing: border-box;
+}
+
+.reply-form {
+	padding: 10px;
+}
+
+.reply-form>form input[type="text"] {
+	width: 200px;
+}
+
+.reply-form>form textarea {
+	width: calc(100% - 100px);
+	min-height: 40px;
+}
+
+.reply-form>form input[type="submit"] {
+	width: 80px;
+	height: 40px;
+	transform: translatey(-40%);
+}
+
+.reply-form>form>div:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.reply-list>table {
+	border: none;
+}
+
+.reply-list>table th {
+	display: none;
+}
+
+.reply-list>table td {
+	border: none;
+}
+
+.reply-list>table tr:nth-child(2n+1) {
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+.reply-list>table td:first-child {
+	font-weight: bold;
+}
+
+.reply-list>table td:first-child::after {
+	content: " : ";
+	font-weight: bold;
 }
 </style>
 </head>
 <body>
 	<div align="center">
-		<div>
-			<table border="1">
-				<tr>
-					<th>글번호</th>
-					<td>${vo.noticeBoardId}</td>
-					<th>작성일자</th>
-					<td>${vo.noticeBoardDate}</td>
-					<th>조회수</th>
-					<td>${vo.noticeBoardHit}</td>
-				</tr>
-				<tr>
-					<th>제목</th>
-					<td colspan="5">${vo.noticeBoardTitle}</td>
-				</tr>
-				<tr>
-					<th>내용</th>
-					<td colspan="5"><textArea rows="10" cols="88"
-							readonly="readonly">${vo.noticeBoardSubject}</textArea></td>
-				</tr>
-			
-			</table>
-		</div>
+		<hr>
 		<br>
-		<div>
-			<c:if test="${memberAuthor == 'ADMIN'}">
-				<button type="button" onclick="subCall('E')">수정</button>
+		<h1 class="con">자유게시판 상세</h1>
+		<br>
+		<section class="article-detail table-common con row">
+			<div class="article-writer cell">
+				<div class="writer-icon"></div>
+			</div>
+			<table class="cell" border="1">
+				<colgroup>
+					<col width="100px">
+				</colgroup>
+				<tbody>
+					<tr class="article-title">
+						<th>[${vo.noticeBoardId }] 제목</th>
+						<td colspan="3">${vo.noticeBoardTitle }</td>
+						<th>작성일</th>
+						<td>${vo.noticeBoardDate }</td>
+					</tr>
+					<tr class="article-info">
+						<th>조회수</th>
+						<td>${vo.noticeBoardHit }</td>
+					</tr>
+					<tr class="article-body">
+						<th>내용</th>
+						<td colspan="4">${vo.noticeBoardSubject }</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</div>
+	<br>
+
+	<div align="center">
+		<c:if test="${memberAuthor == 'ADMIN'}">
+			<button type="button" onclick="subCall('E')">수정</button>
 			&nbsp;&nbsp;
 			<button type="button" onclick="subCall('D')">삭제</button>
 			&nbsp;&nbsp;
 			</c:if>
-			<button type="button" onclick="location.href='noticeBoard.do'">목록</button>
-		</div>
-		<div>
-			<form id="noticeBoardfrm" action="" method="post">
-				<input type="hidden" id="id" name="id" value="${vo.noticeBoardId}">
-			</form>
-		</div>
+		<button type="button" onclick="location.href='noticeBoard.do'">목록</button>
+	</div>
+	<div>
+		<form id="noticeBoardfrm" action="" method="post">
+			<input type="hidden" id="id" name="id" value="${vo.noticeBoardId}">
+		</form>
 	</div>
 	<script type="text/javascript">
 		function subCall(str) {

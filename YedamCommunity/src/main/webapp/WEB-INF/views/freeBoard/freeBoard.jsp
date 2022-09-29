@@ -13,15 +13,13 @@
 	crossorigin="anonymous">
 <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
 	crossorigin="anonymous"></script>
-	
+
 <style>
-	.tableBack {
-		background-image: url("css1/images/tableBack.jpg");
-	
-	}
-	
-</style>	
-	
+.tableBack {
+	background-image: url("css1/images/tableBack.jpg");
+}
+</style>
+
 </head>
 <body>
 	<hr>
@@ -98,15 +96,10 @@
 
 			<div>
 				<ul>
-					<li>
-						<a href="freeBoard.do">◀</a>&nbsp;
-						<a href="freeBoard.do">1</a>&nbsp;
-						<a href="freeBoard.do">2</a>&nbsp;
-						<a href="freeBoard.do">3</a>&nbsp;
-						<a href="freeBoard.do">4</a>&nbsp;
-						<a href="freeBoard.do">5</a>&nbsp;
-						<a href="freeBoard.do">▶</a>
-					</li>
+					<li><a href="freeBoard.do">◀</a>&nbsp; <a href="freeBoard.do">1</a>&nbsp;
+						<a href="freeBoard.do">2</a>&nbsp; <a href="freeBoard.do">3</a>&nbsp;
+						<a href="freeBoard.do">4</a>&nbsp; <a href="freeBoard.do">5</a>&nbsp;
+						<a href="freeBoard.do">▶</a></li>
 				</ul>
 			</div>
 		</div>
