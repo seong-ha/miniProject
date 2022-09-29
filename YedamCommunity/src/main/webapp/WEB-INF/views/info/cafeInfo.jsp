@@ -8,22 +8,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" href="css/info.css">
 <title>스터디카페 리스트</title>
+
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Single+Day&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navMenu {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #73685d;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.navMenu a {
+  color: #ff7f50;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Single Day', cursive;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 230px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(2) {
+	color: yellow;
+}
+
+.navMenu a:hover {
+  color: yellow;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: yellow;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(70px);
+  transform: translateX(70px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(340px);
+  transform: translateX(340px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+	
+</style>
 </head>
 <body>
 	<!-- 상단 메뉴바 -->
 	<!-- 클릭하면 계속 div가 색깔 바껴있기(추가) -->
 	<header>
-		<nav>
-			<div align="center">
-				<a href="infoFood.do">맛집 리스트</a>
-			</div>
-			<div align="center">
-				<a href="infoCafe.do">스터디 카페 리스트</a>
-			</div>
-		</nav>
+		<nav class="navMenu">
+		  	<a href="infoFood.do">맛집 리스트</a>
+		  	<a href="infoCafe.do">스터디카페 리스트</a>
+   		  <div class="dot"></div>
+   		</nav>
 	</header>
-	<br>
-	<br>
+	<br><br><br><br><br><br>
+	
 	<!-- main contents : 카드 형식-->
 	<h2>오늘은 어디서 공부하지?</h2>
 	<br>

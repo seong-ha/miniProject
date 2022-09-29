@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-header {
-	
-	height: 75px;
-	padding:9px;
-	color: white;
-	background-color:#73685d ;
-	font-weight: bold;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	
-	/**화면 상단에 고정*/
-
-	/* width: 100% */
-	
-	
-}
 
 nav>div>a:hover{
 	background:yellow;
