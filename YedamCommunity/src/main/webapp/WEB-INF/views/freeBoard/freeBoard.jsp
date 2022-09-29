@@ -301,6 +301,11 @@ section.notice {
 	</section>
 
 	<script type="text/javascript">
+	function selectFreeBoard(id) {
+		document.getElementById("freeBoardId").value = id;
+		fbf.action = "freeBoardSelect.do";
+		fbf.submit();
+	}
 	function freeBoardSelect(id) {
 		document.getElementById("freeBoardId").value = id;
 		console.log(id);
