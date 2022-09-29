@@ -28,46 +28,60 @@
 
 
 <!-- css2 -->
-<link rel="icon" href="css2/img/favicon/favicon-32x32.png" type="image/x-icon" />
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="css2/img/favicon/favicon-144x144.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="css2/img/favicon/favicon-72x72.png">
-	<link rel="apple-touch-icon-precomposed" href="css2/img/favicon/favicon-54x54.png">
+<link rel="icon" href="css2/img/favicon/favicon-32x32.png"
+	type="image/x-icon" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+	href="css2/img/favicon/favicon-144x144.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+	href="css2/img/favicon/favicon-72x72.png">
+<link rel="apple-touch-icon-precomposed"
+	href="css2/img/favicon/favicon-54x54.png">
 <!-- css3 -->
- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900&display=swap"
+	rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap"
+	rel="stylesheet">
 
 
-    <!-- Css Styles -->
-    <link rel="stylesheet" href="css3/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/font-awesome.min.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/elegant-icons.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/owl.carousel.min.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/slicknav.min.css" type="text/css">
-    <link rel="stylesheet" href="css3/css/style.css" type="text/css">
+<!-- Css Styles -->
+<link rel="stylesheet" href="css3/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css3/css/font-awesome.min.css"
+	type="text/css">
+<link rel="stylesheet" href="css3/css/elegant-icons.css" type="text/css">
+<link rel="stylesheet" href="css3/css/owl.carousel.min.css"
+	type="text/css">
+<link rel="stylesheet" href="css3/css/magnific-popup.css"
+	type="text/css">
+<link rel="stylesheet" href="css3/css/slicknav.min.css" type="text/css">
+<link rel="stylesheet" href="css3/css/style.css" type="text/css">
 
 
 <!-- css4 -->
- <!-- Favicons -->
-  <link href="css4/img/favicon.png" rel="icon">
-  <link href="css4/img/apple-touch-icon.png" rel="apple-touch-icon">
+<!-- Favicons -->
+<link href="css4/img/favicon.png" rel="icon">
+<link href="css4/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+	rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link href="css4/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap CSS File -->
+<link href="css4/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Libraries CSS Files -->
-  <link href="css4/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="css4/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="css4/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="css4/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="css4/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+<!-- Libraries CSS Files -->
+<link href="css4/lib/font-awesome/css/font-awesome.min.css"
+	rel="stylesheet">
+<link href="css4/lib/animate/animate.min.css" rel="stylesheet">
+<link href="css4/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="css4/lib/owlcarousel/assets/owl.carousel.min.css"
+	rel="stylesheet">
+<link href="css4/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-  <!-- Main Stylesheet File -->
-  <link href="css4/css/style.css" rel="stylesheet">
+<!-- Main Stylesheet File -->
+<link href="css4/css/style.css" rel="stylesheet">
 
 
 <!-- css5 -->
@@ -96,7 +110,7 @@
 
 	<section class="home-slider owl-carousel">
 		<div class="slider-item"
-			style="background-image: url(css1/images/bg_1.jpg);">
+			style="background-image: url(css1/images/backimage3.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div
@@ -104,17 +118,15 @@
 					data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h1 class="mb-4">YEDAM COMMUNITY</h1>
-						<p>개발자들의 정보 커뮤니티 황용주 천재 ㅎ</p>
-						<p>
-							<a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a>
-						</p>
+						<p>개발자 정보 커뮤니티</p>
+						
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div class="slider-item"
-			style="background-image: url(css1/images/bg_2.jpg);">
+			style="background-image: url(css1/images/backimage4.jpg);">
 			<div class="overlay"></div>
 			<div class="container">
 				<div
@@ -122,10 +134,8 @@
 					data-scrollax-parent="true">
 					<div class="col-md-6 ftco-animate">
 						<h1 class="mb-4">YEDAM COMMUNITY</h1>
-						<p>개발자들의 정보 커뮤니티 황용주 천재 ㅎ</p>
-						<p>
-							<a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a>
-						</p>
+						<p>개발자 정보 커뮤니티</p>
+						
 					</div>
 				</div>
 			</div>
@@ -143,7 +153,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">공지사항</h3>
-							<p>각종 커뮤니티 정보를 확인 할 수 있습니다.</p>
+							<h5 style="color: white">Notice our information</h5>
 						</div>
 					</div>
 				</div>
@@ -154,8 +164,8 @@
 							<span class="flaticon-reading"></span>
 						</div>
 						<div class="media-body p-2 mt-3">
-							<h3 class="heading">커뮤니티</h3>
-							<p>자유롭게 글쓰시고 정보를 공유할수있는 공간입니다.</p>
+							<h3 class="heading">자유게시판</h3>
+							<h5 style="color: white">Feel free to share your information</h5>
 						</div>
 					</div>
 				</div>
@@ -167,7 +177,8 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">정보</h3>
-							<p>스터디카페 도서 맛집을 볼 수 있습니다.</p>
+							<h5 style="color: white">Yon can see any information in
+								Daegu</h5>
 						</div>
 					</div>
 				</div>
@@ -179,7 +190,7 @@
 						</div>
 						<div class="media-body p-2 mt-3">
 							<h3 class="heading">프로젝트 &amp; 스터디</h3>
-							<p>스터디모집과 프로젝트모집을 공고를 볼수있습니다.</p>
+							<h5 style="color: white">Project & Study Groub schedule</h5>
 						</div>
 					</div>
 				</div>
@@ -188,11 +199,12 @@
 	</section>
 
 	<!-- css5-->
-	
+
 	<!-- Services-->
 	<section class="page-section" id="services">
 		<div class="container px-4 px-lg-5">
-			<h2 class="text-center mt-0">At Your Service</h2>
+			<h2 class="text-center mt-0" style="color: black">At Your
+				Service</h2>
 			<hr class="divider" />
 			<div class="row gx-4 gx-lg-5">
 				<div class="col-lg-3 col-md-6 text-center">
@@ -200,9 +212,9 @@
 						<div class="mb-2">
 							<i class="bi-gem fs-1 text-primary"></i>
 						</div>
-						<h3 class="h4 mb-2">Sturdy Themes</h3>
-						<p class="text-muted mb-0">Our themes are updated regularly to
-							keep them bug free!</p>
+						<h3 class="h4 mb-2" style="color: #FD5F00">Up to Date</h3>
+						<p class="text-muted mb-0">저희 Yedam Community는 보다 나은 회원님들의 정보
+							공유를 위해 주기적인 업데이트를 진행합니다.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 text-center">
@@ -210,9 +222,9 @@
 						<div class="mb-2">
 							<i class="bi-laptop fs-1 text-primary"></i>
 						</div>
-						<h3 class="h4 mb-2">Up to Date</h3>
-						<p class="text-muted mb-0">All dependencies are kept current
-							to keep things fresh.</p>
+						<h3 class="h4 mb-2" style="color: #FD5F00">Dependence</h3>
+						<p class="text-muted mb-0">안전하고 풍요로운 사이트를 위해 사이버 폭력을 예방하고 적극
+							대응 하겠습니다.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 text-center">
@@ -220,9 +232,9 @@
 						<div class="mb-2">
 							<i class="bi-globe fs-1 text-primary"></i>
 						</div>
-						<h3 class="h4 mb-2">Ready to Publish</h3>
-						<p class="text-muted mb-0">You can use this design as is, or
-							you can make changes!</p>
+						<h3 class="h4 mb-2" style="color: #FD5F00">Ready to Publish</h3>
+						<p class="text-muted mb-0">우리들 누구나 정보를 공유할 수 있고 여기에 있는 자료는 무료로
+							배포합니다.</p>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 text-center">
@@ -230,77 +242,76 @@
 						<div class="mb-2">
 							<i class="bi-heart fs-1 text-primary"></i>
 						</div>
-						<h3 class="h4 mb-2">Made with Love</h3>
-						<p class="text-muted mb-0">Is it really open source if it's
-							not made with love?</p>
+						<h3 class="h4 mb-2" style="color: #FD5F00">Made with Love</h3>
+						<p class="text-muted mb-0">사랑하는 마음으로 사이트를 가꾸어 나갑시다.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	
-	
+
+
 	<div id="portfolio">
 		<div class="container-fluid p-0">
 			<div class="row g-0">
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/1.jpg"
+					<a class="portfolio-box" href="https://github.com/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/1.jpg" alt="..." />
+						src="css5/img/site1.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">Git Hub</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/2.jpg"
+					<a class="portfolio-box" href="https://www.acmicpc.net/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/2.jpg" alt="..." />
+						src="css5/img/site2.png" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">BAEK JOON</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/3.jpg"
+					<a class="portfolio-box" href="https://mvnrepository.com/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/3.jpg" alt="..." />
+						src="css5/img/site3.png" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">Maven Repository</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/4.jpg"
+					<a class="portfolio-box" href="https://www.oracle.com/kr/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/4.jpg" alt="..." />
+						src="css5/img/site5.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">Oracle</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/5.jpg"
+					<a class="portfolio-box" href="https://www.youtube.com/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/5.jpg" alt="..." />
+						src="css5/img/site6.jpg" alt="..." />
 						<div class="portfolio-box-caption">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">YouTube</div>
 						</div>
 					</a>
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="css5/img/portfolio/fullsize/6.jpg"
+					<a class="portfolio-box" href="https://www.w3schools.com/"
 						title="Project Name"> <img class="img-fluid"
-						src="css5/img/portfolio/thumbnails/6.jpg" alt="..." />
+						src="css5/img/site7.jpg" alt="..." />
 						<div class="portfolio-box-caption p-3">
 							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Project Name</div>
+							<div class="project-name">W3schools</div>
 						</div>
 					</a>
 				</div>
@@ -313,255 +324,335 @@
 
 
 	<!-- css3 -->
-	
 
-	
-  <!--==========================
+
+
+	<!--==========================
      css4
     ============================-->
-    <section id="skills">
-      <div class="container">
+	<section id="skills">
+		<div class="container">
 
-        <header class="section-header">
-          <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
-        </header>
+			<header class="section-header">
+				<h3>Our Skills</h3>
+				<p>Yedam Community에서 제공되고 있는 언어별 포스팅 자료를 보여드립니다.</p>
+			</header>
 
-        <div class="skills-content">
+			<div class="skills-content">
 
-          <div class="progress">
-            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">HTML <i class="val">100%</i></span>
-            </div>
-          </div>
+				<div class="progress">
+					<div class="progress-bar bg-success" role="progressbar"
+						aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+						<span class="skill">JAVA <i class="val">81.2%</i></span>
+					</div>
+				</div>
 
-          <div class="progress">
-            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">CSS <i class="val">90%</i></span>
-            </div>
-          </div>
+				<div class="progress">
+					<div class="progress-bar bg-info" role="progressbar"
+						aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+						<span class="skill">JavaScript <i class="val">75%</i></span>
+					</div>
+				</div>
 
-          <div class="progress">
-            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">JavaScript <i class="val">75%</i></span>
-            </div>
-          </div>
+				<div class="progress">
+					<div class="progress-bar bg-warning" role="progressbar"
+						aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+						<span class="skill">CSS <i class="val">62%</i></span>
+					</div>
+				</div>
 
-          <div class="progress">
-            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-              <span class="skill">Photoshop <i class="val">55%</i></span>
-            </div>
-          </div>
+				<div class="progress">
+					<div class="progress-bar bg-danger" role="progressbar"
+						aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+						<span class="skill">HTML <i class="val">42%</i></span>
+					</div>
+				</div>
 
-        </div>
+			</div>
 
-      </div>
-    </section>
+		</div>
+	</section>
 
-    <!--==========================
+	<!--==========================
       Facts Section
     ============================-->
-    <section id="facts"  class="wow fadeIn">
-      <div class="container">
+	<section id="facts" class="wow fadeIn">
+		<div class="container">
 
-        <header class="section-header">
-          <h3>Facts</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-        </header>
+			<header class="section-header">
+				<h3>Facts</h3>
+				<p>Yedam Coummunity의 최근 한달간의 접속자와 정회원들의 취업현황</p>
+			</header>
 
-        <div class="row counters">
+			<div class="row counters">
 
-  				<div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">274</span>
-            <p>Clients</p>
-  				</div>
+				<div class="col-lg-3 col-6 text-center">
+					<span data-toggle="counter-up">31</span>
+					<p>일 접속자</p>
+				</div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">421</span>
-            <p>Projects</p>
-  				</div>
+				<div class="col-lg-3 col-6 text-center">
+					<span data-toggle="counter-up">123,412</span>
+					<p>누적 접속자</p>
+				</div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">1,364</span>
-            <p>Hours Of Support</p>
-  				</div>
+				<div class="col-lg-3 col-6 text-center">
+					<span data-toggle="counter-up">17</span>
+					<p>동시 접속자</p>
+				</div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-toggle="counter-up">18</span>
-            <p>Hard Workers</p>
-  				</div>
+				<div class="col-lg-3 col-6 text-center">
+					<span data-toggle="counter-up">3,451</span>
+					<p>취업현황</p>
+				</div>
 
-  			</div>
+			</div>
 
-        <div class="facts-img">
-          <img src="css4/img/facts-img.png" alt="" class="img-fluid">
-        </div>
+			<div class="facts-img">
+				<img src="css4/img/facts-img.png" alt="" class="img-fluid">
+			</div>
 
-      </div>
-    </section><!-- #facts -->
+		</div>
+	</section>
+	<!-- #facts -->
 
-    <!--==========================
+	<!--==========================
       Portfolio Section
     ============================-->
-    <section id="portfolio"  class="section-bg" >
-      <div class="container">
+	<section id="portfolio" class="section-bg">
+		<div class="container">
 
-        <header class="section-header">
-          <h3 class="section-title">Our Portfolio</h3>
-        </header>
+			<header class="section-header">
+				<h3 class="section-title">Our Portfolio</h3>
+			</header>
 
-        <div class="row">
-          <div class="col-lg-12">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
+			<div class="row">
+				<div class="col-lg-12">
+					<ul id="portfolio-flters">
+						<li data-filter="*" class="filter-active">All</li>
+						<li data-filter=".filter-app">Template 자료</li>
+						<li data-filter=".filter-card">Wep 자료</li>
+						<li data-filter=".filter-web">App 자료</li>
+					</ul>
+				</div>
+			</div>
 
-        <div class="row portfolio-container">
+			<div class="row portfolio-container">
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/app1.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template1.png" class="img-fluid" alt="">
+							<a href="css4/img/template1.png" data-lightbox="portfolio"
+								data-title="App 1" class="link-preview" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a
+								href="https://themewagon.com/themes/free-responsive-bootstrap-5-gardening-website-template-gardener/"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">App 1</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="#">Template</a>
+							</h4>
+							<p>Shop</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/web3.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp"
+					data-wow-delay="0.1s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template2.png" class="img-fluid" alt="">
+							<a href="css4/img/template2.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Web 3" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/securex/"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Web 3</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/securex/">App</a>
+							</h4>
+							<p>Job</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/app2.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+					data-wow-delay="0.2s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template3.png" class="img-fluid" alt="">
+							<a href="css4/img/template3.png" class="link-preview"
+								data-lightbox="portfolio" data-title="App 2" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a
+								href="https://themewagon.com/themes/drivin-free-bootstrap-5-driving-school-website-template/"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">App 2</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a
+									href="https://themewagon.com/themes/drivin-free-bootstrap-5-driving-school-website-template/">Template</a>
+							</h4>
+							<p>Drive</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/card2.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template4.png" class="img-fluid" alt="">
+							<a href="css4/img/template4.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Card 2" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/edu-meeting/index.html"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Card 2</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/edu-meeting/index.html">Web</a>
+							</h4>
+							<p>Study</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/web2.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp"
+					data-wow-delay="0.1s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template5.png" class="img-fluid" alt="">
+							<a href="css4/img/template5.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Web 2" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/restaurantly/"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Web 2</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/restaurantly/">App</a>
+							</h4>
+							<p>Restaurant</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/app3.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio" data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp"
+					data-wow-delay="0.2s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template6.png" class="img-fluid" alt="">
+							<a href="css4/img/template6.png" class="link-preview"
+								data-lightbox="portfolio" data-title="App 3" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a
+								href="https://themewagon.com/themes/free-responsive-html5-bootstrap-5-preschool-website-template-kider/"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">App 3</a></h4>
-                <p>App</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a
+									href="https://themewagon.com/themes/free-responsive-html5-bootstrap-5-preschool-website-template-kider/">Template</a>
+							</h4>
+							<p>Kids</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/card1.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template7.png" class="img-fluid" alt="">
+							<a href="css4/img/template7.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Card 1" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/unfold/index.html"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Card 1</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/unfold/index.html">Wep</a>
+							</h4>
+							<p>Profile</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/card3.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp"
+					data-wow-delay="0.1s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template8.png" class="img-fluid" alt="">
+							<a href="css4/img/template8.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Card 3" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/one-music/index.html"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Card 3</a></h4>
-                <p>Card</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/one-music/index.html">Wep</a>
+							</h4>
+							<p>Music</p>
+						</div>
+					</div>
+				</div>
 
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="css4/img/portfolio/web1.jpg" class="img-fluid" alt="">
-                <a href="css4/img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="css4/img/portfolio/web1.jpg" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
+				<div
+					class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp"
+					data-wow-delay="0.2s">
+					<div class="portfolio-wrap">
+						<figure>
+							<img src="css4/img/template9.png" class="img-fluid" alt="">
+							<a href="css4/img/template9.png" class="link-preview"
+								data-lightbox="portfolio" data-title="Web 1" title="Preview"><i
+								class="ion ion-eye"></i></a>
+							<a href="https://technext.github.io/gymlife/index.html"
+								class="link-details" title="More Details"><i
+								class="ion ion-android-open"></i></a>
+						</figure>
 
-              <div class="portfolio-info">
-                <h4><a href="#">Web 1</a></h4>
-                <p>Web</p>
-              </div>
-            </div>
-          </div>
+						<div class="portfolio-info">
+							<h4>
+								<a href="https://technext.github.io/gymlife/index.html">App</a>
+							</h4>
+							<p>Health</p>
+						</div>
+					</div>
+				</div>
 
-        </div>
+			</div>
 
-      </div>
-    </section><!-- #portfolio -->
+		</div>
+	</section>
+	<!-- #portfolio -->
 
 	<!-- css2 -->
 	<!-- Team start -->
@@ -570,137 +661,197 @@
 			<div class="row">
 				<div class="col-md-12 heading">
 					<span class="title-icon pull-left"><i class="fa fa-weixin"></i></span>
-					<h2 class="title">Meet with our Team <span class="title-desc">A Quality Experience Team with 4 years experience</span></h2>
+					<h2 class="title">
+						Yedam Community 제작자 <span class="title-desc"></span>
+					</h2>
 				</div>
-			</div><!-- Title row end -->
+			</div>
+			<!-- Title row end -->
 
 			<div class="row text-center">
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInLeft">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team1.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
+							<img src="css2/images/member1.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
-							<h3>Vosgi Varduhi</h3>
-							<p>Web Designer</p>
+							<h3>전성하</h3>
+							<p>Owner</p>
 							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
-					</div>	
-				</div><!--/ Team 1 end -->
+					</div>
+				</div>
+				<!--/ Team 1 end -->
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInLeft">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team2.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
+							<img src="css2/images/team/team2.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
-							<h3>Robert Aleska</h3>
-							<p>Web Designer</p>
+							<h3>김두영</h3>
+							<p>software engineer</p>
 							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div><!--/ Team 2 end -->
+				</div>
+				<!--/ Team 2 end -->
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team3.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
+							<img src="css2/images/team/team3.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
-							<h3>Taline Voski</h3>
+							<h3>김민지</h3>
 							<p>Web Designer</p>
 							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div><!--/ Team 3 end -->
+				</div>
+				<!--/ Team 3 end -->
 				<div class="col-md-3 col-sm-6">
 					<div class="team animate wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team4.jpg" alt="">
-							<span class="img-top"></span>
-							<span class="img-bottom"></span>
+							<img src="css2/images/team/team4.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
-							<h3>Alban Spencer</h3>
+							<h3>이현성</h3>
 							<p>Web Designer</p>
 							<div class="team-social">
-								<a class="fb" href="#"><i class="fa fa-facebook"></i></a>
-								<a class="twt" href="#"><i class="fa fa-twitter"></i></a>
-								<a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
-								<a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
-								<a class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
 							</div>
 						</div>
 					</div>
-				</div><!--/ Team 4 end -->
-			</div><!--/ Content row end -->
-		</div><!--/ Container end -->
-    </section><!--/ Team end -->
-	
+				</div>
+				<!--/ Team 4 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team4.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>황용주</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 4 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team4.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>석J</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 4 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team4.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>이창호</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 4 end -->
+			</div>
+			<!--/ Content row end -->
+		</div>
+		<!--/ Container end -->
+	</section>
+	<!--/ Team end -->
+
 	<!-- css3 -->
 	<!-- Contact Section Begin -->
-    <section class="contact-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="section-title">
-                        <h2>Location</h2>
-                        <p>Get directions to our event center</p>
-                    </div>
-                    <div class="cs-text">
-                        <div class="ct-address">
-                            <span>Address:</span>
-                            <p>01 Pascale Springs Apt. 339, NY City <br />United State</p>
-                        </div>
-                        <ul>
-                            <li>
-                                <span>Phone:</span>
-                                (+12)-345-67-8910
-                            </li>
-                            <li>
-                                <span>Email:</span>
-                                info.colorlib@gmail.com
-                            </li>
-                        </ul>
-                        <div class="ct-links">
-                            <span>Website:</span>
-                            <p>https://conference.colorlib.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="cs-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1808595875964!2d128.58873723158544!3d35.86908446377675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e3c264a0f67b%3A0x6f6af951f8677f92!2z7JiI64u07KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1664354791415!5m2!1sko!2skr"
-                            height="400" style="border:0;" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact Section End -->
+	<section class="contact-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="section-title">
+						<h2>Location</h2>
+						<p>주차 공간이 없어 자가용은 집에 두고 오세요</p>
+					</div>
+					<div class="cs-text">
+						<div class="ct-address">
+							<span>Address:</span>
+							<p>대구광역시 중구 남일동 중앙대로 403</p>
+						</div>
+						<ul>
+							<li><span>Phone:</span> (+82) 010-3649-7455</li>
+							<li><span>Email:</span> ss03050@naver.com</li>
+						</ul>
+						<div class="ct-links">
+							<span>Website:</span>
+							<p>https://yedamcommunity.com</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="cs-map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3233.1808595875964!2d128.58873723158544!3d35.86908446377675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3565e3c264a0f67b%3A0x6f6af951f8677f92!2z7JiI64u07KeB7JeF7KCE66y47ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1664354791415!5m2!1sko!2skr"
+							height="400" style="border: 0;" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Contact Section End -->
 
 
 
@@ -722,7 +873,7 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="css1/js/google-map.js"></script>
 	<script src="css1/js/main.js"></script>
-	
+
 	<!-- css2 -->
 	<!-- initialize jQuery Library -->
 	<script type="text/javascript" src="css2/js/jquery.js"></script>
@@ -753,15 +904,15 @@
 	<script type="text/javascript" src="css2/js/waypoints.min.js"></script>
 	<!-- Template custom -->
 	<script type="text/javascript" src="css2/js/custom.js"></script>
-	
+
 	<!-- css3 -->
-	 <script src="css3/js/jquery-3.3.1.min.js"></script>
-    <script src="css3/js/bootstrap.min.js"></script>
-    <script src="css3/js/jquery.magnific-popup.min.js"></script>
-    <script src="css3/js/jquery.countdown.min.js"></script>
-    <script src="css3/js/jquery.slicknav.js"></script>
-    <script src="css3/js/owl.carousel.min.js"></script>
-    <script src="css3/js/main.js"></script>
+	<script src="css3/js/jquery-3.3.1.min.js"></script>
+	<script src="css3/js/bootstrap.min.js"></script>
+	<script src="css3/js/jquery.magnific-popup.min.js"></script>
+	<script src="css3/js/jquery.countdown.min.js"></script>
+	<script src="css3/js/jquery.slicknav.js"></script>
+	<script src="css3/js/owl.carousel.min.js"></script>
+	<script src="css3/js/main.js"></script>
 
 	<!-- css5 -->
 	<script
@@ -779,22 +930,22 @@
 
 	<!-- css4 -->
 	<script src="css4/lib/jquery/jquery.min.js"></script>
-  <script src="css4/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="css4/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="css4/lib/easing/easing.min.js"></script>
-  <script src="css4/lib/superfish/hoverIntent.js"></script>
-  <script src="css4/lib/superfish/superfish.min.js"></script>
-  <script src="css4/lib/wow/wow.min.js"></script>
-  <script src="css4/lib/waypoints/waypoints.min.js"></script>
-  <script src="css4/lib/counterup/counterup.min.js"></script>
-  <script src="css4/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="css4/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="css4/lib/lightbox/js/lightbox.min.js"></script>
-  <script src="css4/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="css4/contactform/contactform.js"></script>
+	<script src="css4/lib/jquery/jquery-migrate.min.js"></script>
+	<script src="css4/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="css4/lib/easing/easing.min.js"></script>
+	<script src="css4/lib/superfish/hoverIntent.js"></script>
+	<script src="css4/lib/superfish/superfish.min.js"></script>
+	<script src="css4/lib/wow/wow.min.js"></script>
+	<script src="css4/lib/waypoints/waypoints.min.js"></script>
+	<script src="css4/lib/counterup/counterup.min.js"></script>
+	<script src="css4/lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="css4/lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="css4/lib/lightbox/js/lightbox.min.js"></script>
+	<script src="css4/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+	<!-- Contact Form JavaScript File -->
+	<script src="css4/contactform/contactform.js"></script>
 
-  <!-- Template Main Javascript File -->
-  <script src="css4/js/main.js"></script>
+	<!-- Template Main Javascript File -->
+	<script src="css4/js/main.js"></script>
 </body>
 </html>
