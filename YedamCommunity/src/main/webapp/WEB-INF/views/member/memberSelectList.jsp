@@ -34,10 +34,10 @@
 </head>
 <body>
 	<div align="center" class="tableBack">
-		<div>
+		<div><br><br>
 			<div class="container">
 			<br><br>
-				<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1><br>
+				<h1>멤버 전체 목록 (자세히 보기는 클릭!)</h1><br><br>
 				<div class="table-wrapper">
 					<table class="alt">
 						<thead>
@@ -77,7 +77,7 @@
 		</div>
 
 		<div>
-			<small>◀ 1 2 3 4 5 ▶</small>
+			<small><a href="memberSelectList.do">◀ 1 2 3 4 5 ▶</a></small>
 		</div>
 	</div>
 	<br>

@@ -212,12 +212,12 @@ section.notice {
 </head>
 <body>
 	<section class="notice">
-		<div class="page-title">
+		<div class="page-title" align="center">
 			<div class="container">
-				<h3>자유게시판</h3>
+			<img alt="" src="images/frog.png" width="8%" height="8%">
+				<h1>자유게시판</h1>
 			</div>
 		</div>
-
 		<!-- board seach area -->
 		<div id="board-search">
 			<div class="container">
@@ -255,18 +255,19 @@ section.notice {
 									onMouseover="this.style.backgroundColor='#E2E2E2';"
 									onMouseout="this.style.backgroundColor='white';">
 									<td>${m.freeBoardId }</td>
-									
-									<th><div align="center"><span class="d-inline-block text-truncate"
-										style="max-width: 200px;"> ${m.freeBoardTitle }</span></div></th>
-										
+
+									<th><div align="center">
+											<span class="d-inline-block text-truncate"
+												style="max-width: 200px;"> ${m.freeBoardTitle }</span>
+										</div></th>
+
 									<td>${m.freeBoardDate }</td>
 								</tr>
 							</c:forEach>
 						</c:if>
 					</tbody>
 				</table>
-				<br>
-				<br>
+				<br> <br>
 				<div align="center">
 					<form id="frm" action="freeBoardSelect.do" method="post">
 						<input type="hidden" id="id" name="id">
@@ -276,9 +277,10 @@ section.notice {
 								class="btn btn-outline-dark">글쓰기</button>
 						</c:if>
 					</form>
-					<br><br>
+					<br>
+					<br>
 					<div>
-						<small>◀  1  2  3  4  5  ▶</small>
+						<small><a href="freeBoard.do">◀ 1 2 3 4 5 ▶</a></small>
 					</div>
 				</div>
 			</div>
