@@ -25,10 +25,10 @@
 			ID
 			FROM NOTICE_BOARD
 		</selectKey>
-		INSERT INTO
+	    INSERT INTO
 		NOTICE_BOARD(NOTICE_BOARD_ID,NOTICE_BOARD_TITLE,NOTICE_BOARD_SUBJECT,NOTICE_BOARD_DATE,MEMBER_ID)
 		VALUES(#{noticeBoardId},#{noticeBoardTitle},#{noticeBoardSubject},
-		#{noticeBoardDate},#{memberId})
+		SYSDATE,#{memberId})
 	</insert>
 
 	<update id="noticeBoardUpdate"

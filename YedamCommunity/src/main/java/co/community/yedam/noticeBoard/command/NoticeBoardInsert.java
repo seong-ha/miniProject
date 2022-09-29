@@ -21,9 +21,9 @@ public class NoticeBoardInsert implements Command {
 
 		vo.setNoticeBoardTitle(request.getParameter("noticeBoardTitle"));
 		vo.setNoticeBoardSubject(request.getParameter("noticeBoardSubject"));
-		vo.setNoticeBoardDate(Date.valueOf(request.getParameter("noticeBoardDate")));
+//		vo.setNoticeBoardDate(Date.valueOf(request.getParameter("noticeBoardDate")));
 		vo.setMemberId(request.getParameter("memberId"));
-
+		System.out.println(vo);
 		int no = dao.noticeBoardInsert(vo);
 		if (no != 0) {
 			viewPage = "noticeBoard.do";

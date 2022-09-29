@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
-
 .like-content span {
 	color: #9d9da4;
 	font-family: monospace;
@@ -52,13 +51,27 @@ keyframes likeAnimation { 0% {
 }
 
 100
+
+
 %
 {
 transform
+
+
 :
-scale(
+
+
+scale
+(
+
+
 1
-);
+
+
+)
+;
+
+
 }
 }
 html {
@@ -314,7 +327,7 @@ html, body {
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
 				<div class="writer-icon"></div>
-				<span>작성자</span>
+				<span>${freeBoard.memberId }</span>
 			</div>
 			<table class="cell" border="1">
 				<colgroup>
@@ -324,7 +337,7 @@ html, body {
 					<tr class="article-title">
 						<th>[${freeBoard.freeBoardId }] 제목</th>
 						<td colspan="3">${freeBoard.freeBoardTitle }</td>
-												<th>작성일</th>
+						<th>작성일</th>
 						<td>${freeBoard.freeBoardDate }</td>
 					</tr>
 					<tr class="article-info">
@@ -348,17 +361,16 @@ html, body {
 			</button>
 
 		</div>
-		<br>
-		<br>
+		<br> <br>
 		<div>
 			<c:if test="${freeBoard.memberId eq memberId}">
-				<button type="button" onclick="subCall('E')" class="btn btn-dark">수정</button>
+				<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 					&nbsp;&nbsp;
-					<button type="button" onclick="subCall('D')" class="btn btn-dark">삭제</button>
+					<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 			</c:if>
 			&nbsp;&nbsp;
 			<button type="button" onclick="location.href='freeBoard.do'"
-				class="btn btn-dark">목록</button>
+				class="btn btn-outline-dark">목록</button>
 		</div>
 		<br>
 		<div>
@@ -376,9 +388,9 @@ html, body {
 					</div>
 					<div align="left">
 						<textarea placeholder="내용을 입력하세요."></textarea>
-						<input type="submit" class="btn btn-dark">
+						<input type="submit" class="btn btn-outline-dark">
 					</div>
-				</form>	
+				</form>
 			</section>
 
 			<h1 class="">댓글 목록</h1>
@@ -397,22 +409,22 @@ html, body {
 					<tbody>
 						<tr>
 							<td>전성하</td>
-							<td>좋은 글이네요,,,,, 담아갑니다,,,</td>
+							<td>좋은 글이네요.... 담아갑니다...</td>
 							<td>09-28</td>
 						</tr>
 						<tr>
 							<td>김두영</td>
-							<td>아아ㅏㅏ아아ㅏㅏㅏㅏ아아ㅏ아아ㅏ아ㅏ아아아아아</td>
+							<td>우짤래미저짤래미~</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
 							<td>김민지</td>
-							<td>♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬♬</td>
+							<td>좋은 하루되세요~~ *^^*</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
 							<td>황용주</td>
-							<td>凸凸凸凸凸凸凸凸凸凸凸</td>
+							<td>뭐야 이거?</td>
 							<td>09-27</td>
 						</tr>
 						<tr>
@@ -424,7 +436,10 @@ html, body {
 				</table>
 			</section>
 		</div>
-		<br><br><br><br>
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 	<script type="text/javascript">
 		function subCall(str) {
@@ -434,7 +449,7 @@ html, body {
 				fbs.action = "freeBoardDelete.do"; // 삭제
 			} else if (str == 'L') {
 				fbs.action = "freeBoardUpdateLike.do"; // 좋아요 증가.
-				alert('${message}');
+				alert("좋아요!");
 			}
 			fbs.submit();
 		}

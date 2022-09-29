@@ -12,15 +12,67 @@
 	crossorigin="anonymous">
 
 <style>
-	.tableBack {
-		background-image: url("css1/images/tableBack.jpg");
-		background-position: right bottom;
-	}
-	.table-dark {
-		text-align: center;
-	}
-	
-</style>	
+.tableBack {
+	background-image: url("css1/images/tableBack.jpg");
+	background-position: right bottom;
+}
+
+.table-dark {
+	text-align: center;
+}
+
+.member {
+	width: 900px;
+	background-color: #fff;
+	border-collapse: collapse;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.member caption {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.member tr {
+	border-bottom: 1px solid #eee;
+}
+
+.member tr:last-child {
+	border: none;
+}
+
+.member tr:nth-child(odd) {
+	background-color: #ddd;
+}
+
+.member th, .member td {
+	padding: 12px;
+	text-align: center;
+}
+
+.member tr th {
+	background-color: black;
+	color: #fff;
+}
+
+.member tr th:first-child {
+	border-radius: 5px 0 0 0;
+}
+
+.member tr th:last-child {
+	border-radius: 0 5px 0 0;
+}
+
+.member tr td:last-child {
+	color: crimson;
+	font-weight: 500;
+}
+td {
+	color: black;
+}
+</style>
 
 
 </head>
@@ -29,7 +81,8 @@
 	<form id="mtd" method="post">
 		<div class="tableBack">
 			<div class="container" align="center">
-				<table class="table">
+			<br>
+				<table class="member">
 					<thead class="table-dark">
 						<tr>
 							<th colspan="5">${member.memberId}님의회원정보</th>
@@ -84,7 +137,7 @@
 						</tr>
 						<tr>
 							<td colspan="4">
-								<button type="button" class="btn btn-dark"
+								<button type="button" class="btn btn-outline-dark"
 									onclick="location.href='memberSelectList.do'">회원목록</button>
 							</td>
 						</tr>

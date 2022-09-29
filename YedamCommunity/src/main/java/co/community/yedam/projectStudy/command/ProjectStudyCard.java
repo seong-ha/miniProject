@@ -14,7 +14,7 @@ public class ProjectStudyCard implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		// 프로젝트스터디 메인페이지 겸 프로젝트스터디전체리스트 가져오기
+		// 프로젝트스터디 전체 카드 가져오기
 		ProjectStudyService dao = new ProjectStudyServiceImpl();
 		List<ProjectStudyVO> list = dao.projectStudySelectList();
 
@@ -34,7 +34,7 @@ public class ProjectStudyCard implements Command {
 		}
 
 		request.setAttribute("list", list);
-		return "main/projectStudy/projectStudy";
+		return "projectStudy/projectStudy/projectStudy";
 
 		/*
 		 * ajax로 해보려다 실패...
@@ -45,8 +45,8 @@ public class ProjectStudyCard implements Command {
 		 * obj.addProperty("projectStudyType", vo.getProjectStudyType());
 		 * obj.addProperty("projectStudyonoffline", vo.getProjectStudyonoffline());
 		 * obj.addProperty("projectStudyPersonNum", vo.getProjectStudyPersonNum());
-		 * obj.addProperty("projectStudyStart", vo.getProjectStudyStart().toString());
-		 * obj.addProperty("projectStudyTel", vo.getProjectStudyTel());
+		 * obj.addProperty("projectStudyStart", vo.getProjectStudyStartDate().toString());
+		 * obj.addProperty("projectStudyTel", vo.getProjectStudyContact());
 		 * obj.addProperty("projectStudyPeriod", vo.getProjectStudyPeriod());
 		 * obj.addProperty("projectStudyLanguage", vo.getProjectStudyLanguage());
 		 * obj.addProperty("projectStudyHit", vo.getProjectStudyHit());

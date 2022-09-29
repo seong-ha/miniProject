@@ -1,51 +1,73 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<%-- summernote ë¼ì´ë¸ŒëŸ¬ë¦¬ ì¶”ê°€ --%>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+	href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css"
+	rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script
+	src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+<link
+	href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css"
+	rel="stylesheet">
+<script
+	src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+<script>
+	
+<%-- formì˜ textareaì— summernote ì ìš© --%>
+	$(document).ready(
+			function() {
+				$('#subject').summernote(
+						{
+							height : 400,
+							fontNames : [ 'ë§‘ì€ê³ ë”•', 'Arial', 'Arial Black',
+									'Comic Sans MS', 'Courier New', ],
+							fontNamesIgnoreCheck : [ 'ë§‘ì€ê³ ë”•' ],
+							focus : true
+						});
+			});
+</script>
 </head>
 <body>
+	<hr>
+	<br>
 	<div align="center">
-		<div>
-			<h1>°øÁö»çÇ× µî·Ï</h1>
-		</div>
-		<form id="noticeBoardInsertfrm" action="noticeBoardInsert.do" method="post">
-			<div>
-				<table border="1">
-					<tr>
-						<th width="100">ÀÛ¼ºÀÚ</th>
-						<td>
-							<!-- ·Î±×ÀÎÇÑ »ç¿ëÀÚ ÀÌ¸§À» value¿¡ ¹Ú¾Æ¼­ required ÇÊ¿ä ¾øÀ½. --> <input
-							type="text" id="memberId" name="memberId" value="${memberId}"
-							readonly="readonly">
-						</td>
-						<th width="150">ÀÛ¼ºÀÏÀÚ</th>
-						<td><input type="date" id="noticeBoardDate" name="noticeBoardDate"
-							required="required"></td>
-					</tr>
-					<tr>
-						<th>Á¦¸ñ</th>
-						<td colspan="3"><input type="text" size="87" id="noticeBoardTitle"
-							name="noticeBoardTitle" required="required"></td>
-					</tr>
-					<tr>
-						<th>³»¿ë</th>
-						<td colspan="3"><textArea rows="10" cols="88"
-								id="noticeBoardSubject" name="noticeBoardSubject"></textArea></td>
-					</tr>
-					
-				</table>
-			</div>
-			<br>
-			<div>
-				<input type="submit" value="µî·Ï">&nbsp;&nbsp;&nbsp; <input
-					type="reset" value="Ãë¼Ò">&nbsp;&nbsp;&nbsp; <input
-					type="button" value="¸ñ·Ï"
-					onclick="location.href='noticeBoard.do'">&nbsp;&nbsp;&nbsp;
-			</div>
-		</form>
+		<h1>ê³µì§€ì‚¬í•­ ê¸€ ì‘ì„±</h1>
 	</div>
+	<br>
+	<div>
+		<div class="w3-margin-top w3-main"
+			style="margin-left: 340px; margin-right: 40px; width: 60%;">
+			<form id="noticeBoardInsertForm" action="noticeBoardInsert.do"
+				method="post">
+				<div class="w3-margin-bottom w3-border">
+					<input type="text" name="noticeBoardTitle"
+						class="w3-input w3-border w3-white" autofocus
+						placeholder="ì œëª©ì„ ì…ë ¥í•˜ì„¸ìš”" id="noticeBoardTitle" required="required">
+					<input type="hidden" name="memberId" id="memberId"
+						value="${memberId }">
+				</div>
+				<div>
+					<textarea name="noticeBoardSubject" id="subject"></textarea>
+				</div>
+				<br>
+				<div align="center">
+					<input type="submit" value="ë“±ë¡">&nbsp;&nbsp;&nbsp; <input
+						type="reset" value="ì´ˆê¸°í™”">&nbsp;&nbsp;&nbsp; <input
+						type="button" value="ëª©ë¡" onclick="location.href='noticeBoard.do'">&nbsp;&nbsp;&nbsp;
+				</div>
+			</form>
+		</div>
+		<br> <br> <br>
+	</div>
+
 </body>
 </html>

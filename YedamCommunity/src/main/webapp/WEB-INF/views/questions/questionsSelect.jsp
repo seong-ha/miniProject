@@ -14,10 +14,12 @@
 	animation-duration: 0.65s;
 }
 
+
 @
 keyframes likeAnimation { 0% {
 	transform: scale(30);
 }
+		<br>
 
 100
 %
@@ -39,6 +41,19 @@ body, ul, li, h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	list-style: none;
 }
+		<div>
+			<table border="1">
+
+				<tr>
+					<th>제목</th>
+					<td colspan="5" readonly="readonly">${vo.questionsTitle }</td>
+				</tr>
+				<tr>
+					<th width="100">작성자</th>
+					<td width="100">${vo.memberId }</td>
+					<th width="100">작성일자</th>
+					<td width="100">${vo.questionsDate }</td>
+
 
 a:link {
 	color: lightblue;
@@ -365,6 +380,22 @@ html, body {
 			</section>
 		</div>
 		<br><br><br><br>
+	<div align="center">
+		<button type="button" onclick="subCall('E')">수정</button>
+		&nbsp;&nbsp;
+		<button type="button" onclick="subCall('D')">삭제</button>
+		&nbsp;&nbsp;
+		<button type="button" onclick="location.href='questionsSelectList.do'">목록</button>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<div>
+		<form id="fbs" method="post">
+			<input type="hidden" id="questionsId" name="questionsId"
+				value="${vo.questionsId}">
+		</form>
 	</div>
 
 
