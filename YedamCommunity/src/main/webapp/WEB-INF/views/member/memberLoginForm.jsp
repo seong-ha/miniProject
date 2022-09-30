@@ -11,82 +11,27 @@
 	rel="stylesheet"
 	integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 	crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-<style type="text/css">
-.custom-btn {
-  width: 130px;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: 'Lato', sans-serif;
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  display: inline-block;
-   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
-  outline: none;
-}
-.btn-16 {
-  border: none;
-  color: #000;
-}
-.btn-16:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 100%;
-  top: 0;
-  left: 0;
-  direction: rtl;
-  z-index: -1;
-  box-shadow:
-   -7px -7px 20px 0px #fff9,
-   -4px -4px 5px 0px #fff9,
-   7px 7px 20px 0px #0002,
-   4px 4px 5px 0px #0001;
-  transition: all 0.3s ease;
-}
-.btn-16:hover {
-  color: #000;
-}
-.btn-16:hover:after {
-  left: auto;
-  right: 0;
-  width: 100%;
-}
-.btn-16:active {
-  top: 2px;
-}
-</style>
-
 </head>
 <body>
 <form id="lgm" action="memberLogin.do" method="post">
-<div class="page" style="padding-left: 100px">
+<div class="page">
   <div class="container">
-    <div class="left" style="padding-top: 60px">
+    <div class="left">
       <div class="login">Login</div>
-      <div class="eula" style="color: black; font-size: 30px">Yedam Community</div>
+      <div class="eula">Yedam Community</div>
     </div>
-    <div class="right" style="padding-top: 60px">
+    <div class="right">
      
       
       <div class="form">
-        <label for="id" style= "font-size:20px; color: white">ID</label>
+        <label for="id" style= "font-size:20px">ID</label>
         <input type="text" id="memberId" name="memberId">
-        <label for="password" style= "font-size:20px; color: white">Password</label>
+        <label for="password" style= "font-size:20px">Password</label>
         <input type="password" id="memberPw" name="memberPw">
         <br> <br> <br>
-        
-      	<button  type="submit" class="custom-btn btn-16" style="color: white" value="Submit" onclick="loginAlter()">로그인</button>
-      	<button type="button" class="custom-btn btn-16" style="color: white; margin: 30px" onclick="location.href='memberJoinForm.do'">회원가입</button>
-      	<button type="button" class="custom-btn btn-16" style="color: white" onclick="location.href='main.do'">홈</button>
+        <button type="submit" class="btn-hover color-2" value="Submit" onclick="loginAlter()">로그인</button>
+  		<button type="button" class="btn-hover color-2" onclick="location.href='memberJoinForm.do'">회원가입</button>
+      	<button type="button" class="btn-hover color-2" onclick="location.href='main.do'">홈</button>
       </div>
     </div>
   </div>
@@ -153,7 +98,5 @@
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous">
 	</script>
-	
-	
 </body>
 </html>

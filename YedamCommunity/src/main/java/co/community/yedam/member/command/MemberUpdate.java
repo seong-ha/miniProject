@@ -21,7 +21,6 @@ public class MemberUpdate implements Command {
 		vo.setMemberAddress(request.getParameter("memberAddress"));
 		vo.setMemberBirth(request.getParameter("memberBirth"));
 		vo.setMemberId(request.getParameter("memberId"));
-		vo.setMemberText(request.getParameter("memberText"));
 		System.out.println(vo.getMemberName());
 		int n = dao.memberUpdate(vo);
 		if (n != 0) {

@@ -19,7 +19,7 @@ public class MemberVO {
 	private Date memberCreateDate;
 	private String memberAuthor;
 	private int memberPoint;
-	private String memberText;
+	
 	/*       ↓
 	 * <Date 타입 import 선택 시>
 	 * 시분초포함 상세한 날짜정보 -> import java.util.Date
