@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,30 +86,117 @@
 
 
 <!-- css5 -->
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<!-- Bootstrap Icons-->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
-	rel="stylesheet" />
-<!-- Google fonts-->
-<link
-	href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"
-	rel="stylesheet" />
-<link
-	href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
-	rel="stylesheet" type="text/css" />
-<!-- SimpleLightbox plugin CSS-->
-<link
-	href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css"
-	rel="stylesheet" />
-<!-- Core theme CSS (includes Bootstrap)-->
-<link href="css5/css/styles.css" rel="stylesheet" />
+
+<!-- css7 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+        <link href="css7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css7/css/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link href="css7/css/aos.css" rel="stylesheet">
+
+        <link href="css7/css/templatemo-nomad-force.css" rel="stylesheet">
+        
+<!-- css8 -->
+ <!-- Favicon -->
+    
+    
+    
+    <!-- Template Stylesheet -->
+    <link href="css8/css/style.css" rel="stylesheet">
 </head>
 <body>
 
+	<section class="hero" id="hero">
+                <div class="heroText">
+                    <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                        Yedam Community
+                    </h1>
+
+                    <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
+                        create a great video for your <strong class="custom-underline">website</strong>
+                    </p>
+                </div>
+
+                <div class="videoWrapper">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="css7/videos/pinger.png">
+                        <source src="css7/videos/180825_01_laptop.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="overlay"></div>
+            </section>
+
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="main.do">
+                        <strong>Yedam Community</strong>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="noticeBoard.do">공지 사항</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="freeBoard.do">자유 게시판</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="infoFood.do">정보 게시판</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="projectStudy.do">스터디 & 프로젝트</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="questionsSelectList.do">문의 사항</a>
+                            </li>
+                             <li class="nav-item">
+                   
+                                <c:choose>
+										<c:when test="${empty memberId }">
+											<a class="nav-link" href="memberLoginForm.do">로그인 & 회원가입</a>
+										</c:when>
+										<c:otherwise>
+											
+											<a class="nav-link" href="memberLogout.do">로그아웃</a>
+	
+											<c:if test="${memberAuthor eq 'USER' }">
+												<a class="nav-link" href="memberMyHome.do">마이페이지</a>
+							
+											</c:if>
+											<c:if test="${memberAuthor eq 'ADMIN' }">
+												<a class="nav-link" href="memberSelectList.do">회원조회</a>
+												
+											</c:if>
+						
+										</c:otherwise>
+									</c:choose>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
 
 
-	<section class="home-slider owl-carousel">
+
+<!-- 	<section class="home-slider owl-carousel">
 		<div class="slider-item"
 			style="background-image: url(css1/images/backimage3.jpg);">
 			<div class="overlay"></div>
@@ -197,128 +285,93 @@
 			</div>
 		</div>
 	</section>
-
+ -->
 	<!-- css5-->
-
-	<!-- Services-->
-	<section class="page-section" id="services">
-		<div class="container px-4 px-lg-5">
-			<h2 class="text-center mt-0" style="color: black">At Your
-				Service</h2>
-			<hr class="divider" />
-			<div class="row gx-4 gx-lg-5">
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="mt-5">
-						<div class="mb-2">
-							<i class="bi-gem fs-1 text-primary"></i>
-						</div>
-						<h3 class="h4 mb-2" style="color: #FD5F00">Up to Date</h3>
-						<p class="text-muted mb-0">저희 Yedam Community는 보다 나은 회원님들의 정보
-							공유를 위해 주기적인 업데이트를 진행합니다.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="mt-5">
-						<div class="mb-2">
-							<i class="bi-laptop fs-1 text-primary"></i>
-						</div>
-						<h3 class="h4 mb-2" style="color: #FD5F00">Dependence</h3>
-						<p class="text-muted mb-0">안전하고 풍요로운 사이트를 위해 사이버 폭력을 예방하고 적극
-							대응 하겠습니다.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="mt-5">
-						<div class="mb-2">
-							<i class="bi-globe fs-1 text-primary"></i>
-						</div>
-						<h3 class="h4 mb-2" style="color: #FD5F00">Ready to Publish</h3>
-						<p class="text-muted mb-0">우리들 누구나 정보를 공유할 수 있고 여기에 있는 자료는 무료로
-							배포합니다.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 text-center">
-					<div class="mt-5">
-						<div class="mb-2">
-							<i class="bi-heart fs-1 text-primary"></i>
-						</div>
-						<h3 class="h4 mb-2" style="color: #FD5F00">Made with Love</h3>
-						<p class="text-muted mb-0">사랑하는 마음으로 사이트를 가꾸어 나갑시다.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-
-
-	<div id="portfolio">
-		<div class="container-fluid p-0">
-			<div class="row g-0">
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://github.com/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site1.jpg" alt="..." />
-						<div class="portfolio-box-caption">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Git Hub</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://www.acmicpc.net/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site2.png" alt="..." />
-						<div class="portfolio-box-caption">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">BAEK JOON</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://mvnrepository.com/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site3.png" alt="..." />
-						<div class="portfolio-box-caption">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Maven Repository</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://www.oracle.com/kr/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site5.jpg" alt="..." />
-						<div class="portfolio-box-caption">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">Oracle</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://www.youtube.com/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site6.jpg" alt="..." />
-						<div class="portfolio-box-caption">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">YouTube</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-lg-4 col-sm-6">
-					<a class="portfolio-box" href="https://www.w3schools.com/"
-						title="Project Name"> <img class="img-fluid"
-						src="css5/img/site7.jpg" alt="..." />
-						<div class="portfolio-box-caption p-3">
-							<div class="project-category text-white-50">Category</div>
-							<div class="project-name">W3schools</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	
+	
+	 <!-- css8 -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="section-title text-center">
+                <h1 class="display-5 mb-5">Our Services</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/site1.jpg" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Git Hub</h4>
+                     
+                            <a class="fw-medium" href="https://github.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/site2.png" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">BAEK JOON</h4>
+                            
+                            <a class="fw-medium" href="https://www.acmicpc.net/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/maven1.jpg" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Maven Repository</h4>
+                            
+                            <a class="fw-medium" href="https://mvnrepository.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/site5.jpg" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">Oracle</h4>
+                            
+                            <a class="fw-medium" href="https://www.oracle.com/kr/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/youtube.png" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">You Tube</h4>
+                           
+                            <a class="fw-medium" href="https://www.youtube.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="service-item">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="css5/img/site7.jpg" alt="">
+                        </div>
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
+                            <h4 class="mb-3">W3schools</h4>
+                          
+                            <a class="fw-medium" href="https://www.w3schools.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
 
 
 
@@ -326,95 +379,6 @@
 	<!-- css3 -->
 
 
-
-	<!--==========================
-     css4
-    ============================-->
-	<section id="skills">
-		<div class="container">
-
-			<header class="section-header">
-				<h3>Our Skills</h3>
-				<p>Yedam Community에서 제공되고 있는 언어별 포스팅 자료를 보여드립니다.</p>
-			</header>
-
-			<div class="skills-content">
-
-				<div class="progress">
-					<div class="progress-bar bg-success" role="progressbar"
-						aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-						<span class="skill">JAVA <i class="val">81.2%</i></span>
-					</div>
-				</div>
-
-				<div class="progress">
-					<div class="progress-bar bg-info" role="progressbar"
-						aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-						<span class="skill">JavaScript <i class="val">75%</i></span>
-					</div>
-				</div>
-
-				<div class="progress">
-					<div class="progress-bar bg-warning" role="progressbar"
-						aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-						<span class="skill">CSS <i class="val">62%</i></span>
-					</div>
-				</div>
-
-				<div class="progress">
-					<div class="progress-bar bg-danger" role="progressbar"
-						aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-						<span class="skill">HTML <i class="val">42%</i></span>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-
-	<!--==========================
-      Facts Section
-    ============================-->
-	<section id="facts" class="wow fadeIn">
-		<div class="container">
-
-			<header class="section-header">
-				<h3>Facts</h3>
-				<p>Yedam Coummunity의 최근 한달간의 접속자와 정회원들의 취업현황</p>
-			</header>
-
-			<div class="row counters">
-
-				<div class="col-lg-3 col-6 text-center">
-					<span data-toggle="counter-up">31</span>
-					<p>일 접속자</p>
-				</div>
-
-				<div class="col-lg-3 col-6 text-center">
-					<span data-toggle="counter-up">123,412</span>
-					<p>누적 접속자</p>
-				</div>
-
-				<div class="col-lg-3 col-6 text-center">
-					<span data-toggle="counter-up">17</span>
-					<p>동시 접속자</p>
-				</div>
-
-				<div class="col-lg-3 col-6 text-center">
-					<span data-toggle="counter-up">3,451</span>
-					<p>취업현황</p>
-				</div>
-
-			</div>
-
-			<div class="facts-img">
-				<img src="css4/img/facts-img.png" alt="" class="img-fluid">
-			</div>
-
-		</div>
-	</section>
-	<!-- #facts -->
 
 	<!--==========================
       Portfolio Section
@@ -443,8 +407,8 @@
 					class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
 					<div class="portfolio-wrap">
 						<figure>
-							<img src="css4/img/template1.png" class="img-fluid" alt="">
-							<a href="css4/img/template1.png" data-lightbox="portfolio"
+							<img src="css4/img/template10.png" class="img-fluid" alt="">
+							<a href="css4/img/template10.png" data-lightbox="portfolio"
 								data-title="App 1" class="link-preview" title="Preview"><i
 								class="ion ion-eye"></i></a>
 							<a
@@ -537,8 +501,8 @@
 					data-wow-delay="0.1s">
 					<div class="portfolio-wrap">
 						<figure>
-							<img src="css4/img/template5.png" class="img-fluid" alt="">
-							<a href="css4/img/template5.png" class="link-preview"
+							<img src="css4/img/template50.png" class="img-fluid" alt="">
+							<a href="css4/img/template50.png" class="link-preview"
 								data-lightbox="portfolio" data-title="Web 2" title="Preview"><i
 								class="ion ion-eye"></i></a>
 							<a href="https://technext.github.io/restaurantly/"
@@ -560,8 +524,8 @@
 					data-wow-delay="0.2s">
 					<div class="portfolio-wrap">
 						<figure>
-							<img src="css4/img/template6.png" class="img-fluid" alt="">
-							<a href="css4/img/template6.png" class="link-preview"
+							<img src="css4/img/template60.png" class="img-fluid" alt="">
+							<a href="css4/img/template60.png" class="link-preview"
 								data-lightbox="portfolio" data-title="App 3" title="Preview"><i
 								class="ion ion-eye"></i></a>
 							<a
@@ -607,8 +571,8 @@
 					data-wow-delay="0.1s">
 					<div class="portfolio-wrap">
 						<figure>
-							<img src="css4/img/template8.png" class="img-fluid" alt="">
-							<a href="css4/img/template8.png" class="link-preview"
+							<img src="css4/img/template80.png" class="img-fluid" alt="">
+							<a href="css4/img/template80.png" class="link-preview"
 								data-lightbox="portfolio" data-title="Card 3" title="Preview"><i
 								class="ion ion-eye"></i></a>
 							<a href="https://technext.github.io/one-music/index.html"
@@ -672,7 +636,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInLeft">
 						<div class="img-hexagon">
-							<img src="css2/images/member1.jpg" alt=""> <span
+							<img src="css2/images/member5.jpg" alt=""> <span
 								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
@@ -692,7 +656,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInLeft">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team2.jpg" alt=""> <span
+							<img src="css2/images/member2.jpg" alt=""> <span
 								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
@@ -712,7 +676,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team3.jpg" alt=""> <span
+							<img src="css2/images/member6.jpg" alt=""> <span
 								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
@@ -732,7 +696,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team animate wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team4.jpg" alt=""> <span
+							<img src="css2/images/member3.jpg" alt=""> <span
 								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
@@ -752,7 +716,7 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team animate wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/team/team4.jpg" alt=""> <span
+							<img src="css2/images/면도.png" alt=""> <span
 								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
@@ -797,6 +761,27 @@
 						</div>
 						<div class="team-content">
 							<h3>이창호</h3>
+							<p>Web Designer</p>
+							<div class="team-social">
+								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
+									class="twt" href="#"><i class="fa fa-twitter"></i></a> <a
+									class="gplus" href="#"><i class="fa fa-google-plus"></i></a> <a
+									class="linkdin" href="#"><i class="fa fa-linkedin"></i></a> <a
+									class="dribble" href="#"><i class="fa fa-dribbble"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/ Team 4 end -->
+				<!--/ Team 4 end -->
+				<div class="col-md-3 col-sm-6">
+					<div class="team animate wow slideInRight">
+						<div class="img-hexagon">
+							<img src="css2/images/team/team4.jpg" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
+						</div>
+						<div class="team-content">
+							<h3>마이콜</h3>
 							<p>Web Designer</p>
 							<div class="team-social">
 								<a class="fb" href="#"><i class="fa fa-facebook"></i></a> <a
@@ -915,18 +900,7 @@
 	<script src="css3/js/main.js"></script>
 
 	<!-- css5 -->
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- SimpleLightbox plugin JS-->
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-	<!-- Core theme JS-->
-	<script src="js/scripts.js"></script>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<!-- * *                               SB Forms JS                               * *-->
-	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	
 
 	<!-- css4 -->
 	<script src="css4/lib/jquery/jquery.min.js"></script>
@@ -947,5 +921,18 @@
 
 	<!-- Template Main Javascript File -->
 	<script src="css4/js/main.js"></script>
+	<!-- css7 -->
+	 <script src="css7/js/jquery.min.js"></script>
+        <script src="css7/js/bootstrap.bundle.min.js"></script>
+        <script src="css7/js/jquery.sticky.js"></script>
+        <script src="css7/js/aos.js"></script>
+        <script src="css7/js/jquery.magnific-popup.min.js"></script>
+        <script src="css7/js/magnific-popup-options.js"></script>
+        <script src="css7/js/scrollspy.min.js"></script>
+        <script src="css7/js/custom.js"></script>
+     
+     <!-- css8 -->
+    <!-- Template Javascript -->
+    <script src="css8/js/main.js"></script>   
 </body>
 </html>
