@@ -30,7 +30,7 @@
 </head>
 
 <body>
-
+	
 
 	<!-- ***** Header Area Start ***** -->
 	<header class="header-area header-sticky">
@@ -57,12 +57,7 @@
 
 								</ul></li>
 
-							<li class="has-sub"><a href="infoFood.do">정보 게시판</a>
-								<ul class="sub-menu">
-									<li><a href="infoCafe.do">스터디 카페</a></li>
-									<li><a href="infoFood.do">맛집</a></li>
-								</ul></li>
-
+							<li><a href="infoFood.do">정보 게시판</a></li>
 							<li><c:choose>
 									<c:when test="${empty memberId }">
 										<a href="memberLoginForm.do">로그인 & 회원가입</a>
@@ -76,12 +71,9 @@
 													</c:if> <c:if test="${memberAuthor eq 'ADMIN' }">
 														<a href="memberSelectList.do">회원조회</a>
 
-													</c:if>
-												</li>
+													</c:if></li>
 												<li><a href="memberLogout.do">로그아웃</a></li>
-											</ul>
-										</li>
-												<li><a>${message }</a></li>
+											</ul></li>
 
 									</c:otherwise>
 								</c:choose></li>
@@ -96,7 +88,7 @@
 	</header>
 
 
-
+	
 	<script src="headercss/vendor/jquery/jquery.min.js"></script>
 
 

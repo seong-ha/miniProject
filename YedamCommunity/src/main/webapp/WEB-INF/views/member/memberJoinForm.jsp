@@ -10,9 +10,9 @@
 <body>
 <body>
    
-    <div id="login_form" ><!--로그인 폼-->
-    <form  id="frm" action="memberJoin.do" onsubmit="return formCheck()" method="post" >
-        <h3 class="login" style="letter-spacing:-1px; color: white">회 원 가 입</h3>
+    <div id="login_form"><!--로그인 폼-->
+    <form  id="frm" action="memberJoin.do" onsubmit="return formCheck()" method="post">
+        <h3 class="login" style="letter-spacing:-1px;">회 원 가 입</h3>
 
         <!-- <p>
             <input type="submit" value="Sign in with Google" class="btn" style="background-color:#217Af0">
@@ -25,7 +25,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <button type="button" id="btn" onclick="idCheck()">중복체크</button></p>
         

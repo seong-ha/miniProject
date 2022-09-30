@@ -90,118 +90,106 @@
 <!-- css7 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;700;900&display=swap"
-	rel="stylesheet">
+        <link href="css7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css7/css/bootstrap-icons.css" rel="stylesheet">
 
-<link href="css7/css/bootstrap.min.css" rel="stylesheet">
-<link href="css7/css/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/magnific-popup.css">
 
-<link rel="stylesheet" href="css/magnific-popup.css">
+        <link href="css7/css/aos.css" rel="stylesheet">
 
-<link href="css7/css/aos.css" rel="stylesheet">
-
-<link href="css7/css/templatemo-nomad-force.css" rel="stylesheet">
-
+        <link href="css7/css/templatemo-nomad-force.css" rel="stylesheet">
+        
 <!-- css8 -->
-<!-- Favicon -->
-
-
-
-<!-- Template Stylesheet -->
-<link href="css8/css/style.css" rel="stylesheet">
-
-<!-- footercsss -->
-<!-- Styles -->
-<link href="footercss/css/styles.css" rel="stylesheet">
-
-
-
-
-
-
-
-
+ <!-- Favicon -->
+    
+    
+    
+    <!-- Template Stylesheet -->
+    <link href="css8/css/style.css" rel="stylesheet">
 </head>
 <body>
 
 	<section class="hero" id="hero">
-		<div class="heroText">
-			<h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in"
-				data-aos-delay="800">Yedam Community</h1>
+                <div class="heroText">
+                    <h1 class="text-white mt-5 mb-lg-4" data-aos="zoom-in" data-aos-delay="800">
+                        Yedam Community
+                    </h1>
 
-			<p class="text-secondary-white-color" data-aos="fade-up"
-				data-aos-delay="1000">
-				create a great video for your <strong class="custom-underline"
-					style="color: #FFC107">website</strong>
-			</p>
-		</div>
+                    <p class="text-secondary-white-color" data-aos="fade-up" data-aos-delay="1000">
+                        create a great video for your <strong class="custom-underline">website</strong>
+                    </p>
+                </div>
 
-		<div class="videoWrapper">
-			<video autoplay="" loop="" muted="" class="custom-video"
-				poster="css7/videos/pinger.png">
-				<source src="css7/videos/180825_01_laptop.mp4" type="video/mp4">
+                <div class="videoWrapper">
+                    <video autoplay="" loop="" muted="" class="custom-video" poster="css7/videos/pinger.png">
+                        <source src="css7/videos/180825_01_laptop.mp4" type="video/mp4">
 
-				Your browser does not support the video tag.
-			</video>
-		</div>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
-		<div class="overlay"></div>
-	</section>
+                <div class="overlay"></div>
+            </section>
 
-	<nav class="navbar navbar-expand-lg bg-light shadow-lg">
-		<div class="container">
-			<a class="navbar-brand" href="main.do"> <strong>Yedam
-					Community</strong>
-			</a>
+            <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="main.do">
+                        <strong>Yedam Community</strong>
+                    </a>
 
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse" data-bs-target="#navbarNav"
-				aria-controls="navbarNav" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav mx-auto">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            
 
+                            <li class="nav-item">
+                                <a class="nav-link" href="noticeBoard.do">공지 사항</a>
+                            </li>
 
-					<li class="nav-item"><a class="nav-link" href="noticeBoard.do"
-						style="color: black">공지 사항</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="freeBoard.do">자유 게시판</a>
+                            </li>
 
-					<li class="nav-item"><a class="nav-link" href="freeBoard.do"
-						style="color: black">자유 게시판</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="infoFood.do">정보 게시판</a>
+                            </li>
 
-					<li class="nav-item"><a class="nav-link" href="infoFood.do"
-						style="color: black">정보 게시판</a></li>
-
-					<li class="nav-item"><a class="nav-link"
-						href="projectStudy.do" style="color: black">스터디 & 프로젝트</a></li>
-					<li class="nav-item"><a class="nav-link"
-						href="questionsSelectList.do" style="color: black">문의 사항</a></li>
-					<li class="nav-item"><c:choose>
-							<c:when test="${empty memberId }">
-								<a class="nav-link" href="memberLoginForm.do"
-									style="color: black">로그인 & 회원가입</a>
-							</c:when>
-							<c:otherwise>
-								<li class="nav-item"><c:if
-										test="${memberAuthor eq 'USER' }">
-										<a class="nav-link" href="memberMyHome.do"
-											style="color: black">마이페이지</a>
-
-									</c:if> <c:if test="${memberAuthor eq 'ADMIN' }">
-										<a class="nav-link" href="memberSelectList.do"
-											style="color: black">회원조회</a>
-
-									</c:if></li>
-								<li class="nav-item"><a class="nav-link"
-									href="memberLogout.do" style="color: black">로그아웃</a></li>
-							</c:otherwise>
-						</c:choose><li>${message }</li>
-					
+                            <li class="nav-item">
+                                <a class="nav-link" href="projectStudy.do">스터디 & 프로젝트</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="questionsSelectList.do">문의 사항</a>
+                            </li>
+                             <li class="nav-item">
+                   
+                                <c:choose>
+										<c:when test="${empty memberId }">
+											<a class="nav-link" href="memberLoginForm.do">로그인 & 회원가입</a>
+										</c:when>
+										<c:otherwise>
+											<li class="nav-item">	
+											<c:if test="${memberAuthor eq 'USER' }">
+												<a class="nav-link" href="memberMyHome.do">마이페이지</a>
+							
+											</c:if>
+											<c:if test="${memberAuthor eq 'ADMIN' }">
+												<a class="nav-link" href="memberSelectList.do">회원조회</a>
+												
+											</c:if>
+											</li>
+											<li class="nav-item">
+											<a class="nav-link" href="memberLogout.do">로그아웃</a>
+											</li>
+										</c:otherwise>
+									</c:choose>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -309,105 +297,75 @@
                 <h1 class="display-5 mb-5">Our Services</h1>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.1s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/site1.jpg" alt="">
+                            <img class="img-fluid" src="css5/img/site1.jpg" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Git Hub</h4>
                      
-                            <a class="fw-medium"
-								href="https://github.com/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://github.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.3s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/site2.png" alt="">
+                            <img class="img-fluid" src="css5/img/site2.png" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">BAEK JOON</h4>
                             
-                            <a class="fw-medium"
-								href="https://www.acmicpc.net/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://www.acmicpc.net/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.5s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/maven1.jpg" alt="">
+                            <img class="img-fluid" src="css5/img/maven1.jpg" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Maven Repository</h4>
                             
-                            <a class="fw-medium"
-								href="https://mvnrepository.com/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://mvnrepository.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.1s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/site5.jpg" alt="">
+                            <img class="img-fluid" src="css5/img/site5.jpg" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Oracle</h4>
                             
-                            <a class="fw-medium"
-								href="https://www.oracle.com/kr/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://www.oracle.com/kr/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.3s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/youtube.png" alt="">
+                            <img class="img-fluid" src="css5/img/youtube.png" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">You Tube</h4>
                            
-                            <a class="fw-medium"
-								href="https://www.youtube.com/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://www.youtube.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 wow fadeInUp"
-					data-wow-delay="0.5s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="service-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid"
-								src="css5/img/site7.jpg" alt="">
+                            <img class="img-fluid" src="css5/img/site7.jpg" alt="">
                         </div>
-                        <div
-							class="p-4 text-center border border-5 border-light border-top-0">
+                        <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">W3schools</h4>
                           
-                            <a class="fw-medium"
-								href="https://www.w3schools.com/">Read More<i
-								class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://www.w3schools.com/">Read More<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -759,8 +717,8 @@
 				<div class="col-md-3 col-sm-6">
 					<div class="team animate wow slideInRight">
 						<div class="img-hexagon">
-							<img src="css2/images/면도.png" alt=""> <span class="img-top"></span> <span
-								class="img-bottom"></span>
+							<img src="css2/images/면도.png" alt=""> <span
+								class="img-top"></span> <span class="img-bottom"></span>
 						</div>
 						<div class="team-content">
 							<h3>황용주</h3>
@@ -879,64 +837,9 @@
 			</div>
 		</div>
 	</section>
-	
-	 <!-- Footer -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="footer-col first">
-                        <h6>About Spify</h6>
-                        <p class="p-small">Spify is a business website Bootstrap HTML template designed to present startups in a beautiful manner with features for description</p>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col second">
-                        <h6>Links</h6>
-                        <ul class="list-unstyled li-space-lg p-small">
-                            <li>Important: <a href="terms.html">Terms & Conditions</a>, <a
-								href="privacy.html">Privacy Policy</a></li>
-                            <li>Useful: <a href="#">Colorpicker</a>, <a
-								href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
-                            <li>Menu: <a class="page-scroll"
-								href="#header">Home</a>, <a class="page-scroll" href="#details">Details</a>, <a
-								class="page-scroll" href="#strengths">Strengths</a>, <a
-								class="page-scroll" href="#contact">Contact</a></li>
-                        </ul>
-                    </div> <!-- end of footer-col -->
-                    <div class="footer-col third">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i
-								class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-instagram fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <p class="p-small">We would love to hear from you <a
-								href="mailto:contact@site.com"><strong style="color: white">contact@site.com</strong></a>
-						</p>
-                    </div> <!-- end of footer-col -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of footer -->  
-    <!-- end of footer -->
+	<!-- Contact Section End -->
+
+
 
 
 
