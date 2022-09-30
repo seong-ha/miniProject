@@ -10,39 +10,42 @@
 <title>맛집 게시판</title>
 
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Single+Day&display=swap');
+@import
+	url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Single+Day&display=swap')
+	;
+
 * {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 header {
 	display: block;
 	background-color: #73685d;
 	height: 80px;
-    text-align: center;
+	text-align: center;
 }
 
 .navMenu {
-  position: relative;
-  left: 50%;
-  padding-top: 100px;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+	position: relative;
+	left: 50%;
+	padding-top: 100px;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 
 .navMenu a {
-  color: #ff7f50;
-  text-decoration: none;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 230px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+	color: #ff7f50;
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: inline-block;
+	width: 230px;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .navMenu a:nth-child(1) {
@@ -50,56 +53,78 @@ header {
 }
 
 .navMenu a:hover {
-  color: yellow;
+	color: yellow;
 }
 
 .navMenu .dot {
-  width: 6px;
-  height: 6px;
-  background: yellow;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transform: translateX(400px);
-  transform: translateX(400px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+	width: 6px;
+	height: 6px;
+	background: yellow;
+	border-radius: 50%;
+	opacity: 0;
+	-webkit-transform: translateX(400px);
+	transform: translateX(400px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 
 .navMenu a:nth-child(1):hover ~ .dot {
-  -webkit-transform: translateX(510px);
-  transform: translateX(510px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+	-webkit-transform: translateX(510px);
+	transform: translateX(510px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
 }
 
 .navMenu a:nth-child(2):hover ~ .dot {
-  -webkit-transform: translateX(740px);
-  transform: translateX(740px);
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 1;
+	-webkit-transform: translateX(740px);
+	transform: translateX(740px);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	opacity: 1;
+}
+
+section.heading-page {
+	background-image: url(headercss/images/food2.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+	
 }
 </style>
 </head>
 <body>
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<h2 class="display-4" style="font-weight:lighter; color:white">주변 맛집들</h2>
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- 상단 메뉴바 -->
 	<!-- 클릭하면 계속 div가 색깔 바껴있기(추가) -->
-	<header>
+	<!-- <header>
 		<nav class="navMenu">
-		  	<a href="infoFood.do">맛집 리스트</a>
-		  	<a href="infoCafe.do">스터디카페 리스트</a>
-   		  <div class="dot"></div>
-   		</nav>
-	</header>
-	<br><br><br>
-	
+			<a href="infoFood.do">맛집 리스트</a> <a href="infoCafe.do">스터디카페 리스트</a>
+			<div class="dot"></div>
+		</nav>
+	</header> -->
+	<br>
+	<br><br>
+	<br>
+	<br>
+<!-- 
 	<!-- main contents : 카드 형식-->
-	<h2>오늘은 뭐 먹지?</h2>
+	<h2>"오늘은 뭐 먹지?"</h2>
 	<br>
 	<br>
 	<br>
-
 	<!--<c:if test="${not empty list }">
 		<c:forEach items="${list }" var="n">
 			<tr onclick="selectNotice('${n.noticeId }')">
@@ -124,9 +149,9 @@ header {
 		</c:forEach>
 	</c:if>-->
 
-	 <div class="container">
+	<div class="container">
 		<div class="main-content">
-			  <article class="component">
+			<article class="component">
 				<img src="images/store1.jpg" alt="이미지1">
 				<div class="description">
 					<h3>신라식당</h3>
@@ -141,7 +166,7 @@ header {
 					<h3>만복국수</h3>
 					<p>#매일다른메뉴 #한식</p>
 					<p class="here">세부내용</p>
-					 <a href="store2.do" class="button">더보기</a>
+					<a href="store2.do" class="button">더보기</a>
 				</div>
 			</article>
 			<article class="component">
@@ -180,15 +205,11 @@ header {
 					<a href="store6.do" class="button">더보기</a>
 				</div>
 			</article>
-			
 
 
-	</div>
-	<br>
-	<br>
 
-	<br>
-	<br>
+		</div>
+		<br> <br> <br> <br>
 
 	</div>
 
