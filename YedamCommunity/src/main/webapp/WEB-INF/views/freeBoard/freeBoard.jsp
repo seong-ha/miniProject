@@ -207,108 +207,194 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+
 .optionBox {
 	margin-left: 275px;
 }
+
 section.heading-page {
-   background-image: url(headercss/images/freeBoardHeader.jpg);
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   padding-top: 230px;
-   padding-bottom: 110px;
-   text-align: center;
+	background-image: url(headercss/images/freeBoardHeader.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+}
+/* 페이징css */
+.page_wrap {
+	text-align: center;
+	font-size: 0;
+}
+
+.page_nation {
+	display: inline-block;
+}
+
+.page_nation .none {
+	display: none;
+}
+
+.page_nation a {
+	display: block;
+	margin: 0 3px;
+	float: left;
+	border: 1px solid #e6e6e6;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	background-color: #fff;
+	font-size: 13px;
+	color: #999999;
+	text-decoration: none;
+}
+
+.page_nation .arrow {
+	border: 1px solid #ccc;
+}
+
+.page_nation .pprev {
+	background: #f8f8f8 url('images/page_pprev.png') no-repeat center center;
+	margin-left: 0;
+}
+
+.page_nation .prev {
+	background: #f8f8f8 url('images/page_prev.png') no-repeat center center;
+	margin-right: 7px;
+}
+
+.page_nation .next {
+	background: #f8f8f8 url('images/page_next.png') no-repeat center center;
+	margin-left: 7px;
+}
+
+.page_nation .nnext {
+	background: #f8f8f8 url('images/page_nnext.png') no-repeat center center;
+	margin-right: 0;
+}
+
+.page_nation a.active {
+	background-color: #42454c;
+	color: #fff;
+	border: 1px solid #42454c;
 }
 </style>
 
 </head>
 <body>
-<section class="heading-page header-text" id="top">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-12">
-               <h1 class="display-4" style="font-weight:lighter; color:white">자유게시판</h1>
-            </div>
-         </div>
-      </div>
-   </section>
-
-		<!-- board seach area -->
-		<div id="board-search">
-			<div class="container">
-				<div class="search-window">
-					<form id="searchfrm" method="post" action="ajaxFreeBoardSearch.do">
-					<select class="optionBox" id="key" name="key">
-								<option value="0">전체</option>
-								<option value="1">제목</option>
-								<option value="2">작성자</option>
-							</select>
-						<div class="search-wrap">
-							<label for="search" class="blind">자유게시판 내용 검색</label> <input
-								id="val" type="text" name="val" placeholder="검색어를 입력해주세요."
-								value="검색"><button onclick="searchCall()" type="submit" class="btn btn-dark">검색</button>
-						</div>
-					</form>
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="display-4" style="font-weight: lighter; color: white">자유게시판</h1>
 				</div>
 			</div>
 		</div>
+	</section>
 
-		<!-- board list area -->
-		<div id="board-list">
-			<div class="container">
-				<table class="board-table">
-					<thead>
-						<tr>
-							<th width="70">글번호</th>
-							<th width="250">제목</th>
-							<th width="150">작성자</th>
-							<th width="150">작성일자</th>
-							<th width="70">조회수</th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:if test="${empty freeBoards }">
-							<td colspan="6">게시글이 존재하지 않습니다.</td>
-						</c:if>
-						<c:if test="${not empty freeBoards }">
-							<c:forEach items="${freeBoards }" var="m">
-								<tr onclick="selectFreeBoard(${m.freeBoardId})"
-									onMouseover="this.style.backgroundColor='#E2E2E2';"
-									onMouseout="this.style.backgroundColor='white';">
-									<td>${m.freeBoardId }</td>
-									<th><div align="center">
-											<span class="d-inline-block text-truncate"
-												style="max-width: 200px;"> ${m.freeBoardTitle }</span>
-										</div></th>
-									<td>${m.memberId }</td>
-									<td>${m.freeBoardDate }</td>
-									<td>${m.freeBoardHit }</td>
-								</tr>
-							</c:forEach>
-						</c:if>
-					</tbody>
-				</table>
-				<br> <br>
-				<div align="center">
-					<form id="frm" action="freeBoardSelect.do" method="post">
-						<input type="hidden" id="id" name="id">
-						<c:if test="${not empty memberId}">
-							<button type="button"
-								onclick="location.href='freeBoardInsertForm.do'"
-								class="btn btn-outline-dark">글쓰기</button>
-						</c:if>
-					</form>
-					<div>
-						<small><a href="freeBoard.do" style="color:#808080">◀ 1 2 3 4 5 ▶</a></small>
+	<!-- board seach area -->
+	<!-- 	<div id="board-search">
+		<div class="container">
+			<div class="search-window">
+				<form id="searchfrm" method="post" action="ajaxFreeBoardSearch.do">
+					<select class="optionBox" id="key" name="key">
+						<option value="0">전체</option>
+						<option value="1">제목</option>
+						<option value="2">작성자</option>
+					</select>
+					<div class="search-wrap">
+						<input id="val" type="text" name="val" placeholder="검색어를 입력해주세요.">
+						<button onclick="searchCall()" type="submit" class="btn btn-dark">검색</button>
 					</div>
-				</div>
-			</div><br>
-			<div>
-				<form id="fbf" name="fbf" method="post">
-					<input type="hidden" id="freeBoardId" name="freeBoardId">
 				</form>
 			</div>
 		</div>
+	</div> -->
+
+	<!-- board seach area -->
+	<div id="board-search">
+		<div class="container">
+			<div class="search-window">
+				<div class="search-wrap">
+					<form id="searchfrm" method="post" action="ajaxFreeBoardSearch.do">
+						<select id="key" name="key">
+							<option value="0">전체</option>
+							<option value="1">제목</option>
+							<option value="2">작성자</option>
+						</select> <input type="text" id="val" name="val" placeholder="검색어를 입력해주세요.">&nbsp;&nbsp;
+						<input type="button" onclick="searchCall()" value="검색"
+							class="btn btn-dark" style="width: 100px; margin-top: 31px;">
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- board list area -->
+	<div id="board-list">
+		<div class="container">
+			<table class="board-table">
+				<thead>
+					<tr>
+						<th width="70">글번호</th>
+						<th width="250">제목</th>
+						<th width="150">작성자</th>
+						<th width="150">작성일자</th>
+						<th width="70">조회수</th>
+					</tr>
+				</thead>
+				<tbody>
+					<c:if test="${empty freeBoards }">
+						<td colspan="6">게시글이 존재하지 않습니다.</td>
+					</c:if>
+					<c:if test="${not empty freeBoards }">
+						<c:forEach items="${freeBoards }" var="m">
+							<tr onclick="selectFreeBoard(${m.freeBoardId})"
+								onMouseover="this.style.backgroundColor='#E2E2E2';"
+								onMouseout="this.style.backgroundColor='white';">
+								<td>${m.freeBoardId }</td>
+								<th><div align="center">
+										<span class="d-inline-block text-truncate"
+											style="max-width: 200px;"> ${m.freeBoardTitle }</span>
+									</div></th>
+								<td>${m.memberId }</td>
+								<td>${m.freeBoardDate }</td>
+								<td>${m.freeBoardHit }</td>
+							</tr>
+						</c:forEach>
+					</c:if>
+				</tbody>
+			</table>
+			<br> <br>
+			<div align="center">
+				<form id="frm" action="freeBoardSelect.do" method="post">
+					<input type="hidden" id="id" name="id">
+					<c:if test="${not empty memberId}">
+						<button type="button"
+							onclick="location.href='freeBoardInsertForm.do'"
+							class="btn btn-outline-dark">글쓰기</button>
+					</c:if>
+				</form><br>
+				<div class="page_wrap">
+					<div class="page_nation">
+						<a class="arrow pprev" href="#"></a> <a class="arrow prev"
+							href="#"></a> <a href="#" class="active">1</a> <a href="#">2</a>
+						<a href="#">3</a> <a href="#">4</a> <a href="#">5</a> <a href="#">6</a>
+						<a href="#">7</a> <a href="#">8</a> <a href="#">9</a> <a href="#">10</a>
+						<a class="arrow next" href="#"></a> <a class="arrow nnext"
+							href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div>
+			<form id="fbf" name="fbf" method="post">
+				<input type="hidden" id="freeBoardId" name="freeBoardId">
+			</form>
+		</div>
+	</div>
 
 	<script type="text/javascript">
 	function selectFreeBoard(id) {

@@ -316,14 +316,30 @@ html, body {
 	content: " : ";
 	font-weight: bold;
 }
+
+section.heading-page {
+	background-image: url(headercss/images/freeBoardHeader.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="display-4" style="font-weight: lighter; color: white">자유게시판 상세</h1>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div align="center">
-		<hr>
-		<br>
-		<h1 class="con">자유게시판 상세</h1>
-		<br>
+	<br><br>
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
 				<div class="writer-icon"></div>

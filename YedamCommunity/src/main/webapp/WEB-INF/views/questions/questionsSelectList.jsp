@@ -196,6 +196,9 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+.optionBox {
+	margin-left: 275px;
+}
 section.heading-page {
    background-image: url(headercss/images/qna.jpg);
    background-position: center center;
@@ -204,6 +207,56 @@ section.heading-page {
    padding-top: 230px;
    padding-bottom: 110px;
    text-align: center;
+}
+
+/* 페이징css */
+.page_wrap {
+	text-align:center;
+	font-size:0;
+ }
+.page_nation {
+	display:inline-block;
+}
+.page_nation .none {
+	display:none;
+}
+.page_nation a {
+	display:block;
+	margin:0 3px;
+	float:left;
+	border:1px solid #e6e6e6;
+	width:28px;
+	height:28px;
+	line-height:28px;
+	text-align:center;
+	background-color:#fff;
+	font-size:13px;
+	color:#999999;
+	text-decoration:none;
+}
+.page_nation .arrow {
+	border:1px solid #ccc;
+}
+.page_nation .pprev {
+	background:#f8f8f8 url('images/page_pprev.png') no-repeat center center;
+	margin-left:0;
+}
+.page_nation .prev {
+	background:#f8f8f8 url('images/page_prev.png') no-repeat center center;
+	margin-right:7px;
+}
+.page_nation .next {
+	background:#f8f8f8 url('images/page_next.png') no-repeat center center;
+	margin-left:7px;
+}
+.page_nation .nnext {
+	background:#f8f8f8 url('images/page_nnext.png') no-repeat center center;
+	margin-right:0;
+}
+.page_nation a.active {
+	background-color:#42454c;
+	color:#fff;
+	border:1px solid #42454c;
 }
 </style>
 </head>
@@ -228,14 +281,15 @@ section.heading-page {
 										<option value="0">전체</option>
 										<option value="1">제목</option>
 										<option value="2">작성자</option>
-									</select> <input type="text" id="val" name="val" placeholder="검색어를 입력해주세요.">&nbsp;&nbsp; <input
-										type="button" onclick="searchCall()" value="검색">
+									</select> 
+									<input type="text" id="val" name="val" placeholder="검색어를 입력해주세요.">&nbsp;&nbsp; 
+									<input type="button" onclick="searchCall()" value="검색" class="btn btn-dark" 
+									style="width: 100px; margin-top: 31px;" >
 								</form>
 						</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- board list area -->
 		<div id="board-list">
 			<div class="container">
@@ -277,11 +331,7 @@ section.heading-page {
 
 				</table>
 			</div>
-
-
 		</div>
-
-	</section>
 
 
 	<!-- <div align="center"><h1>Q&A</h1></div> -->
@@ -292,14 +342,14 @@ section.heading-page {
 	<br>
 	<br>
 	<div align="center">
-		<form id="searchfrm" method="post">
+<!-- 		<form id="searchfrm" method="post">
 			<select id="key" name="key">
 				<option value="0">전체</option>
 				<option value="1">제목</option>
 				<option value="2">작성자</option>
 			</select> <input type="text" id="val" name="val">&nbsp;&nbsp; <input
 				type="button" onclick="searchCall()" value="검색">
-		</form>
+		</form> -->
 
 
 		<br>
@@ -308,7 +358,15 @@ section.heading-page {
 			<button type="button" onclick="location.href='questionsWriteForm.do'">글쓰기</button>
 		</c:if>
 	</div>
-
+	<div class="page_wrap">
+		<div class="page_nation">
+			<a class="arrow pprev" href="#"></a> <a class="arrow prev" href="#"></a>
+			<a href="#" class="active">1</a> <a href="#">2</a> <a href="#">3</a>
+			<a href="#">4</a> <a href="#">5</a> <a href="#">6</a> <a href="#">7</a>
+			<a href="#">8</a> <a href="#">9</a> <a href="#">10</a> <a
+				class="arrow next" href="#"></a> <a class="arrow nnext" href="#"></a>
+		</div>
+	</div>
 
 	<form id="fbf" name="fbf" method="post">
 		<input type="hidden" id="questionsId" name="questionsId">
