@@ -299,7 +299,7 @@ html, body {
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
 				<div class="writer-icon"></div>
-				<span>작성자</span>
+				<span>${vo.memberId}</span>
 			</div>
 			<table class="cell" border="1">
 				<colgroup>
@@ -326,13 +326,13 @@ html, body {
 		<br>
 		<div>
 			<c:if test="${vo.memberId eq memberId}">
-				<button type="button" onclick="subCall('E')" class="btn btn-dark">수정</button>
+				<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 					&nbsp;&nbsp;
-					<button type="button" onclick="subCall('D')" class="btn btn-dark">삭제</button>
+					<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 			</c:if>
 			&nbsp;&nbsp;
 			<button type="button" onclick="location.href='questionsSelectList.do'"
-				class="btn btn-dark">목록</button>
+				class="btn btn-outline-dark">목록</button>
 		</div>
 		<br>
 		<div>
@@ -342,7 +342,7 @@ html, body {
 			</form>
 		</div>
 		<div class="con reply">
-			<h1 class="">댓글 입력</h1>
+			<h1 class="">답변 입력</h1>
 			<section class="reply-form">
 				<form action="return false;">
 					<div align="left">
@@ -355,7 +355,7 @@ html, body {
 				</form>	
 			</section>
 
-			<h1 class="">댓글 목록</h1>
+			<h1 class="">답변 목록</h1>
 			<section class="reply-list table-common">
 				<table border="1">
 					<colgroup>
@@ -380,13 +380,13 @@ html, body {
 			</section>
 		</div>
 		<br><br><br><br>
-	<div align="center">
-		<button type="button" onclick="subCall('E')">수정</button>
+	<!-- <div align="center">
+		<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 		&nbsp;&nbsp;
-		<button type="button" onclick="subCall('D')">삭제</button>
+		<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 		&nbsp;&nbsp;
-		<button type="button" onclick="location.href='questionsSelectList.do'">목록</button>
-	</div>
+		<button type="button" onclick="location.href='questionsSelectList.do'" class="btn btn-outline-dark">목록</button>
+	</div> -->
 	<br>
 	<br>
 	<br>
