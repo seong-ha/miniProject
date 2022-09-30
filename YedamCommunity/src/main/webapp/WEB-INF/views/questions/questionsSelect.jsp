@@ -14,21 +14,36 @@
 	animation-duration: 0.65s;
 }
 
-
 @
 keyframes likeAnimation { 0% {
 	transform: scale(30);
 }
-		<br>
 
+<
+br
+>
 100
+
+
 %
 {
 transform
+
+
 :
-scale(
+
+
+scale
+(
+
+
 1
-);
+
+
+)
+;
+
+
 }
 }
 html {
@@ -41,21 +56,110 @@ body, ul, li, h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	list-style: none;
 }
-		<div>
-			<table border="1">
 
-				<tr>
-					<th>제목</th>
-					<td colspan="5" readonly="readonly">${vo.questionsTitle }</td>
-				</tr>
-				<tr>
-					<th width="100">작성자</th>
-					<td width="100">${vo.memberId }</td>
-					<th width="100">작성일자</th>
-					<td width="100">${vo.questionsDate }</td>
-
-
-a:link {
+<
+div
+>
+<
+table
+ 
+border
+="
+1
+"
+>
+<
+tr
+>
+<
+th
+>
+제목
+</
+th
+>
+<
+td
+ 
+colspan
+="
+5
+"
+ 
+readonly
+="
+readonly
+"
+>
+${
+vo
+.questionsTitle
+ 
+}
+</
+td
+>
+</
+tr
+>
+<
+tr
+>
+<
+th
+ 
+width
+="
+100
+"
+>
+작성자
+</
+th
+>
+<
+td
+ 
+width
+="
+100
+"
+>
+${
+vo
+.memberId
+ 
+}
+</
+td
+>
+<
+th
+ 
+width
+="
+100
+"
+>
+작성일자
+</
+th
+>
+<
+td
+ 
+width
+="
+100
+"
+>
+${
+vo
+.questionsDate
+ 
+}
+</
+td>a:link {
 	color: lightblue;
 }
 
@@ -286,16 +390,33 @@ html, body {
 	content: " : ";
 	font-weight: bold;
 }
+
+section.heading-page {
+	background-image: url(headercss/images/qna.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+}
 </style>
 
 
 </head>
 <body>
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="display-4" style="font-weight: lighter; color: white">문의사항
+						상세</h1>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div align="center">
-		<hr>
-		<br>
-		<h1 class="con">문의게시판</h1>
-		<br>
+		<br> <br>
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
 				<div class="writer-icon"></div>
@@ -309,10 +430,10 @@ html, body {
 					<tr class="article-title">
 						<th>[${vo.questionsId }] 제목</th>
 						<td colspan="3">${vo.questionsTitle }</td>
-												<th>작성일</th>
+						<th>작성일</th>
 						<td>${vo.questionsDate}</td>
 					</tr>
-					
+
 					<tr class="article-body">
 						<th>내용</th>
 						<td colspan="4">${vo.questionsContent }</td>
@@ -320,18 +441,18 @@ html, body {
 				</tbody>
 			</table>
 		</section>
-		<br>
-		
-		<br>
-		<br>
+		<br> <br> <br>
 		<div>
 			<c:if test="${vo.memberId eq memberId}">
-				<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
+				<button type="button" onclick="subCall('E')"
+					class="btn btn-outline-dark">수정</button>
 					&nbsp;&nbsp;
-					<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
+					<button type="button" onclick="subCall('D')"
+					class="btn btn-outline-dark">삭제</button>
 			</c:if>
 			&nbsp;&nbsp;
-			<button type="button" onclick="location.href='questionsSelectList.do'"
+			<button type="button"
+				onclick="location.href='questionsSelectList.do'"
 				class="btn btn-outline-dark">목록</button>
 		</div>
 		<br>
@@ -352,7 +473,7 @@ html, body {
 						<textarea placeholder="내용을 입력하세요."></textarea>
 						<input type="submit" class="btn btn-dark">
 					</div>
-				</form>	
+				</form>
 			</section>
 
 			<h1 class="">답변 목록</h1>
@@ -372,44 +493,44 @@ html, body {
 						<tr>
 							<td>관리자</td>
 							<td>문의사항 확인하였습니다. 빠른 시일 내에 문제를 해결하겠습니다.</td>
-							<td>09-30<td>
+							<td>09-30
+							<td>
 						</tr>
-						
+
 					</tbody>
 				</table>
 			</section>
 		</div>
-		<br><br><br><br>
-	<!-- <div align="center">
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- <div align="center">
 		<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
 		&nbsp;&nbsp;
 		<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
 		&nbsp;&nbsp;
 		<button type="button" onclick="location.href='questionsSelectList.do'" class="btn btn-outline-dark">목록</button>
 	</div> -->
-	<br>
-	<br>
-	<br>
+		<br> <br> <br>
 
-	<div>
-		<form id="fbs" method="post">
-			<input type="hidden" id="questionsId" name="questionsId"
-				value="${vo.questionsId}">
-		</form>
-	</div>
+		<div>
+			<form id="fbs" method="post">
+				<input type="hidden" id="questionsId" name="questionsId"
+					value="${vo.questionsId}">
+			</form>
+		</div>
 
 
-	<script type="text/javascript">
-		function subCall(str) {
-			if (str == 'E') {
-				fbs.action = "questionsEditForm.do"; // 수정
-			} else if (str == 'D') {
-				fbs.action = "questionsDelete.do"; // 삭제
+		<script type="text/javascript">
+			function subCall(str) {
+				if (str == 'E') {
+					fbs.action = "questionsEditForm.do"; // 수정
+				} else if (str == 'D') {
+					fbs.action = "questionsDelete.do"; // 삭제
+				}
+				fbs.submit();
 			}
-			fbs.submit();
-		}
-
-	
-	</script>
+		</script>
 </body>
 </html>

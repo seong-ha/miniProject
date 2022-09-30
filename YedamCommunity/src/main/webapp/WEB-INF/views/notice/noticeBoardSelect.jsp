@@ -163,13 +163,30 @@ html, body {
 	content: " : ";
 	font-weight: bold;
 }
+
+section.heading-page {
+	background-image: url(headercss/images/notice.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h1 class="display-4" style="font-weight: lighter; color: white">공지사항 상세</h1>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div align="center">
-		<hr>
 		<br>
-		<h1 class="con">공지사항 상세</h1>
 		<br>
 		<section class="article-detail table-common con row">
 			<div class="article-writer cell">
@@ -202,13 +219,18 @@ html, body {
 
 	<div align="center">
 		<c:if test="${memberAuthor == 'ADMIN'}">
-			<button type="button" onclick="subCall('E')" class="btn btn-outline-dark">수정</button>
+			<button type="button" onclick="subCall('E')"
+				class="btn btn-outline-dark">수정</button>
 			&nbsp;&nbsp;
-			<button type="button" onclick="subCall('D')" class="btn btn-outline-dark">삭제</button>
+			<button type="button" onclick="subCall('D')"
+				class="btn btn-outline-dark">삭제</button>
 			&nbsp;&nbsp;
 			</c:if>
-		<button type="button" onclick="location.href='noticeBoard.do'" class="btn btn-outline-dark">목록</button>
-	</div><br><br>
+		<button type="button" onclick="location.href='noticeBoard.do'"
+			class="btn btn-outline-dark">목록</button>
+	</div>
+	<br>
+	<br>
 	<div>
 		<form id="noticeBoardfrm" action="" method="post">
 			<input type="hidden" id="id" name="id" value="${vo.noticeBoardId}">
