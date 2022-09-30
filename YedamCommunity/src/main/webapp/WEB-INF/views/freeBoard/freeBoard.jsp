@@ -210,16 +210,29 @@ section.notice {
 .optionBox {
 	margin-left: 275px;
 }
+section.heading-page {
+   background-image: url(headercss/images/freeBoardHeader.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 230px;
+   padding-bottom: 110px;
+   text-align: center;
+}
 </style>
 
 </head>
 <body>
-	<section class="notice">
-		<div class="page-title" align="center">
-			<div class="container">
-				<h1>자유게시판</h1>
-			</div>
-		</div>
+<section class="heading-page header-text" id="top">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <h1 class="display-4" style="font-weight:lighter; color:white">자유게시판</h1>
+            </div>
+         </div>
+      </div>
+   </section>
+
 		<!-- board seach area -->
 		<div id="board-search">
 			<div class="container">
@@ -285,20 +298,17 @@ section.notice {
 								class="btn btn-outline-dark">글쓰기</button>
 						</c:if>
 					</form>
-					<br>
 					<div>
-						<small><a href="freeBoard.do">◀ 1 2 3 4 5 ▶</a></small>
+						<small><a href="freeBoard.do" style="color:#808080">◀ 1 2 3 4 5 ▶</a></small>
 					</div>
 				</div>
-			</div>
+			</div><br>
 			<div>
 				<form id="fbf" name="fbf" method="post">
 					<input type="hidden" id="freeBoardId" name="freeBoardId">
 				</form>
 			</div>
 		</div>
-
-	</section>
 
 	<script type="text/javascript">
 	function selectFreeBoard(id) {
