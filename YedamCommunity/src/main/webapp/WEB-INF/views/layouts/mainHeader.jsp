@@ -6,7 +6,24 @@
 <head>
 <meta charset="UTF-8">
 <meta charset="utf-8">
-<meta name="viewport"
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Template Mo">
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Education - List of Meetings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="headercss/css/fontawesome.css">
+    <link rel="stylesheet" href="headercss/css/templatemo-edu-meeting.css">
+    <link rel="stylesheet" href="headercss/css/owl.css">
+    <link rel="stylesheet" href="headercss/css/lightbox.css">
+
+<!-- <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +48,8 @@
 
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/style.css">
-<!-- <link href="css1/css/memberLogin2.css" rel="stylesheet" type="text/css"> -->
-<!-- 버튼 때문에 위에 스타일 적용해 놓음 다른 css와 얽힐까바 -->
+<link href="css1/css/memberLogin2.css" rel="stylesheet" type="text/css">
+버튼 때문에 위에 스타일 적용해 놓음 다른 css와 얽힐까바
 <style type="text/css">
 .buttons {
     margin: 10%;
@@ -78,11 +95,71 @@
     background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
     box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
 }
-</style>
+</style> -->
 </head>
 
-<body>
-	<div>
+ <body>
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>This is an educational <em>HTML CSS</em> template by TemplateMo website.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          Yedam community
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li><a href="index.html">Home</a></li>
+                          <li><a href="meetings.html" >공지사항</a></li>
+                          <li><a href="index.html">자유 게시판</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Pages</a>
+                              <ul class="sub-menu">
+                                  <li><a href="meetings.html">Upcoming Meetings</a></li>
+                                  <li><a href="meeting-details.html">Meeting Details</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="index.html">문의사항</a></li> 
+                          <li><a href="index.html">로그인&회원가입</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+ 
+ 
+<%--	<div>
 		<div class="container-fluid px-md-5  pt-4 pt-md-5">
 			<div class="row justify-content-between">
 				<div class="col-md-8 order-md-last">
@@ -170,6 +247,63 @@
 				</div>
 			</div>
 		</nav>
-	</div>
+	</div> --%>
+	 <script src="headercss/vendor/jquery/jquery.min.js"></script>
+   
+
+    <script src="headercss/js/isotope.min.js"></script>
+    <script src="headercss/js/owl-carousel.js"></script>
+    <script src="headercss/js/lightbox.js"></script>
+    <script src="headercss/js/tabs.js"></script>
+    <script src="headercss/js/isotope.js"></script>
+    <script src="headercss/js/video.js"></script>
+    <script src="headercss/js/slick-slider.js"></script>
+    <script src="headercss/js/custom.js"></script>
+   	 <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
 </body>
 </html>
