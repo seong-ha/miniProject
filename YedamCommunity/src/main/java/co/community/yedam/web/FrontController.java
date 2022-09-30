@@ -154,7 +154,7 @@ public class FrontController extends HttpServlet {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 
-		// 실제 요펑 페이지 분석
+		// 실제 요청 페이지 분석
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
