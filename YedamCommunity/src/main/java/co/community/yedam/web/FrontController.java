@@ -82,61 +82,74 @@ public class FrontController extends HttpServlet {
 
 	public void init(ServletConfig config) throws ServletException {
 		map.put("/main.do", new Main());
+		
+		// Member
 		map.put("/memberLoginForm.do", new MemberLoginForm());
+		map.put("/memberLogin.do", new MemberLogin());
 		map.put("/memberJoinForm.do", new MemberJoinForm());
-		map.put("/freeBoard.do", new FreeBoard());
+		map.put("/memberJoin.do", new MemberJoin());
+		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
+		map.put("/memberLogout.do", new MemberLogout());
+		map.put("/memberMyHome.do", new MemberMyHome());
+		map.put("/memberUpdate.do", new MemberUpdate());
+		map.put("/memberDelete.do", new MemberDelete());
+		map.put("/memberSelectList.do", new MemberSelectList());
+		map.put("/memberSelect.do", new MemberSelect());
+		
+		// Questions
 		map.put("/questionsWriteForm.do", new QuestionsWriteForm());
 		map.put("/questionsSelectList.do", new QuestionsSelectList());
 		map.put("/questionsSelect.do", new QuestionsSelect());
 		map.put("/questionsEditForm.do", new QuestionsEditForm());
 		map.put("/questionsEdit.do", new QuestionsEdit());
 		map.put("/questionsInsert.do", new QuestionsInsert());
-		map.put("/projectStudy.do", new ProjectStudy()); // 프로젝트스터디 메인페이지
 		map.put("/questionsSearchForm.do", new QuestionsSearchForm());
 		map.put("/AjaxQuestionsSearch.do", new AjaxQuestionsSearch());
-		map.put("/memberLogin.do", new MemberLogin());
-		map.put("/memberJoin.do", new MemberJoin());
-		map.put("/ajaxMemberIdCheck.do", new AjaxMemberIdCheck());
+		
+		// NoticeBoard
 		map.put("/noticeBoard.do", new NoticeBoard());
 		map.put("/noticeBoardWriteForm.do", new NoticeBoardWriteForm());
 		map.put("/noticeBoardInsert.do", new NoticeBoardInsert());
-		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); // 공지사항 상세보기
-		map.put("/noticeBoardEditForm.do", new NoticeBoardEditForm()); // 상세보기에서 게시글 수정 폼으로
-		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); // 상세보기에서 게시글 수정
-		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); // 상세보기에서 게시글 삭제
-		map.put("/freeBoardSelect.do", new FreeBoardSelect());
+		map.put("/noticeBoardSelect.do", new NoticeBoardSelect()); 		// 공지사항 상세보기
+		map.put("/noticeBoardEditForm.do", new NoticeBoardEditForm()); 	// 상세보기에서 게시글 수정 폼으로
+		map.put("/noticeBoardEdit.do", new NoticeBoardEdit()); 			// 상세보기에서 게시글 수정
+		map.put("/noticeBoardDelete.do", new NoticeBoardDelete()); 		// 상세보기에서 게시글 삭제
+		
+		// FreeBoard
+		map.put("/freeBoard.do", new FreeBoard());
 		map.put("/freeBoardInsertForm.do", new FreeBoardInsertForm());
-		map.put("/memberLogout.do", new MemberLogout());
-		map.put("/memberMyHome.do", new MemberMyHome());
-		map.put("/projectStudyCard.do", new ProjectStudyCard()); // 프로젝트스터디 전체 모집건 필터링해서 가져오기
-		map.put("/projectCard.do", new ProjectCard()); // 프로젝트 모집건만 필터링해서 가져오기
-		map.put("/studyCard.do", new StudyCard()); // 스터디 모집건만 필터링해서 가져오기
-		map.put("/projectStudyInsertForm.do", new ProjectStudyInsertForm()); // 프로젝트스터디 새글쓰기 폼으로
-		map.put("/memberUpdate.do", new MemberUpdate());
-		map.put("/memberDelete.do", new MemberDelete());
 		map.put("/freeBoardInsert.do", new FreeBoardInsert());
+		map.put("/freeBoardSelect.do", new FreeBoardSelect());
+		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); 		// 자유게시판 작성 글 수정폼 호출.
+		map.put("/freeBoardEdit.do", new FreeBoardEdit()); 				// 자유게시판 작성 글 수정.
 		map.put("/freeBoardDelete.do", new FreeBoardDelete());
+		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); 	// 자유게시판 좋아요 기능.
+		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm());
+		map.put("/ajaxFreeBoardSearch.do", new AjaxFreeBoardSearch());
+		
+		// Info
 		map.put("/infoFood.do", new foodInfo());
 		map.put("/infoCafe.do", new InfoCafe());
-		map.put("/memberSelectList.do", new MemberSelectList());
-		map.put("/memberSelect.do", new MemberSelect());
-		map.put("/freeBoardEditForm.do", new FreeBoardEditForm()); // 자유게시판 작성 글 수정폼 호출.
-		map.put("/freeBoardEdit.do", new FreeBoardEdit()); // 자유게시판 작성 글 수정.
 		map.put("/store1.do", new Store1());
 		map.put("/store2.do", new Store2());
 		map.put("/store3.do", new Store3());
 		map.put("/store4.do", new Store4());
 		map.put("/store5.do", new Store5());
 		map.put("/store6.do", new Store6());
-		map.put("/freeBoardUpdateLike.do", new FreeBoardUpdateLike()); // 자유게시판 좋아요 기능.
-		map.put("/projectStudyInsert.do", new ProjectStudyInsert()); // 프로젝트스터디 글쓰기 form의 데이터 들고와서 insert
-		map.put("/projectStudySelect.do", new ProjectStudySelect()); // 프로젝트스터디 모집글 상세보기.
+		
+		// ProjectStudy
+		map.put("/projectStudy.do", new ProjectStudy()); 					 // 프로젝트스터디 메인페이지
+		map.put("/projectStudyCard.do", new ProjectStudyCard()); 			 // 프로젝트스터디 전체 모집건 필터링해서 가져오기
+		map.put("/projectCard.do", new ProjectCard()); 						 // 프로젝트 모집건만 필터링해서 가져오기
+		map.put("/studyCard.do", new StudyCard()); 							 // 스터디 모집건만 필터링해서 가져오기
+		map.put("/projectStudyInsertForm.do", new ProjectStudyInsertForm()); // 프로젝트스터디 새글쓰기 폼으로
+		map.put("/projectStudyInsert.do", new ProjectStudyInsert()); 		 // 프로젝트스터디 글쓰기 form의 데이터 들고와서 insert
+		map.put("/projectStudySelect.do", new ProjectStudySelect()); 		 // 프로젝트스터디 모집글 상세보기.
 		map.put("/projectStudyUpdateForm.do", new ProjectStudyUpdateForm()); // 프로젝트스터디 모집글 수정폼으로.
-		map.put("/projectStudyUpdate.do", new ProjectStudyUpdate()); // 프로젝트스터디 모집글 수정.
-		map.put("/projectStudyDelete.do", new ProjectStudyDelete()); // 프로젝트스터디 모집글 삭제.
-		map.put("/ajaxFreeBoardSearch.do", new AjaxFreeBoardSearch());
-		map.put("/freeBoardSearchForm.do", new FreeBoardSearchForm());
+		map.put("/projectStudyUpdate.do", new ProjectStudyUpdate()); 		 // 프로젝트스터디 모집글 수정.
+		map.put("/projectStudyDelete.do", new ProjectStudyDelete()); 		 // 프로젝트스터디 모집글 삭제.
 	}
+	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
@@ -145,13 +158,12 @@ public class FrontController extends HttpServlet {
 		String uri = request.getRequestURI();
 		String contextPath = request.getContextPath();
 		String page = uri.substring(contextPath.length());
-System.out.println(page);
+		
 		// 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
-    // 분석된 요청 페이지에 대해 할당된 커멘드에게 일 시킴.(DB까지 가서 결과물 가져옴)
 		Command command = map.get(page);
 		String viewPage = command.exec(request, response);
+		
 		// 커멘드가 가져온 결과를 바탕으로 해당하는 view를 찾아서 실행시켜서 요청에 대한 응답을 해준다. (view Resolver)
-		System.out.println(viewPage);
 		if (!viewPage.endsWith(".do")) {
 
 			if (viewPage.startsWith("ajax:")) { // ajax를 사용할때
@@ -163,7 +175,7 @@ System.out.println(page);
 				if (viewPage.startsWith("noTiles:")) {
 					viewPage = "/WEB-INF/views/" + viewPage.substring(8) + ".jsp";
 				} else { // tiles 적용 되도록할 때
-					viewPage = viewPage + ".tiles"; // tiles layout 사용
+					viewPage = viewPage + ".tiles"; // tiles.xml로 가서 definition 동적으로 pick
 				}
 
 				// RequestDipatcher의 forward로 쏴줘야 앞단에 뿌려줄 수 있다.
