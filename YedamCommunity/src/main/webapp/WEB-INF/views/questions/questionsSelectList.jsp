@@ -196,9 +196,32 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+
+section.heading-page {
+	background-image: url(headercss/images/heading-bg.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-top: 230px;
+	padding-bottom: 110px;
+	text-align: center;
+}
 </style>
 </head>
 <body>
+
+	<section class="heading-page header-text" id="top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+
+					<h2>Yedam community</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 	<section class="notice">
 		<div class="page-title">
 			<div class="container">
@@ -210,16 +233,17 @@ section.notice {
 		<div id="board-search">
 			<div class="container">
 				<div class="search-window">
-						<div class="search-wrap" >
-								<form id="searchfrm" method="post" action="AjaxQuestionsSearch.do">
-									<select id="key" name="key">
-										<option value="0">전체</option>
-										<option value="1">제목</option>
-										<option value="2">작성자</option>
-									</select> <input type="text" id="val" name="val" placeholder="검색어를 입력해주세요.">&nbsp;&nbsp; <input
-										type="button" onclick="searchCall()" value="검색">
-								</form>
-						</div>
+					<div class="search-wrap">
+						<form id="searchfrm" method="post" action="AjaxQuestionsSearch.do">
+							<select id="key" name="key">
+								<option value="0">전체</option>
+								<option value="1">제목</option>
+								<option value="2">작성자</option>
+							</select> <input type="text" id="val" name="val"
+								placeholder="검색어를 입력해주세요.">&nbsp;&nbsp; <input
+								type="button" onclick="searchCall()" value="검색">
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -29,10 +29,30 @@
 	font-weight: bold;
 	font-size: 16px;
 }
+section.heading-page {
+   background-image: url(headercss/images/heading-bg.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 230px;
+   padding-bottom: 110px;
+   text-align: center;
 }
+}
+
 </style>
 </head>
 <body>
+<section class="heading-page header-text" id="top">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+
+               <h2>Yedam community</h2>
+            </div>
+         </div>
+      </div>
+   </section>
 	<div align="center" class="tableBack">
 		<div><br><br>
 			<div class="container">
