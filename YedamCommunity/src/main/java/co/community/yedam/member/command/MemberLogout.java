@@ -15,7 +15,7 @@ public class MemberLogout implements Command {
 				String name = (String) session.getAttribute("memberName"); // 세션에 담긴 이름 가져오기
 				session.invalidate(); // 세션을 완전히 없애주는 것
 				request.setAttribute("message", name + "님 정상적으로 로그아웃 되었습니다.");
-				return "main/main/main";
+				return "noTiles:main/main";
 	}
 
 }

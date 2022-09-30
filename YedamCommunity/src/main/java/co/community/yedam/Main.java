@@ -9,7 +9,7 @@ public class Main implements Command {
 
 	@Override
 	public String exec(HttpServletRequest request, HttpServletResponse response) {
-		return "main/main/main";
+		return "noTiles:/main/main";
 	}
 
 }
