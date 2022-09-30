@@ -194,18 +194,27 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+section.heading-page {
+   background-image: url(headercss/images/notice.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 230px;
+   padding-bottom: 110px;
+   text-align: center;
+}
 </style>
 </head>
 <body>
-	<div align="center">
-		<br>
-		<br>
-		<section class="noticeBoard">
-			<div class="page-title">
-				<div class="container">
-					<h1>공지사항</h1>
-				</div>
-			</div>
+<section class="heading-page header-text" id="top">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <h1 class="display-4" style="font-weight:lighter; color:white">공지사항</h1>
+            </div>
+         </div>
+      </div>
+   </section>
 
 			<!-- board seach area -->
 			<div id="noticeBoard-search">

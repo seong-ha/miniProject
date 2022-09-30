@@ -196,15 +196,27 @@ section.notice {
 	width: 1px;
 	height: 1px;
 }
+section.heading-page {
+   background-image: url(headercss/images/qna.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 230px;
+   padding-bottom: 110px;
+   text-align: center;
+}
 </style>
 </head>
 <body>
-	<section class="notice">
-		<div class="page-title">
-			<div class="container">
-				<h3>문의게시판</h3>
-			</div>
-		</div>
+<section class="heading-page header-text" id="top">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-12">
+               <h1 class="display-4" style="font-weight:lighter; color:white">문의게시판</h1>
+            </div>
+         </div>
+      </div>
+   </section>
 
 		<!-- board seach area -->
 		<div id="board-search">
