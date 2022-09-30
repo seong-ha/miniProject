@@ -174,9 +174,7 @@
 											<a class="nav-link" href="memberLoginForm.do">로그인 & 회원가입</a>
 										</c:when>
 										<c:otherwise>
-											
-											<a class="nav-link" href="memberLogout.do">로그아웃</a>
-	
+											<li class="nav-item">	
 											<c:if test="${memberAuthor eq 'USER' }">
 												<a class="nav-link" href="memberMyHome.do">마이페이지</a>
 							
@@ -185,7 +183,10 @@
 												<a class="nav-link" href="memberSelectList.do">회원조회</a>
 												
 											</c:if>
-						
+											</li>
+											<li class="nav-item">
+											<a class="nav-link" href="memberLogout.do">로그아웃</a>
+											</li>
 										</c:otherwise>
 									</c:choose>
                             </li>
