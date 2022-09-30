@@ -27,6 +27,7 @@
 	<c:if test="${message eq '★ 회원가입이 완료 되었습니다 로그인 해 주세요!!★'}">
 		<img src="images/kiss.png" alt="" class="emoji">
 	</c:if>
+	
 	<br><br><br><br><br><br><br><br><br><br><br>
 	</div>
 </body>

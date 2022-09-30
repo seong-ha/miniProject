@@ -9,7 +9,7 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 
@@ -23,100 +23,72 @@
 <link rel="stylesheet" href="css/magnific-popup.css">
 
 <link rel="stylesheet" href="css/flaticon.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css"> 
+
+<!-- footercsss -->
+ <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="footercss/css/bootstrap.css" rel="stylesheet">
+    <link href="footercss/css/fontawesome-all.css" rel="stylesheet">
+    <link href="footercss/css/swiper.css" rel="stylesheet">
+	<link href="footercss/css/magnific-popup.css" rel="stylesheet">
+	<link href="footercss/css/styles.css" rel="stylesheet">
+	 <link rel="icon" href="footercss/images/favicon.png">
 </head>
 <body>
-	<div>
-		<footer class="ftco-footer">
-			<div class="container">
-				<div class="row mb-5">
-					<div class="col-sm-12 col-md">
-						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2 logo">
-								<a href="main.do" style="color: #FD5F00">Yedam Community</a>
-							</h2>
-							
-							<ul class="ftco-footer-social list-unstyled mt-2">
-								<li class="ftco-animate"><a href="#"><span
-										class="fa fa-twitter"></span></a></li>
-								<li class="ftco-animate"><a href="#"><span
-										class="fa fa-facebook"></span></a></li>
-								<li class="ftco-animate"><a href="#"><span
-										class="fa fa-instagram"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md">
-						<div class="ftco-footer-widget mb-4 ml-md-4">
-							<h2 class="ftco-heading-2" style="color: #FD5F00">언어 지원</h2>
-							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>KOREAN</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>English</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Chinese</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>France</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md">
-						<div class="ftco-footer-widget mb-4 ml-md-4">
-							<h2 class="ftco-heading-2" style="color: #FD5F00">개발 프로그램</h2>
-							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>JAVA</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>JavaScript</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>HTML</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>CSS</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md">
-						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2" style="color: #FD5F00">광고문의</h2>
-							<ul class="list-unstyled">
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>전성하와 아이들</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>한건당</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>만원에</a></li>
-								<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>모십니다</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-sm-12 col-md">
-						<div class="ftco-footer-widget mb-4">
-							<h2 class="ftco-heading-2" style="color: #FD5F00">서비스 이용</h2>
-							<div class="block-23 mb-3">
-								<ul>
-									<li><span class="icon fa fa-map marker"></span><span
-										class="text">대구광역시 중구 남일동 중앙대로 403</span></li>
-									<li><a href="#"><span class="icon fa fa-phone"></span><span
-											class="text">+82 010 2352 9011</span></a></li>
-									<li><a href="#"><span
-											class="icon fa fa-paper-plane pr-4"></span><span class="text">dydwn3107@gmail.com</span></a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="container-fluid px-0 py-5 bg-black">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-12">
+	 <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-col first">
+                        <h6>About Spify</h6>
+                        <p class="p-small">Spify is a business website Bootstrap HTML template designed to present startups in a beautiful manner with features for description</p>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col second">
+                        <h6>Links</h6>
+                        <ul class="list-unstyled li-space-lg p-small">
+                            <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
+                            <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
+                            <li>Menu: <a class="page-scroll" href="#header">Home</a>, <a class="page-scroll" href="#details">Details</a>, <a class="page-scroll" href="#strengths">Strengths</a>, <a class="page-scroll" href="#contact">Contact</a></li>
+                        </ul>
+                    </div> <!-- end of footer-col -->
+                    <div class="footer-col third">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong style="color: white">contact@site.com</strong></a></p>
+                    </div> <!-- end of footer-col -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
 
-							<p class="mb-0" style="color: rgba(255, 255, 255, .5);">
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-								Copyright &copy;
-								<script>
-									document.write(new Date().getFullYear());
-								</script>
-								All rights reserved | This template is made with <i
-									class="fa fa-heart color-danger" aria-hidden="true"></i> by <a
-									href="main.do" target="_blank" style="color: #FD5F00">YedamCommunity.com</a>
-								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
+
+    
+   
 </body>
 </html>
