@@ -23,6 +23,7 @@ public class MemberServiceImpl implements MemberService {
 		// TODO Auto-generated method stub
 		return map.memberSelectList();
 	}
+	
 
 	@Override
 	public MemberVO memberSelect(MemberVO vo) {

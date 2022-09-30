@@ -13,7 +13,7 @@ public interface MemberMapper {
 	int memberDelete(MemberVO vo); // 데이터 삭제
 	
 	boolean isIdCheck(String id); // 아이디 중복체크, 존재하면 false, 존재하지 않으면 ture
-	
+
 	
 	// 매개변수가 2개일때는 각각 앞에 @Param을 붙여줘야함.
 	// List<SampleVO> SampleSearchList(@Param("key") String key, @Param("val") String val);
